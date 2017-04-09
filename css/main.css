@@ -245,7 +245,7 @@ a.lp-primary-btn{
 	transition:all 0.3s ease;
 }
 .margin-top-subtract-55{
-	margin-top:-55px;
+	margin-top:-146px;
 }
 .margin-top-subtract-25{
     margin-top: -25px;
@@ -410,7 +410,7 @@ a.lp-primary-btn{
 	margin-left:-30px !important;
 }
 .margin-top-subtract-35{
-	margin-top:-35px;
+	margin-top:-122px;
 }
 .overlay-link{ /* Overlay Link */
 	position:absolute;
@@ -526,7 +526,10 @@ a.lp-primary-btn{
 	padding-top: 0px;
 	padding-bottom: 0px;
 }
-.listing-sidebar .ui-autocomplete, .listing-sidebar-left .ui-widget select{
+.listing-sidebar .
+
+
+, .listing-sidebar-left .ui-widget select{
 	width:200px !important;
 	position:fixed !important;
 }
@@ -1079,12 +1082,12 @@ input.default{
 	/*===========2.3 Home Banner Container  ==============
 	====================================================*/
 .lp-home-banner-contianer{
-	height:560px;
+	height:575px;
 	position:relative;
 }
 .lp-home-banner-contianer-inner{
 	position:absolute;
-	top:50%;
+	top:42%;
 	-moz-transform:translateY(-50%);
 	-webkit-transform:translateY(-50%);
 	-o-transform:translateY(-50%);
@@ -1246,7 +1249,7 @@ margin: 0;
 	list-style:none;
 	margin:0;
 	padding:0;
-	width:187px !important;
+	/*width:187px !important; fix by shubham*/
     box-shadow: 0px 2px 5px 0px rgba(46,46,46,0.2);
 	background-color:#fff;
 	padding-top:8px;
@@ -2105,7 +2108,7 @@ ul.lp-grid-box-price li{
 	margin-right:5px;
 }
 .archive-page .page-heading-inner-container{
-	top: 39%;
+	top: 23%;
 }
 .mapSidebar{
 	min-height:82vh;
@@ -3762,7 +3765,7 @@ p.lp-list-view-paypal-tit{
 	color:#7f7f7f;
 }
 .author-page .border-dropdown span:after{
-	color:#7f7f7f;
+	color:#7;
 }
 .lp-list-pay-btn a:hover{
     background-color: #363F48;
@@ -3781,7 +3784,7 @@ p.lp-list-view-paypal-tit{
 ===============================================================*/
 
 footer{
-	background-color:#45505b;	
+	background-color:#252525;	
 }
 
 	/*================4.1 Footer Upper Bar================

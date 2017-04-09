@@ -396,7 +396,19 @@ $(document).ready(function(){
 		
 	// Autocomplete
 	
+	/* my code for Home search autocomplete */
+
+	$('.lp-home-search-input').autocomplete({
+		minLength:1,	
+		source: 'search.php'
+  });
+
+	// End of my code
+
+
     $.widget( "custom.combobox", {
+
+      gData:[],
       _create: function() {
         this.wrapper = $( "<span>" )
           .addClass( "custom-combobox" )
@@ -459,17 +471,44 @@ $(document).ready(function(){
           });
       },
  
-      _source: function( request, response ) {
-        var matcher = new RegExp( $.ui.autocomplete.escapeRegex(request.term), "i" );
-        response( this.element.children( "option" ).map(function() {
-          var text = $( this ).text();
-          if ( this.value && ( !request.term || matcher.test(text) ) )
-            return {
-              label: text,
-              value: text,
-              option: this
-            };
-        }) );
+      _source:  function( request, response ) {
+		var self = this;
+        if(self.gData.length === 0) {
+	        var options = {
+				url : 'location.php',
+				success : function(data) {
+						console.log("data from XHR: "+data);
+							var rData = JSON.parse(data);
+							var temp;
+							for(var i in rData)
+							{
+								temp = "option[value='"+rData[i]+"']";
+								if(self.element.children(temp).length === 0) {
+							 		i = "<option value="+rData[i]+">"+rData[i]+"</option>";
+							 		self.gData.push(i);
+							 	}
+							}
+							//self.element.empty();
+							self.element.append(self.gData);
+							},
+							error : function(error) {
+								console.log("Error from XHR: "+error);
+								response(null);
+						}
+			}
+			$.ajax(options);
+		}
+		var matcher = new RegExp( "^"+$.ui.autocomplete.escapeRegex(request.term), "i" );
+		var results = this.element.children( "option" ).map(function() {
+				var text = $(this).text();
+				if ( this.value && ( !request.term || matcher.test(text) ) )
+				return {
+				label: text,
+				value: text,
+				option: this
+				};
+			 }) 
+		 response(results.splice(0,6));
       },
  
       _removeIfInvalid: function( event, ui ) {
