@@ -68,7 +68,7 @@ h6 a,
 #accordion h5 .accordion-title{
 	font-family:'quicksand-bold';
 	font-weight:bold;
-	color:#292929;
+	color:#292929!important;
 }
 
 h1,
@@ -489,7 +489,7 @@ a.lp-primary-btn{
 	color:#3c3c3c;
 }
 .form-inline .form-group{
-	margin-right:7px;
+	margin-right:0px;
 }
 .input-width-299{
 		width:311px !important;
@@ -1063,7 +1063,7 @@ input.default{
 	background-color:#fff;
 	padding:10px 20px;
 	border-top:0px;
-	color:#000;
+	color:#000!important;
     text-align: left;
 }
 .lp-add-listing-btn ul{
@@ -1170,7 +1170,7 @@ input.default{
 	font-weight:bold;
 	font-family:'quicksand-bold';
 	border-radius:5px;
-	color:#fff;
+	color:#fff!important;
 	-o-transition:all 0.3s ease;
 	-webkit-transition:all 0.3s ease;
 	-moz-transition:all 0.3s ease;
@@ -1505,11 +1505,11 @@ margin: 0;
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
 	position:relative;
-}	
+}	/*
 .lp-grid-box-thumb img{
 	border-top-right-radius:8px;
 	border-top-left-radius:8px;	
-}
+}*/
 .lp-grid-box-quick{
 	width:100%;
 	position:absolute;

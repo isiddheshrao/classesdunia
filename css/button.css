@@ -1,0 +1,24 @@
+a.button {
+    background: #EEEE1B no-repeat 88% center;
+        font-family: "Myriad Pro";
+        font-size: 17px;
+        color: black;
+        text-transform: uppercase;
+        padding: 0 10px;
+        outline: none;
+        text-decoration: none;
+        position: absolute; 
+        top: 30px;
+        left:-82px;
+        /*width: 136px;*/
+        height: 40px;
+        line-height: 45px;
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    
+     -webkit-transform-origin:100% 100%;
+    -moz-transform-origin:100% 100%;
+    transform-origin:100% 100%;
+        
+}
