@@ -1,12 +1,14 @@
 <?php
-$name=$_POST["first_name"]." ".$_POST["last_name"]; 
+if(!isset($_POST["first_name"]))
+{
+    return;
+}
+$name=$_POST["first_name"]." ".$_POST["last_name"];
 $email=$_POST["email"];
 $phone=$_POST["phone"];
 $address=$_POST["city"]." ".$_POST["state"]." ".$_POST["zip"];
-$servername = "localhost";
-$username = "root7262";
-$password = "Punk@7262";
-$dbname = "shubham7262";
+
+require 'connect.php';
 
 //$coupon = random_bytes(7);
 //var_dump(bin2hex($coupon));
@@ -15,7 +17,6 @@ for ($i = -1; $i <= 4; $i++) {
     $bytes = openssl_random_pseudo_bytes($i, $cstrong);
     $coupon   = bin2hex($bytes);
 
-
 }
 
 // Create connection
@@ -23,7 +24,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 
 $sql = "INSERT INTO MyClients (name,email,phone,address,coupon) VALUES ('$name','$email',$phone,'$address','$coupon')";
 
@@ -41,7 +42,7 @@ $to = $email;
 $email_subject = "Your coupon";
 $email_body = "You have received a new message from couponcode .\n\n"."Here are the details:\n\nName:".$name."\n\nEmail:".$email."\n\nPhone: $phone"."\n\nMessage:\n".$msg;
 $headers = "From: demo@designdunia.com\n";
-$headers .= "Reply-To: $email";	
+$headers .= "Reply-To: $email";
 mail($to,$email_subject,$email_body,$headers);
 
 ?>
