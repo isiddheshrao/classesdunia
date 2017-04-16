@@ -1,9 +1,9 @@
-/*  1 Common Css 
-	2 Header 
-		2.1  Top Bar  
-		2.2  Menu Bar  
-		2.3  Home Search Container  
-	3 Sections	
+/*  1 Common Css
+	2 Header
+		2.1  Top Bar
+		2.2  Menu Bar
+		2.3  Home Search Container
+	3 Sections
 		3.1  Home Categoires
 		3.2  Location Sections
 		3.3  Nearby Sections
@@ -68,7 +68,7 @@ h6 a,
 #accordion h5 .accordion-title{
 	font-family:'quicksand-bold';
 	font-weight:bold;
-	color:#292929!important;
+	color:#292929;
 }
 
 h1,
@@ -85,7 +85,7 @@ h3,
 .lp-h3,
 .lp-h3 a{
 	font-size:25px;
-}	
+}
 h4,
 .lp-h4,
 .lp-h4 a{
@@ -184,7 +184,7 @@ button:focus{
 .lp-border-radius-8{
 	border-radius:8px;
 }
-.lp-primary-btn{   
+.lp-primary-btn{
 	font-size: 16px;
     font-weight: bold;
     font-family: 'quicksand-bold';
@@ -199,7 +199,7 @@ button:focus{
 	-moz-transition:all 0.3s ease;
 	transition:all 0.3s ease;
 }
-.file-upload-btn{   
+.file-upload-btn{
 	font-size: 16px;
     font-weight: bold;
     font-family: 'quicksand-bold';
@@ -226,7 +226,7 @@ button:focus{
 	-moz-transition:all 0.3s ease;
 	transition:all 0.3s ease;
 }
-a.lp-primary-btn{   
+a.lp-primary-btn{
 	padding: 18px 60px;
 }
 .lp-primary-btn:hover{
@@ -489,7 +489,7 @@ a.lp-primary-btn{
 	color:#3c3c3c;
 }
 .form-inline .form-group{
-	margin-right:0px;
+	margin-right:7px;
 }
 .input-width-299{
 		width:311px !important;
@@ -518,7 +518,7 @@ a.lp-primary-btn{
     z-index: 9;
     position: relative;
 	padding:20px 0px;
-    margin-right: 30px;	
+    margin-right: 30px;
 }
 .listing-sidebar-left .ui-widget{
 	width:100%;
@@ -633,16 +633,36 @@ a.lp-primary-btn{
   animation-delay: -1.0s;
 }
 
+
+/* classes Dunia css */
+
+select.cd-dropdown {
+    width: 100%;
+    border: 1px solid #e3e3e3;
+    color: grey;
+}
+
+option {
+    height: 40px;
+    color: black;
+    text-align: left;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+
+/* end */
+
 @-webkit-keyframes sk-bounce {
   0%, 100% { -webkit-transform: scale(0.0) }
   50% { -webkit-transform: scale(1.0) }
 }
 
 @keyframes sk-bounce {
-  0%, 100% { 
+  0%, 100% {
     transform: scale(0.0);
     -webkit-transform: scale(0.0);
-  } 50% { 
+  } 50% {
     transform: scale(1.0);
     -webkit-transform: scale(1.0);
   }
@@ -749,14 +769,14 @@ input.default{
     height: 5px;
     background-color: #fff;
     border-radius: 50%;
-	
+
 }
 .lp-join-now ul{
 	padding:0;
 	list-style:none;
 }
 .lp-topbar-menu li:first-child:before{
-   list-style-type: none; 
+   list-style-type: none;
    display:none;
 }
 .lp-topbar-menu li a:hover{
@@ -809,7 +829,7 @@ input.default{
 	border-top-left-radius:5px;
 }
 .lp-user-menu li:last-child {
-	padding-bottom:20px; 
+	padding-bottom:20px;
 	border-bottom-right-radius:5px;
 	border-bottom-left-radius:5px;
 }
@@ -842,7 +862,7 @@ input.default{
 	font-family: 'FontAwesome';
 }
 .lp-menu ul.sub-menu li:first-child{
-    padding-top:20px; 
+    padding-top:20px;
 	border-top-left-radius:5px;
 	border-top-right-radius:5px;
 }
@@ -871,7 +891,7 @@ input.default{
 .mm-navbar-top a.userimage{
 	width: 80px;
 	height: 80px;
-	line-height: 50px;   
+	line-height: 50px;
 	margin-top: 19px;
 }
 .mm-navbar-top a{
@@ -880,7 +900,7 @@ input.default{
 .mm-navbar-top a:last-child{
 	margin-right:0px;
 }
-.iconsmall{   
+.iconsmall{
 	height: 40px;
     line-height: 34px;
     padding: 0;
@@ -959,7 +979,7 @@ input.default{
 	visibility: hidden;
 	/* padding-top:20px; */
 	border-radius:5px;
-	
+
 }
 .lp-menu-bar-color .menu ul.sub-menu{
     box-shadow: 0px 2px 10px rgba(221, 221, 221, 0.3);
@@ -984,7 +1004,7 @@ input.default{
 	height: auto;
 	opacity: 1;
 	visibility: visible;
-	
+
 }
 .lp-menu > ul > li:hover ul.sub-menu,
 .lp-join-user-info li:hover .lp-user-menu{
@@ -992,7 +1012,7 @@ input.default{
 	height: auto;
 	opacity: 1;
 	visibility: visible;
-	
+
 }
 
 .lp-join-user-info li:hover .lp-user-menu{
@@ -1003,7 +1023,7 @@ input.default{
 	opacity: 1;
 	overflow: visible;
 	visibility: visible;
-	
+
 }
 
 .menu ul.sub-menu li{
@@ -1028,7 +1048,7 @@ input.default{
     width: 0;
     height: 0;
     position: absolute;
-    top: 29px;  
+    top: 29px;
     left: -3px;
     overflow: hidden;
     opacity: 0;
@@ -1042,13 +1062,13 @@ input.default{
 	height: auto;
 	opacity: 1;
 	visibility: visible;
-	
+
 }
 .menu ul.sub-menu li:hover ul.sub-menu:after{
 	opacity: 1;
 	overflow: visible;
 	visibility: visible;
-	
+
 }
 .menu ul.sub-menu li{
 	display:block;
@@ -1122,17 +1142,19 @@ input.default{
 .lp-search-bar-right{
 	float:right;
 	position:relative;
+	color:white;
 }
 .lp-search-input{
 	padding:12px 15px;
 	font-size:16px;
 }
 .lp-home-locaton-input{
-	width:189px;
+	width:254px;
 	float:left;
 	border:0px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+	border-radius: 5px;
+    /*border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;*/
 }
 .lp-home-search-input{
 	width:380px;
@@ -1208,9 +1230,45 @@ input.default{
     display: inline-block;
     vertical-align: top;
 }
+
+/*Custom css code start*/
+
+thead, th, .th-inner, .selectize-control, .selectize-input, .selectize-dropdown, .selectize-dropdown-content, .selectize-dropdown-content div{
+	z-index:999999;
+}
+.search-div
+{
+	float: left;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: 189px;
+}
+
+.search-div select
+{
+	font-size: 16px;
+    height: 48px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+	transition: all 0.2s ease;
+	color: black;
+}
+
+.search-select
+{
+	margin-top: 6px;
+	width:100%;
+}
+
+
+/*custom css code end*/
+
+
 /* .ui-autocomplete  */
 .ui-widget{
 	float:left;
+	margin-left: 2px;
+	margin-right: 2px;
 }
 .custom-combobox {
 position: relative;
@@ -1266,10 +1324,10 @@ margin: 0;
     border-radius: 25px;
 	opacity:0;
 }
- 
+
 .ui-autocomplete::-webkit-scrollbar-thumb {
     border-radius: 25px;
-    background-color:rgba(233, 233, 233, 0.58); 
+    background-color:rgba(233, 233, 233, 0.58);
 	opacity:0;
 }
 .ui-autocomplete li:first-child{
@@ -1283,7 +1341,7 @@ margin: 0;
     border-top: 0px;
     color: #000;
 	border-bottom:1px solid #f9f9f9;
-	
+
 }
 .post-submit .ui-widget ,
 .post-submit .custom-combobox ,
@@ -1293,12 +1351,12 @@ margin: 0;
 .post-submit .ui-autocomplete{
 	width:863px !important;
 }
-.post-submit .custom-combobox-input { 
+.post-submit .custom-combobox-input {
 	border-color: #eee;
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
-}	
+}
 .post-submit .chosen-container-single{
     float: left;
     width: 100% !important;
@@ -1364,12 +1422,12 @@ margin: 0;
 	list-style:none;
     position: relative;
     margin-bottom: 0px;
-}	
+}
 .lp-home-categoires li{
 	display:inline-block;
 	width:132px;
 	margin-right:10px;
-}	
+}
 .lp-home-categoires li a{
 	width:100%;
 	height:110px;
@@ -1404,13 +1462,13 @@ margin: 0;
 	height:35px;
 	margin-bottom:12px;
 }
-	
+
 	/*================../3.1 Home Categoires==============
 	======================================================*/
-	
+
 	/*=================3.2 Location Sections==============
 	======================================================*/
-	
+
 .city-girds{
 	position:relative;
 	overflow:hidden;
@@ -1450,14 +1508,14 @@ margin: 0;
 	-moz-transition:all 0.4s ease-in-out;
 	-o-transition:all 0.4s ease-in-out;
 	transition:all 0.4s ease-in-out;
-}	
+}
 .city-girds:hover .lp-listing-quantity{
 	opacity:1;
 	-webkit-transform:translateY(0px);
 	-moz-transform:translateY(0px);
 	-o-transform:translateY(0px);
 	transform:translateY(0px);
-	
+
 }
 .city-girds:hover .city-title .lp-h3{
 	-webkit-transform:translateY(0px);
@@ -1467,10 +1525,10 @@ margin: 0;
 }
 	/*===============../3.2 Location Sections=============
 	======================================================*/
-	
+
 	/*=================3.3 Nearby Sections==============
 	======================================================*/
-	
+
 .nearby-download{
 	width:100%;
 	margin-top:80px;
@@ -1491,10 +1549,10 @@ margin: 0;
 }
 .nearby-download li:last-child{
 	margin-right:0px;
-}	
+}
 	/*===============../3.3 Nearby Sections=============
 	======================================================*/
-	
+
 	/*=================3.4 Grid Box Sections==============
 	======================================================*/
 .lp-grid-box-contianer{
@@ -1505,11 +1563,11 @@ margin: 0;
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
 	position:relative;
-}	/*
+}
 .lp-grid-box-thumb img{
 	border-top-right-radius:8px;
-	border-top-left-radius:8px;	
-}*/
+	border-top-left-radius:8px;
+}
 .lp-grid-box-quick{
 	width:100%;
 	position:absolute;
@@ -1558,7 +1616,7 @@ ul.lp-grid-box-price li{
     display: inherit;
 }
 .lp-grid-box-price .category-cion img{
-	
+
     width: 20px;
     height: 20px;
 }
@@ -1600,7 +1658,7 @@ ul.lp-grid-box-price li{
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-	
+
 }
 .lp-add-to-fav i:before{
 	 content: "\f08a";
@@ -1644,7 +1702,7 @@ ul.lp-grid-box-price li{
 .video-thumb{
 	position:relative;
 	text-align:center;
-}	
+}
 .video-thumb,
 .testimonial-inner-box{
 	margin-bottom:30px;
@@ -1680,18 +1738,18 @@ ul.lp-grid-box-price li{
 .testimonial-description {
     padding: 30px 30px 20px 30px;
     position:relative;
-}	
+}
 .testimonial-description:after{
    content:"";
    bottom:-15px;
    left:50px;
    position:absolute;
-   width: 0; 
+   width: 0;
    height: 0;
    border-top: 15px solid #fff;
-   border-left: 10px solid transparent; 
-   border-right: 10px solid transparent;  
-}	
+   border-left: 10px solid transparent;
+   border-right: 10px solid transparent;
+}
 .testimonial-user-thumb img{
 	border:1px solid #a6a6a6;
 	border-radius:50%;
@@ -1776,7 +1834,7 @@ ul.lp-grid-box-price li{
     margin-top: 7px;
 }
 .testimonial-rating .fa-star{
-    color: #ffd925;	
+    color: #ffd925;
 }
 .testimonial-slider .slick-dots li button::before{
 	line-height: 33px;
@@ -1829,7 +1887,7 @@ ul.lp-grid-box-price li{
 
 	/*================3.6 Blog Grids Section==============
 	======================================================*/
-.lp-blog-grid-box{	
+.lp-blog-grid-box{
 	margin-bottom:30px;
 }
 .lp-blog-grid-box-container{
@@ -1869,7 +1927,7 @@ ul.lp-grid-box-price li{
 }
 .lp-blog-grid-author li:last-child{
 	margin-right:0px;
-}	
+}
 .image-popup-margin{
 	margin-left:33px;
 }
@@ -1917,7 +1975,7 @@ ul.lp-grid-box-price li{
 }
 .popup-post-price-container{
 	margin-bottom:27px;
-}	
+}
 .popup-post-left-bottom{
 	margin-top: 25px;
 }
@@ -1938,7 +1996,7 @@ ul.lp-grid-box-price li{
 	    padding: 15px 40px 30px;
 }
 .popup-map-position{
-	
+
     position: absolute;
     top: 0;
     right: 0;
@@ -1984,14 +2042,14 @@ ul.lp-grid-box-price li{
 }
 	/*==================../3.7 Popup Box==================
 	======================================================*/
-	
+
 	/*===================3.8 Page Header==================
 	======================================================*/
 
 .page-heading{
 	height:290px;
 	position:relative;
-}	
+}
 .about-page-heading{
 	height:256px;
 	position:relative;
@@ -2027,14 +2085,14 @@ ul.lp-grid-box-price li{
     background-color: rgba(0, 0, 0, 0.7);
     height: 100%;
 }
-	
+
 	/*==================../3.8 Page Header================
 	======================================================*/
-	
+
 	/*====================3.9 Breadcrumbs=================
 	======================================================*/
 .sidebar-breadcrumbs{
-	
+
 }
 .breadcrumbs{
 	margin:0;
@@ -2058,7 +2116,7 @@ ul.lp-grid-box-price li{
     height: 5px;
     background-color: #fff;
     border-radius: 50%;
-	
+
 }
 .breadcrumbs li a:hover{
 	text-decoration:underline;
@@ -2068,7 +2126,7 @@ ul.lp-grid-box-price li{
 }
 	/*==================../3.9 Breadcrumbs================
 	======================================================*/
-	
+
 	/*==================3.10 Listing Pages=================
 	======================================================*/
 .listing-page-result-row p,
@@ -2085,7 +2143,7 @@ ul.lp-grid-box-price li{
 }
 .view-on-map .icon{
 	width:15px;
-}	
+}
 .search-row,
 .listing-sidebar-left .form-inline,
 .post-with-map-container .form-inline{
@@ -2097,7 +2155,7 @@ ul.lp-grid-box-price li{
     border-radius: 5px;
     position: relative;
     background-color: rgb(255, 255, 255);
-}	
+}
 .search-row .form-control{
 	height:44px;
 }
@@ -2167,7 +2225,7 @@ ul.lp-grid-box-price li{
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 }
-.map-post-des h5{    
+.map-post-des h5{
 	font-family: 'quicksand-regular';
 	font-weight:normal;
 }
@@ -2200,10 +2258,10 @@ ul.lp-grid-box-price li{
 	width:190px;
 }
 .tag-select-second{
-	width:123px;	
+	width:123px;
 }
 .tag-select-third{
-	width:100%;	
+	width:100%;
 }
 .chosen-container-multi .chosen-choices li.search-choice{
 	display:none;
@@ -2317,7 +2375,7 @@ ul.lp-grid-box-price li{
 
 	/*=================../3.10 Listing Page===============
 	======================================================*/
-	
+
 	/*==================3.11 Author Page==================
 	======================================================*/
 .lp-join-user-info li{
@@ -2332,7 +2390,7 @@ ul.lp-grid-box-price li{
 }
 .nav-tabs,
 .nav-tabs > li > a,
-.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus{
 	border:0px;
@@ -2375,7 +2433,7 @@ ul.lp-grid-box-price li{
 .user-portfolio,.user-description-box{
 	min-height:475px;
     padding: 40px;
-}	
+}
 .user-portfolio-stat ul{
 	padding:0;
 	margin:0;
@@ -2425,17 +2483,17 @@ ul.lp-grid-box-price li{
 }
 	/*=================../3.11 Author Page================
 	======================================================*/
-	
+
 	/*===============/3.12 Blog Single Page===============
 	======================================================*/
-	
+
 .blog-single-page{
 	background-image:url('../images/blog-post.jpg');
 	background-repeat:no-repeat;
 	background-position:center center;
 	height:637px;
     position: relative;
-}	
+}
 .blog-heading-inner-container{
 	position:absolute;
 	bottom:0;
@@ -2497,7 +2555,7 @@ ul.lp-grid-box-price li{
 	======================================================*/
 	/*==================3.13 Comments Box=================
 	======================================================*/
-	
+
 .comments-thumb,
 .comments-content,
 .comments-box,
@@ -2537,7 +2595,7 @@ ul.lp-grid-box-price li{
     width: 83.5%;
 }
 .form-review-stars li{
-	display:inline-block;  
+	display:inline-block;
 	margin-right: 7px;
 }
 .form-review-stars li a{
@@ -2553,7 +2611,7 @@ ul.lp-grid-box-price li{
 
 	/*================../3.13 Comments Box================
 	======================================================*/
-	
+
 	/*==================3.14 Post Detail==================
 	======================================================*/
 .single-page-slider-container{
@@ -2564,7 +2622,7 @@ ul.lp-grid-box-price li{
 .post-meta-info{
 	padding-top:90px;
 	padding-bottom:90px;
-}	
+}
 .post-meta-left-box .breadcrumbs li:before{
     content: "";
     position: absolute;
@@ -2599,7 +2657,7 @@ ul.lp-grid-box-price li{
 .post-price-row li{
 	display:inline-block;
 	vertical-align: middle;
-}	
+}
 .post-rice{
 	font-family:'quicksand-bold';
 	font-size:24px;
@@ -2710,7 +2768,7 @@ position: relative;
     text-align: left;
 }
 
-.smenu:after {   
+.smenu:after {
 	height: 10px;
     left: 50%;
     position: absolute;
@@ -2771,10 +2829,10 @@ position: relative;
 }
 	/*=================../3.14 Post Detail================
 	======================================================*/
-	
+
 	/*==================/3.15 Post Sidebar================
 	======================================================*/
-	
+
 .widget-box{
 	padding:25px;
 	margin-bottom:50px;
@@ -2832,10 +2890,10 @@ position: relative;
 .categories-container li a .cat-icon img{
 	width:20px;
 }
-	
+
 	/*=================../3.15 Post Sidebar===============
 	======================================================*/
-	
+
 	/*===================3.16 Pricing Plan================
 	======================================================*/
 .price-plan-box{
@@ -2861,21 +2919,21 @@ position: relative;
 	width:18px;
 	margin-right:5px;
 }
-	
+
 	/*=================../3.16 Pricing Plan===============
 	======================================================*/
-	
+
 	/*================3.17 Accordion Section==============
 	======================================================*/
-	
+
 .ui-accordion .ui-accordion-header span{
 	font-size:20px;
 	margin-right:12px;
 }
-	
+
 	/*==============../3.17 Accordion Section=============
 	======================================================*/
-	
+
 	/*====================3.18 Post Submit================
 	======================================================*/
 .checkbox label:before {
@@ -2919,7 +2977,7 @@ position: relative;
 	color:#7f7f7f;
 	background-color:transparent;
 	border:1px solid #7f7f7f;
-}	
+}
 .checkbox label{
 	font-weight:400;
 }
@@ -2932,26 +2990,26 @@ position: relative;
 }
 .lp-form-row-right{
 	width:40%;
-}	
+}
 .featuresDataContainer{
 	position:relative;
-	min-height:120px;
+	min-height:100px;
 }
 .featuresData{
-	position:absolute;
+	/*position:absolute;
 	top:0;
-	left:0;
+	left:0;*/
 	width:100%;
-	opacity:0;
-	visibility:hidden;
-	display:none;
+	opacity:1;
+	visibility:visible;
+	display:block;
 }
 .featuresDataselected{
 	opacity:1;
 	visibility:visible;
 }
 .featuresDataRow{
-	display:none;
+	display:block;
 }
 .btn-file {
   position: relative;
@@ -2982,10 +3040,10 @@ position: relative;
 }
 	/*==================../3.18 Post Submit===============
 	======================================================*/
-	
+
 	/*=====================3.19 About US==================
 	======================================================*/
-	
+
 .about-box-inner{
 	padding-top: 40px;
 	padding-left: 23px;
@@ -3006,7 +3064,7 @@ position: relative;
 	margin:0 auto;
 	-webkit-transition: all 0.6s cubic-bezier(0.55, 0.09, 0.68, 0.53);
 	-moz-transition: all 0.6s cubic-bezier(0.55, 0.09, 0.68, 0.53);
-	-o-transition: all 0.6s cubic-bezier(0.55, 0.09, 0.68, 0.53);	
+	-o-transition: all 0.6s cubic-bezier(0.55, 0.09, 0.68, 0.53);
 	transition: all 0.6s cubic-bezier(0.55, 0.09, 0.68, 0.53);
 	  position:relative;
 }
@@ -3058,19 +3116,19 @@ position: relative;
 }
 	/*===================../3.19 About US=================
 	======================================================*/
-	
+
 	/*=====================3.20 Contact US================
 	======================================================*/
 .contact-left{
 	width:calc(100% - 650px);
 	float:left;
-}	
+}
 .contact-right{
 	width:650px;
 	float:right;
 	padding-left:30px;
 	padding-right:30px;
-	
+
 }
 .contactmap{
 	height:832px;
@@ -3094,7 +3152,7 @@ position: relative;
 #success span, #error span {
     display:block;
 }
-#success span p {    
+#success span p {
 	color: #fff;
 	background-color: #41a6df;
 	border-radius: 5px;
@@ -3105,13 +3163,13 @@ position: relative;
 	background-color: #c0392b;
 	border-radius: 5px;
 	padding: 10px 10px;
-}	
+}
 	/*==================../3.20 Contact US================
 	======================================================*/
-	
+
 	/*=======================3.21 Login===================
 	======================================================*/
-	
+
 .login-form-popup{
     width: 556px;
     margin: 0 auto;
@@ -3154,7 +3212,7 @@ position: relative;
 	opacity:0.9;
 }
 .social-login li button i{
-	
+
     position: absolute;
     left: 22px;
     top: 50%;
@@ -3210,7 +3268,7 @@ position: relative;
 	======================================================*/
 	/*========================3.22 404====================
 	======================================================*/
-	
+
 .pg-404-tit {
 	font-size: 200px;
 	padding: 0px;
@@ -3219,14 +3277,14 @@ position: relative;
 .pg-404-p {
     font-size: 28px;
 }
-	
+
 	/*====================../3.22 Loogin==================
 	======================================================*/
-	
+
 	/*=====================3.23 ToolTip===================
 	======================================================*/
 	/* SimpTip v1.0.4
-// A simple CSS tooltip made with Sass 
+// A simple CSS tooltip made with Sass
 // source: https://github.com/arashmanteghi/simptip/
 // ducoment: http://arashm.net/lab/simptip/
 // by @ArashManteghi - http://arashm.net */
@@ -3637,15 +3695,15 @@ position: relative;
 }
 .simptip-warning.simptip-position-bottom.half-arrow:before {
   border-right: 7px solid #e67e22;
-}	
+}
 	/*===================../3.23 ToolTip==================
 	======================================================*/
-	
+
 	/*=================3.24 Post List View================
-	======================================================*/	
+	======================================================*/
 .lp-list-view{
 	margin-bottom:30px;
-}	
+}
 .lp-list-view-thumb,
 .lp-list-view-content,
 .lp-list-view-paypal{
@@ -3667,34 +3725,34 @@ position: relative;
 .lp-list-sp-icon{
 	margin-right:3px;
 }
-.lp-list-view-paypal{ 
+.lp-list-view-paypal{
     background-color: #41a6df;
     border-bottom-right-radius: 8px;
     border-top-right-radius: 8px;
     height: 294px;
     position: relative;
-    width: 257px;	
+    width: 257px;
     text-align: center;
     padding-right: 30px;
     color: #fff;
 	float:right;
 }
 .lp-list-view-paypal h4,
-.lp-list-view-paypal p{ 
+.lp-list-view-paypal p{
     color: #fff;
 }
 p.lp-list-view-paypal-tit{
 	color:#fff;
     font-size: 22px !important;
     font-weight: bold;
-} 
+}
 .lp-list-view-edit {
     float: left;
     padding: 10px 21px;
 }
 .lp-list-view-edit li{
     float: left;
-}	
+}
 .lp-list-view-edit li a{
 	font-size:14px;
 	border-right:1px solid #dfdfdf;
@@ -3710,7 +3768,7 @@ p.lp-list-view-paypal-tit{
 .lp-list-view-edit li a:hover{
 	color:#41a6df;
 }
-.lp-list-view-paypal h4{   
+.lp-list-view-paypal h4{
 	margin-bottom: 4px;
 }
 .lp-list-view-paypal p,
@@ -3734,7 +3792,7 @@ p.lp-list-view-paypal-tit{
 .lp-list-pay-btn{
     margin-top: 17px;
     float: left;
-    text-align: center;    
+    text-align: center;
 	margin-left: 0px;
     position: relative;
     left: 50%;
@@ -3779,12 +3837,12 @@ p.lp-list-view-paypal-tit{
 
 /*=====================../3 Sections Css=======================
 ===============================================================*/
-		
+
 /*==========================4 Footer===========================
 ===============================================================*/
 
 footer{
-	background-color:#252525;	
+	background-color:#252525;
 }
 
 	/*================4.1 Footer Upper Bar================
@@ -3812,14 +3870,14 @@ footer{
     height: 5px;
     background-color: #fff;
     border-radius: 50%;
-	
+
 }
 .footer-menu li:first-child:before{
 	display:none;
 }
 	/*===============../4.1 Footer Upper Bar==============
 	======================================================*/
-	
+
 	/*=================4.2 Footer Bottom Bar==============
 	======================================================*/
 .footer-bottom-bar{
@@ -3846,7 +3904,7 @@ footer{
     height: 5px;
     background-color: #96a0a9;
     border-radius: 50%;
-	
+
 }
 .credit-links{
 	color:#96a0a9;
@@ -3875,9 +3933,19 @@ footer{
 .add-listing-mobile{
 	display:none;
 }
+
+/* my code to style the dropdown: JQUERY SELECTOR -> $('ul.ui-autocomplete.ui-front.ui-menu.ui-widget.ui-widget-content.ui-autocomplete-input') */
+
+ul.ui-autocomplete.ui-front.ui-menu.ui-widget.ui-widget-content.ui-autocomplete-input{
+	width: 254px !important;
+	max-height: 200px;
+	overflow-y: scroll;
+}
+
+
 	/*===============../4.2 Footer Bottom Bar=============
 	======================================================*/
-		
+
 /*========================../4 Footer===========================
 ===============================================================*/
 
@@ -3932,7 +4000,7 @@ footer{
 		margin-bottom:30px;
 	}
 	.mobile-nav-icon{
-		display:block;   
+		display:block;
 		float:left;
 	}
 	.lp-menu-container{
@@ -4049,13 +4117,13 @@ footer{
 	}
 	.lp-list-view-edit{
 		position: relative;
-		transform: translateX(-50%);  
+		transform: translateX(-50%);
 		left: 50%;
 	}
 	.lp-list-view-content{
 		text-align:center;
 	}
-	.list-pt-display li{    
+	.list-pt-display li{
 		float: left;
 		margin-right: 0;
 		margin-top: 15px;
@@ -4117,7 +4185,7 @@ footer{
 		line-height: 32px;
 		display:inline-block;
 		z-index:9999999;
-	}	
+	}
 	.add-listing-mobile:hover,
 	.add-listing-mobile:focus{
 		color:#fff;
@@ -4154,7 +4222,7 @@ footer{
 	.ui-autocomplete, .ui-widget select{
 		width:1px !important;
 	}
-	
+
 	.listing .ui-autocomplete, .ui-widget select {
 		width: 643px !important;
 	}
@@ -4350,7 +4418,7 @@ footer{
 		height:200px;
 	}.contact-left{
 		width:100%;
-	}	
+	}
 	.contact-right{
 		width:100%;
 		padding-left:15px;
@@ -4359,7 +4427,7 @@ footer{
 	.nameform{
 		margin-bottom:15px;
 	}
-	
+
 	.listing-sidebar-left {
 		padding-bottom: 30px;
 		width: 100%;
@@ -4433,10 +4501,10 @@ footer{
 	.comments-box-sub{
 		width:100%;
 	}
-	.comments-thumb{	
+	.comments-thumb{
 		text-align:center;
 	}
-	.list-pt-display li{    
+	.list-pt-display li{
 		float: none;
 		margin-right: 0;
 		margin-top: 15px;
@@ -4468,7 +4536,7 @@ footer{
 		-moz-transform:translateY(0px);
 		-o-transform:translateY(0px);
 		transform:translateY(0px);
-		
+
 	}
 	.city-girds .city-title .lp-h3{
 		-webkit-transform:translateY(0px);
@@ -4524,7 +4592,20 @@ footer{
 	.post-map-container .ui-autocomplete, .ui-widget select {
 		width: 253px !important;
 	}
-	
+
+	.search-div {
+	    float: left;
+	    margin-left: 2px;
+	    margin-right: 2px;
+	    width: 99%;
+	}
+
+	ul.ui-autocomplete.ui-front.ui-menu.ui-widget.ui-widget-content.ui-autocomplete-input{
+		width: 85.7% !important;
+	  max-height: 150px;
+	  overflow-y: scroll;
+	}
+
 }
 @media (max-width: 321px){
 	.listing .ui-autocomplete, .ui-widget select {
@@ -4536,5 +4617,5 @@ footer{
 	.post-map-container .ui-autocomplete, .ui-widget select {
 		width: 213px !important;
 	}
-	
+
 }
