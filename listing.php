@@ -1,3 +1,7 @@
+<?php
+require 'connect.php';
+require 'helper.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,16 +11,16 @@
 	<meta name="keywords" content="HTML5 Template" />
 	<meta name="description" content="Listingpro - Template HTML5">
 	<meta name="author" content="">
-	
+
 	<!-- Title -->
 	<title>Listingpro - Home</title>
-	
+
 	<!-- Mobile Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-	
+
 	<!-- CSS -->
 	<link href="lib/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" />
 	<link href="css/colors.css" type="text/css" rel="stylesheet" />
@@ -71,7 +75,7 @@
 				</div>
 			</div>
 		</div><!-- ../topbar -->
-		
+
 		<!-- Login Popup -->
 		<div class="md-modal md-effect-3" id="modal-3">
 			<div class="login-form-popup lp-border-radius-8">
@@ -92,11 +96,11 @@
 								<label for="check1">Keep me signed in</label>
 							</div>
 						</div>
-						
+
 						<div class="form-group">
-							<input type="submit" value="Sign in" class="lp-secondary-btn width-full btn-first-hover" /> 
+							<input type="submit" value="Sign in" class="lp-secondary-btn width-full btn-first-hover" />
 						</div>
-					</form>	
+					</form>
 					<div class="pop-form-bottom">
 						<div class="bottom-links">
 							<a  class="signUpClick">Not a member? Sign up</a>
@@ -126,9 +130,9 @@
 							<p>A password will be e-mailed to you.</p>
 						</div>
 						<div class="form-group">
-							<input type="submit" value="Register" class="lp-secondary-btn width-full btn-first-hover" /> 
+							<input type="submit" value="Register" class="lp-secondary-btn width-full btn-first-hover" />
 						</div>
-					</form>	
+					</form>
 					<div class="pop-form-bottom">
 						<div class="bottom-links">
 							<a class="signInClick" >Already have an account? Sign in</a>
@@ -151,9 +155,9 @@
 							<input type="email" class="form-control" id="email2" />
 						</div>
 						<div class="form-group">
-							<input type="submit" value="Get New Password" class="lp-secondary-btn width-full btn-first-hover" /> 
+							<input type="submit" value="Get New Password" class="lp-secondary-btn width-full btn-first-hover" />
 						</div>
-					</form>	
+					</form>
 					<div class="pop-form-bottom">
 						<div class="bottom-links">
 							<a class="cancelClick" >Cancel</a>
@@ -161,10 +165,10 @@
 					</div>
 				<a class="md-close"><i class="fa fa-close"></i></a>
 				</div>
-			</div>	
+			</div>
 		</div>
 		<!-- ../Login Popup -->
-		
+
 		<!-- Popup Open -->
 		<div class="md-modal md-effect-3" id="modal-2">
 			<div class="container">
@@ -300,39 +304,51 @@
 				<h1>Food</h1>
 				<ul class="breadcrumbs">
 					<li><a href="index.html">Home</a></li>
-					<li><span>Food</span></li>
+					<li><span>Classes</span></li>
 				</ul>
 			</div>
 			<div class="page-header-overlay"></div>
 		</div><!-- ../Home Search Container -->
 	</header>
 	<!--==================================Header Close=================================-->
-	
+
 	<!--==================================Section Open=================================-->
 	<section>
 		<div class="container page-container">
 			<div class="row">
 				<div class="col-md-12 search-row margin-top-subtract-35  margin-bottom-35">
-					<form class="form-inline clearfix">
-						<div class="form-group">
+					<form class="form-inline clearfix" method="post">
+						<!-- <div class="form-group">
 							<div class="input-group">
 								<div class="input-group-addon lp-border"><i class="fa fa-search"></i></div>
 									<input type="text" class="form-control lp-border input-width-299 border-right-radius" id="searchInput" placeholder="What is your Interest?">
 							</div>
-						</div>
+						</div> -->
 						<div class="form-group">
 							<div class="input-group">
 								<div class="input-group-addon lp-border"><i class="fa fa-crosshairs"></i></div>
 									<div class="ui-widget border-dropdown">
-									  <select class="comboboxs">
-										<option value="">Select one...</option>
-										<option value="All Locations">All Locations</option>
-										<option value="London">London</option>
-										<option value="Birmingham">Birmingham</option>
-										<option value="Bristol">Bristol</option>
-										<option value="Manchester">Manchester</option>
-										<option value="Newcastle">Newcastle</option>
-										<option value="Glasgow">Glasgow</option>
+									  <select class="comboboxs" data-name="location">
+										<option value="">Your Location</option>
+										<option value="All">All Locations</option>
+										<?php
+											try {
+
+												$conn = new PDO("mysql:host=".DB_SERVER.";dbname=".DB_NAME, DB_USER, DB_PASSWORD);
+												$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+												// Case - I : location based search
+
+												$stmt = $conn->prepare('SELECT loc FROM locations');
+												$stmt->execute();
+												if($stmt->rowCount()>0)
+												{
+													while($row = $stmt->fetch())
+													{
+															echo '<option value="'.$row['loc'].'">'.$row['loc'].'</option>';
+													}
+												}
+										?>
 									  </select>
 									</div>
 							</div>
@@ -340,34 +356,69 @@
 						<div class="form-group">
 							<div class="input-group">
 								<div class="input-group-addon lp-border"><i class="fa fa-list"></i></div>
-									<div class="ui-widget comboboxCategory border-dropdown">
-									  <select id="comboboxCategory">
-										<option value="">Select one...</option>
-										<option value="All Categories">All Categories</option>
-										<option value="Food">Food</option>
-										<option value="Beauty & Spas">Beauty & Spas</option>
-										<option value="Real Estate">Real Estate</option>
-										<option value="Automotive">Automotive</option>
-										<option value="Restaurents">Restaurents</option>
-										<option value="Cafe">Cafe</option>
+									<div class="ui-widget streambox border-dropdown">
+									  <select id="comboboxCategory" data-name="stream">
+										<option value="">Your Streams</option>
+										<option value="All">All Streams</option>
+										<?php
+												$stmt = $conn->prepare('SELECT ssname FROM substream');
+												$stmt->execute();
+												if($stmt->rowCount()>0)
+												{
+													while($row = $stmt->fetch())
+													{
+															echo '<option value="'.$row['ssname'].'">'.$row['ssname'].'</option>';
+													}
+												}
+										?>
 									  </select>
 									</div>
-							
+
 							</div>
 						</div>
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-addon lp-border"><i class="fa fa-tag"></i></div>
+									<div class="ui-widget subjectbox border-dropdown">
+									  <select class="comboboxs" data-name="subject">
+										<option value="">Your Subject</option>
+										<option value="All">All Subjects</option>
+										<?php
+													$stmt = $conn->prepare('SELECT sname FROM subject');
+													$stmt->execute();
+													if($stmt->rowCount()>0)
+													{
+														while($row = $stmt->fetch())
+														{
+															echo '<option value="'.$row['sname'].'">'.$row['sname'].'</option>';
+														}
+													}
+
+											}
+											catch(PDOException $e) {
+													echo 'ERROR: ' . $e->getMessage();
+											}
+										?>
+									  </select>
+									</div>
+							</div>
+						</div>
+
+						<!--  this one is the tags chosen, will look into this later
 						<div class="form-group margin-right-0">
 							<div class="input-group margin-right-0">
 								<div class="input-group-addon lp-border"><i class="fa fa-tag"></i></div>
-									<select data-placeholder="Tags" class="chosen-select tag-select-one" multiple >
-										
-										<option value="Food">Food</option>
-										<option value="Cafe">Cafe</option>
-										<option value="Fast Food">Fast Food</option>
-										<option value="Automotive">Automotive</option>
-										<option value="Restaurents">Restaurents</option>
+									<select data-placeholder="Select Subjects" class="chosen-select tag-select-one" multiple >
+									// php code to load subject options the one in above subject dropdown
 									</select>
 							</div>
+						</div> -->
+
+						<div class="lp-search-bar-right">
+							<input type="submit" value="Search" class="lp-search-btn" />
+							<i class="icons8-search lp-search-icon"></i>
 						</div>
+
 					</form>
 				</div>
 			</div>
@@ -376,427 +427,513 @@
 					<div class="LPtagsContainer "></div>
 				</div>
 			</div>
-			<div class="row listing-page-result-row margin-bottom-25">
-				<div class="col-md-4 col-sm-4 text-left">
-					<p>10 Results</p>
-				</div>
-				<div class="col-md-4 col-sm-4  text-center">
-					<p class="view-on-map">
-						<!-- Marker icon by Icons8 -->
-						<img class="icon icons8-Marker" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEoklEQVRoQ91Z4XEWNxDVqgGggjgVYCrAVICpIKYCnAIs7ckFYCoIVBC7gpgKMBXgVIDTwG3mfbNiNJc7aXXffZ4M+mN/c7qTnnb37dsVuZ9k0NY4QgiviejUOXfknHvqnDvWNe6ccw/OuXsRuU4p3Wy59iZAmPlIRKJzDgCwecsAqGsi+p2Z8f9eY28gIYRIROcZgIh89d5/dM7tLMDM+OuYGZbZWWgcxzMieq47fxCRq5TSsA+S1UCY+amI/JVdR0Q+ee+Zme8tG4IVx3FkIvotux4RvVprnVVAcLoKAmBggXNmvrUAmM5h5pNxHK/UQg8KZmfFntENRC3xDW4iIp+996drTzFvFN8cxxHx8hLuSES/9n6zC0jpTgCRUjrpObXW3BDCrYK5G4bhRWt++bwLSAgBPh3VnU56T621MbUMwDwXkSGlxK138nMzEKXYL3ApInqR2ci6kHUeYkbjr8vFzEBCCB/BMGCnlNKZdWNr5q1ZywwkxvhdrYFArFKsusg7zfA/Mjsyuvf+Q8sl1foglIdhGJ5ZDsMEhJlPReRPxEZKKW9s9vvMfCYi7ysZHi7zlpmvaxsMIdwhVojoTWsuvmMCkk2tcuJqaQMK4g88F5Eb7/1Vzi+aL86J6PVu4cYGC2L5kFKCcqgOK5AdLWqymk18ZX7RE4dM+c8owFaDOQe9leZNQGKMYKvjGlsVJ3iTUoJ4XBw5X9QoVtUD1jXlFCsQwa6GYVicX4CFXqrKlYJiq5uMMTbX7cojlg9a5pQmssy3zPnfA9GY+y4i/6SUmjWOybWyT9eCvaBLs2vV6PwgwV4AWeT0HOyo+oZheFML9hgj6hhIkUU9ldkNNN4ij548ksVibWFI8XsielKjX60oGS7jvT9ayvIFC5rEo8m1isxele55nlrjGgXT5eXlZ/y+uLh4iQoSljAmxJy7tsvsOfBaFIznADOOIwTmkzn3Ukuc1WRHuR4RPWtpM7NrYWKP9lHRCFlxmpsMCGzEj8qWatfE6gHlQZlcS4Ggrn73SDIeZS/6Y2gVLWq7VUDWSOuW0FvQYugFoGSAsGyWDF0JMU8u3AsyfFYUrtl8+U5Bu109AbNraSCj1oBMvx2G4dW+m557P8aIguqoRuFz7/UCKXPF5nV7kc3/Timhd2weXUAOHfSWjL+ErBtIEfRdwdg62sIa1Yy/GRC1yuYdlX2s0ZUQJ8yCawQEJazSVLuHtsZqIGqVnZDcgsEyU/V2F1clxOmpqgzJatck7BYS4DnaRyLSzVSbAJnkFQACHXfdPE06L6sPYy/XKrL9Tm6vcYuiNdqVxfdOiAuugUsftG0Q+OYkOaHb41YbtkUY3Xlk7oNFmWvqQalLATzYz1QBPgoQDXz0an+xbCyEkEuCZi+5BSA/38QiGvgmFyuac12u2AK0GZBJbpllsQlLmYumFohNWGu6SK5Z5tpChQzZm6Wm625qEXUx3J8jXtAW+nHqRXtnlShsWWVzIApmdzGUtRj+6r3gJtrsIHlk6aQKSs7ZHrX4JlT7qEA0+HfdELWIqfXZcqGl5wdxrbxYvjfHb+/95vfyJaiDAll7umve+xc6iKNgzDxqMAAAAABJRU5ErkJggg==" alt="map">
-						<a class="md-trigger mobilelink" data-modal="modal-4">View on map</a>
-					</p>
-				</div>
-				<div class="col-md-4 col-sm-4  text-right">
-					<p>Showing all Café Listings <a href="#" class="achor-color">Reset</a></p>
-				</div>
-			</div>
-			<div class="mobile-map-space">
-			
-					<!-- Popup Open -->
-	
-					<div class="md-modal md-effect-3 mobilemap" id="modal-4">
-						<div class="md-content mapbilemap-content">
-							<div id='map' class="listingmap"></div>
-							<a class="md-close mapbilemap-close"><i class="fa fa-close"></i></a>
-						</div>
-					</div>
-					<!-- Popup Close -->
-					<div class="md-overlay md-overlayi"></div> <!-- Overlay for Popup -->
-			</div>
+
 			<div class="row lp-list-page-grid">
 <?php
-define('DB_SERVER', 'localhost');
-define('DB_USER', 'root7262');
-define('DB_PASSWORD', 'Punk@7262');
-define('DB_NAME', 'shubham7262');
+
+// TODO : empty check should also be performed
 
 
-if (isset($_POST['term']) && isset($_POST['location'])){
-
-$term = $_POST['term'];
-
-$location = $_POST['location'];
-
-// preg_replace finds all special characters(except whitespace \s) and replaces them with ""(nothing) 
-
-$term = preg_replace("/[^a-zA-Z\s]/", "", $term);
-
-$location = preg_replace("/[^a-zA-Z\s]/", "", $location);
-
-
-//check whether location is all location or not
-
-$result = strcmp($location,"All Location");
-
-if($result == 0)
+if (isset($_POST['location']) && isset($_POST['stream']) && isset($_POST['subject']))
 {
-	$loc_search = false;
-}
-else
-{
-	$loc_search = true;
-}
+		// cleanStringLow finds all special characters(except whitespace \s) and replaces them with ""(nothing)
 
-	
-//$return_arr = array();
+		$location = cleanStringLow($_POST['location']);
 
-try {
-	    $conn = new PDO("mysql:host=".DB_SERVER.";dbname=".DB_NAME, DB_USER, DB_PASSWORD);
-	    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	
-	// Case - I : MainStream based search
+		$stream = cleanStringLow($_POST['stream']);
 
-	$stmt1 = $conn->prepare('SELECT ssname FROM substream WHERE msname LIKE :term');
-	$stmt1->execute(array('term' => '%'.$term.'%'));
+		$subject = cleanStringLow($_POST['subject']);
 
-	if($stmt1->rowCount()>0)
-	{
-		while($row1 = $stmt1->fetch())
-		{
-				$substream_name = $row1['ssname'];
-				//echo $substream_name.' ';
-
-				if($loc_search)
-				{
-					$stmt2 = $conn->prepare('SELECT a.cname,a.location,b.ssname FROM classes a, substream b, map_class_stream c where a.classid = c.class_id and b.ssid=c.stream_id and b.ssname LIKE :substream and a.location LIKE :loc');
-			    	$stmt2->execute(array('substream' => '%'.$substream_name.'%', 'loc' => '%'.$location.'%'));
-
-				}
-		    	else
-		    	{
-			    	$stmt2 = $conn->prepare('SELECT a.cname,a.location,b.ssname FROM classes a, substream b, map_class_stream c where a.classid = c.class_id and b.ssid=c.stream_id and b.ssname LIKE :substream');
-			    	$stmt2->execute(array('substream' => '%'.$substream_name.'%'));
-		    	}
-
-		    	while($row2 = $stmt2->fetch()) {
-				    //$return_arr[] =  array('Classes:' => $row2['cname'], 'Location:' => $row2['location'], 'Stream' => $row2['ssname']);
-
-		    	echo	'<div class="col-md-3 col-sm-6 lp-grid-box-contianer lp-grid-box-contianer1" data-title="The Dorchester grill" data-reviews="4" data-number="+007-123-4567-89" data-email="jhonruss@example.com" data-website="www.example.com" data-price="$200" data-pricetext="Text about your price" data-description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi archeum" data-userimage="images/user-thumb-94x94.png" data-username="Jhon Russel" data-userlisting="14" data-fb="www.facebook.com" data-gplus="www.plus.google.com" data-linkedin="www.linkedin.com" data-instagram="www.instagram.com" data-twitter="www.twitter.com" data-lattitue="40.6700" data-longitute="-73.9400"  data-id="11"  data-posturl="post-detail.html" data-authorurl="author.html">
-							<div class="lp-grid-box lp-border lp-border-radius-8">
-								<div class="lp-grid-box-thumb-container" >
-									<div class="lp-grid-box-thumb">
-										<img src="images/grid/grid-1.png" alt="grid-1" />
-									</div><!-- ../grid-box-thumb -->
-									<div class="lp-grid-box-quick">
-										<ul class="lp-post-quick-links">
-											<li>
-												<a class="icon-quick-eye md-trigger" data-modal="modal-2"><i class="fa fa-eye"></i></a>
-											</li>
-										</ul>
-									</div><!-- ../grid-box-quick-->
-								</div>
-								<div class="lp-grid-box-description ">
-									<h4 class="lp-h4">
-										<a href="post-detail.html">
-										'.$row2['cname'].'
-										</a>
-									</h4>
-									<p>
-										<i class="fa fa-map-marker"></i>
-										<span>Branch: '.$row2['location'].'</span>
-									</p>
-									<ul class="lp-grid-box-price">
-										<li class="category-cion"><a href="listing.html">
-										<!-- Food icon by Icons8 -->
-										<img class="icon icons8-Food" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADaklEQVRoQ+1aQVbbMBD9013YlJ6gUS9AOAHKCZoscRZNT0B6AuAENSdoukhYAiewOQHhAlU4QWEDu07fKLZxDI4jm5S2T14ltjTSn5k/kr5NemKuiNDBK1wMnMeB6ueHlvnI/3igdl3uU3dq+BUwZENGgaL8+Ol8XO9nQIodNw2u7oTLAHogTSPmI1LCKZ9aPrUSD3iOeI40JUNJf59aPrV8aq32wAqOzKRnFKilo0V3asru2937X7eyuyZA6hAPxNVzxfZlqeVq9zEikx9zEL1ngor31dzVUJ32+tS0iWHAfBMNPrTr2Ej75FMrBrDHhG68r+T3xi99ajQxIgCXUaB03QFzdq5JT01IwAEzjuOBOqpr1KWfnpgjIhwycBIHauTSd0mQmJqIAC1zFyA9As6aesdlMqlyw0A/DtS5S9+0rZ6YIRG+AXzHLWqTPjPb9MBzgN7+CZ5k/EgmEPfVrQuQ7tTsMTAioGdBEPWEElaKyYX6exyooYth17Z6asYEfHJNZZ2kUTYe8w2DevFA2YVyAcRWEZ4lUdkY6R/JaT3ZcamSaXVixgVE2Buocd6JmTimp0bC9ZWBOVrYdQ15VWQkhfGAKwLaDHyJAxVW9ck/r1p3iirfohQzZthC96XAWBD3iBJptlbJdQKyID4EzA4DMVroNwVTAHHNLeg6Np2AWL4sg5mD0U8J5ZIKSRHpgHAm6QSgNgix5QwkBYN7jInwUf4zY4w3OF6XnFI88AuHRLAV0BJ0C8M6kShuRco06iWOFD2+WHQ4lGqWTEhKnYC6KIJKJi/AZaFKzhJ8x0yjYoVxjWztiCxtAxZEHRF4KJvLBNBtPFDvltpNzE8ibNt7ixo/xhbCJlGoXbWqPKUnpkME+yKmTN5nxm5dTq0avxZH6hisGqjKSVXPq+yv5Mhzxl31qKoJrvvcAynzlI/IujlU0s6nlk+tgsjcMKOy7j61/uvUym1RrktE5p1/YouSCQfP6FGZPgZsRMB4MY7oiTkgQphIME+EgyUBgyFb95OXInqjbXxyUpRUkVOeCBNWo2XG57LzxaNoBlgRgxESYRYF6rIpKOeIlH6/JWcMolGVMmiVS+YwPbvkAYioUfwOa12AzkCSN0M7yQCX1rOLD8ScpE0BBEDkWInkXmLvSZFwAPLsG6u0/288R19KOGbU8gAAAABJRU5ErkJggg==" alt="restaurents"></a></li>
-										<li><span> Stream:'.$row2['ssname'].'</span></li>
-									</ul>
-								</div><!-- ../grid-box-description-->
-								<div class="lp-grid-box-bottom">
-									<div class="pull-left">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o"></i>
-										<span class="rating-ratio">4.0</span>
-									</div>
-									<div class="pull-right">
-										<a href="#" class="lp-add-to-fav simptip-position-top simptip-movable" data-tooltip="Add to favorites">
-										<i></i>
-										</a>
-									</div>
-									<div class="clearfix"></div>
-								</div><!-- ../grid-box-bottom-->
-							</div><!-- ../grid-box -->
-						</div>';
-
-
-				}
-
-
+		$all = 'all';
+		if( strpos( $location, $all ) !== false ) {
+			$location = "";
 		}
 
-		    /* Toss back results as json encoded array. */
-    		//echo json_encode($return_arr);
-	}
-	else
-	{
-		//echo 'no result found in case I<br/>';
+		if( strpos( $stream, $all ) !== false ) {
+			$stream = "";
+		}
 
-		// Case 2: Substream based search
+		if( strpos( $subject, $all ) !== false ) {
+			$subject = "";
+		}
 
-			if($loc_search)
-			{
-				$stmt1 = $conn->prepare('SELECT a.cname,a.location,b.ssname FROM classes a, substream b, map_class_stream c where a.classid = c.class_id and b.ssid=c.stream_id and b.ssname LIKE :term and a.location LIKE :loc');
-			    $stmt1->execute(array('term' => '%'.$term.'%', 'loc' => '%'.$location.'%'));
-			}
-			else 
-			{
-				$stmt1 = $conn->prepare('SELECT a.cname,a.location,b.ssname FROM classes a, substream b, map_class_stream c where a.classid = c.class_id and b.ssid=c.stream_id and b.ssname LIKE :term');
-		    	$stmt1->execute(array('term' => '%'.$term.'%'));
-		    }
+		// let start developing for most simple case first which is
+
+		// case I : user passes value to all three dropdowns
+
+		// so check whether values are all or null will be done later
+
+		// assuming user gives valid values to all the fields,
+
+		// simply pull the data by joining the three tables
+
+		try {
+
+			    $conn = new PDO("mysql:host=".DB_SERVER.";dbname=".DB_NAME, DB_USER, DB_PASSWORD);
+
+			    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+			    $stmt = $conn->prepare('SELECT a.cname,a.location,b.ssname,c.sname FROM classes a, substream b, subject c, map_class_stream d, map_class_subject e WHERE a.classid = d.class_id AND b.ssid=d.stream_id AND a.classid = e.class_id AND c.subjectid = e.subject_id AND c.fstream = b.ssname AND a.location LIKE :location AND b.ssname LIKE :stream AND c.sname LIKE :subject');
+
+			    $stmt->execute(array('location' => '%'.$location.'%', 'stream' => '%'.$stream.'%', 'subject' => '%'.$subject.'%'));
+
+			    //var_dump($stmt);
+
+				if($stmt->rowCount()>0)
+				{
+
+					echo '<div class="row listing-page-result-row margin-bottom-25">
+						<div class="col-md-4 col-sm-4 text-left">
+							<p>'.$stmt->rowCount().' Results</p>
+						</div>
+						<div class="col-md-4 col-sm-4  text-center">
+							<p class="view-on-map">
+								<!-- Marker icon by Icons8 -->
+								<img class="icon icons8-Marker" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEoklEQVRoQ91Z4XEWNxDVqgGggjgVYCrAVICpIKYCnAIs7ckFYCoIVBC7gpgKMBXgVIDTwG3mfbNiNJc7aXXffZ4M+mN/c7qTnnb37dsVuZ9k0NY4QgiviejUOXfknHvqnDvWNe6ccw/OuXsRuU4p3Wy59iZAmPlIRKJzDgCwecsAqGsi+p2Z8f9eY28gIYRIROcZgIh89d5/dM7tLMDM+OuYGZbZWWgcxzMieq47fxCRq5TSsA+S1UCY+amI/JVdR0Q+ee+Zme8tG4IVx3FkIvotux4RvVprnVVAcLoKAmBggXNmvrUAmM5h5pNxHK/UQg8KZmfFntENRC3xDW4iIp+996drTzFvFN8cxxHx8hLuSES/9n6zC0jpTgCRUjrpObXW3BDCrYK5G4bhRWt++bwLSAgBPh3VnU56T621MbUMwDwXkSGlxK138nMzEKXYL3ApInqR2ci6kHUeYkbjr8vFzEBCCB/BMGCnlNKZdWNr5q1ZywwkxvhdrYFArFKsusg7zfA/Mjsyuvf+Q8sl1foglIdhGJ5ZDsMEhJlPReRPxEZKKW9s9vvMfCYi7ysZHi7zlpmvaxsMIdwhVojoTWsuvmMCkk2tcuJqaQMK4g88F5Eb7/1Vzi+aL86J6PVu4cYGC2L5kFKCcqgOK5AdLWqymk18ZX7RE4dM+c8owFaDOQe9leZNQGKMYKvjGlsVJ3iTUoJ4XBw5X9QoVtUD1jXlFCsQwa6GYVicX4CFXqrKlYJiq5uMMTbX7cojlg9a5pQmssy3zPnfA9GY+y4i/6SUmjWOybWyT9eCvaBLs2vV6PwgwV4AWeT0HOyo+oZheFML9hgj6hhIkUU9ldkNNN4ij548ksVibWFI8XsielKjX60oGS7jvT9ayvIFC5rEo8m1isxele55nlrjGgXT5eXlZ/y+uLh4iQoSljAmxJy7tsvsOfBaFIznADOOIwTmkzn3Ukuc1WRHuR4RPWtpM7NrYWKP9lHRCFlxmpsMCGzEj8qWatfE6gHlQZlcS4Ggrn73SDIeZS/6Y2gVLWq7VUDWSOuW0FvQYugFoGSAsGyWDF0JMU8u3AsyfFYUrtl8+U5Bu109AbNraSCj1oBMvx2G4dW+m557P8aIguqoRuFz7/UCKXPF5nV7kc3/Timhd2weXUAOHfSWjL+ErBtIEfRdwdg62sIa1Yy/GRC1yuYdlX2s0ZUQJ8yCawQEJazSVLuHtsZqIGqVnZDcgsEyU/V2F1clxOmpqgzJatck7BYS4DnaRyLSzVSbAJnkFQACHXfdPE06L6sPYy/XKrL9Tm6vcYuiNdqVxfdOiAuugUsftG0Q+OYkOaHb41YbtkUY3Xlk7oNFmWvqQalLATzYz1QBPgoQDXz0an+xbCyEkEuCZi+5BSA/38QiGvgmFyuac12u2AK0GZBJbpllsQlLmYumFohNWGu6SK5Z5tpChQzZm6Wm625qEXUx3J8jXtAW+nHqRXtnlShsWWVzIApmdzGUtRj+6r3gJtrsIHlk6aQKSs7ZHrX4JlT7qEA0+HfdELWIqfXZcqGl5wdxrbxYvjfHb+/95vfyJaiDAll7umve+xc6iKNgzDxqMAAAAABJRU5ErkJggg==" alt="map">
+								<a class="md-trigger mobilelink" data-modal="modal-4">View on map</a>
+							</p>
+						</div>
+						<div class="col-md-4 col-sm-4  text-right">
+							<p>Showing all Café Listings <a href="#" class="achor-color">Reset</a></p>
+						</div>
+					</div>
+					<div class="mobile-map-space">
+
+							<!-- Popup Open -->
+
+							<div class="md-modal md-effect-3 mobilemap" id="modal-4">
+								<div class="md-content mapbilemap-content">
+									<div id="map" class="listingmap"></div>
+									<a class="md-close mapbilemap-close"><i class="fa fa-close"></i></a>
+								</div>
+							</div>
+							<!-- Popup Close -->
+							<div class="md-overlay md-overlayi"></div> <!-- Overlay for Popup -->
+					</div>';
+
+
+
+					while($row = $stmt->fetch())
+					{
+
+					    	echo	'<div class="col-md-3 col-sm-6 lp-grid-box-contianer lp-grid-box-contianer1" data-title="The Dorchester grill" data-reviews="4" data-number="+007-123-4567-89" data-email="jhonruss@example.com" data-website="www.example.com" data-price="$200" data-pricetext="Text about your price" data-description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi archeum" data-userimage="images/user-thumb-94x94.png" data-username="Jhon Russel" data-userlisting="14" data-fb="www.facebook.com" data-gplus="www.plus.google.com" data-linkedin="www.linkedin.com" data-instagram="www.instagram.com" data-twitter="www.twitter.com" data-lattitue="40.6700" data-longitute="-73.9400"  data-id="11"  data-posturl="post-detail.html" data-authorurl="author.html">
+										<div class="lp-grid-box lp-border lp-border-radius-8">
+											<div class="lp-grid-box-thumb-container" >
+												<div class="lp-grid-box-thumb">
+													<img src="images/grid/grid-1.png" alt="grid-1" />
+												</div><!-- ../grid-box-thumb -->
+												<div class="lp-grid-box-quick">
+													<ul class="lp-post-quick-links">
+														<li>
+															<a class="icon-quick-eye md-trigger" data-modal="modal-2"><i class="fa fa-eye"></i></a>
+														</li>
+													</ul>
+												</div><!-- ../grid-box-quick-->
+											</div>
+											<div class="lp-grid-box-description ">
+												<h4 class="lp-h4">
+													<a href="post-detail.html">
+													'.$row['cname'].'
+													</a>
+												</h4>
+												<p>
+													<i class="fa fa-map-marker"></i>
+													<span>Branch: <b>'.$row['location'].'</b></span>
+												</p>
+												<ul class="lp-grid-box-price">
+													<i class="fa fa-graduation-cap"></i>
+													<li><span> Stream: <b>'.$row['sname'].'</b></span></li>
+													<li><span> Stream: <b>'.$row['ssname'].'</b></span></li>
+												</ul>
+											</div><!-- ../grid-box-description-->
+											<div class="lp-grid-box-bottom">
+												<div class="pull-left">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-o"></i>
+													<span class="rating-ratio">4.0</span>
+												</div>
+												<div class="pull-right">
+													<a href="#" class="lp-add-to-fav simptip-position-top simptip-movable" data-tooltip="Add to favorites">
+													<i></i>
+													</a>
+												</div>
+												<div class="clearfix"></div>
+											</div><!-- ../grid-box-bottom-->
+										</div><!-- ../grid-box -->
+									</div>';
+
+
+					}
+
+					    // Toss back results as json encoded array.
+			    		//echo json_encode($return_arr);
+				}
+				else
+				{
+					echo '<h1>No Class Found</h1>';
+				}
+
+		}
+		catch(PDOException $e) {
+			    echo 'ERROR: ' . $e->getMessage();
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+		// thinking of making a function to handle db calls - will do that later
+
+
+
+		//check whether location is all location or not
+
+/*
+
+		$result = strcmp($location,"all");
+
+		if($result == 0)
+		{
+			$loc_search = false;
+		}
+		else
+		{
+			$loc_search = true;
+		}
+
+
+		//$return_arr = array();
+
+		try {
+			    $conn = new PDO("mysql:host=".DB_SERVER.";dbname=".DB_NAME, DB_USER, DB_PASSWORD);
+			    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+				// Case - I : MainStream based search
+
+				$stmt1 = $conn->prepare('SELECT ssname FROM substream WHERE msname LIKE :term');
+				$stmt1->execute(array('term' => '%'.$term.'%'));
 
 				if($stmt1->rowCount()>0)
 				{
 					while($row1 = $stmt1->fetch())
 					{
-					        //$return_arr[] =  array('Classes:' => $row1['cname'], 'Location:' => $row1['location'], 'stream' => $row1['ssname']);
-					
-		    	echo	'<div class="col-md-3 col-sm-6 lp-grid-box-contianer lp-grid-box-contianer1" data-title="The Dorchester grill" data-reviews="4" data-number="+007-123-4567-89" data-email="jhonruss@example.com" data-website="www.example.com" data-price="$200" data-pricetext="Text about your price" data-description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi archeum" data-userimage="images/user-thumb-94x94.png" data-username="Jhon Russel" data-userlisting="14" data-fb="www.facebook.com" data-gplus="www.plus.google.com" data-linkedin="www.linkedin.com" data-instagram="www.instagram.com" data-twitter="www.twitter.com" data-lattitue="40.6700" data-longitute="-73.9400"  data-id="11"  data-posturl="post-detail.html" data-authorurl="author.html">
-							<div class="lp-grid-box lp-border lp-border-radius-8">
-								<div class="lp-grid-box-thumb-container" >
-									<div class="lp-grid-box-thumb">
-										<img src="images/grid/grid-1.png" alt="grid-1" />
-									</div><!-- ../grid-box-thumb -->
-									<div class="lp-grid-box-quick">
-										<ul class="lp-post-quick-links">
-											<li>
-												<a class="icon-quick-eye md-trigger" data-modal="modal-2"><i class="fa fa-eye"></i></a>
-											</li>
-										</ul>
-									</div><!-- ../grid-box-quick-->
-								</div>
-								<div class="lp-grid-box-description ">
-									<h4 class="lp-h4">
-										<a href="post-detail.html">
-										'.$row1['cname'].'
-										</a>
-									</h4>
-									<p>
-										<i class="fa fa-map-marker"></i>
-										<span>Branch: '.$row1['location'].'</span>
-									</p>
-									<ul class="lp-grid-box-price">
-										<li class="category-cion"><a href="listing.html">
-										<!-- Food icon by Icons8 -->
-										<img class="icon icons8-Food" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADaklEQVRoQ+1aQVbbMBD9013YlJ6gUS9AOAHKCZoscRZNT0B6AuAENSdoukhYAiewOQHhAlU4QWEDu07fKLZxDI4jm5S2T14ltjTSn5k/kr5NemKuiNDBK1wMnMeB6ueHlvnI/3igdl3uU3dq+BUwZENGgaL8+Ol8XO9nQIodNw2u7oTLAHogTSPmI1LCKZ9aPrUSD3iOeI40JUNJf59aPrV8aq32wAqOzKRnFKilo0V3asru2937X7eyuyZA6hAPxNVzxfZlqeVq9zEikx9zEL1ngor31dzVUJ32+tS0iWHAfBMNPrTr2Ej75FMrBrDHhG68r+T3xi99ajQxIgCXUaB03QFzdq5JT01IwAEzjuOBOqpr1KWfnpgjIhwycBIHauTSd0mQmJqIAC1zFyA9As6aesdlMqlyw0A/DtS5S9+0rZ6YIRG+AXzHLWqTPjPb9MBzgN7+CZ5k/EgmEPfVrQuQ7tTsMTAioGdBEPWEElaKyYX6exyooYth17Z6asYEfHJNZZ2kUTYe8w2DevFA2YVyAcRWEZ4lUdkY6R/JaT3ZcamSaXVixgVE2Buocd6JmTimp0bC9ZWBOVrYdQ15VWQkhfGAKwLaDHyJAxVW9ck/r1p3iirfohQzZthC96XAWBD3iBJptlbJdQKyID4EzA4DMVroNwVTAHHNLeg6Np2AWL4sg5mD0U8J5ZIKSRHpgHAm6QSgNgix5QwkBYN7jInwUf4zY4w3OF6XnFI88AuHRLAV0BJ0C8M6kShuRco06iWOFD2+WHQ4lGqWTEhKnYC6KIJKJi/AZaFKzhJ8x0yjYoVxjWztiCxtAxZEHRF4KJvLBNBtPFDvltpNzE8ibNt7ixo/xhbCJlGoXbWqPKUnpkME+yKmTN5nxm5dTq0avxZH6hisGqjKSVXPq+yv5Mhzxl31qKoJrvvcAynzlI/IujlU0s6nlk+tgsjcMKOy7j61/uvUym1RrktE5p1/YouSCQfP6FGZPgZsRMB4MY7oiTkgQphIME+EgyUBgyFb95OXInqjbXxyUpRUkVOeCBNWo2XG57LzxaNoBlgRgxESYRYF6rIpKOeIlH6/JWcMolGVMmiVS+YwPbvkAYioUfwOa12AzkCSN0M7yQCX1rOLD8ScpE0BBEDkWInkXmLvSZFwAPLsG6u0/288R19KOGbU8gAAAABJRU5ErkJggg==" alt="restaurents"></a></li>
-										<li><span> Stream:'.$row1['ssname'].'</span></li>
-									</ul>
-								</div><!-- ../grid-box-description-->
-								<div class="lp-grid-box-bottom">
-									<div class="pull-left">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o"></i>
-										<span class="rating-ratio">4.0</span>
-									</div>
-									<div class="pull-right">
-										<a href="#" class="lp-add-to-fav simptip-position-top simptip-movable" data-tooltip="Add to favorites">
-										<i></i>
-										</a>
-									</div>
-									<div class="clearfix"></div>
-								</div><!-- ../grid-box-bottom-->
-							</div><!-- ../grid-box -->
-						</div>';
+							$substream_name = $row1['ssname'];
+							//echo $substream_name.' ';
 
-
-
-
-
-
-
-
-
-
-
-
-					}
-
-					    /* Toss back results as json encoded array. */
-			    		//echo json_encode($return_arr);
-				}
-				else
-				{
-					//echo '<br/>no result found in case II<br/>';
-					//Case 3: Class Based Search
-
-				if($loc_search)
-				{
-					$stmt1 = $conn->prepare('SELECT cname, location FROM classes where cname LIKE :term and location LIKE :loc');
-			    	$stmt1->execute(array('term' => '%'.$term.'%', 'loc' => '%'.$location.'%'));
-			    }
-			    else
-			    {
-			    	$stmt1 = $conn->prepare('SELECT cname, location FROM classes where cname LIKE :term');
-			    	$stmt1->execute(array('term' => '%'.$term.'%'));
-			    }
-
-					if($stmt1->rowCount()>0)
-					{
-						while($row1 = $stmt1->fetch())
-						{
-						        //$return_arr[] =  array('Classes:' => $row1['cname'], 'Location:' => $row1['location']);
-			echo	'<div class="col-md-3 col-sm-6 lp-grid-box-contianer lp-grid-box-contianer1" data-title="The Dorchester grill" data-reviews="4" data-number="+007-123-4567-89" data-email="jhonruss@example.com" data-website="www.example.com" data-price="$200" data-pricetext="Text about your price" data-description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi archeum" data-userimage="images/user-thumb-94x94.png" data-username="Jhon Russel" data-userlisting="14" data-fb="www.facebook.com" data-gplus="www.plus.google.com" data-linkedin="www.linkedin.com" data-instagram="www.instagram.com" data-twitter="www.twitter.com" data-lattitue="40.6700" data-longitute="-73.9400"  data-id="11"  data-posturl="post-detail.html" data-authorurl="author.html">
-							<div class="lp-grid-box lp-border lp-border-radius-8">
-								<div class="lp-grid-box-thumb-container" >
-									<div class="lp-grid-box-thumb">
-										<img src="images/grid/grid-1.png" alt="grid-1" />
-									</div><!-- ../grid-box-thumb -->
-									<div class="lp-grid-box-quick">
-										<ul class="lp-post-quick-links">
-											<li>
-												<a class="icon-quick-eye md-trigger" data-modal="modal-2"><i class="fa fa-eye"></i></a>
-											</li>
-										</ul>
-									</div><!-- ../grid-box-quick-->
-								</div>
-								<div class="lp-grid-box-description ">
-									<h4 class="lp-h4">
-										<a href="post-detail.html">
-										'.$row1['cname'].'
-										</a>
-									</h4>
-									<p>
-										<i class="fa fa-map-marker"></i>
-										<span>Branch: '.$row1['location'].'</span>
-									</p>
-									<ul class="lp-grid-box-price">
-										<li class="category-cion"><a href="listing.html">
-										<!-- Food icon by Icons8 -->
-										<img class="icon icons8-Food" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADaklEQVRoQ+1aQVbbMBD9013YlJ6gUS9AOAHKCZoscRZNT0B6AuAENSdoukhYAiewOQHhAlU4QWEDu07fKLZxDI4jm5S2T14ltjTSn5k/kr5NemKuiNDBK1wMnMeB6ueHlvnI/3igdl3uU3dq+BUwZENGgaL8+Ol8XO9nQIodNw2u7oTLAHogTSPmI1LCKZ9aPrUSD3iOeI40JUNJf59aPrV8aq32wAqOzKRnFKilo0V3asru2937X7eyuyZA6hAPxNVzxfZlqeVq9zEikx9zEL1ngor31dzVUJ32+tS0iWHAfBMNPrTr2Ej75FMrBrDHhG68r+T3xi99ajQxIgCXUaB03QFzdq5JT01IwAEzjuOBOqpr1KWfnpgjIhwycBIHauTSd0mQmJqIAC1zFyA9As6aesdlMqlyw0A/DtS5S9+0rZ6YIRG+AXzHLWqTPjPb9MBzgN7+CZ5k/EgmEPfVrQuQ7tTsMTAioGdBEPWEElaKyYX6exyooYth17Z6asYEfHJNZZ2kUTYe8w2DevFA2YVyAcRWEZ4lUdkY6R/JaT3ZcamSaXVixgVE2Buocd6JmTimp0bC9ZWBOVrYdQ15VWQkhfGAKwLaDHyJAxVW9ck/r1p3iirfohQzZthC96XAWBD3iBJptlbJdQKyID4EzA4DMVroNwVTAHHNLeg6Np2AWL4sg5mD0U8J5ZIKSRHpgHAm6QSgNgix5QwkBYN7jInwUf4zY4w3OF6XnFI88AuHRLAV0BJ0C8M6kShuRco06iWOFD2+WHQ4lGqWTEhKnYC6KIJKJi/AZaFKzhJ8x0yjYoVxjWztiCxtAxZEHRF4KJvLBNBtPFDvltpNzE8ibNt7ixo/xhbCJlGoXbWqPKUnpkME+yKmTN5nxm5dTq0avxZH6hisGqjKSVXPq+yv5Mhzxl31qKoJrvvcAynzlI/IujlU0s6nlk+tgsjcMKOy7j61/uvUym1RrktE5p1/YouSCQfP6FGZPgZsRMB4MY7oiTkgQphIME+EgyUBgyFb95OXInqjbXxyUpRUkVOeCBNWo2XG57LzxaNoBlgRgxESYRYF6rIpKOeIlH6/JWcMolGVMmiVS+YwPbvkAYioUfwOa12AzkCSN0M7yQCX1rOLD8ScpE0BBEDkWInkXmLvSZFwAPLsG6u0/288R19KOGbU8gAAAABJRU5ErkJggg==" alt="restaurents"></a></li>
-										<li><span></span></li>
-									</ul>
-								</div><!-- ../grid-box-description-->
-								<div class="lp-grid-box-bottom">
-									<div class="pull-left">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o"></i>
-										<span class="rating-ratio">4.0</span>
-									</div>
-									<div class="pull-right">
-										<a href="#" class="lp-add-to-fav simptip-position-top simptip-movable" data-tooltip="Add to favorites">
-										<i></i>
-										</a>
-									</div>
-									<div class="clearfix"></div>
-								</div><!-- ../grid-box-bottom-->
-							</div><!-- ../grid-box -->
-						</div>';
-
-						}
-
-						    /* Toss back results as json encoded array. */
-				    		//echo json_encode($return_arr);
-					}
-					else 
-					{
-						//echo '<br/>no result found in case III<br/>';
-						//Case 3: subject Based Search
-						// if fstream is also required then query
-						// SELECT a.cname,a.location,b.sname,b.fstream FROM classes a, subject b, map_class_subject c where a.classid = c.class_id and b.subjectid=c.subject_id and b.sname LIKE :term
-
-					if($loc_search)
-					{
-						$stmt1 = $conn->prepare('SELECT a.cname,a.location,b.sname FROM classes a, subject b, map_class_subject c where a.classid = c.class_id and b.subjectid=c.subject_id and b.sname LIKE :term and a.location LIKE :loc');
-				    	$stmt1->execute(array('term' => '%'.$term.'%', 'loc' => '%'.$location.'%'));
-					}
-					else
-					{
-						$stmt1 = $conn->prepare('SELECT a.cname,a.location,b.sname FROM classes a, subject b, map_class_subject c where a.classid = c.class_id and b.subjectid=c.subject_id and b.sname LIKE :term');
-				    	$stmt1->execute(array(':term' => '%'.$_GET['term'].'%'));
-				    }
-					if($stmt1->rowCount()>0)
-					{
-							while($row1 = $stmt1->fetch())
+							if($loc_search)
 							{
-							        //$return_arr[] =  array('Classes:' => $row1['cname'],'Subject:' => $row1['sname'], 'Location:' => $row1['location']);
-							
-				echo	'<div class="col-md-3 col-sm-6 lp-grid-box-contianer lp-grid-box-contianer1" data-title="The Dorchester grill" data-reviews="4" data-number="+007-123-4567-89" data-email="jhonruss@example.com" data-website="www.example.com" data-price="$200" data-pricetext="Text about your price" data-description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi archeum" data-userimage="images/user-thumb-94x94.png" data-username="Jhon Russel" data-userlisting="14" data-fb="www.facebook.com" data-gplus="www.plus.google.com" data-linkedin="www.linkedin.com" data-instagram="www.instagram.com" data-twitter="www.twitter.com" data-lattitue="40.6700" data-longitute="-73.9400"  data-id="11"  data-posturl="post-detail.html" data-authorurl="author.html">
-							<div class="lp-grid-box lp-border lp-border-radius-8">
-								<div class="lp-grid-box-thumb-container" >
-									<div class="lp-grid-box-thumb">
-										<img src="images/grid/grid-1.png" alt="grid-1" />
-									</div><!-- ../grid-box-thumb -->
-									<div class="lp-grid-box-quick">
-										<ul class="lp-post-quick-links">
-											<li>
-												<a class="icon-quick-eye md-trigger" data-modal="modal-2"><i class="fa fa-eye"></i></a>
-											</li>
-										</ul>
-									</div><!-- ../grid-box-quick-->
-								</div>
-								<div class="lp-grid-box-description ">
-									<h4 class="lp-h4">
-										<a href="post-detail.html">
-										'.$row1['cname'].'
-										</a>
-									</h4>
-									<p>
-										<i class="fa fa-map-marker"></i>
-										<span>Branch: '.$row1['location'].'</span>
-									</p>
-									<ul class="lp-grid-box-price">
-										<li class="category-cion"><a href="listing.html">
-										<!-- Food icon by Icons8 -->
-										<img class="icon icons8-Food" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADaklEQVRoQ+1aQVbbMBD9013YlJ6gUS9AOAHKCZoscRZNT0B6AuAENSdoukhYAiewOQHhAlU4QWEDu07fKLZxDI4jm5S2T14ltjTSn5k/kr5NemKuiNDBK1wMnMeB6ueHlvnI/3igdl3uU3dq+BUwZENGgaL8+Ol8XO9nQIodNw2u7oTLAHogTSPmI1LCKZ9aPrUSD3iOeI40JUNJf59aPrV8aq32wAqOzKRnFKilo0V3asru2937X7eyuyZA6hAPxNVzxfZlqeVq9zEikx9zEL1ngor31dzVUJ32+tS0iWHAfBMNPrTr2Ej75FMrBrDHhG68r+T3xi99ajQxIgCXUaB03QFzdq5JT01IwAEzjuOBOqpr1KWfnpgjIhwycBIHauTSd0mQmJqIAC1zFyA9As6aesdlMqlyw0A/DtS5S9+0rZ6YIRG+AXzHLWqTPjPb9MBzgN7+CZ5k/EgmEPfVrQuQ7tTsMTAioGdBEPWEElaKyYX6exyooYth17Z6asYEfHJNZZ2kUTYe8w2DevFA2YVyAcRWEZ4lUdkY6R/JaT3ZcamSaXVixgVE2Buocd6JmTimp0bC9ZWBOVrYdQ15VWQkhfGAKwLaDHyJAxVW9ck/r1p3iirfohQzZthC96XAWBD3iBJptlbJdQKyID4EzA4DMVroNwVTAHHNLeg6Np2AWL4sg5mD0U8J5ZIKSRHpgHAm6QSgNgix5QwkBYN7jInwUf4zY4w3OF6XnFI88AuHRLAV0BJ0C8M6kShuRco06iWOFD2+WHQ4lGqWTEhKnYC6KIJKJi/AZaFKzhJ8x0yjYoVxjWztiCxtAxZEHRF4KJvLBNBtPFDvltpNzE8ibNt7ixo/xhbCJlGoXbWqPKUnpkME+yKmTN5nxm5dTq0avxZH6hisGqjKSVXPq+yv5Mhzxl31qKoJrvvcAynzlI/IujlU0s6nlk+tgsjcMKOy7j61/uvUym1RrktE5p1/YouSCQfP6FGZPgZsRMB4MY7oiTkgQphIME+EgyUBgyFb95OXInqjbXxyUpRUkVOeCBNWo2XG57LzxaNoBlgRgxESYRYF6rIpKOeIlH6/JWcMolGVMmiVS+YwPbvkAYioUfwOa12AzkCSN0M7yQCX1rOLD8ScpE0BBEDkWInkXmLvSZFwAPLsG6u0/288R19KOGbU8gAAAABJRU5ErkJggg==" alt="restaurents"></a></li>
-										<li><span> Subject:'.$row1['sname'].'</span></li>
-									</ul>
-								</div><!-- ../grid-box-description-->
-								<div class="lp-grid-box-bottom">
-									<div class="pull-left">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o"></i>
-										<span class="rating-ratio">4.0</span>
-									</div>
-									<div class="pull-right">
-										<a href="#" class="lp-add-to-fav simptip-position-top simptip-movable" data-tooltip="Add to favorites">
-										<i></i>
-										</a>
-									</div>
-									<div class="clearfix"></div>
-								</div><!-- ../grid-box-bottom-->
-							</div><!-- ../grid-box -->
-						</div>';
+								$stmt2 = $conn->prepare('SELECT a.cname,a.location,b.ssname FROM classes a, substream b, map_class_stream c where a.classid = c.class_id and b.ssid=c.stream_id and b.ssname LIKE :substream and a.location LIKE :loc');
+						    	$stmt2->execute(array('substream' => '%'.$substream_name.'%', 'loc' => '%'.$location.'%'));
 
+							}
+					    	else
+					    	{
+						    	$stmt2 = $conn->prepare('SELECT a.cname,a.location,b.ssname FROM classes a, substream b, map_class_stream c where a.classid = c.class_id and b.ssid=c.stream_id and b.ssname LIKE :substream');
+						    	$stmt2->execute(array('substream' => '%'.$substream_name.'%'));
+					    	}
 
+					    	while($row2 = $stmt2->fetch()) {
+							    //$return_arr[] =  array('Classes:' => $row2['cname'], 'Location:' => $row2['location'], 'Stream' => $row2['ssname']);
 
-
-
-
-
-
-
-
-
-
-
-
-
+					    	echo	'<div class="col-md-3 col-sm-6 lp-grid-box-contianer lp-grid-box-contianer1" data-title="The Dorchester grill" data-reviews="4" data-number="+007-123-4567-89" data-email="jhonruss@example.com" data-website="www.example.com" data-price="$200" data-pricetext="Text about your price" data-description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi archeum" data-userimage="images/user-thumb-94x94.png" data-username="Jhon Russel" data-userlisting="14" data-fb="www.facebook.com" data-gplus="www.plus.google.com" data-linkedin="www.linkedin.com" data-instagram="www.instagram.com" data-twitter="www.twitter.com" data-lattitue="40.6700" data-longitute="-73.9400"  data-id="11"  data-posturl="post-detail.html" data-authorurl="author.html">
+										<div class="lp-grid-box lp-border lp-border-radius-8">
+											<div class="lp-grid-box-thumb-container" >
+												<div class="lp-grid-box-thumb">
+													<img src="images/grid/grid-1.png" alt="grid-1" />
+												</div><!-- ../grid-box-thumb -->
+												<div class="lp-grid-box-quick">
+													<ul class="lp-post-quick-links">
+														<li>
+															<a class="icon-quick-eye md-trigger" data-modal="modal-2"><i class="fa fa-eye"></i></a>
+														</li>
+													</ul>
+												</div><!-- ../grid-box-quick-->
+											</div>
+											<div class="lp-grid-box-description ">
+												<h4 class="lp-h4">
+													<a href="post-detail.html">
+													'.$row2['cname'].'
+													</a>
+												</h4>
+												<p>
+													<i class="fa fa-map-marker"></i>
+													<span>Branch: <b>'.$row2['location'].'</b></span>
+												</p>
+												<ul class="lp-grid-box-price">
+													<i class="fa fa-graduation-cap"></i>
+													<li><span> Stream: <b>'.$row2['ssname'].'</b></span></li>
+												</ul>
+											</div><!-- ../grid-box-description-->
+											<div class="lp-grid-box-bottom">
+												<div class="pull-left">
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-o"></i>
+													<span class="rating-ratio">4.0</span>
+												</div>
+												<div class="pull-right">
+													<a href="#" class="lp-add-to-fav simptip-position-top simptip-movable" data-tooltip="Add to favorites">
+													<i></i>
+													</a>
+												</div>
+												<div class="clearfix"></div>
+											</div><!-- ../grid-box-bottom-->
+										</div><!-- ../grid-box -->
+									</div>';
 
 
 							}
 
-							    /* Toss back results as json encoded array. */
+
+					}
+
+					    // Toss back results as json encoded array.
+			    		//echo json_encode($return_arr);
+				}
+				else
+				{
+					//echo 'no result found in case I<br/>';
+
+					// Case 2: Substream based search
+
+						if($loc_search)
+						{
+							$stmt1 = $conn->prepare('SELECT a.cname,a.location,b.ssname FROM classes a, substream b, map_class_stream c where a.classid = c.class_id and b.ssid=c.stream_id and b.ssname LIKE :term and a.location LIKE :loc');
+						    $stmt1->execute(array('term' => '%'.$term.'%', 'loc' => '%'.$location.'%'));
+						}
+						else
+						{
+							$stmt1 = $conn->prepare('SELECT a.cname,a.location,b.ssname FROM classes a, substream b, map_class_stream c where a.classid = c.class_id and b.ssid=c.stream_id and b.ssname LIKE :term');
+					    	$stmt1->execute(array('term' => '%'.$term.'%'));
+					    }
+
+						if($stmt1->rowCount()>0)
+						{
+							while($row1 = $stmt1->fetch())
+							{
+							        //$return_arr[] =  array('Classes:' => $row1['cname'], 'Location:' => $row1['location'], 'stream' => $row1['ssname']);
+
+				    				echo	'<div class="col-md-3 col-sm-6 lp-grid-box-contianer lp-grid-box-contianer1" data-title="The Dorchester grill" data-reviews="4" data-number="+007-123-4567-89" data-email="jhonruss@example.com" data-website="www.example.com" data-price="$200" data-pricetext="Text about your price" data-description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi archeum" data-userimage="images/user-thumb-94x94.png" data-username="Jhon Russel" data-userlisting="14" data-fb="www.facebook.com" data-gplus="www.plus.google.com" data-linkedin="www.linkedin.com" data-instagram="www.instagram.com" data-twitter="www.twitter.com" data-lattitue="40.6700" data-longitute="-73.9400"  data-id="11"  data-posturl="post-detail.html" data-authorurl="author.html">
+									<div class="lp-grid-box lp-border lp-border-radius-8">
+										<div class="lp-grid-box-thumb-container" >
+											<div class="lp-grid-box-thumb">
+												<img src="images/grid/grid-1.png" alt="grid-1" />
+											</div><!-- ../grid-box-thumb -->
+											<div class="lp-grid-box-quick">
+												<ul class="lp-post-quick-links">
+													<li>
+														<a class="icon-quick-eye md-trigger" data-modal="modal-2"><i class="fa fa-eye"></i></a>
+													</li>
+												</ul>
+											</div><!-- ../grid-box-quick-->
+										</div>
+										<div class="lp-grid-box-description ">
+											<h4 class="lp-h4">
+												<a href="post-detail.html">
+												'.$row1['cname'].'
+												</a>
+											</h4>
+											<p>
+												<i class="fa fa-map-marker"></i>
+												<span>Branch: '.$row1['location'].'</span>
+											</p>
+											<ul class="lp-grid-box-price">
+												<li><span> Stream:'.$row1['ssname'].'</span></li>
+											</ul>
+										</div><!-- ../grid-box-description-->
+										<div class="lp-grid-box-bottom">
+											<div class="pull-left">
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star-o"></i>
+												<span class="rating-ratio">4.0</span>
+											</div>
+											<div class="pull-right">
+												<a href="#" class="lp-add-to-fav simptip-position-top simptip-movable" data-tooltip="Add to favorites">
+												<i></i>
+												</a>
+											</div>
+											<div class="clearfix"></div>
+										</div><!-- ../grid-box-bottom-->
+									</div><!-- ../grid-box -->
+								</div>';
+
+							}
+							    // Toss back results as json encoded array.
 					    		//echo json_encode($return_arr);
 						}
-					}
-				}
- 	} 
-}
-catch(PDOException $e) {
-	    echo 'ERROR: ' . $e->getMessage();
-	}
+						else
+						{
+							//echo '<br/>no result found in case II<br/>';
+							//Case 3: Class Based Search
+
+							if($loc_search)
+							{
+								$stmt1 = $conn->prepare('SELECT cname, location FROM classes where cname LIKE :term and location LIKE :loc');
+						    	$stmt1->execute(array('term' => '%'.$term.'%', 'loc' => '%'.$location.'%'));
+						    }
+						    else
+						    {
+						    	$stmt1 = $conn->prepare('SELECT cname, location FROM classes where cname LIKE :term');
+						    	$stmt1->execute(array('term' => '%'.$term.'%'));
+						    }
+
+							if($stmt1->rowCount()>0)
+							{
+								while($row1 = $stmt1->fetch())
+								{
+								        //$return_arr[] =  array('Classes:' => $row1['cname'], 'Location:' => $row1['location']);
+									echo	'<div class="col-md-3 col-sm-6 lp-grid-box-contianer lp-grid-box-contianer1" data-title="The Dorchester grill" data-reviews="4" data-number="+007-123-4567-89" data-email="jhonruss@example.com" data-website="www.example.com" data-price="$200" data-pricetext="Text about your price" data-description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi archeum" data-userimage="images/user-thumb-94x94.png" data-username="Jhon Russel" data-userlisting="14" data-fb="www.facebook.com" data-gplus="www.plus.google.com" data-linkedin="www.linkedin.com" data-instagram="www.instagram.com" data-twitter="www.twitter.com" data-lattitue="40.6700" data-longitute="-73.9400"  data-id="11"  data-posturl="post-detail.html" data-authorurl="author.html">
+									<div class="lp-grid-box lp-border lp-border-radius-8">
+										<div class="lp-grid-box-thumb-container" >
+											<div class="lp-grid-box-thumb">
+												<img src="images/grid/grid-1.png" alt="grid-1" />
+											</div><!-- ../grid-box-thumb -->
+											<div class="lp-grid-box-quick">
+												<ul class="lp-post-quick-links">
+													<li>
+														<a class="icon-quick-eye md-trigger" data-modal="modal-2"><i class="fa fa-eye"></i></a>
+													</li>
+												</ul>
+											</div><!-- ../grid-box-quick-->
+										</div>
+										<div class="lp-grid-box-description ">
+											<h4 class="lp-h4">
+												<a href="post-detail.html">
+												'.$row1['cname'].'
+												</a>
+											</h4>
+											<p>
+												<i class="fa fa-map-marker"></i>
+												<span>Branch: '.$row1['location'].'</span>
+											</p>
+											<ul class="lp-grid-box-price">
+												<li><span></span></li>
+											</ul>
+										</div><!-- ../grid-box-description-->
+										<div class="lp-grid-box-bottom">
+											<div class="pull-left">
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star-o"></i>
+												<span class="rating-ratio">4.0</span>
+											</div>
+											<div class="pull-right">
+												<a href="#" class="lp-add-to-fav simptip-position-top simptip-movable" data-tooltip="Add to favorites">
+												<i></i>
+												</a>
+											</div>
+											<div class="clearfix"></div>
+										</div><!-- ../grid-box-bottom-->
+									</div><!-- ../grid-box -->
+								</div>';
+
+								}
+
+								    // Toss back results as json encoded array.
+						    		//echo json_encode($return_arr);
+							}
+							else
+							{
+								//echo '<br/>no result found in case III<br/>';
+								//Case 3: subject Based Search
+								// if fstream is also required then query
+								// SELECT a.cname,a.location,b.sname,b.fstream FROM classes a, subject b, map_class_subject c where a.classid = c.class_id and b.subjectid=c.subject_id and b.sname LIKE :term
+
+								if($loc_search)
+								{
+									$stmt1 = $conn->prepare('SELECT a.cname,a.location,b.sname FROM classes a, subject b, map_class_subject c where a.classid = c.class_id and b.subjectid=c.subject_id and b.sname LIKE :term and a.location LIKE :loc');
+							    	$stmt1->execute(array('term' => '%'.$term.'%', 'loc' => '%'.$location.'%'));
+								}
+								else
+								{
+									$stmt1 = $conn->prepare('SELECT a.cname,a.location,b.sname FROM classes a, subject b, map_class_subject c where a.classid = c.class_id and b.subjectid=c.subject_id and b.sname LIKE :term');
+							    	$stmt1->execute(array(':term' => '%'.$_GET['term'].'%'));
+							    }
+								if($stmt1->rowCount()>0)
+								{
+										while($row1 = $stmt1->fetch())
+										{
+										        //$return_arr[] =  array('Classes:' => $row1['cname'],'Subject:' => $row1['sname'], 'Location:' => $row1['location']);
+
+												echo	'<div class="col-md-3 col-sm-6 lp-grid-box-contianer lp-grid-box-contianer1" data-title="The Dorchester grill" data-reviews="4" data-number="+007-123-4567-89" data-email="jhonruss@example.com" data-website="www.example.com" data-price="$200" data-pricetext="Text about your price" data-description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi archeum" data-userimage="images/user-thumb-94x94.png" data-username="Jhon Russel" data-userlisting="14" data-fb="www.facebook.com" data-gplus="www.plus.google.com" data-linkedin="www.linkedin.com" data-instagram="www.instagram.com" data-twitter="www.twitter.com" data-lattitue="40.6700" data-longitute="-73.9400"  data-id="11"  data-posturl="post-detail.html" data-authorurl="author.html">
+													<div class="lp-grid-box lp-border lp-border-radius-8">
+														<div class="lp-grid-box-thumb-container" >
+															<div class="lp-grid-box-thumb">
+																<img src="images/grid/grid-1.png" alt="grid-1" />
+															</div><!-- ../grid-box-thumb -->
+															<div class="lp-grid-box-quick">
+																<ul class="lp-post-quick-links">
+																	<li>
+																		<a class="icon-quick-eye md-trigger" data-modal="modal-2"><i class="fa fa-eye"></i></a>
+																	</li>
+																</ul>
+															</div><!-- ../grid-box-quick-->
+														</div>
+														<div class="lp-grid-box-description ">
+															<h4 class="lp-h4">
+																<a href="post-detail.html">
+																'.$row1['cname'].'
+																</a>
+															</h4>
+															<p>
+																<i class="fa fa-map-marker"></i>
+																<span>Branch: '.$row1['location'].'</span>
+															</p>
+															<ul class="lp-grid-box-price">
+																<li><span> Subject:'.$row1['sname'].'</span></li>
+															</ul>
+														</div><!-- ../grid-box-description-->
+														<div class="lp-grid-box-bottom">
+															<div class="pull-left">
+																<i class="fa fa-star"></i>
+																<i class="fa fa-star"></i>
+																<i class="fa fa-star"></i>
+																<i class="fa fa-star"></i>
+																<i class="fa fa-star-o"></i>
+																<span class="rating-ratio">4.0</span>
+															</div>
+															<div class="pull-right">
+																<a href="#" class="lp-add-to-fav simptip-position-top simptip-movable" data-tooltip="Add to favorites">
+																<i></i>
+																</a>
+															</div>
+															<div class="clearfix"></div>
+														</div><!-- ../grid-box-bottom-->
+													</div><!-- ../grid-box -->
+												</div>';
+
+										}
+
+									    // Toss back results as json encoded array.
+							    		//echo json_encode($return_arr);
+								}
+							}
+						}
+			 	}
+			}
+		catch(PDOException $e) {
+			    echo 'ERROR: ' . $e->getMessage();
+			}
+
+*/
+
 }
 
 
@@ -805,7 +942,7 @@ catch(PDOException $e) {
 		</div>
 	</section>
 	<!--==================================Section Close=================================-->
-	
+
 	<!--==================================Footer Open=================================-->
 	<footer class="text-center">
 		<div class="footer-upper-bar">
@@ -852,9 +989,9 @@ catch(PDOException $e) {
 	<a href="post-submit.html" class="add-listing-mobile lp-search-btn">Add listing</a>
 </div>
 	<!--==================================Footer Close=================================-->
-	
-	
-	
+
+
+
 	<!--==================================Javscript=================================-->
 
 
@@ -874,6 +1011,6 @@ catch(PDOException $e) {
 		<script type="text/javascript" src="lib/popup/js/classie.js"></script> <!-- Popup -->
 		<script type="text/javascript" src="lib/popup/js/modalEffects.js"></script> <!-- Popup -->
 		<script type="text/javascript" src="js/main.js"></script>
-		
+
 </body>
 </html>
