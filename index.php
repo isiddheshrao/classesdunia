@@ -33,7 +33,9 @@
 	<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
 	<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
 	<link href="css/main.css" type="text/css" rel="stylesheet" />
-
+	<link href="css/button.css" type="text/css" rel="stylesheet" />
+	<link href="css/stylefooter.css" rel="stylesheet" type="text/css" />
+	<link href="css/bootstrapfooter.css" rel="stylesheet" type="text/css" />
 	<!-- IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
