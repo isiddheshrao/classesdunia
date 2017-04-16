@@ -1,5 +1,12 @@
+// use contentType: 'application/json' whenever the data sent through ajax to the server is json
+
+// following javascript code involves use of jquery, autocomplete plugin and good plain old ES5 JS
+
+// this file has to go through the process of linting.
+
+
 $(document).ready(function(){
-	
+
 	'use-strict';
 
 	$('.post-slide').slick({
@@ -26,7 +33,7 @@ $(document).ready(function(){
 		}
 	  ]
 	});
-	
+
 	//Slick One Per Slide Testimonials
 	$('.testimonial-slider').slick({
 		dots: true,
@@ -37,6 +44,7 @@ $(document).ready(function(){
 		arrows: false,
 		slidesToShow: 1
 	});
+
 	// Accordion
 	var icons = {
 		header: "fa fa-plus",
@@ -52,6 +60,7 @@ $(document).ready(function(){
 			$( "#accordion" ).accordion( "option", "icons", icons );
 	}
 	});
+
 	// Popup Gallery
 	$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
 	  disableOn: 700,
@@ -121,31 +130,31 @@ $(document).ready(function(){
           $(this).next('.label').text($(this).val());
         });
 	// Popup Form
-	$(".signUpClick").on('click' , function() {  
+	$(".signUpClick").on('click' , function() {
 		$('.siginincontainer').fadeOut();
 		$('.forgetpasswordcontainer').fadeOut();
 		$('.siginupcontainer').fadeIn();
 	 });
-	$(".signInClick").on('click' , function() {  
+	$(".signInClick").on('click' , function() {
 		$('.forgetpasswordcontainer').fadeOut();
 		$('.siginupcontainer').fadeOut();
 		$('.siginincontainer').fadeIn();
 	 });
-	$(".forgetPasswordClick").on('click' , function() { 
+	$(".forgetPasswordClick").on('click' , function() {
 		$('.siginupcontainer').fadeOut();
-		$('.siginincontainer').fadeOut(); 
+		$('.siginincontainer').fadeOut();
 		$('.forgetpasswordcontainer').fadeIn();
 
 	 });
-	$(".cancelClick").on('click' , function() { 
+	$(".cancelClick").on('click' , function() {
 		$('.siginupcontainer').fadeOut();
 		$('.forgetpasswordcontainer').fadeOut();
-		$('.siginincontainer').fadeIn(); 
+		$('.siginincontainer').fadeIn();
 
 	 });
-	 // Mapbox 
+	 // Mapbox
 	$(window).load(function(){
-	
+
 		$(window).resize(function () {
 			console.log($(this).width())
 			if ($(this).width() < 781) {
@@ -155,46 +164,46 @@ $(document).ready(function(){
 					$('.mobilelink').removeClass('md-trigger');
 					$('.mobile-map-space .md-overlayi').removeClass('md-overlay');
 					$('.listing-container-right .md-overlayi').removeClass('md-overlay');
-					$(".mobilelink").on('click' , function() {  
+					$(".mobilelink").on('click' , function() {
 						if($('.mobilemap').hasClass('map-open')) {
-							$('.mobilemap').removeClass("map-open"); 
+							$('.mobilemap').removeClass("map-open");
 							$('.mobilemap .mapbilemap-content').css({"opacity":"0","margin-top":"-520px"});
 							$("a.mobilelink").text("View on map");
 						}
-						else{   
-							$('.mobilemap').addClass("map-open"); 
+						else{
+							$('.mobilemap').addClass("map-open");
 							$('.mobilemap .mapbilemap-content').css({"opacity":"1","margin-top":"0px"});
 							$("a.mobilelink").text("Close map");
 						}
 				    });
-					$(".claimformtrigger").on('click' , function() { 
+					$(".claimformtrigger").on('click' , function() {
 						if($('.claimform').hasClass('claimform-open')) {
 							$('.claimform').removeClass("claimform-open");
-							$('.claimform').slideUp(600); 
-							
+							$('.claimform').slideUp(600);
+
 							}
 						else{
-							$('.claimform').addClass("claimform-open"); 
+							$('.claimform').addClass("claimform-open");
 							$('.claimform').slideDown(600);
 						}
 					});
-					$(".quickformtrigger").on('click' , function() { 
+					$(".quickformtrigger").on('click' , function() {
 						if($('.quickform').hasClass('quickform-open')) {
 							$('.quickform').removeClass("quickform-open");
-							$('.quickform').slideUp(600); 
-							
+							$('.quickform').slideUp(600);
+
 							}
 						else{
-							$('.quickform').addClass("quickform-open"); 
+							$('.quickform').addClass("quickform-open");
 							$('.quickform').slideDown(600);
 						}
 					});
 			} else {
 					var headertop = $('header').height();
 					$('.section-fixed').css('padding-top',headertop+'px');
-		
+
 			}
-			  
+
 		}).resize();//triggcurrentColorer the event manually when the page is loaded
 
 		$('.search-row').fadeTo( 600 , 1);
@@ -202,13 +211,13 @@ $(document).ready(function(){
 		$('.post-with-map-container .form-inline').fadeTo( 600 , 1);
 		$('.lp-search-bar').fadeTo( 600 , 1);
 		var LogoHeight = jQuery('.lp-logo img') .height();
-		var LogowithSpace = parseInt(LogoHeight,10)+parseInt(44,10); 
+		var LogowithSpace = parseInt(LogoHeight,10)+parseInt(44,10);
 		$('.lp-menu-container .lp-menu > ul > li > a').css('line-height',LogowithSpace+'px');
 		$('.lp-menu-container .lp-add-listing-btn > ul > li > a').css('line-height',LogowithSpace+'px');
 		$('#menu').css('display','block');
 		$('.spinner').css("display","none");
 		$('.single-page-slider-container').css("opacity","1");
-		
+
 		 if ($('#map').is('.mapSidebar,.listingmap')) {
 			 	L.HtmlIcon = L.Icon.extend({
 				options: {
@@ -238,12 +247,12 @@ $(document).ready(function(){
 				}
 		});
 				L.mapbox.accessToken = 'pk.eyJ1IjoibGlzdGluZ3BybyIsImEiOiJjaWxhaGZjNWgwMDB1d25tMm1uZThub2wyIn0.UF5krbL-hVDhMcARAZmDGQ';
-				 
+
 				var map = L.mapbox.map('map', 'mapbox.streets')
 					.setView([51.495728, -0.108773], 14);
 				var markers = new L.MarkerClusterGroup();
 
-				var addressPointss = [    
+				var addressPointss = [
 					[51.495091, -0.087155, '<div class="map-post"><div class="map-post-thumb"><a href="post-detail.html"><img src="images/grid/post245x150-1.jpg" alt="post245x150-1"></a></div><div class="map-post-des"><div class="map-post-title"><h5><a href="post-detail.html">The Dorchester grill</a></h5></div><div class="map-post-address"><p><i class="fa fa-map-marker"></i> Brighton, The City of Brighton</p></div></div></div>','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADaklEQVRoQ+1aQVbbMBD9013YlJ6gUS9AOAHKCZoscRZNT0B6AuAENSdoukhYAiewOQHhAlU4QWEDu07fKLZxDI4jm5S2T14ltjTSn5k/kr5NemKuiNDBK1wMnMeB6ueHlvnI/3igdl3uU3dq+BUwZENGgaL8+Ol8XO9nQIodNw2u7oTLAHogTSPmI1LCKZ9aPrUSD3iOeI40JUNJf59aPrV8aq32wAqOzKRnFKilo0V3asru2937X7eyuyZA6hAPxNVzxfZlqeVq9zEikx9zEL1ngor31dzVUJ32+tS0iWHAfBMNPrTr2Ej75FMrBrDHhG68r+T3xi99ajQxIgCXUaB03QFzdq5JT01IwAEzjuOBOqpr1KWfnpgjIhwycBIHauTSd0mQmJqIAC1zFyA9As6aesdlMqlyw0A/DtS5S9+0rZ6YIRG+AXzHLWqTPjPb9MBzgN7+CZ5k/EgmEPfVrQuQ7tTsMTAioGdBEPWEElaKyYX6exyooYth17Z6asYEfHJNZZ2kUTYe8w2DevFA2YVyAcRWEZ4lUdkY6R/JaT3ZcamSaXVixgVE2Buocd6JmTimp0bC9ZWBOVrYdQ15VWQkhfGAKwLaDHyJAxVW9ck/r1p3iirfohQzZthC96XAWBD3iBJptlbJdQKyID4EzA4DMVroNwVTAHHNLeg6Np2AWL4sg5mD0U8J5ZIKSRHpgHAm6QSgNgix5QwkBYN7jInwUf4zY4w3OF6XnFI88AuHRLAV0BJ0C8M6kShuRco06iWOFD2+WHQ4lGqWTEhKnYC6KIJKJi/AZaFKzhJ8x0yjYoVxjWztiCxtAxZEHRF4KJvLBNBtPFDvltpNzE8ibNt7ixo/xhbCJlGoXbWqPKUnpkME+yKmTN5nxm5dTq0avxZH6hisGqjKSVXPq+yv5Mhzxl31qKoJrvvcAynzlI/IujlU0s6nlk+tgsjcMKOy7j61/uvUym1RrktE5p1/YouSCQfP6FGZPgZsRMB4MY7oiTkgQphIME+EgyUBgyFb95OXInqjbXxyUpRUkVOeCBNWo2XG57LzxaNoBlgRgxESYRYF6rIpKOeIlH6/JWcMolGVMmiVS+YwPbvkAYioUfwOa12AzkCSN0M7yQCX1rOLD8ScpE0BBEDkWInkXmLvSZFwAPLsG6u0/288R19KOGbU8gAAAABJRU5ErkJggg==','1'],
 					[51.499449, -0.097283, '<div class="map-post"><div class="map-post-thumb"><a href="post-detail.html"><img src="images/grid/post245x150-2.jpg" alt="post245x150-2"></a></div><div class="map-post-des"><div class="map-post-title"><h5><a href="post-detail.html">3 Bed Detached House</a></h5></div><div class="map-post-address"><p><i class="fa fa-map-marker"></i> Brighton, The City of Brighton</p></div></div></div>','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACVElEQVRoQ+3YvXnbMBAG4O9Ku4kyAiaIvAG4QVJGKiJvYE+SbGClEFtlA2EDyxNghNhNVCIPIEKmGJIHKgDFAu5s0gTeOxz+CAl/5FbPcMAWBjPcolBfxGuq5ijVhx3iD3ZEmNs2jME+JSYdZKOfjwjzdgwWfbAYtRR3KYKXBCI3+okIK4swhqRjkFEVZq2W4j42JjqkiVBLsbedlhs9T4mJCulC+OhzmKLUpi1Tu4Vg+8m+EDoEOEQI5uqQUASH8RCfgebvfUH974y8I9wUe+drgsvkcZjhuZqa3QQgS70m4NvoEFnqBwK+V525V0ux5gD153KjV0R4cv8PPKqF+GExaiFW9m+jZOSsEwaDEbVh9o5pfCc5JBaCwySFxEb0YZo1E63YUyH6MEWp1W4h3O4gCiQ1oguDW/wK2TUHTb+y1J8J2Fazy08/q3BRuvS5H1KuPUKhvgrFfYuF2PkecNvxmQGSI06ZqdYUY2DPMAW3PvVCroW4BNMJuTZiKKYVMhXEEMw/kKkhQjFnkDrCfiDkHMDNJjGf+5W+bQI4QZqXBVOGVJvUs8sMB2kgXgB8mjjE9bF+M0NNhLmBpAN+TxlibvCRDrCL5AlD8nRtgxeLsNuBIbvOmDXAfaveL5uAOoaq7cDcI4YeaLjGYz5vBthjDLBvXUcuyUjXxQEHGTIz9vUrQ5qRHprFoe9zQz56RkKHSoZ07DhyRnKNVBHINZJrhFuaLxwqeWjloZWHVn8Eco3kGsk1kmukMwKjHnUnebAKLI/RX2sLVu/BavQeBjbYBvkLODEBNn2o34UAAAAASUVORK5CYII=','2'],
 					[51.496286, -0.101746, '<div class="map-post"><div class="map-post-thumb"><a href="post-detail.html"><img src="images/grid/post245x150-3.jpg" alt="post245x150-3"></a></div><div class="map-post-des"><div class="map-post-title"><h5><a href="post-detail.html">Photography</a></h5></div><div class="map-post-address"><p><i class="fa fa-map-marker"></i> Brighton, The City of Brighton</p></div></div></div>','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEXUlEQVRoQ+1ZTVrbSBB9xWrMJswJQs8FhpwgrRPELCMvQk4QcwIyJ4g5AWRhZYlyAjcnIFxgmpxgzCbJipqv2mohbP20bIn444MlVv+8rupXr14TnsgfPREceAaybZHsJSL6wu7hFz7gDkMiHLQBzYxv2EGKP3BqDtU8dGznQByIH5i1BbC8YQdoF1EomO6BJHZCwAeAb5loaN4qE3qq8p3+YjUxpwC9YODUxGocMr4UiE7sjABdNQEDqYnV4fLv+ovdJ4aV/zPjlRmpbyGbWJlnag+IcOXmISjzVt00zVMKJEosNw2cxWplrJ7aj0Q4YeCzidVR0xx1v+vEnhPwjhn/mJH62DTX6mYS+46AcxlYttkQkAwcmlilTYs3ABkScFF6d0rIIAeip/YAhAsC9rPB17NYrTBOlFjJ+dc1mygdtw6oKLGSmn+XjWXGHIT3/sAcEAcCjmn2mPEVhPNNT3SdjYeMETLAHcZEeOPuUBZ9cnT5E1cSidB8DFmw72/01B4R4cxFZheK/AUFcDmLVSVTbbIxYTPc4Q0IQzD2fI1xtYIwByPFDr6GsFNxH3pqU4mMBIB8zhcvqAsf48wNkjxsWQv8Ytk8J3VUXtwYAwaM41DaXtQczORAJCL/ubsxwJ++iurEWn/pGbgxsVJtI6IT+4mArJjxLYOExVIwbvxGM4IRchkSeChFMMv7iYnVcciankUlIq5mFKk2Sv6d+0nB/H02+sszWePc2Z0T9tOuujNNsItJk9TIpM2YiMdZVTcY4LBpXC0QF7I7drWEd+ioTWrdqwIHQoemSZ6Orqqz8WBMrKK606sF0njsFR/oos4a0H7TaVatI9Ghn3wTorc6B+IvXpZOrSOxDEruTx6ZGt3WPZBMaHZZiwrazVSlWKdA7lUv3/IGKbUSlWKKVajgboEkdkzApy5U7woYr4KBYxOryfLvnQIpK6rrEkYJEK+CS5VHp0D01F6J7NikmapksKzJkuptRupV3xFZKapdRUTmKSvafv5OI1K3UBeAHhOIa4D6TC0AVY2ey4ZSrdX2FJ/OZX8q9OsLou/W1tVYZQURP2Bdm/EYBTFjFmdK9CFR6rrXTllLgCxEHq5cVICorXwvE40FQ6TS7OsciAOTyfhNUyxrshYp1WCb9gJkKcXWikzRmgoxRHoDsmiKIP253Jc5djAJeSIoPEWIZ7UnIHiAYRNx9AYkb1nzbtEZ2hKdlICUge9F84GAlwwMnQGxACCmW7AL3zuQAgGI9K6zWIv3/JIZ4zZEUQSykBeEqI3J0Kb6O4OOxfJxJy+n7v3cawBzeaYAIW1t0GW+lsiX3GmsevNos+HH/tY7Ns5pfOBYMN6bkXI20Lb/ee/XmR0D2l+48YnN3yIkMgRMZrG63EYwUWJfMyCttaTpvRtfYBmxLc9zh3EbUTzYk7Nhjx68j+RgFi+ywuOCtvSBZQvwXbO490s2bOevur8L6DOQ33XyVes+R+Q5Ij2dwP9TYAKAKNjkVAAAAABJRU5ErkJggg==','3'],
@@ -251,14 +260,14 @@ $(document).ready(function(){
 					[51.505077, -0.113366, '<div class="map-post"><div class="map-post-thumb"><a href="post-detail.html"><img src="images/grid/post245x150-5.jpg" alt="post245x150-1"></a></div><div class="map-post-des"><div class="map-post-title"><h5><a href="post-detail.html">5th Generation Laptop</a></h5></div><div class="map-post-address"><p><i class="fa fa-map-marker"></i> Brighton, The City of Brighton</p></div></div></div>','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABYUlEQVRoQ+1Y0VGDQBTcTQNqBYoVxA6wAv01aUIr0SbUX60glJAKgqnA0IDrQEYnAnKTOcgdmccv947dt3vvmCVG/nDk+GEEQitoCkSpQPqaX0B4hJCSOA0JUsIGRAbiIbtLPupYGhYqwVPIQ4Ju+3ZFZIKrOokmgef8jcRNbARKPBLes3lyu4utjcBnaNv817xShWyenHUSuH7JtbtgMUuCTioXngY4V8GhreXCYwSGVsQUsEPs6TGzkFnILNT9Z2AXmadDnOU2hWwKOU3SvcAsZBYyC+19ka02AE88GzdQuYrF7PJPTnWEsUqkwRagQuTUGWyV2lfR4heeSKXh7aRCYoYJ7lujxfpFMZB5B9uWR0Ag5qnjEE5aM404zHX5rgx7uY3TtQx/WF1w6++3U6m6B36nDjQFeb7vVgddL60FLn+mUtDkuQ/iRqCPLvrsYQr4dK+PWlOgjy767DF6Bb4BAAIIyCXX8RcAAAAASUVORK5CYII=','5'],
 					[51.502893, -0.117325, '<div class="map-post"><div class="map-post-thumb"><a href="post-detail.html"><img src="images/grid/post245x150-6.jpg" alt="post245x150-2"></a></div><div class="map-post-des"><div class="map-post-title"><h5><a href="post-detail.html">Takai Car 2000 </a></h5></div><div class="map-post-address"><p><i class="fa fa-map-marker"></i> Brighton, The City of Brighton</p></div></div></div>','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADRUlEQVRoQ+1YzXnaQBB941PkS0gF8VZgXIGXCoyPgYPtCkIHcSoIqSD4gHzErkByBRYNZJ0OnIu5efLNIhHCh5C0K4jjaC/wgTRv37z52yW8kkWvhAcaIi9NyUaRRpEteaAJrS051tlso4iz67b0YmVF9Ni0AXwE0CVCy3VfDNwAuIp7Sj69VyUiemzOifDNG3XJADNGcV9d+NosTURfmwM8415UYOArCMP4g3pYt4FOaFh+j3pqrX09MS3McE7AF3mOGRdxX418yJQnEpqIAM2M27ivuptAi4hk72YKM+MRQCfuq8SVTCkiv0OKf3JAB/GpEuDcVZaIGNChGRFwxowE++gU2c4DLSRiw+AJxoZUyRCoRGRiWjRDDODQJ1+KiaQeA3AX9ZQuI30VIlaVsWkTcQzQ27LOWt3HRiL62mhiRDYhCSovuVeNViWSkrEV0TVf/iBie8QeTsCQXtGS5C6jwDaeYSAGQ6piQoSEA0w35Y8lkpbWCZEl8GKXVYsglS0hRhz11W22WVpOZjD/YKIbSAXZwwPeIHGtIj7esI4FpG9pEA5IvgPHqzZtpYPtQQnp0AxpPnLccYDu39h4WdLLBAl8DqL3VqV9KNJjI926zYwjn4ZUdjN1PqfH5oYIJwxckUuFqXMzPrbmZRv3EmL/NBFxQibE/0NEh+YMjEFWmm2lkMm3p658wiLv3ap4hYqkZTnK6y2+Q94qEVe8YiJpNUt7ywCBHeyAGTQxD9PSl8R9dVSHMln1rIq3kchibJcGuU/t1d4i3qMnTlIy3ociH7wlIt8f06lz0UcWvQU4zTtT69B0CZhUmYpz8yLrZRXxsvIrKkpDvCTCp3UgHOBdXqeXLksMU0dYZTZc8ZjxeT40Cpm05S9vzNWwK7nKeBL6ILm8uFx7HumERhL7mCtK7UqgDrz1txzptQ8DDwhwtC7ZMcO9TKWuJ7pl0otLCA+83BNiJzQyIh8KGWIMeA9TAadnHDJBJmYZradRT9VyhvHFyyViS2x6KZATMlMOoOsa+33xii8f5mE2EHVSQlNmDH0v1DaUYie8QiKuCbzr9xoiu/Z4EV6jSJGHdv1/o8iuPV6E1yhS5KFd/98osmuPF+H9AkKsIa0CLZEmAAAAAElFTkSuQmCC','6'],
 					[51.507194, -0.129685, '<div class="map-post"><div class="map-post-thumb"><a href="post-detail.html"><img src="images/grid/post245x150-7.jpg" alt="post245x150-3"></a></div><div class="map-post-des"><div class="map-post-title"><h5><a href="post-detail.html">Suny Mobile for sale </a></h5></div><div class="map-post-address"><p><i class="fa fa-map-marker"></i> Brighton, The City of Brighton</p></div></div></div>','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACCElEQVRoQ+1awVUCMRD94QYnSzBWoBW4VCAcXQ5qBWIH2IFWIB5Yj0IFmw60g0AHevE6voRdRR7LMtkFfLzhCEMyf/6fCeGvwoG81IHggABxTEYjewvgWimcVmGWgCmAMZq4N139EbJWECPRqz3CF9KqAJYTJoID0TY9/c4FEwZkZN/mIOiTSPXRwji0kp7ZFxspwgDAuQfTguauxwYSjayT0lMGIgqpXlG124k1HgzwaGLd57ASAsSzQcCdifUDZ7Oy2IyZ1PWMibUui1/8nA2knVhyC5CCNpd6Gv3IjLPt31gCxibWXfduvn4aa1ZurOBVG+Ubh8OYfzNPfO9AuBXMgS8nLkC4kqirgsJIQeVra3bpkWycy9TKpCbSqioFmVoytZYqIAdigSTqKoxMLZlaW+o5kZZIS6S1/gooPSI9Ij0iPbK6AnX9yJOLlVystjRl/q20uH+9LsdXPZfqONm9y1QFCBEmpqc7e/VHygBEib1yMSbWz2WxuwYy9/kIN6anh+uS+/UbgY3i56ZoCqJZ2js53gR4HsOWVp6cd18bOHP2W9GGbCCJTRUQ7cQMzejPWXG++AANTIoAOTBeWmvYayfWObkDB8K7xU11vHV72iWVPTAwVAoXHPrLY71vH2R5s6W1mExW7U5lQEQzUso9wjHgMhHcI+VV3U9EJUb2k/LqXQ8GyDfcDKhRa+yP+gAAAABJRU5ErkJggg==','7'],
-					[51.494902, -0.120741, '<div class="map-post"><div class="map-post-thumb"><a href="post-detail.html"><img src="images/grid/post245x150-8.jpg" alt="post245x150-4"></a></div><div class="map-post-des"><div class="map-post-title"><h5><a href="post-detail.html">Luxury Spa in London </a></h5></div><div class="map-post-address"><p><i class="fa fa-map-marker"></i> Brighton, The City of Brighton</p></div></div></div>','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACcElEQVRoQ+1awXXTQBD9kxsnQgV4KyAdsK4Ac4xywFQQpwN3gKmA+GBxTKiApYKECjZUAJy4MbxZbD/i7GqkjZB5ZHX0jFb/z/wZ7Y5MaLhs7V8BmIBhiXDY5Nu3jYEbMBwOsHTHxmnrU8zBXvhD/MAFAVZbYAg7AwtXmbOmZ8WJrPwVEY4A/s5MMxzAuWNzMwTozTPsyh+JGoh4BtBjBt66ysxSGO4QsSs/JcK7QOIRjdxL821IArvPEkJEuJLfmTBOySxG5JIIL5jx2p2Y86FJ2NpPAJyKrJkhQbwE8CRgApauMtMYphiRr1LYTDCDy6n2MwLepIInDcBVxrQiMq49i+PHykTr529lyL73I2L4ICHgzFVmsW46cwJON89N4boDdm9Ear8QwDH5jGsv7fd5U4DJbjvU7VgPnZE/wXbNOjOuaVz7awDPdm/eA5Eg6czr8z8jLU3Smr0QyZRA8jYt4pq9ZKRkJBEBTTqavUirSKtIq3kzW2qk1EipkVIjwx51tTe3Zle71nraON0M6xiQY+e5q8wyJvdM/wnJRLNhVpBNhAEZu8jBfxQDHEaawByET8HO4Ux9b//UyTSbyBY88xcGzWXaGH77CUvgOYieRhtQpv/voWB6epNNhBkfZDiWGtKtJ5KStTDduK+/BlSzqzXS94svtZ4GVLM/HCKZXahrlytdayPVpLRK10p8itC6nFbMmv3hFHtpvx0joElHs///0uoY0N7c+9w0br8O9Yau5UKyX3MnJmznd6/O0srdC7XEmu1WiHRNbXaoW95YMlIy0lIqXd16l1ZXAH37t/7nQ0P73dv7ZYOp6T3zC1HtqHqb2BmDAAAAAElFTkSuQmCC','8'],    
+					[51.494902, -0.120741, '<div class="map-post"><div class="map-post-thumb"><a href="post-detail.html"><img src="images/grid/post245x150-8.jpg" alt="post245x150-4"></a></div><div class="map-post-des"><div class="map-post-title"><h5><a href="post-detail.html">Luxury Spa in London </a></h5></div><div class="map-post-address"><p><i class="fa fa-map-marker"></i> Brighton, The City of Brighton</p></div></div></div>','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACcElEQVRoQ+1awXXTQBD9kxsnQgV4KyAdsK4Ac4xywFQQpwN3gKmA+GBxTKiApYKECjZUAJy4MbxZbD/i7GqkjZB5ZHX0jFb/z/wZ7Y5MaLhs7V8BmIBhiXDY5Nu3jYEbMBwOsHTHxmnrU8zBXvhD/MAFAVZbYAg7AwtXmbOmZ8WJrPwVEY4A/s5MMxzAuWNzMwTozTPsyh+JGoh4BtBjBt66ysxSGO4QsSs/JcK7QOIRjdxL821IArvPEkJEuJLfmTBOySxG5JIIL5jx2p2Y86FJ2NpPAJyKrJkhQbwE8CRgApauMtMYphiRr1LYTDCDy6n2MwLepIInDcBVxrQiMq49i+PHykTr529lyL73I2L4ICHgzFVmsW46cwJON89N4boDdm9Ear8QwDH5jGsv7fd5U4DJbjvU7VgPnZE/wXbNOjOuaVz7awDPdm/eA5Eg6czr8z8jLU3Smr0QyZRA8jYt4pq9ZKRkJBEBTTqavUirSKtIq3kzW2qk1EipkVIjwx51tTe3Zle71nraON0M6xiQY+e5q8wyJvdM/wnJRLNhVpBNhAEZu8jBfxQDHEaawByET8HO4Ux9b//UyTSbyBY88xcGzWXaGH77CUvgOYieRhtQpv/voWB6epNNhBkfZDiWGtKtJ5KStTDduK+/BlSzqzXS94svtZ4GVLM/HCKZXahrlytdayPVpLRK10p8itC6nFbMmv3hFHtpvx0joElHs///0uoY0N7c+9w0br8O9Yau5UKyX3MnJmznd6/O0srdC7XEmu1WiHRNbXaoW95YMlIy0lIqXd16l1ZXAH37t/7nQ0P73dv7ZYOp6T3zC1HtqHqb2BmDAAAAAElFTkSuQmCC','8'],
 					[51.506925, -0.096853, '<div class="map-post"><div class="map-post-thumb"><a href="post-detail.html"><img src="images/grid/post245x150-9.jpg" alt="post245x150-1"></a></div><div class="map-post-des"><div class="map-post-title"><h5><a href="post-detail.html">Dream Home </a></h5></div><div class="map-post-address"><p><i class="fa fa-map-marker"></i> Brighton, The City of Brighton</p></div></div></div>','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACVElEQVRoQ+3YvXnbMBAG4O9Ku4kyAiaIvAG4QVJGKiJvYE+SbGClEFtlA2EDyxNghNhNVCIPIEKmGJIHKgDFAu5s0gTeOxz+CAl/5FbPcMAWBjPcolBfxGuq5ijVhx3iD3ZEmNs2jME+JSYdZKOfjwjzdgwWfbAYtRR3KYKXBCI3+okIK4swhqRjkFEVZq2W4j42JjqkiVBLsbedlhs9T4mJCulC+OhzmKLUpi1Tu4Vg+8m+EDoEOEQI5uqQUASH8RCfgebvfUH974y8I9wUe+drgsvkcZjhuZqa3QQgS70m4NvoEFnqBwK+V525V0ux5gD153KjV0R4cv8PPKqF+GExaiFW9m+jZOSsEwaDEbVh9o5pfCc5JBaCwySFxEb0YZo1E63YUyH6MEWp1W4h3O4gCiQ1oguDW/wK2TUHTb+y1J8J2Fazy08/q3BRuvS5H1KuPUKhvgrFfYuF2PkecNvxmQGSI06ZqdYUY2DPMAW3PvVCroW4BNMJuTZiKKYVMhXEEMw/kKkhQjFnkDrCfiDkHMDNJjGf+5W+bQI4QZqXBVOGVJvUs8sMB2kgXgB8mjjE9bF+M0NNhLmBpAN+TxlibvCRDrCL5AlD8nRtgxeLsNuBIbvOmDXAfaveL5uAOoaq7cDcI4YeaLjGYz5vBthjDLBvXUcuyUjXxQEHGTIz9vUrQ5qRHprFoe9zQz56RkKHSoZ07DhyRnKNVBHINZJrhFuaLxwqeWjloZWHVn8Eco3kGsk1kmukMwKjHnUnebAKLI/RX2sLVu/BavQeBjbYBvkLODEBNn2o34UAAAAASUVORK5CYII=','9'],
 					[51.507756, -0.111616, '<div class="map-post"><div class="map-post-thumb"><a href="post-detail.html"><img src="images/grid/post245x150-10.jpg" alt="post245x150-2"></a></div><div class="map-post-des"><div class="map-post-title"><h5><a href="post-detail.html">Buy now 10 shots </a></h5></div><div class="map-post-address"><p><i class="fa fa-map-marker"></i> Brighton, The City of Brighton</p></div></div></div>','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEXUlEQVRoQ+1ZTVrbSBB9xWrMJswJQs8FhpwgrRPELCMvQk4QcwIyJ4g5AWRhZYlyAjcnIFxgmpxgzCbJipqv2mohbP20bIn444MlVv+8rupXr14TnsgfPREceAaybZHsJSL6wu7hFz7gDkMiHLQBzYxv2EGKP3BqDtU8dGznQByIH5i1BbC8YQdoF1EomO6BJHZCwAeAb5loaN4qE3qq8p3+YjUxpwC9YODUxGocMr4UiE7sjABdNQEDqYnV4fLv+ovdJ4aV/zPjlRmpbyGbWJlnag+IcOXmISjzVt00zVMKJEosNw2cxWplrJ7aj0Q4YeCzidVR0xx1v+vEnhPwjhn/mJH62DTX6mYS+46AcxlYttkQkAwcmlilTYs3ABkScFF6d0rIIAeip/YAhAsC9rPB17NYrTBOlFjJ+dc1mygdtw6oKLGSmn+XjWXGHIT3/sAcEAcCjmn2mPEVhPNNT3SdjYeMETLAHcZEeOPuUBZ9cnT5E1cSidB8DFmw72/01B4R4cxFZheK/AUFcDmLVSVTbbIxYTPc4Q0IQzD2fI1xtYIwByPFDr6GsFNxH3pqU4mMBIB8zhcvqAsf48wNkjxsWQv8Ytk8J3VUXtwYAwaM41DaXtQczORAJCL/ubsxwJ++iurEWn/pGbgxsVJtI6IT+4mArJjxLYOExVIwbvxGM4IRchkSeChFMMv7iYnVcciankUlIq5mFKk2Sv6d+0nB/H02+sszWePc2Z0T9tOuujNNsItJk9TIpM2YiMdZVTcY4LBpXC0QF7I7drWEd+ioTWrdqwIHQoemSZ6Orqqz8WBMrKK606sF0njsFR/oos4a0H7TaVatI9Ghn3wTorc6B+IvXpZOrSOxDEruTx6ZGt3WPZBMaHZZiwrazVSlWKdA7lUv3/IGKbUSlWKKVajgboEkdkzApy5U7woYr4KBYxOryfLvnQIpK6rrEkYJEK+CS5VHp0D01F6J7NikmapksKzJkuptRupV3xFZKapdRUTmKSvafv5OI1K3UBeAHhOIa4D6TC0AVY2ey4ZSrdX2FJ/OZX8q9OsLou/W1tVYZQURP2Bdm/EYBTFjFmdK9CFR6rrXTllLgCxEHq5cVICorXwvE40FQ6TS7OsciAOTyfhNUyxrshYp1WCb9gJkKcXWikzRmgoxRHoDsmiKIP253Jc5djAJeSIoPEWIZ7UnIHiAYRNx9AYkb1nzbtEZ2hKdlICUge9F84GAlwwMnQGxACCmW7AL3zuQAgGI9K6zWIv3/JIZ4zZEUQSykBeEqI3J0Kb6O4OOxfJxJy+n7v3cawBzeaYAIW1t0GW+lsiX3GmsevNos+HH/tY7Ns5pfOBYMN6bkXI20Lb/ee/XmR0D2l+48YnN3yIkMgRMZrG63EYwUWJfMyCttaTpvRtfYBmxLc9zh3EbUTzYk7Nhjx68j+RgFi+ywuOCtvSBZQvwXbO490s2bOevur8L6DOQ33XyVes+R+Q5Ij2dwP9TYAKAKNjkVAAAAABJRU5ErkJggg==','10'],
 					[51.489085, -0.094793, '<div class="map-post"><div class="map-post-thumb"><a href="post-detail.html"><img src="images/grid/post245x150-11.jpg" alt="post245x150-3"></a></div><div class="map-post-des"><div class="map-post-title"><h5><a href="post-detail.html">Cabet Bar in Brighton </a></h5></div><div class="map-post-address"><p><i class="fa fa-map-marker"></i> Brighton, The City of Brighton</p></div></div></div>','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADaklEQVRoQ+1aQVbbMBD9013YlJ6gUS9AOAHKCZoscRZNT0B6AuAENSdoukhYAiewOQHhAlU4QWEDu07fKLZxDI4jm5S2T14ltjTSn5k/kr5NemKuiNDBK1wMnMeB6ueHlvnI/3igdl3uU3dq+BUwZENGgaL8+Ol8XO9nQIodNw2u7oTLAHogTSPmI1LCKZ9aPrUSD3iOeI40JUNJf59aPrV8aq32wAqOzKRnFKilo0V3asru2937X7eyuyZA6hAPxNVzxfZlqeVq9zEikx9zEL1ngor31dzVUJ32+tS0iWHAfBMNPrTr2Ej75FMrBrDHhG68r+T3xi99ajQxIgCXUaB03QFzdq5JT01IwAEzjuOBOqpr1KWfnpgjIhwycBIHauTSd0mQmJqIAC1zFyA9As6aesdlMqlyw0A/DtS5S9+0rZ6YIRG+AXzHLWqTPjPb9MBzgN7+CZ5k/EgmEPfVrQuQ7tTsMTAioGdBEPWEElaKyYX6exyooYth17Z6asYEfHJNZZ2kUTYe8w2DevFA2YVyAcRWEZ4lUdkY6R/JaT3ZcamSaXVixgVE2Buocd6JmTimp0bC9ZWBOVrYdQ15VWQkhfGAKwLaDHyJAxVW9ck/r1p3iirfohQzZthC96XAWBD3iBJptlbJdQKyID4EzA4DMVroNwVTAHHNLeg6Np2AWL4sg5mD0U8J5ZIKSRHpgHAm6QSgNgix5QwkBYN7jInwUf4zY4w3OF6XnFI88AuHRLAV0BJ0C8M6kShuRco06iWOFD2+WHQ4lGqWTEhKnYC6KIJKJi/AZaFKzhJ8x0yjYoVxjWztiCxtAxZEHRF4KJvLBNBtPFDvltpNzE8ibNt7ixo/xhbCJlGoXbWqPKUnpkME+yKmTN5nxm5dTq0avxZH6hisGqjKSVXPq+yv5Mhzxl31qKoJrvvcAynzlI/IujlU0s6nlk+tgsjcMKOy7j61/uvUym1RrktE5p1/YouSCQfP6FGZPgZsRMB4MY7oiTkgQphIME+EgyUBgyFb95OXInqjbXxyUpRUkVOeCBNWo2XG57LzxaNoBlgRgxESYRYF6rIpKOeIlH6/JWcMolGVMmiVS+YwPbvkAYioUfwOa12AzkCSN0M7yQCX1rOLD8ScpE0BBEDkWInkXmLvSZFwAPLsG6u0/288R19KOGbU8gAAAABJRU5ErkJggg==','11'],
 					[51.502741, -0.098484, '<div class="map-post"><div class="map-post-thumb"><a href="post-detail.html"><img src="images/grid/post245x150-12.jpg" alt="post245x150-4"></a></div><div class="map-post-des"><div class="map-post-title"><h5><a href="post-detail.html">5 Star Moon Hotel </a></h5></div><div class="map-post-address"><p><i class="fa fa-map-marker"></i> Brighton, The City of Brighton</p></div></div></div>','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACWUlEQVRoQ+1ZvXnbMBB95zKN5REwQZQJAk0QuwxZRJnAHsEj2BNYKciUsScQNrAzAUZI0qQ0/IEy80E0IQIgKOhTwE68H9w7HN7hKMLAw79LrlXEZyb6VFPL25hoEEgt1w2Qgi16gSSW7wTCKznHCT5BYU7AuVZWwD0IT3jGQ2OcUC5K9tRNqnVHeC1XBHwxDRTwTRRsqd+lljsD0YqLWmrk71+Nfq4LNjcdpJabsew8I7ySvwjqz6a06FSU7Mw0Ti13AsJ/yBn+4kqU7LoppUpe4x1uxAX73fxOLHcqreawA5cAzokwG2K2fciVgk7gPYBbp8POK7kkwt0+ggtdQyl8FSVbWUtL7wQRHl/p9hYKqz70oQGMsWuqhLCkTaVAKXwwY9s67C2lKr19Bbsas/BUtryWNxqM2Qr0WttANEsRZl20UwUV4retGn1mTBbdArKopdLO1wUbvLqEBBHLpi9OJyC8ko9E2GqGbVD66iIKdtHpL5PqBwNpDW0Z7e7gvvTNdZ12xFZyh/T+/wRyDKWlp8OPfUCUwoMoWTOztM+illPrv2FXp9KKRZux/ASzVqwAYvkJBpL7iGULYvWd3EdsmTyE906sta8rh2+fCimtqfuCr//cR2K1gCh+ch85psPeOwLneaTzTSBGQnIf+ffxIc8j4UwcTL/hS05jGQwkzyN5HtlkwIeWvej3EOYOG0AvIGPmBZcMj/HvCmT0vDAAZLR/JyC+JOpT276+R5WW72IZiGPGghuio3/z26/XtT+G/+M+I74ZSqW/63OQlQZTBWtbt/t3xgvz/SNvFqVEmwAAAABJRU5ErkJggg==','12'],
 				];
 				for (var i = 0; i < addressPointss.length; i++) {
-					
+
 				var a = addressPointss[i];
 					var markerLocation = new L.LatLng(a[0], a[1]); // London
 
@@ -268,14 +277,14 @@ $(document).ready(function(){
 						}
 					});
 
-					var customHtmlIcon = new CustomHtmlIcon(); 
+					var customHtmlIcon = new CustomHtmlIcon();
 
 					var marker = new L.Marker(markerLocation, {icon: customHtmlIcon}).bindPopup(a[2]).addTo(map);
 					markers.addLayer(marker);
 				}
 					map.scrollWheelZoom.disable();
 				map.addLayer(markers);
-			
+
 		 }else if($('#map').is('.contactmap')) {
 			 	L.HtmlIcon = L.Icon.extend({
 				options: {
@@ -305,16 +314,16 @@ $(document).ready(function(){
 				}
 		});
 			L.mapbox.accessToken = 'pk.eyJ1IjoibGlzdGluZ3BybyIsImEiOiJjaWxhaGZjNWgwMDB1d25tMm1uZThub2wyIn0.UF5krbL-hVDhMcARAZmDGQ';
-				 
+
 				var map = L.mapbox.map('map', 'mapbox.streets')
 					.setView([51.516576, -0.137508], 14);
 				var markers = new L.MarkerClusterGroup();
 
-				var addressPointss = [    
+				var addressPointss = [
 					[51.516576, -0.137508, '','images/pins/lp-logo.png'],
 				];
 				for (var i = 0; i < addressPointss.length; i++) {
-					
+
 				var a = addressPointss[i];
 					var markerLocation = new L.LatLng(a[0], a[1]); // London
 
@@ -324,16 +333,16 @@ $(document).ready(function(){
 						}
 					});
 
-					var customHtmlIcon = new CustomHtmlIcon(); 
+					var customHtmlIcon = new CustomHtmlIcon();
 
 					var marker = new L.Marker(markerLocation, {icon: customHtmlIcon}).bindPopup(a[2]).addTo(map);
 					markers.addLayer(marker);
 				}
 					map.scrollWheelZoom.disable();
 				map.addLayer(markers);
-			
+
 		}else if($('#map').is('.singlebigpost')) {
-		
+
 			 	L.HtmlIcon = L.Icon.extend({
 				options: {
 					/*
@@ -362,16 +371,16 @@ $(document).ready(function(){
 				}
 		});
 			L.mapbox.accessToken = 'pk.eyJ1IjoibGlzdGluZ3BybyIsImEiOiJjaWxhaGZjNWgwMDB1d25tMm1uZThub2wyIn0.UF5krbL-hVDhMcARAZmDGQ';
-				 
+
 				var map = L.mapbox.map('map', 'mapbox.streets')
 					.setView([40.6700,-73.9400], 14);
 				var markers = new L.MarkerClusterGroup();
 
-				var addressPointss = [    
+				var addressPointss = [
 					[40.6700,-73.9400, '','images/pins/lp-logo.png'],
 				];
 				for (var i = 0; i < addressPointss.length; i++) {
-					
+
 				var a = addressPointss[i];
 					var markerLocation = new L.LatLng(a[0], a[1]); // London
 
@@ -381,7 +390,7 @@ $(document).ready(function(){
 						}
 					});
 
-					var customHtmlIcon = new CustomHtmlIcon(); 
+					var customHtmlIcon = new CustomHtmlIcon();
 
 					var marker = new L.Marker(markerLocation, {icon: customHtmlIcon}).bindPopup(a[2]).addTo(map);
 					markers.addLayer(marker);
@@ -389,195 +398,377 @@ $(document).ready(function(){
 					map.scrollWheelZoom.disable();
 				map.addLayer(markers);
 		}
-		
+
 
 	});
-				
-		
+
+
 	// Autocomplete
-	
-	/* my code for Home search autocomplete */
+
+	/* my code for Home search autocomplete
 
 	$('.lp-home-search-input').autocomplete({
-		minLength:1,	
+		minLength:1,
 		source: 'search.php'
-  });
+  	});
+
+	*/
 
 	// End of my code
 
+	// My modified $.widget code for autocomplete RIP
+
+	/*
 
     $.widget( "custom.combobox", {
 
       gData:[],
+
       _create: function() {
-        this.wrapper = $( "<span>" )
-          .addClass( "custom-combobox" )
-          .insertAfter( this.element );
- 
-        this.element.hide();
-        this._createAutocomplete();
-        this._createShowAllButton();
+
+	        this.wrapper = $( "<span>" )
+	          .addClass( "custom-combobox" )
+	          .insertAfter( this.element );
+
+	        this.element.hide();
+	        this._createAutocomplete();
+	        this._createShowAllButton();
+
       },
+
       _createAutocomplete: function() {
-        var selected = this.element.children( ":selected" ),
-          value = selected.val() ? selected.text() : "";
- 
-        this.input = $( "<input>" )
-          .appendTo( this.wrapper )
-          .val( value )
-          .attr( "title", "" )
-          .addClass( "custom-combobox-input ui-widget ui-widget-content ui-state-default ui-corner-left lp-search-input location_input lp-home-locaton-input" )
-          .autocomplete({
-            delay: 0,
-            minLength: 0,
-            source: $.proxy( this, "_source" )
-          })
-		  .tooltip({
-            tooltipClass: "ui-state-highlight"
-          });
- 
+
+	        var selected = this.element.children( ":selected" ),
+	          value = selected.val() ? selected.text() : "";
+
+	        this.input = $( "<input>" )
+	          .appendTo( this.wrapper )
+	          .val( value )
+	          .attr( "title", "" )
+	          .addClass( "custom-combobox-input ui-widget ui-widget-content ui-state-default ui-corner-left lp-search-input location_input lp-home-locaton-input" )
+	          .autocomplete({
+	            delay: 0,
+	            minLength: 0,
+	            source: $.proxy( this, "_source" )
+	          })
+			  .tooltip({
+	            tooltipClass: "ui-state-highlight"
+	          });
+
       },
- 
+
       _createShowAllButton: function() {
-        var input = this.input,
-          wasOpen = false;
- 
-        $( "<a>" )
-          .attr( "tabIndex", -1 )
-          .attr( "title", "Show All Items" )
-          .tooltip()
-          .appendTo( this.wrapper )
-          .button({
-            icons: {
-              primary: "ui-icon-triangle-1-s"
-            },
-            text: false
-          })
-          .removeClass( "ui-corner-all" )
-          .addClass( "custom-combobox-toggle ui-corner-right" )
-          .mousedown(function() {
-            wasOpen = input.autocomplete( "widget" ).is( ":visible" );
-          })
-          .on('click' , function() {
-            input.focus();
- 
-            // Close if already visible
-            if ( wasOpen ) {
-              return;
-            }
- 
-            // Pass empty string as value to search for, displaying all results
-            input.autocomplete( "search", "" );
-          });
+
+	        var input = this.input,
+	          wasOpen = false;
+
+	        $( "<a>" )
+	          .attr( "tabIndex", -1 )
+	          .attr( "title", "Show All Items" )
+	          .tooltip()
+	          .appendTo( this.wrapper )
+	          .button({
+	            icons: {
+	              primary: "ui-icon-triangle-1-s"
+	            },
+	            text: false
+	          })
+	          .removeClass( "ui-corner-all" )
+	          .addClass( "custom-combobox-toggle ui-corner-right" )
+	          .mousedown(function() {
+	            wasOpen = input.autocomplete( "widget" ).is( ":visible" );
+	          })
+	          .on('click' , function() {
+	            input.focus();
+
+	            // Close if already visible
+	            if ( wasOpen ) {
+	              return;
+	            }
+
+	            // Pass empty string as value to search for, displaying all results
+	            input.autocomplete( "search", "" );
+	          });
+
       },
- 
+
       _source:  function( request, response ) {
-		var self = this;
-        if(self.gData.length === 0) {
-	        var options = {
-				url : 'location.php',
-				success : function(data) {
-						console.log("data from XHR: "+data);
-							var rData = JSON.parse(data);
-							var temp;
-							for(var i in rData)
-							{
-								temp = "option[value='"+rData[i]+"']";
-								if(self.element.children(temp).length === 0) {
-							 		i = "<option value="+rData[i]+">"+rData[i]+"</option>";
-							 		self.gData.push(i);
-							 	}
+
+			var self = this;
+	        if(self.gData.length === 0) {
+		        var options = {
+					url : 'location.php',
+					success : function(data) {
+							console.log("data from XHR: "+data);
+								var rData = JSON.parse(data);
+								var temp;
+								for(var i in rData)
+								{
+									temp = "option[value='"+rData[i]+"']";
+									if(self.element.children(temp).length === 0) {
+								 		i = "<option value="+rData[i]+">"+rData[i]+"</option>";
+								 		self.gData.push(i);
+								 	}
+								}
+								//self.element.empty();
+								self.element.append(self.gData);
+								},
+								error : function(error) {
+									console.log("Error from XHR: "+error);
+									response(null);
 							}
-							//self.element.empty();
-							self.element.append(self.gData);
-							},
-							error : function(error) {
-								console.log("Error from XHR: "+error);
-								response(null);
-						}
+				}
+				$.ajax(options);
 			}
-			$.ajax(options);
-		}
-		var matcher = new RegExp( "^"+$.ui.autocomplete.escapeRegex(request.term), "i" );
-		var results = this.element.children( "option" ).map(function() {
-				var text = $(this).text();
-				if ( this.value && ( !request.term || matcher.test(text) ) )
-				return {
-				label: text,
-				value: text,
-				option: this
-				};
-			 }) 
-		 response(results.splice(0,6));
+			var matcher = new RegExp( "^"+$.ui.autocomplete.escapeRegex(request.term), "i" );
+			var results = this.element.children( "option" ).map(function() {
+					var text = $(this).text();
+					if ( this.value && ( !request.term || matcher.test(text) ) )
+					return {
+					label: text,
+					value: text,
+					option: this
+					};
+				 })
+			 response(results.splice(0,6));
+
       },
- 
+
       _removeIfInvalid: function( event, ui ) {
- 
-        // Selected an item, nothing to do
-        if ( ui.item ) {
-          return;
-        }
- 
-        // Search for a match (case-insensitive)
-        var value = this.input.val(),
-          valueLowerCase = value.toLowerCase(),
-          valid = false;
-        this.element.children( "option" ).each(function() {
-          if ( $( this ).text().toLowerCase() === valueLowerCase ) {
-            this.selected = valid = true;
-            return false;
-          }
-        });
- 
-        // Found a match, nothing to do
-        if ( valid ) {
-          return;
-        }
- 
-        // Remove invalid value
-        this.input
-          .val( "" )
-          .attr( "title", value + " didn't match any item" )
-          .tooltip( "open" );
-        this.element.val( "" );
-        this._delay(function() {
-          this.input.tooltip( "close" ).attr( "title", "" );
-        }, 2500 );
-        this.input.autocomplete( "instance" ).term = "";
+
+	        // Selected an item, nothing to do
+	        if ( ui.item ) {
+	          return;
+	        }
+
+	        // Search for a match (case-insensitive)
+	        var value = this.input.val(),
+	          valueLowerCase = value.toLowerCase(),
+	          valid = false;
+	        this.element.children( "option" ).each(function() {
+	          if ( $( this ).text().toLowerCase() === valueLowerCase ) {
+	            this.selected = valid = true;
+	            return false;
+	          }
+	        });
+
+	        // Found a match, nothing to do
+	        if ( valid ) {
+	          return;
+	        }
+
+	        // Remove invalid value
+	        this.input
+	          .val( "" )
+	          .attr( "title", value + " didn't match any item" )
+	          .tooltip( "open" );
+	        this.element.val( "" );
+	        this._delay(function() {
+	          this.input.tooltip( "close" ).attr( "title", "" );
+	        }, 2500 );
+	        this.input.autocomplete( "instance" ).term = "";
+
       },
- 
+
       _destroy: function() {
-        this.wrapper.remove();
-        this.element.show();
+
+	        this.wrapper.remove();
+	        this.element.show();
+
       }
+
     });
-	
+
+    $( ".comboboxs" ).combobox();
+
+	$( "#toggle" ).on('click' , function(){
+		$( ".comboboxs" ).toggle();
+	});
+
+    $( "#comboboxCategory" ).combobox();
+
+	$( "#toggle" ).on('click' , function(){
+		$( "#comboboxCategory" ).toggle();
+    });
+
+    $( ".ui-autocomplete" ).autocomplete({
+	  appendTo: ".input-group"
+	});
+
+	$('.custom-combobox-input').autocomplete({ minLength: 0 });
+
+	$('.custom-combobox-input').on( "click", function()
+	{
+		$(this).autocomplete("search", "");
+	});
+
+	*/
+
+
+	// original widget code as from the theme
+
+	    $.widget( "custom.combobox", {
+	  _create: function() {
+	    this.wrapper = $( "<span>" )
+	      .addClass( "custom-combobox" )
+	      .insertAfter( this.element );
+
+	    this.element.hide();
+	    this._createAutocomplete();
+	    this._createShowAllButton();
+	  },
+	  _createAutocomplete: function() {
+	    var selected = this.element.children( ":selected" ),
+	      value = selected.val() ? selected.text() : "";
+				//name = this.element[0].name;
+				name = this.element[0].getAttribute('data-name')
+	    this.input = $( "<input>" )
+	      .appendTo( this.wrapper )
+	      .val( value )
+	      .attr( "title", "" )
+				.attr("name", name)
+	      .addClass( "custom-combobox-input ui-widget ui-widget-content ui-state-default ui-corner-left lp-search-input location_input lp-home-locaton-input" )
+	      .autocomplete({
+	        delay: 0,
+	        minLength: 0,
+	        source: $.proxy( this, "_source" )
+	      })
+		  .tooltip({
+	        tooltipClass: "ui-state-highlight"
+	      });
+
+	  },
+
+	  _createShowAllButton: function() {
+	    var input = this.input,
+	      wasOpen = false;
+
+	    $( "<a>" )
+	      .attr( "tabIndex", -1 )
+	      .attr( "title", "Show All Items" )
+	      .tooltip()
+	      .appendTo( this.wrapper )
+	      .button({
+	        icons: {
+	          primary: "ui-icon-triangle-1-s"
+	        },
+	        text: false
+	      })
+	      .removeClass( "ui-corner-all" )
+	      .addClass( "custom-combobox-toggle ui-corner-right" )
+	      .mousedown(function() {
+	        wasOpen = input.autocomplete( "widget" ).is( ":visible" );
+	      })
+	      .on('click' , function() {
+	        input.focus();
+
+	        // Close if already visible
+	        if ( wasOpen ) {
+	          return;
+	        }
+
+	        // Pass empty string as value to search for, displaying all results
+	        input.autocomplete( "search", "" );
+	      });
+	  },
+
+	  _source: function( request, response ) {
+	    var matcher = new RegExp( $.ui.autocomplete.escapeRegex(request.term), "i" );
+	    response( this.element.children( "option" ).map(function() {
+	      var text = $( this ).text();
+	      if ( this.value && ( !request.term || matcher.test(text) ) )
+	        return {
+	          label: text,
+	          value: text,
+	          option: this
+	        };
+	    }) );
+	  },
+
+	  _removeIfInvalid: function( event, ui ) {
+
+	    // Selected an item, nothing to do
+	    if ( ui.item ) {
+	      return;
+	    }
+
+	    // Search for a match (case-insensitive)
+	    var value = this.input.val(),
+	      valueLowerCase = value.toLowerCase(),
+	      valid = false;
+	    this.element.children( "option" ).each(function() {
+	      if ( $( this ).text().toLowerCase() === valueLowerCase ) {
+	        this.selected = valid = true;
+	        return false;
+	      }
+	    });
+
+	    // Found a match, nothing to do
+	    if ( valid ) {
+	      return;
+	    }
+
+	    // Remove invalid value
+	    this.input
+	      .val( "" )
+	      .attr( "title", value + " didn't match any item" )
+	      .tooltip( "open" );
+	    this.element.val( "" );
+	    this._delay(function() {
+	      this.input.tooltip( "close" ).attr( "title", "" );
+	    }, 2500 );
+	    this.input.autocomplete( "instance" ).term = "";
+	  },
+
+	  _destroy: function() {
+	    this.wrapper.remove();
+	    this.element.show();
+	  }
+	});
+
     $( ".comboboxs" ).combobox();
 		$( "#toggle" ).on('click' , function(){
 		$( ".comboboxs" ).toggle();
-    });	
+    });
     $( "#comboboxCategory" ).combobox();
 		$( "#toggle" ).on('click' , function(){
 		$( "#comboboxCategory" ).toggle();
-    });	
+    });
     $( ".ui-autocomplete" ).autocomplete({
 	  appendTo: ".input-group"
-	});    
+	});
 	$('.custom-combobox-input').autocomplete({ minLength: 0 });
 	$('.custom-combobox-input').on( "click", function()
 	{
 		$(this).autocomplete("search", "");
 	});
-	
-	
-		  
+
+
+
+
+	/* My code */
+
+
+
+	// end of my code
+
+	// Jugaad wala kaam by the creators of the theme
+
 	// Location Placeholder
 	$(".location_input").attr("placeholder", "Your Location");
 	$(".comboboxCategory .location_input").attr("placeholder", "Food");
 	$(".postSubmitCat .location_input").attr("placeholder", "Chose one or more than one categories");
-	
 
-	
+
+	/* My Jugaad Code */
+
+	$(".streambox .location_input").attr("placeholder", "Your Stream");
+	$(".subjectbox .location_input").attr("placeholder", "Your Subject");
+
+
+	// end of my code
+
+
 	// Popup Data
 	$('.md-trigger').on('click' , function(){
 		// variables
@@ -629,7 +820,7 @@ $(document).ready(function(){
 			var stars = '';
 		}
 		if (typeof LPreviews && LPnumber && LPemail && LPprice && LPdescription && LPuserimage && LPusernameCondition !== typeof undefined ) {
-			
+
 			var reviewbox =	'<li class="reviews"><span class="reviews-quantity">'+stars+'('+LPreviews+')</span></li>';
 			var LPnumberCondition =	'<li><span class="phone-icon"><img class="icon icons8-Phone" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEbElEQVRoQ81a4XnUMAy1vEC7QekEwASUCWgnoEzQY4FE9gLQCWgnoJ2AMgF0AtoJgAUivpdPyefzJU6cC5fcv/Z8iZ71JD3JJpP4MPO5iJTGmFfGmCcicsx8k/rNUt9R14uZ+VhEPhljLuPviegtMz8sZXDfe3eAKIhv8IKI/LXWMjN/ZuaNgoNnXjPznzWB2QLCzDAeIOCRR2vtJTP/bAwuiuInEb00xtw55y5WCaQDxFm868z8QkR+AQARXTDz3VrA1B5RA3+oJ26ttZs+6hRFwUSEBPCHiE7XQjGKYuLee38+tMsNxUTk2nu/GVp/iO+pKIrPRHSlMbFDp56shliCB0GxVWQxKssSnH+Ra1BAsVVkMQAR7KxzrrOmpGixJoqBWtjREw3cpxw+a6ZbBcUA5IGI3kxNpyHFnHOnORsx51oAqdPpPhmooecUr84FBum3yUBPU3ZU0/fvqXE2GxA8KIiT7FTaaDAR+e69P5vLsNzn1JkqoNet935H8fY9VL2B9H2cm75zDR1a30gUiMSaHjk8DzZgUW/UdgfK9oaI3ovIKK9EAjKbkkM7nPt9CyQyDP1GK9+7HlqW5VdjDDrIUcBzDctdv1XNg5rw4Jx7m4iNUGtBAWcV0lwjx6yPG6vjqqpQ6Y+I6CM6wx7ROGrdGAPmWtPV6oIuoA36DVCsc7d1MIF1q1DAnUKxKIo7InpnjElSLGqyEPDJuJpr97ue0ztFqaoK/fmJiDjvPfcZURRFne2MMVgPMIsMJXqlOzOf6SAiSR0UxaqqIDwxlFgMTLIHiaiTipfFwQw2U0G8JHcbdUjpeLSEZwaBRNRJzrOgpJVmAAO6YWR0kJgZBIIgj3b7xjn3IVUsAzAHi5lRQBRMu9upYhmvPRTNRgNRAy9F5IsWwQ+pyXxEs9GeAZUx1cmtSVlAJoBBAkBxbVIzwHcWTVUKV8aYpjmDVML6UZP/bCATwISpGbIHCaA1TusVRrB93SUGiDiXSSaNSUAmgoFBUABGRNhae6uHSHVHqkcYmDnXB0lBDcOfg96ZDCQXTIdxbeKDDLLW4gxma9c1ziCBQE18er2zF5ApYEAljZsjEbnXyX+ynxnjnb2BxGBEZOO9v04p3SmZacg7swCJwRhjkkVzHznf553ZgDRgqqoCjyFRkHaRPmeXKLF38J5ZgfRUdaTb/9LTbx1t7OPmhN4KC+FO7Zjzne3cec6Hhs9S1YzUiZa5rh3eezfn+4Jx7ePs1IoNjYIT0h5xszfVwlNoqIX/DkTjpq0dmM6od5Ipeih96xkmjsvrAeFBgCgYaK6Watp4YXaWNXmJTqFxqaE+wD0YkGaHoXI1RZ/o/wAOonAU3cqyRBuBduLZWvuqSe8HBxJ4Z6MXDxqMqDvXfbK9444MPNF6cxEggXeQpnH0V6ti/cAzdyLyYK19hKdU6uO2UnPRZwsEfrcokAAQusLLqqrgpYZyO/GulxrOu2i4CiBR/cFsANdI0GjhIgOmnc/wkl656pQ8/wC3pFkyvejV7AAAAABJRU5ErkJggg==" alt="phone-icon" ></span><span class="phone-number">'+LPnumber+'</span></li>';
 			var LPemailCondition = '<li><span class="email-icon">@</span><span class="email-address">'+LPemail+'</span></li>';
@@ -658,10 +849,10 @@ $(document).ready(function(){
 									'+LPusernameCondition+'\
 								</div><!-- ../user-info -->\
 							</div><!-- ../popup-post-left-bottom -->';
-								
-		$(".lp-insert-data").html(addhtml);	
-		
-	
+
+		$(".lp-insert-data").html(addhtml);
+
+
 	//Popup Quick Map
 	var latlng = new google.maps.LatLng(LPlattitue,LPlongitute);
        var myOptions = {
@@ -680,11 +871,11 @@ $(document).ready(function(){
       }
 
       initialize();
-		
+
 	});
-	
+
 	//href Smooth Scroll
-	
+
 	// handle links with @href started with '#' only
 	$('a[href^="#"]').on('click',function (e) {
 	    e.preventDefault();
@@ -706,14 +897,14 @@ $(document).ready(function(){
 			},
 			navbars		: {
 				height 	: 3,
-				content :  [ 
+				content :  [
 					'<a href="about.html" class="iconsmall iconsmalltext"><i class="fa fa-info"></i></a>',
 					'<a href="'+userlink+'" class="userimage"><img class="icon icons8-Contacts" src="'+userimg+'" alt="user"></a>',
 					'<a href="contact.html" class="iconsmall"><img class="icon icons8-Message" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADjElEQVRoge1YPWgUQRROkcIiRZCAERQVUlwhKGIghT/vTQotLCxSCFpYREkhGEQhhUVAwZAg6bQ88HbehGtSWKSwuMIihYVIiCHmdt5IikMiWJygKBKLnd3bS/budu+SrB77wVYz++77dud977vt6cmQIUOGDGkAibe74eo+IWmfjHbRvUKAOJc2qaQA4lxUj1TA4ZG0ycUFKPc8ElcaNXsZFz7fTZtkKwgy40D6U2SzC8X50DGbTJtsIwDxJJL5jcTbglhFNjsQTwXCiOfTJh0GlEq9gni+9uDNk56eJq4Fjh5D4h+eGFOAUqk3PfqWU3G1TxAvelzNb5B8219rar8g+QYSv7drhAv6zIGztxCFjXModdFy+QDS3Ayvt5wj1trYrq9BoTx0cPQth0J5CInXLAeOGhGxBiIUeRDJvEvDnuvt1byDIg9G7Ys92aG42ieUeW0LVoH4+v7Rt7/puNeQTNWaziIUV/sa7U0UUYDWB5DMrBXzFUk/2nv6PjHzAIm/2N+aBVofaL6/jawFUj8M2d/c3lCvQRA/C2aZ1A/j3NN2aBSKJwITUPxCSH2ifeoeLr0yp1CZF35TC8UTce/tKP0CuReQzJZ9/W8hz/3J6dtanqG8tbW2gNwLSe7vOMZbV/GzzhooPpm4BnEOldkIjpNyzyet0dkbKZSHkMzKjsBZSUKk/q36l1lJOq/aFhK2RiSzAsS5WniLZ89A+lYo+C16w9efV6YKjntt34RAqdQL0p0OhUoV9nehzFyQhYinojKaV0M/DiXul/4+yPOhugQu3ek4OS/ZHMlzPxIv1UJbtDWC1Pf8J43Ea+DoMaD1AaD1Ae9NBvltG4inImuQHg/VWGplJPEnu+SzoYasQIGhqWjiqxj65xZxfWt1/MDhkaCGMhuwUD7dkRB7lqt2ZiyDs3GsGYHgvjz3g3SnUfGy19BmCxUvC2XmGmWmXTWKPIjEpVrv6VuJhYySPiIkz6Din4LMHyT9/JIqH49DYC9xsWCOIulZJP6Fin8KyTOjpI+E9zQUctlxh1EZ6U9ZkHz/oAXshO29suVElx132F+LFOINObMZiGhjQO0XQPLZIBqR2fS57RJS7xbmTavUmQa8FB5yT9Lju4TYxe+C9NN/UYSPK8XNwyD1k9pQ3vk5iPgjSv7nv2n5EErfAeKPEUerSz6Zpk2qXXSvkP/96h4hGTJkyJAhDfwFrL5XNwpoE2kAAAAASUVORK5CYII=" alt="contactus"></a>'
 				]
 			}
 		});
-	//Tags Container 
+	//Tags Container
 	var $tags = $('.chosen-select').chosen(),
 		LPnewTags = function() {
                     $('.LPtagsContainer').empty();
@@ -730,7 +921,7 @@ $(document).ready(function(){
                 };
 
             $tags.on('change', LPnewTags);
-	
+
 		/* Social Share */
 		$('.sbutton').on('click', function(event) {
 		  event.preventDefault();
@@ -742,24 +933,287 @@ $(document).ready(function(){
 			var cardID  = $(this).data("id");
 				cardclass= '.lpmap-icon-shape.card'+cardID+'';
 			if($(cardclass).hasClass('cardHighlight')) {
-				$(cardclass).removeClass("cardHighlight"); 
+				$(cardclass).removeClass("cardHighlight");
 			 }
-			 else{   
-				$(cardclass).addClass("cardHighlight"); 
+			 else{
+				$(cardclass).addClass("cardHighlight");
 			 }
-		  });
+		});
+
 		  $(document).on('mouseleave','.lp-grid-box-contianer',function() {
-				$(cardclass).removeClass("cardHighlight"); 			 
+				$(cardclass).removeClass("cardHighlight");
 		  });
-		  
-	 /* Select Category */
-	 $('.postsubmitSelect').on('change', function(){
-		 $('.featuresDataRow').show();
-		var cvalue =	$(this).val() ;
-		$('.featuresData').css({'opacity':'0','visibility':'hidden','display':'none'});
-		$('.featuresDataContainer').find('.featuresData'+cvalue).css({'opacity':'1','visibility':'visible','display':'block'});
+
+		 /* Select Category */
+		$('.postsubmitSelect').on('change', function(){
+		 	//console.log('Selected a value');
+			//$('.featuresDataRow').show();
+			//console.log(this);
+			 var cvalue = $(this).val();
+			 if(cvalue === 'null'){
+			 	return;
+			 }
+			 //console.log(document.querySelector('#'+cvalue+'.substream-checkbox'));
+			 if(document.querySelector('#'+cvalue+'.substream-checkbox')!==null)
+			 {
+			 	$(".postsubmitSelect").val("null");
+			 	$(".postsubmitSelect").trigger("chosen:updated");
+			 	return;
+			 }
+			 console.log(cvalue);
+
+			var options = {
+					url : 'get-subject.php',
+					method : 'GET',
+					data : {'substream':cvalue},
+					success : function(data) {
+									//console.log(data);
+									$('.featuresDataRow').append(data);
+									$(".postsubmitSelect").val("null");
+									$(".postsubmitSelect").trigger("chosen:updated");
+								},
+								error : function(error) {
+									console.log("Error from XHR: "+error);
+									response(null);
+								}
+			}
+
+			$.ajax(options);
+
+
+			 /*$('.featuresData').css({'opacity':'0','visibility':'hidden','display':'none'});
+			 $('.featuresDataContainer').find('.featuresData'+cvalue).css({'opacity':'1','visibility':'visible','display':'block'});*/
+
+		});
+
+
+// code to attach click eventlistener to .substream-checkbox class
+// we declared it on via parent element because substream-checkbox
+// is dynamically created at runtime
+
+	 $('.featuresDataRow').on('click','.substream-checkbox',function(event){
+
+	 	console.log(this.id+" is "+this.checked);
+
+	 	if(this.checked === false)
+	 	{
+	 		$('#'+this.id+'-container').remove();
+	 	}
+
+	 });
+
+// code to attach click eventlistener to .subject-checkbox class
+// we declared it on via parent element because subject-checkbox
+// is dynamically created at runtime
+
+	 $('.featuresDataRow').on('click','.subject-checkbox',function(event){
+
+	 	console.log(this.id+" is "+this.checked);
+
+	 	if(this.checked === true)
+	 	{
+	 		console.log("checked");
+	 	}
+	 	else
+	 	{
+	 		console.log("unchecked");
+	 	}
+
+	 });
+
+
+
+/* code related to post-stream.html */
+
+/*var form = document.querySelector('#substream_form');
+
+	form.addEventListener('submit', newSubStream);
+
+	function newSubStream(e) {
+
+		e.preventDefault();
+
+		alert("hello");
+
+	}*/
+
+// best method
+
+// for substream_form, following approach is preferred
+
+// 1. use ajax to submit the form for faster submissions without page reload
+// 2. this won't be live after the website goes live, this is just for filling up the data
+// 3. plain old ajax submitting form data to server
+// 4. some cleanup has to be done before going live, like adding content-type
+
+	$('#substream_form').submit(function(e) {
+
+		e.preventDefault();
+		$("#substream_name").focus()
+	  var options = {
+				url : 'save-stream.php',
+				method : 'POST',
+				data : $('#substream_form').serialize(),
+				success : function(data) {
+								console.log(data);
+								data = JSON.parse(data);
+								if(data.status==="success")
+								{
+									$('.status-results').append( "<h3>"+data.substream+" was added</h3>" );
+								}
+								else
+								{
+									$('.status-results').append( "<h3>"+data.substream+" was *NOT* added</h3>" );
+								}
+							},
+							error : function(error) {
+								console.log("Error from XHR: "+error);
+								response(null);
+						}
+			}
+			$.ajax(options);
+
 	});
-	
+
+
+	/*	$('#substream_form').on('submit', function (e) {
+
+			e.preventDefault();
+
+			var options = {
+				url : 'save-stream.php',
+				method : 'POST',
+				data : $('#substream_form').serialize(),
+				success : function(data) {
+								console.log(data);
+							},
+							error : function(error) {
+								console.log("Error from XHR: "+error);
+								response(null);
+						}
+			}
+			$.ajax(options);
+
+		}); */
+
+
+
+// for subject_form, following approach is preferred
+
+// 1. use ajax to submit the form for faster submissions without page reload
+// 2. this won't be live after the website goes live, this is just for filling up the data
+// 3. plain old ajax submitting form data to server
+// 4. some cleanup has to be done before going live, like adding content-type
+
+	$('#subject_form').submit(function(e){
+
+		e.preventDefault();
+		$("#subject_name").focus()
+
+	  	var options = {
+				url : 'save-subject.php',
+				method : 'POST',
+				data : $('#subject_form').serialize(),
+				success : function(data) {
+								console.log(data);
+								data = JSON.parse(data);
+								if(data.status==="success")
+								{
+									$('.status-results').append( "<h3>"+data.subject+" was added</h3>" );
+								}
+								else
+								{
+									$('.status-results').append( "<h3>"+data.subject+" was *NOT* added</h3>" );
+								}
+							},
+							error : function(error) {
+								console.log("Error from XHR: "+error);
+								response(null);
+						}
+			}
+			$.ajax(options);
+
+			//cleanup
+
+			$('input[name="subject_name"]').val("");
+			$('input[name="semester"]').val("");
+			$('input[name="university"]').val("");
+			$('select[name="substream"]').val("");
+	});
+
+
+	// for class_form following approaches are used
+
+	// 1 . use smart ids
+	// 2 . use 'change' event handlers and create an array on check and submit it to server later using ajax
+	// 3 . third approach check whether values are checked/unchecked on form submission
+
+	$('#class_form').submit(function(e){
+
+		e.preventDefault();
+
+		var data = {};
+		data.classtitle = $('#classtitle').val();
+		data.description = $('#description').val();
+		data.city = $('#city').val();
+		data.phone = $('#phone').val();
+		data.email = $('#email').val();
+		data.astreams = {};
+
+		$('.substream-checkbox').map(function(){
+			data.astreams[this.id] = []
+		})
+
+		$('.subject-checkbox').map(function(){
+
+			if(this.checked===true){
+				data.astreams[this.name].push(this.value);
+			}
+		})
+
+ 	  	var options = {
+			url : 'save-class.php',
+			method : 'POST',
+			data : data,
+			success : function(data) {
+							console.log(data);
+							data = JSON.parse(data);
+							$('#response').text("");
+							if(data.status==="success")
+							{
+								$('#response').append( "Class Was added" );
+							}
+							else
+							{
+								$('#response').append( "Class was *NOT* added<br>Some error Occurred" );
+							}
+						},
+						error : function(error) {
+							console.log("Error from XHR: "+error);
+					}
+		}
+		$.ajax(options);
+
+		//clean-up
+		$('#classtitle').val("");
+		$('#description').val("");
+		$('#city').val("");
+		$('#phone').val("");
+		$('#email').val("");
+		$('.substream-container').remove();
+	});
+
+// $('#search-location').selectize({
+// 	placeholder : "Enter Location"
+// });
+// $('#search-subject').selectize({
+// 	placeholder : "Enter Subject"
+// });
+// $('#search-stream').selectize({
+// 	placeholder : "Enter Stream"
+// });
+
+
 });
 $(document).on('change', '.btn-file :file', function() {
   var input = $(this),
