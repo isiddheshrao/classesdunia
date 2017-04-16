@@ -1,8 +1,5 @@
 <?php
-define('DB_SERVER', 'localhost');
-define('DB_USER', 'root7262');
-define('DB_PASSWORD', 'Punk@7262');
-define('DB_NAME', 'shubham7262');
+require 'connect.php';
 
 
 //if (isset($_GET['term'])){
@@ -13,7 +10,7 @@ define('DB_NAME', 'shubham7262');
 	try {
 	    $conn = new PDO("mysql:host=".DB_SERVER.";dbname=".DB_NAME, DB_USER, DB_PASSWORD);
 	    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	    
+
 	    $stmt = $conn->prepare('SELECT loc FROM locations');
 	    //$stmt->execute(array('term' => '%'.$_GET['term'].'%'));
 	    $stmt->execute();
