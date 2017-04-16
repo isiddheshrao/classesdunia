@@ -1,8 +1,5 @@
 <?php
-define('DB_SERVER', 'localhost');
-define('DB_USER', 'root7262');
-define('DB_PASSWORD', 'Punk@7262');
-define('DB_NAME', 'shubham7262');
+require 'connect.php';
 
 
 if (isset($_GET['term'])){
@@ -13,10 +10,10 @@ if (isset($_GET['term'])){
 	try {
 	    $conn = new PDO("mysql:host=".DB_SERVER.";dbname=".DB_NAME, DB_USER, DB_PASSWORD);
 	    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	    
+
 	    $stmt = $conn->prepare('SELECT tag FROM tags WHERE tag LIKE :term LIMIT 0,5');
 	    $stmt->execute(array('term' => '%'.$_GET['term'].'%'));
-	    
+
 	    while($row = $stmt->fetch()) {
 	    	//echo '"' . $row['tag'] . '",';
 	        $return_arr[] =  $row['tag'];
@@ -25,7 +22,7 @@ if (isset($_GET['term'])){
 	} catch(PDOException $e) {
 	    echo 'ERROR: ' . $e->getMessage();
 	}
- 
+
 
     /* Toss back results as json encoded array. */
     echo json_encode($return_arr);
