@@ -57,7 +57,7 @@ function validEmail($email)
   if(filter_var($email, FILTER_VALIDATE_EMAIL))
   {
     return true;
-  } 
+  }
   else
   {
     return false;
@@ -65,7 +65,7 @@ function validEmail($email)
 }
 
 // swag code
-/*function isValidEmail($email){ 
+/*function isValidEmail($email){
     return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
 }*/
 
@@ -95,10 +95,20 @@ function validEmailPro($email){
             }
         }
     }
-
     return true;
 }
 
+function cleanUrl($url)
+{
+  // allow only letters, dash, dots, slash and spaces
+  $url = preg_replace("/[^a-zA-Z-\/\.]/", "", $url);
 
+  // make lowercase
+  $url = strtolower($url);
+
+  // return
+  return $url;
+
+}
 
 ?>
