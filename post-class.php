@@ -7,16 +7,16 @@
 	<meta name="keywords" content="HTML5 Template" />
 	<meta name="description" content="Listingpro - Template HTML5">
 	<meta name="author" content="">
-	
+
 	<!-- Title -->
 	<title>Listingpro - Home</title>
-	
+
 	<!-- Mobile Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-	
+
 	<!-- CSS -->
 	<link href="lib/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" />
 	<link href="css/colors.css" type="text/css" rel="stylesheet" />
@@ -42,7 +42,7 @@
 </head>
 <body class="post-submit"  data-userimg="images/user-thumb-94x94.png" data-userlink ="author.html">
 	<!--==================================Header Open=================================-->
-	
+
 	<!--==================================Header Open=================================-->
 	<div id="page">
 	<!--==================================Header Open=================================-->
@@ -75,7 +75,7 @@
 				</div>
 			</div>
 		</div><!-- ../topbar -->
-		
+
 		<!-- Login Popup -->
 		<div class="md-modal md-effect-3" id="modal-3">
 			<div class="login-form-popup lp-border-radius-8">
@@ -96,11 +96,11 @@
 								<label for="check1">Keep me signed in</label>
 							</div>
 						</div>
-						
+
 						<div class="form-group">
-							<input type="submit" value="Sign in" class="lp-secondary-btn width-full btn-first-hover" /> 
+							<input type="submit" value="Sign in" class="lp-secondary-btn width-full btn-first-hover" />
 						</div>
-					</form>	
+					</form>
 					<div class="pop-form-bottom">
 						<div class="bottom-links">
 							<a  class="signUpClick">Not a member? Sign up</a>
@@ -130,9 +130,9 @@
 							<p>A password will be e-mailed to you.</p>
 						</div>
 						<div class="form-group">
-							<input type="submit" value="Register" class="lp-secondary-btn width-full btn-first-hover" /> 
+							<input type="submit" value="Register" class="lp-secondary-btn width-full btn-first-hover" />
 						</div>
-					</form>	
+					</form>
 					<div class="pop-form-bottom">
 						<div class="bottom-links">
 							<a class="signInClick" >Already have an account? Sign in</a>
@@ -155,9 +155,9 @@
 							<input type="email" class="form-control" id="email2" />
 						</div>
 						<div class="form-group">
-							<input type="submit" value="Get New Password" class="lp-secondary-btn width-full btn-first-hover" /> 
+							<input type="submit" value="Get New Password" class="lp-secondary-btn width-full btn-first-hover" />
 						</div>
-					</form>	
+					</form>
 					<div class="pop-form-bottom">
 						<div class="bottom-links">
 							<a class="cancelClick">Cancel</a>
@@ -165,10 +165,10 @@
 					</div>
 				<a class="md-close"><i class="fa fa-close"></i></a>
 				</div>
-			</div>	
+			</div>
 		</div>
 		<!-- ../Login Popup -->
-		
+
 		<!-- Popup Open -->
 		<div class="md-modal md-effect-3" id="modal-2">
 			<div class="container">
@@ -311,7 +311,7 @@
 		</div><!-- ../Home Search Container -->
 	</header>
 	<!--==================================Header Close=================================-->
-	
+
 	<!--==================================Section Open=================================-->
 	<section class="aliceblue">
 		<div class="container page-container-third">
@@ -325,7 +325,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0">
-					
+
 					<div class="lp-border-radius-8 lp-border lp-form-container">
 						<div class="lp-form-row clearfix lp-border-bottom margin-bottom-40 padding-bottom-40">
                             <h2>Add Class Details</h2>
@@ -339,7 +339,7 @@
 							<label for="category">Category</label>
 							  <select data-placeholder="Choose one or more than one categories" id="category" class="chosen-select postsubmitSelect" tabindex="5" name="category">
 								<option value="null">Choose Streams</option>
-                                
+
                                <?php
 
                                		require 'connect.php';
@@ -360,7 +360,7 @@
 												{
 													    $stmt1 = $conn->prepare('SELECT ssname FROM substream WHERE msname LIKE :mainstream');
                                                         $stmt1->execute(array('mainstream' => $row['msname']));
-                                                        
+
                                                         if($stmt1->rowCount()>0)
                                                         {
                                                             echo '<optgroup label="'.$row['msname'].'">';
@@ -380,7 +380,7 @@
 
 							    ?>
 
-                                
+
                             <!--<optgroup label="Engineering">
 								  <option value="1">Information Technology</option>
 								  <option value="2">Computer Science</option>
@@ -393,7 +393,7 @@
 								  <option value="7">Hotels & Travel</option>
 								  <option value="8">Nightlife</option>
 								</optgroup>-->
-								
+
 							  </select>
 						</div>
 
@@ -403,7 +403,7 @@
 							<label for="inputTags">Subjects</label>
 
 							<!-- PHP CODE LOADED HERE -->
-	
+
 
 						</div>
 
@@ -414,7 +414,7 @@
 							<textarea class="form-control" rows="8" id="description" name="description"></textarea>
 						</div>
 
-						<!-- File Component 
+						<!-- File Component
 
 						<div class="form-group clearfix">
 							<div class="col-sm-12 padding-left-0 padding-right-0">
@@ -436,9 +436,17 @@
 							<label for="email">Email</label>
 							<input type="email" class="form-control" id="email" name="email" placeholder="your contact email">
 						</div>
+						<div class="form-group">
+							<label for="logo_url">Logo Path</label>
+							<input type="text" class="form-control" id="logo_url" name="logo_url" placeholder="Logo URL path">
+						</div>
+						<div class="form-group">
+							<label for="page_url">Html page path</label>
+							<input type="text" class="form-control" id="page_url" name="page_url" placeholder="your html file">
+						</div>
 						<div class="form-group clearfix margin-bottom-0">
-							<input type="submit" id="class_submit" value="Add Class" class="lp-secondary-btn btn-first-hover" /> 
-							<strong id="response">Hello</strong>	
+							<input type="submit" id="class_submit" value="Add Class" class="lp-secondary-btn btn-first-hover" />
+							<strong id="response"></strong>
 						</div>
 						</form>
 					</div>
@@ -447,7 +455,7 @@
 		</div>
 	</section>
 	<!--==================================Section Close=================================-->
-	
+
 	<!--==================================Footer Open=================================-->
 	<footer class="text-center">
 		<div class="footer-upper-bar">
@@ -494,8 +502,8 @@
 	<!--==================================Footer Close=================================-->
 	<a href="post-submit.html" class="add-listing-mobile lp-search-btn">Add listing</a>
 	</div>
-	
-	
+
+
 	<!--==================================Javscript=================================-->
 
 
@@ -516,6 +524,6 @@
 		<script type="text/javascript" src="lib/popup/js/classie.js"></script> <!-- Popup -->
 		<script type="text/javascript" src="lib/popup/js/modalEffects.js"></script> <!-- Popup -->
 		<script type="text/javascript" src="js/main.js"></script>
-		
+
 </body>
 </html>
