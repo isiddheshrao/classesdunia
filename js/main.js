@@ -1158,6 +1158,8 @@ $(document).ready(function(){
 		data.city = $('#city').val();
 		data.phone = $('#phone').val();
 		data.email = $('#email').val();
+		data.logo_url = $('#logo_url').val();
+		data.page_url = $('#page_url').val();
 		data.astreams = {};
 
 		$('.substream-checkbox').map(function(){
@@ -1200,6 +1202,8 @@ $(document).ready(function(){
 		$('#city').val("");
 		$('#phone').val("");
 		$('#email').val("");
+		$('#logo_url').val("");
+		$('#page_url').val("");
 		$('.substream-container').remove();
 	});
 
