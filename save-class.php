@@ -3,37 +3,24 @@
 require 'connect.php';
 require 'helper.php';
 
-if (isset($_POST['classtitle']) && 
-    isset($_POST['description']) && 
-    isset($_POST['city']) && 
-    isset($_POST['phone']) && 
-    isset($_POST['phone']) && 
-    isset($_POST['email']) && 
+if (isset($_POST['classtitle']) &&
+    isset($_POST['description']) &&
+    isset($_POST['city']) &&
+    isset($_POST['phone']) &&
+    isset($_POST['phone']) &&
+    isset($_POST['email']) &&
     isset($_POST['astreams']) &&
-    !empty($_POST['classtitle']) && 
-    !empty($_POST['description']) && 
-    !empty($_POST['city']) && 
-    !empty($_POST['phone']) && 
-    !empty($_POST['phone']) && 
-    !empty($_POST['email']) && 
+    isset($_POST['logo_url']) &&
+    isset($_POST['page_url']) &&
+    !empty($_POST['classtitle']) &&
+    !empty($_POST['description']) &&
+    !empty($_POST['city']) &&
+    !empty($_POST['phone']) &&
+    !empty($_POST['phone']) &&
+    !empty($_POST['email']) &&
+    !empty($_POST['logo_url']) &&
+    !empty($_POST['page_url']) &&
     !empty($_POST['astreams'])) {
-
-    $classtitle = cleanStringCap($_POST['classtitle']);
-    $description = cleanStringCap($_POST['description']);
-    $city = cleanStringCap($_POST['city']);
-    $phone = cleanPhoneNo($_POST['phone']);
-    if(!validEmail($email))
-    {
-        echo json_encode($arr);
-        return;
-    }
-    $astreams = $_POST['astreams'];
-        
-    // echo 'classtitle: '.$classtitle.'<br/>';
-    // echo 'description: '.$description.'<br/>';
-    // echo 'city: '.$city.'<br/>';
-    // echo 'phone: '.$phone.'<br/>';
-    // echo 'email: '.$email.'<br/>';
 
     $results = array(
                         "class" => false,
@@ -43,6 +30,26 @@ if (isset($_POST['classtitle']) &&
 
     $arr = array('status' => 'failure');
 
+    $classtitle = cleanStringCap($_POST['classtitle']);
+    $description = cleanStringCap($_POST['description']);
+    $city = cleanStringCap($_POST['city']);
+    $phone = cleanPhoneNo($_POST['phone']);
+    $email = $_POST['email'];
+    $logourl = cleanUrl($_POST['logo_url']);
+    $pageurl = cleanUrl($_POST['page_url']);
+    if(!validEmail($email))
+    {
+        echo json_encode($arr);
+        return;
+    }
+    $astreams = $_POST['astreams'];
+
+    // echo 'classtitle: '.$classtitle.'<br/>';
+    // echo 'description: '.$description.'<br/>';
+    // echo 'city: '.$city.'<br/>';
+    // echo 'phone: '.$phone.'<br/>';
+    // echo 'email: '.$email.'<br/>';
+
     //var_dump($results);
 
     try {
@@ -50,22 +57,22 @@ if (isset($_POST['classtitle']) &&
 	    $conn = new PDO("mysql:host=".DB_SERVER.";dbname=".DB_NAME, DB_USER, DB_PASSWORD);
 	    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        // check whether similar values exist in our db
+      // check whether similar values exist in our db
 
-        $stmt = $conn->prepare('SELECT classid FROM classes WHERE cname LIKE :term');
-        $stmt->execute(array('term' => '%'.$classtitle.'%'));
-        $stmt->execute();
+      $stmt = $conn->prepare('SELECT classid FROM classes WHERE cname LIKE :term');
+      $stmt->execute(array('term' => '%'.$classtitle.'%'));
+      $stmt->execute();
 
-        if($stmt->rowCount()>=1) {
+      if($stmt->rowCount()>=1) {
 
-            // echo there exists a same vale in the db exit the program
-            echo json_encode($arr);
-            return;
+          // echo there exists a same vale in the db exit the program
+          echo json_encode($arr);
+          return;
 
-        }
+      }
 
-	    $stmt = $conn->prepare('INSERT INTO `classes`(`cname`, `location`, `email`, `phone`, `description`) VALUES (:classname,:location,:email,:phone,:description)');
-	    $res = $stmt->execute(array('classname' => $classtitle,'location' => $city, 'email' => $email, 'phone' => $phone, 'description' => $description));
+	    $stmt = $conn->prepare('INSERT INTO `classes`(`cname`, `location`, `email`, `phone`, `logourl`, `pageurl`, `description`) VALUES (:classname,:location,:email,:phone,:logourl,:pageurl,:description)');
+	    $res = $stmt->execute(array('classname' => $classtitle,'location' => $city, 'email' => $email, 'phone' => $phone, 'logourl' => $logourl, 'pageurl' => $pageurl, 'description' => $description));
 
         if($res)
         {
@@ -79,7 +86,7 @@ if (isset($_POST['classtitle']) &&
         }
 
         foreach ($astreams as $subStreamName => $subjects) {
-            
+
             // perform class to substream mapping and class to subject here
 
             // echo '<br><br>Stream: '.$subStreamName.'<br>';
@@ -181,7 +188,7 @@ if (isset($_POST['classtitle']) &&
             {
                 echo json_encode($arr);
                 return;
-            }                
+            }
 
 
         }
@@ -192,7 +199,7 @@ if (isset($_POST['classtitle']) &&
         foreach($results as $key => $value)
         {
             //echo $key.'<br>'.$value;
-    	    
+
             if($results[$key])
             {
                 $arr = array('status' => 'success');
@@ -209,7 +216,7 @@ if (isset($_POST['classtitle']) &&
 	    //echo 'ERROR: ' . $e->getMessage();
         echo "Some Error occured";
 	}
- 
+
 }
 
 
