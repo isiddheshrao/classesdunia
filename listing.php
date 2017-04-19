@@ -91,7 +91,7 @@ require 'helper.php';
 												</ul>
 											</li>
 											<li><a href="listing-design.html">Design </a></li>
-											
+
 											<li class="has-menu"><a href="listing-entrance.html">Entrance </a>
 												<ul class="sub-menu">
 													<li><a href="listing-entrance.html">GATE </a></li>
@@ -113,7 +113,7 @@ require 'helper.php';
 												<a href="about-us.html">About Us </a></li>
 											<li>
 												<a href="contact-us.html">Contact Us </a>
-											</li>							
+											</li>
 										</ul>
 									</div>
 						<div class="col-md-8 col-xs-12 lp-menu-container">
@@ -141,7 +141,7 @@ require 'helper.php';
 												</ul>
 											</li>
 											<li><a href="listing-design.html">Design </a></li>
-											
+
 											<li class="has-menu"><a href="listing-entrance.html">Entrance </a>
 												<ul class="sub-menu">
 													<li><a href="listing-entrance.html">GATE </a></li>
@@ -307,13 +307,17 @@ if (isset($_POST['location']) && isset($_POST['stream']) && isset($_POST['subjec
 {
 		// cleanStringLow finds all special characters(except whitespace \s) and replaces them with ""(nothing)
 
+		//echo 'Location: '.$_POST['location'].' Stream: '.$_POST['stream'] .' Subject: '.$_POST['subject'];
+
+
 		$location = cleanStringLow($_POST['location']);
 
 		$stream = cleanStringLow($_POST['stream']);
 
 		$subject = cleanStringLow($_POST['subject']);
 
-		$all = 'all';
+		$all = 'all-';
+
 		if( strpos( $location, $all ) !== false ) {
 			$location = "";
 		}
@@ -325,6 +329,8 @@ if (isset($_POST['location']) && isset($_POST['stream']) && isset($_POST['subjec
 		if( strpos( $subject, $all ) !== false ) {
 			$subject = "";
 		}
+
+		//echo 'Location: '.$location.' Stream: '.$stream .' Subject: '.$subject;
 
 		// let start developing for most simple case first which is
 
@@ -363,7 +369,7 @@ if (isset($_POST['location']) && isset($_POST['stream']) && isset($_POST['subjec
 							</p>
 						</div>
 						<div class="col-md-4 col-sm-4  text-right">
-							<p>Showing all Café Listings <a href="#" class="achor-color">Reset</a></p>
+							<p>Showing all Class Listings <a href="#" class="achor-color">Reset</a></p>
 						</div>
 					</div>
 					<div class="mobile-map-space">
@@ -449,359 +455,6 @@ if (isset($_POST['location']) && isset($_POST['stream']) && isset($_POST['subjec
 		catch(PDOException $e) {
 			    echo 'ERROR: ' . $e->getMessage();
 		}
-
-
-
-
-
-
-
-
-
-
-
-
-		// thinking of making a function to handle db calls - will do that later
-
-
-
-		//check whether location is all location or not
-
-/*
-
-		$result = strcmp($location,"all");
-
-		if($result == 0)
-		{
-			$loc_search = false;
-		}
-		else
-		{
-			$loc_search = true;
-		}
-
-
-		//$return_arr = array();
-
-		try {
-			    $conn = new PDO("mysql:host=".DB_SERVER.";dbname=".DB_NAME, DB_USER, DB_PASSWORD);
-			    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-				// Case - I : MainStream based search
-
-				$stmt1 = $conn->prepare('SELECT ssname FROM substream WHERE msname LIKE :term');
-				$stmt1->execute(array('term' => '%'.$term.'%'));
-
-				if($stmt1->rowCount()>0)
-				{
-					while($row1 = $stmt1->fetch())
-					{
-							$substream_name = $row1['ssname'];
-							//echo $substream_name.' ';
-
-							if($loc_search)
-							{
-								$stmt2 = $conn->prepare('SELECT a.cname,a.location,b.ssname FROM classes a, substream b, map_class_stream c where a.classid = c.class_id and b.ssid=c.stream_id and b.ssname LIKE :substream and a.location LIKE :loc');
-						    	$stmt2->execute(array('substream' => '%'.$substream_name.'%', 'loc' => '%'.$location.'%'));
-
-							}
-					    	else
-					    	{
-						    	$stmt2 = $conn->prepare('SELECT a.cname,a.location,b.ssname FROM classes a, substream b, map_class_stream c where a.classid = c.class_id and b.ssid=c.stream_id and b.ssname LIKE :substream');
-						    	$stmt2->execute(array('substream' => '%'.$substream_name.'%'));
-					    	}
-
-					    	while($row2 = $stmt2->fetch()) {
-							    //$return_arr[] =  array('Classes:' => $row2['cname'], 'Location:' => $row2['location'], 'Stream' => $row2['ssname']);
-
-					    	echo	'<div class="col-md-3 col-sm-6 lp-grid-box-contianer lp-grid-box-contianer1" data-title="The Dorchester grill" data-reviews="4" data-number="+007-123-4567-89" data-email="jhonruss@example.com" data-website="www.example.com" data-price="$200" data-pricetext="Text about your price" data-description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi archeum" data-userimage="images/user-thumb-94x94.png" data-username="Jhon Russel" data-userlisting="14" data-fb="www.facebook.com" data-gplus="www.plus.google.com" data-linkedin="www.linkedin.com" data-instagram="www.instagram.com" data-twitter="www.twitter.com" data-lattitue="40.6700" data-longitute="-73.9400"  data-id="11"  data-posturl="post-detail.html" data-authorurl="author.html">
-										<div class="lp-grid-box lp-border lp-border-radius-8">
-											<div class="lp-grid-box-thumb-container" >
-												<div class="lp-grid-box-thumb">
-													<img src="images/grid/grid-1.png" alt="grid-1" />
-												</div><!-- ../grid-box-thumb -->
-												<div class="lp-grid-box-quick">
-													<ul class="lp-post-quick-links">
-														<li>
-															<a class="icon-quick-eye md-trigger" data-modal="modal-2"><i class="fa fa-eye"></i></a>
-														</li>
-													</ul>
-												</div><!-- ../grid-box-quick-->
-											</div>
-											<div class="lp-grid-box-description ">
-												<h4 class="lp-h4">
-													<a href="post-detail.html">
-													'.$row2['cname'].'
-													</a>
-												</h4>
-												<p>
-													<i class="fa fa-map-marker"></i>
-													<span>Branch: <b>'.$row2['location'].'</b></span>
-												</p>
-												<ul class="lp-grid-box-price">
-													<i class="fa fa-graduation-cap"></i>
-													<li><span> Stream: <b>'.$row2['ssname'].'</b></span></li>
-												</ul>
-											</div><!-- ../grid-box-description-->
-											<div class="lp-grid-box-bottom">
-												<div class="pull-left">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
-													<span class="rating-ratio">4.0</span>
-												</div>
-												<div class="pull-right">
-													<a href="#" class="lp-add-to-fav simptip-position-top simptip-movable" data-tooltip="Add to favorites">
-													<i></i>
-													</a>
-												</div>
-												<div class="clearfix"></div>
-											</div><!-- ../grid-box-bottom-->
-										</div><!-- ../grid-box -->
-									</div>';
-
-
-							}
-
-
-					}
-
-					    // Toss back results as json encoded array.
-			    		//echo json_encode($return_arr);
-				}
-				else
-				{
-					//echo 'no result found in case I<br/>';
-
-					// Case 2: Substream based search
-
-						if($loc_search)
-						{
-							$stmt1 = $conn->prepare('SELECT a.cname,a.location,b.ssname FROM classes a, substream b, map_class_stream c where a.classid = c.class_id and b.ssid=c.stream_id and b.ssname LIKE :term and a.location LIKE :loc');
-						    $stmt1->execute(array('term' => '%'.$term.'%', 'loc' => '%'.$location.'%'));
-						}
-						else
-						{
-							$stmt1 = $conn->prepare('SELECT a.cname,a.location,b.ssname FROM classes a, substream b, map_class_stream c where a.classid = c.class_id and b.ssid=c.stream_id and b.ssname LIKE :term');
-					    	$stmt1->execute(array('term' => '%'.$term.'%'));
-					    }
-
-						if($stmt1->rowCount()>0)
-						{
-							while($row1 = $stmt1->fetch())
-							{
-							        //$return_arr[] =  array('Classes:' => $row1['cname'], 'Location:' => $row1['location'], 'stream' => $row1['ssname']);
-
-				    				echo	'<div class="col-md-3 col-sm-6 lp-grid-box-contianer lp-grid-box-contianer1" data-title="The Dorchester grill" data-reviews="4" data-number="+007-123-4567-89" data-email="jhonruss@example.com" data-website="www.example.com" data-price="$200" data-pricetext="Text about your price" data-description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi archeum" data-userimage="images/user-thumb-94x94.png" data-username="Jhon Russel" data-userlisting="14" data-fb="www.facebook.com" data-gplus="www.plus.google.com" data-linkedin="www.linkedin.com" data-instagram="www.instagram.com" data-twitter="www.twitter.com" data-lattitue="40.6700" data-longitute="-73.9400"  data-id="11"  data-posturl="post-detail.html" data-authorurl="author.html">
-									<div class="lp-grid-box lp-border lp-border-radius-8">
-										<div class="lp-grid-box-thumb-container" >
-											<div class="lp-grid-box-thumb">
-												<img src="images/grid/grid-1.png" alt="grid-1" />
-											</div><!-- ../grid-box-thumb -->
-											<div class="lp-grid-box-quick">
-												<ul class="lp-post-quick-links">
-													<li>
-														<a class="icon-quick-eye md-trigger" data-modal="modal-2"><i class="fa fa-eye"></i></a>
-													</li>
-												</ul>
-											</div><!-- ../grid-box-quick-->
-										</div>
-										<div class="lp-grid-box-description ">
-											<h4 class="lp-h4">
-												<a href="post-detail.html">
-												'.$row1['cname'].'
-												</a>
-											</h4>
-											<p>
-												<i class="fa fa-map-marker"></i>
-												<span>Branch: '.$row1['location'].'</span>
-											</p>
-											<ul class="lp-grid-box-price">
-												<li><span> Stream:'.$row1['ssname'].'</span></li>
-											</ul>
-										</div><!-- ../grid-box-description-->
-										<div class="lp-grid-box-bottom">
-											<div class="pull-left">
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star-o"></i>
-												<span class="rating-ratio">4.0</span>
-											</div>
-											<div class="pull-right">
-												<a href="#" class="lp-add-to-fav simptip-position-top simptip-movable" data-tooltip="Add to favorites">
-												<i></i>
-												</a>
-											</div>
-											<div class="clearfix"></div>
-										</div><!-- ../grid-box-bottom-->
-									</div><!-- ../grid-box -->
-								</div>';
-
-							}
-							    // Toss back results as json encoded array.
-					    		//echo json_encode($return_arr);
-						}
-						else
-						{
-							//echo '<br/>no result found in case II<br/>';
-							//Case 3: Class Based Search
-
-							if($loc_search)
-							{
-								$stmt1 = $conn->prepare('SELECT cname, location FROM classes where cname LIKE :term and location LIKE :loc');
-						    	$stmt1->execute(array('term' => '%'.$term.'%', 'loc' => '%'.$location.'%'));
-						    }
-						    else
-						    {
-						    	$stmt1 = $conn->prepare('SELECT cname, location FROM classes where cname LIKE :term');
-						    	$stmt1->execute(array('term' => '%'.$term.'%'));
-						    }
-
-							if($stmt1->rowCount()>0)
-							{
-								while($row1 = $stmt1->fetch())
-								{
-								        //$return_arr[] =  array('Classes:' => $row1['cname'], 'Location:' => $row1['location']);
-									echo	'<div class="col-md-3 col-sm-6 lp-grid-box-contianer lp-grid-box-contianer1" data-title="The Dorchester grill" data-reviews="4" data-number="+007-123-4567-89" data-email="jhonruss@example.com" data-website="www.example.com" data-price="$200" data-pricetext="Text about your price" data-description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi archeum" data-userimage="images/user-thumb-94x94.png" data-username="Jhon Russel" data-userlisting="14" data-fb="www.facebook.com" data-gplus="www.plus.google.com" data-linkedin="www.linkedin.com" data-instagram="www.instagram.com" data-twitter="www.twitter.com" data-lattitue="40.6700" data-longitute="-73.9400"  data-id="11"  data-posturl="post-detail.html" data-authorurl="author.html">
-									<div class="lp-grid-box lp-border lp-border-radius-8">
-										<div class="lp-grid-box-thumb-container" >
-											<div class="lp-grid-box-thumb">
-												<img src="images/grid/grid-1.png" alt="grid-1" />
-											</div><!-- ../grid-box-thumb -->
-											<div class="lp-grid-box-quick">
-												<ul class="lp-post-quick-links">
-													<li>
-														<a class="icon-quick-eye md-trigger" data-modal="modal-2"><i class="fa fa-eye"></i></a>
-													</li>
-												</ul>
-											</div><!-- ../grid-box-quick-->
-										</div>
-										<div class="lp-grid-box-description ">
-											<h4 class="lp-h4">
-												<a href="post-detail.html">
-												'.$row1['cname'].'
-												</a>
-											</h4>
-											<p>
-												<i class="fa fa-map-marker"></i>
-												<span>Branch: '.$row1['location'].'</span>
-											</p>
-											<ul class="lp-grid-box-price">
-												<li><span></span></li>
-											</ul>
-										</div><!-- ../grid-box-description-->
-										<div class="lp-grid-box-bottom">
-											<div class="pull-left">
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star"></i>
-												<i class="fa fa-star-o"></i>
-												<span class="rating-ratio">4.0</span>
-											</div>
-											<div class="pull-right">
-												<a href="#" class="lp-add-to-fav simptip-position-top simptip-movable" data-tooltip="Add to favorites">
-												<i></i>
-												</a>
-											</div>
-											<div class="clearfix"></div>
-										</div><!-- ../grid-box-bottom-->
-									</div><!-- ../grid-box -->
-								</div>';
-
-								}
-
-								    // Toss back results as json encoded array.
-						    		//echo json_encode($return_arr);
-							}
-							else
-							{
-								//echo '<br/>no result found in case III<br/>';
-								//Case 3: subject Based Search
-								// if fstream is also required then query
-								// SELECT a.cname,a.location,b.sname,b.fstream FROM classes a, subject b, map_class_subject c where a.classid = c.class_id and b.subjectid=c.subject_id and b.sname LIKE :term
-
-								if($loc_search)
-								{
-									$stmt1 = $conn->prepare('SELECT a.cname,a.location,b.sname FROM classes a, subject b, map_class_subject c where a.classid = c.class_id and b.subjectid=c.subject_id and b.sname LIKE :term and a.location LIKE :loc');
-							    	$stmt1->execute(array('term' => '%'.$term.'%', 'loc' => '%'.$location.'%'));
-								}
-								else
-								{
-									$stmt1 = $conn->prepare('SELECT a.cname,a.location,b.sname FROM classes a, subject b, map_class_subject c where a.classid = c.class_id and b.subjectid=c.subject_id and b.sname LIKE :term');
-							    	$stmt1->execute(array(':term' => '%'.$_GET['term'].'%'));
-							    }
-								if($stmt1->rowCount()>0)
-								{
-										while($row1 = $stmt1->fetch())
-										{
-										        //$return_arr[] =  array('Classes:' => $row1['cname'],'Subject:' => $row1['sname'], 'Location:' => $row1['location']);
-
-												echo	'<div class="col-md-3 col-sm-6 lp-grid-box-contianer lp-grid-box-contianer1" data-title="The Dorchester grill" data-reviews="4" data-number="+007-123-4567-89" data-email="jhonruss@example.com" data-website="www.example.com" data-price="$200" data-pricetext="Text about your price" data-description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi archeum" data-userimage="images/user-thumb-94x94.png" data-username="Jhon Russel" data-userlisting="14" data-fb="www.facebook.com" data-gplus="www.plus.google.com" data-linkedin="www.linkedin.com" data-instagram="www.instagram.com" data-twitter="www.twitter.com" data-lattitue="40.6700" data-longitute="-73.9400"  data-id="11"  data-posturl="post-detail.html" data-authorurl="author.html">
-													<div class="lp-grid-box lp-border lp-border-radius-8">
-														<div class="lp-grid-box-thumb-container" >
-															<div class="lp-grid-box-thumb">
-																<img src="images/grid/grid-1.png" alt="grid-1" />
-															</div><!-- ../grid-box-thumb -->
-															<div class="lp-grid-box-quick">
-																<ul class="lp-post-quick-links">
-																	<li>
-																		<a class="icon-quick-eye md-trigger" data-modal="modal-2"><i class="fa fa-eye"></i></a>
-																	</li>
-																</ul>
-															</div><!-- ../grid-box-quick-->
-														</div>
-														<div class="lp-grid-box-description ">
-															<h4 class="lp-h4">
-																<a href="post-detail.html">
-																'.$row1['cname'].'
-																</a>
-															</h4>
-															<p>
-																<i class="fa fa-map-marker"></i>
-																<span>Branch: '.$row1['location'].'</span>
-															</p>
-															<ul class="lp-grid-box-price">
-																<li><span> Subject:'.$row1['sname'].'</span></li>
-															</ul>
-														</div><!-- ../grid-box-description-->
-														<div class="lp-grid-box-bottom">
-															<div class="pull-left">
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star"></i>
-																<i class="fa fa-star-o"></i>
-																<span class="rating-ratio">4.0</span>
-															</div>
-															<div class="pull-right">
-																<a href="#" class="lp-add-to-fav simptip-position-top simptip-movable" data-tooltip="Add to favorites">
-																<i></i>
-																</a>
-															</div>
-															<div class="clearfix"></div>
-														</div><!-- ../grid-box-bottom-->
-													</div><!-- ../grid-box -->
-												</div>';
-
-										}
-
-									    // Toss back results as json encoded array.
-							    		//echo json_encode($return_arr);
-								}
-							}
-						}
-			 	}
-			}
-		catch(PDOException $e) {
-			    echo 'ERROR: ' . $e->getMessage();
-			}
-
-*/
 
 }
 
