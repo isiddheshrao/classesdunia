@@ -430,7 +430,7 @@
 						</div>
 						<div class="form-group">
 							<label for="phone">Phone</label>
-							<input type="tel" class="form-control" id="phone" name="phone" placeholder="your contact number">
+							<input type="tel" class="form-control" id="phone" name="phone" placeholder="your contact number" maxlength="10">
 						</div>
 						<div class="form-group">
 							<label for="email">Email</label>
@@ -446,7 +446,7 @@
 						</div>
 						<div class="form-group clearfix margin-bottom-0">
 							<input type="submit" id="class_submit" value="Add Class" class="lp-secondary-btn btn-first-hover" />
-							<strong id="response"></strong>
+							<strong id="response">Hello</strong>
 						</div>
 						</form>
 					</div>
