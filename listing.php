@@ -348,7 +348,7 @@ if (isset($_POST['location']) && isset($_POST['stream']) && isset($_POST['subjec
 
 			    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-			    $stmt = $conn->prepare('SELECT a.cname,a.location,b.ssname,c.sname FROM classes a, substream b, subject c, map_class_stream d, map_class_subject e WHERE a.classid = d.class_id AND b.ssid=d.stream_id AND a.classid = e.class_id AND c.subjectid = e.subject_id AND c.fstream = b.ssname AND a.location LIKE :location AND b.ssname LIKE :stream AND c.sname LIKE :subject');
+			    $stmt = $conn->prepare('SELECT a.cname,a.location,a.logourl,a.pageurl,b.ssname,c.sname FROM classes a, substream b, subject c, map_class_stream d, map_class_subject e WHERE a.classid = d.class_id AND b.ssid=d.stream_id AND a.classid = e.class_id AND c.subjectid = e.subject_id AND c.fstream = b.ssname AND a.location LIKE :location AND b.ssname LIKE :stream AND c.sname LIKE :subject');
 
 			    $stmt->execute(array('location' => '%'.$location.'%', 'stream' => '%'.$stream.'%', 'subject' => '%'.$subject.'%'));
 
@@ -395,7 +395,7 @@ if (isset($_POST['location']) && isset($_POST['stream']) && isset($_POST['subjec
 										<div class="lp-grid-box lp-border lp-border-radius-8">
 											<div class="lp-grid-box-thumb-container" >
 												<div class="lp-grid-box-thumb">
-													<img src="images/grid/grid-1.png" alt="grid-1" />
+													<img src="images/grid/'.$row['logourl'].'" alt="grid-1" />
 												</div><!-- ../grid-box-thumb -->
 												<div class="lp-grid-box-quick">
 													<ul class="lp-post-quick-links">
@@ -407,18 +407,19 @@ if (isset($_POST['location']) && isset($_POST['stream']) && isset($_POST['subjec
 											</div>
 											<div class="lp-grid-box-description ">
 												<h4 class="lp-h4">
-													<a href="post-detail.html">
+													<a href="'.$row['pageurl'].'">
 													'.$row['cname'].'
 													</a>
 												</h4>
 												<p>
 													<i class="fa fa-map-marker"></i>
-													<span>Branch: <b>'.$row['location'].'</b></span>
+													<span><b>'.$row['location'].'</b></span>
 												</p>
 												<ul class="lp-grid-box-price">
 													<i class="fa fa-graduation-cap"></i>
-													<li><span> Stream: <b>'.$row['sname'].'</b></span></li>
-													<li><span> Stream: <b>'.$row['ssname'].'</b></span></li>
+													<li><b>'.$row['ssname'].'</b></li>
+													<li>||</li>
+													<li><b>'.$row['sname'].'</b></li>
 												</ul>
 											</div><!-- ../grid-box-description-->
 											<div class="lp-grid-box-bottom">
