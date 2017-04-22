@@ -3124,7 +3124,7 @@ position: relative;
 	float:left;
 }
 .contact-right{
-	width:650px;
+	width:100%;
 	float:right;
 	padding-left:30px;
 	padding-right:30px;
@@ -4177,7 +4177,7 @@ ul.ui-autocomplete.ui-front.ui-menu.ui-widget.ui-widget-content.ui-autocomplete-
 		position: fixed;
 		bottom: 30px;
 		right: 0px;
-		width: 110px !important;
+		width: 120px !important;
 		background-color: rgb(252, 209, 22);
 		padding: 0px !important;
 		text-align: center;

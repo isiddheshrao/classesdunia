@@ -53,7 +53,7 @@
 					<div class="row">
 						<div class="col-md-4 col-xs-6 lp-logo-container">
 							<div class="lp-logo">
-								<a href="index.html">
+								<a href="index.php">
 									<img src="images/logo.png" alt="" />
 								</a>
 							</div>
@@ -74,6 +74,7 @@
 
 							<div id="menu">
 								<ul>
+									<li><a href="index.php">Home</a></li>
 									<li><a href="#">Categories </a>
 										<ul class="sub-menu">
 											<li class="has-menu"><a href="listing-science.html">Science </a>
@@ -120,14 +121,15 @@
 						<div class="col-md-8 col-xs-12 lp-menu-container">
 							<div class="pull-right lp-add-listing-btn">
 								<ul>
-									<li><a href="post-submit.html"><i class="fa fa-plus"></i> Add Listing</a></li>
+									<li><a href="#tellmemore"></i> Tell Me More</a></li>
 								</ul>
 							</div>
 							<div class="lp-menu pull-right menu">
 								<ul>
+									<li><a href="index.php">Home </a></li>
 									<li><a href="#">Categories <i class="icons8-angle-down drop-down-icon"></i></a>
 										<ul class="sub-menu">
-											<li class="has-menu"><a href="listing.html">Science </a>
+											<li class="has-menu"><a href="listing-science.html">Science </a>
 												<ul class="sub-menu">
 													<li><a href="listing-science.html">HSC </a></li>
 													<li><a href="listing-science.html">Diploma </a></li>
@@ -278,7 +280,6 @@
 
 	<!--==================================Section Open=================================-->
 	<section>
-		<a href="#nearby" class="button">Tell Me More</a>
 		<div class="lp-section-row">
 			<div class="container">
 				<div class="row">
@@ -345,10 +346,10 @@
 			</div>
 		</div><!-- ../section-row -->
 
-		<div class="lp-section-row " id="nearby">
+		<div class="lp-section-row ">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12">
+					<div class="col-md-12" id="tellmemore">
 						<div class="lp-section-title-container text-center ">
 							<h1>Explore Your Nearby</h1>
 							<div class="lp-sub-title">find your interests and check whats going on in the city now.</div>
@@ -430,9 +431,9 @@
               <div id="meta-3" class="widget widgetFooter widget_meta">
               <h4 class="widgettitle">Pages:</h4>
               <ul>
-    		  <li><a href="#"><i class="fa fa-home fa-fw"></i> Home</a></li>
+    		  <li><a href="index.php"><i class="fa fa-home fa-fw"></i> Home</a></li>
 			  <li><a href="privacypolicy.php"><i class="fa fa-link"></i>   Privacy Policy</a></li>
-			  <li><a href="#"><i class="fa fa-envelope fa-fw"></i> Contact Us</a></li>
+			  <li><a href="contact-us.php"><i class="fa fa-envelope fa-fw"></i> Contact Us</a></li>
              </ul>
 </div>      </div> <!-- end widget1 -->
 
@@ -441,13 +442,13 @@
                     <h4 class="widgettitle">Social Media :</h4>
                     <ul>
 					<li>
-				     <a href="https://www.facebook.com/mr.dauod" target="_blank"><i class="fa fa-facebook"></i> Facebook</a>
+				     <a href="#" target="_blank"><i class="fa fa-facebook"></i> Facebook</a>
 					</li>
 					<li>
-				      <a href="https://www.twitter.com/ayatquranCom" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>
+				      <a href="#" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>
 					</li>
 					<li>
-				      <a href="http://www.youtube.com/user/sonsofye" target="_blank"><i class="fa fa-youtube"></i> Youtube</a>
+				      <a href="#" target="_blank"><i class="fa fa-youtube"></i> Youtube</a>
 				   </li>
 				</ul>
 		</div>            </div> <!-- end widget1 -->
@@ -471,12 +472,12 @@
                     <h4 class="widgettitle">Payment Modes:</h4>
                     <ul>
 					<li>
-				     <a href="https://www.facebook.com/mr.dauod" target="_blank"><img src="images/payment/visa.png"></a>
-				     <a href="https://www.facebook.com/mr.dauod" target="_blank"><img src="images/payment/paypal.png"></a>
+				     <a href="#" target="#"><img src="images/payment/visa.png"></a>
+				     <a href="#" target="#"><img src="images/payment/mastercard.png"></a>
 				 </li>
 				 <li>
-				     <a href="https://www.facebook.com/mr.dauod" target="_blank"><img src="images/payment/westernunion.png"></a>
-				     <a href="https://www.facebook.com/mr.dauod" target="_blank"><img src="images/payment/maestro.png"></a>
+				     <a href="#" target="#"><img src="images/payment/bhim.png"></a>
+				     <a href="#" target="#"><img src="images/payment/instamojo.png"></a>
 				   </li>
 				</ul>
 		</div>
@@ -500,7 +501,7 @@
           </div> <!-- end .row -->
         </div>
       </div>
-
+      <a href="#tellmemore" class="add-listing-mobile lp-search-btn">Tell Me More</a>
     </footer>
 	<!--==================================Footer Close=================================-->
 	<!--==================================Javscript=================================-->
