@@ -1,8 +1,8 @@
 @import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 
 #footer {
-    border-top: 5px solid #CDB380;
-    background: #033649 none repeat scroll 0% 0%;
+    border-top: 5px solid #283540;
+    background: #2d4146 none repeat scroll 0% 0%;
     padding-top: 30px;
     margin-top: 60px;
     clear: both;
@@ -35,7 +35,7 @@
 
 #sub-floor {
     color: #AAA;
-    background: #031634 none repeat scroll 0% 0%;
+    background: #111823 none repeat scroll 0% 0%;
     padding: 10px 0px;
 }
 .btn {

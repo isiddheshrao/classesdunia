@@ -265,31 +265,6 @@
 		<!-- ../Login Popup -->
 		
 		<!-- Popup Open -->
-		<div class="md-modal md-effect-3 single-page-popup" id="modal-2">
-			<div class="md-content claimform-box">
-				<h3>Claim This Listing</h3>
-				<div class="">
-					<form class="form-horizontal"  method="post">
-						<div class="form-group">
-							<input type="text" class="form-control" id="name1" placeholder="Name:">
-						</div>
-						<div class="form-group">
-							<input type="email" class="form-control" id="email1" placeholder="Email:">
-						</div>
-						<div class="form-group">
-							<textarea class="form-control" rows="5" id="message" placeholder="Message:"></textarea>
-						</div>
-						<div class="form-group mr-bottom-0">
-							<input type="submit" value="Submit" class="lp-review-btn btn-second-hover">
-						</div>
-					</form>	
-					<a class="md-close"><i class="fa fa-close"></i></a>
-				</div>
-			</div>
-		</div>
-		<!-- Popup Close -->
-		
-		<!-- Popup Open -->
 		<div class="md-modal md-effect-3 single-page-popup" id="modal-6">
 			<div class="md-content cotnactowner-box">
 				<h3>Contact Owner</h3>
@@ -348,23 +323,11 @@
 						<div class="post-meta-left-box">
 							<ul class="breadcrumbs">
 								<li><a href="index.php">Home</a></li>
-								<li><a href="listing.html">Entrance</a></li>
+								<li><a href="listing-entrance.html">Entrance</a></li>
 								<li><span>MBA Coaching</span></li>
 							</ul>
 							<h1>CET King</h1>
 							<ul class="post-stat">
-								<li class="reviews">
-									<span class="reviews-stars">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o"></i>
-										<i class="fa fa-star-o"></i>
-									</span>
-									<span class="reviews-quantity">
-										(2)
-									</span>
-								</li>
 								<li>
 									<span class="phone-icon">
 										<!-- Phone icon by Icons8 -->
@@ -420,18 +383,6 @@
 									  </ul>
 								</li>
 								<li>
-									<span class="phone-icon">
-										<!-- Info icon by Icons8 -->
-										<img class="icon icons8-Info" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAEfklEQVRoQ+1ai1HcMBDVqoGQCgIVBCoIqSBHBVwq4NKALKuBkAoCFQQqyFFBLhXkqCCkAW3meWSPLMsfCRuGTDTD3MxxlvT2/3ZNYoaltT6w1n4QQhwS0Sk+3Z+/+14IsWfmLT6llLda64fHHk+5G7hLnxPRWghxnLnPjpmvpJTXuWCSAWitD5n5QgiBix9kXjx8DJq4IqIvWmtoavJKAqCUKohoM+PFO0CY+dIYU05FMAmA1vqYmb8OmQoz/xRC3Egpd7BxrTU+m4U94BfWWnyuiOjtwCV3RHQ2RRujALTWa2b+HJM6M99LKS9x8SmHBYDg6Ctr7YaI3kTAPBDRJ6311ZA2BgG4y0PyrcXMf6SUm7HNp5oBzrHWXhLRq/AZIvo4dE4vgIHL30op17lRow+Ui2pwZITj1hoCEQXQd/kxaUyV+NDvBs6GT9x0wIVfOIf97tu8MxlIvbPBHJeO3AG+AW34JgWfOAl9raOBoih+hNHGRYQnuXwNRmu9YuZvAbhdWZYn/nctAEopTURF6wcjTjRg0wiZ7/B/KeVdapTCc1rrjYuAzTHMXBpjdP1FA8BlWEi/ya7MfGuMWaWaiTND7FUvqP99mBum7KuUugkcu2VKDQClFMIYSoRqObs/zIk2MU0y87UxBuVH0nLRae/7g6+FCgB+xMy/fOk/JuLMCcDdD8nUz0fQwhGEWwNo2RoyrDEGmTJrhSbktHmaY0L1BZRS0EKTsWsBVwDCyONSOEqE7AWf8jgBaqOkKjM8OOLQVUQiZz6//Qeceh51YDbyngddkIGZN4uIXgNAy75QVRpjcglKtbnb8zw4DKRlsDAbA62UQpXaVLHITxSJPq04O7Zp7P89TjzHvmGkLAFgS0RVwsGaI+suBSDMzsx8R0VRwK6aiOPqjRYZSdXCggBArPwEuQcA9i9YluUoyRkDtBQAFzFb9/0P4Cmd+N/UQCRFgzS8CCdGyfPyw+iLT2QREt2hbWNhM/z/UmE0UnSeLVLMLQGgt5iD9CJFEjpi2eX0QgBCzlIVnVFCg95mWZZHqaZT/34JAJGSp+rYNZTSWtvinQtQyuxqNCQzPl/vJfVCiIZ3pmpiTg3E+HqH1DsSgj4OCIPfDbspy/LsOQEURYHmVtPacdI/rinqIo2tgA/X+JN5cVJjy3PAFm2bi+SkajHWWozR3U7tj5aItRYsLWyswuufpD/qLo8+kN8lxEyiMZ2GQcYk85ztdaXUBRF1clAf1U0ecGCc5ELso2e8vvBctIHUO73Y5AFHvXGfJhBimXljjLlOte0eAgSpo+PcGduO5aNR/gt7jAwbmsiCsaibuic1whCpMN13Y9tOG3PqUGUUgJcjYDqDo1EhxBavEkgp72NjVmvtG/cqAl5H6G2eIdpIKVdT2pGTAPg1jhACY9HONHEOU4LUhRAYdDcDjLF9kwB42sC0fj0XkPriUsqrKVL3QSUD8BwcDof5LoAMmVavEJ2p1IPyrKiWDSAMgUKIU/caQfW6TTh9BwFHmQ4/ca8jbHOmP6E0/gKjlpwsE7XXhgAAAABJRU5ErkJggg==" alt="info">
-									</span>
-									<a class="phone-number md-trigger claimformtrigger2" data-modal="modal-2">
-										Claim Now
-									</a>
-									<a class="phone-number claimformtrigger" >
-										Claim Now
-									</a>
-								</li>
-								<li>
 									<span class="email-icon">
 										<!-- Hearts icon by Icons8 -->
 										<img class="icon icons8-Hearts" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAD/ElEQVRoQ+1Yi1HcMBDVqgFIBYEKIBWEVMClglwq4GhAXquBcBUEKghUAKkgpIJcKghpQJt5nlXGOLYs22fIMKcZhrmxvdLbtx/tI/NCFr0QHGYH5H9jcsfIjpGZPLALrZkcO9rsYEacc6dEtDDGHBhjTnTnjTFmIyJ31torZsbvzsXMByGED0SE72EHf1h3aufae38zBFU2EOccNubapql97ojoYxMQAIjI55oDUjbgGPbeX+UA6gXCzPsi8skYs4RBEflprb0wxtwzMzxocEAADCHgnQUR7RljHojonJkv9Z2l2oG938aYa2stnm0iYGYGQ8chhBURvVYAl2rnIQUoCURB3MI4NrfWruLBuozimxACE9EZ3gEz6gAwAUesrbXMzMmDMfMyhHChTrknonepb5JAiqLA5vDkd2vtkpnvc2iuMVAdPi4Nt4qhnMXMYAeMHBljLsuyrJzStjqBwCOIZ2XiZAiIuFG0EZnpY7PtgAoGObeXckQnkKIofiDuh3qxeRjnHPLJeO9XOSx0gKmcinwqy/IwmxFmXojIFyS29z6WxlHnQM5oqCVzos+4c26DAkBE75n5uvl+KyPOOcQlyi2qTuXR517MvELVE5Er731VQeurCwhi8q1WiqrEPvdCaRaRWxH56r2PjfjvsVqBFEUheKMsy94+85QAU+faAXlKJuJegxlxzqGTHhHRmzH9Yw6Qo3KkVrVw8cvuxHMAiDZHVa2+j+Y8cJftvpbQmux63UZnx6XvVd8Fb25genn9pec5bJt3Osurc67qJSJSeu8xhzzbcs7hNl109ZAKYNfpYnLpXAEvTLpijPWCsoHo2E816GTDq7GynnLpGwsC3+HSidkmxUaSETzEFVpEvmlsYrB50utKLSqQq8lW0HsFifGpIQZjSWFhivfr32rBgRMxGvfmaS8QpbdKfMzpfSPnNoA0RuzWS2JznywgOocDDEbOWcE0QGDExnTaW2iygGi+QCUBCCgks4BpETsOckD0JnuTvoYYALkHBSBbkEiFnRYWKDbICTCxGJKP2YzU7jyQe2KYPdKuxuaHihTQziKIrHCq7zcYiIYZwGAcPlVjF2VZno8BUhQFAFTCBMZY1c56c2JUsie6fzVH63PkDW7LWaGmoQRl5Fj71CR9YBQjjXp/ouxA4nxQvXadYsc5d6Y6MkIJEizEv0nNdjKQjlDLErFF5EZBDA6lrYZWS1VbKDtRxEaoVRqUamUIpUrEVgD/6FNj8mxw+c3ZRJvno0KAw9fU/K2xMLlqZQJaqSoPdlCRstT8HNtt72wlRxJVrVLT8Xyomj8U0KxAYiHQ/5MTOgVudiBDPTv2/R2QsZ6b67sdI3N5dqzdP6xqi1FZGrwUAAAAAElFTkSuQmCC" alt="favorites">
@@ -462,7 +413,7 @@
 										</div>
 									</div>
 							<div class="padding-top-30">
-								<a href="coupons.html" class="secondary-btn">
+								<a href="https://www.classesdunia.com/instamojo/order.php?id=101" target="_blank" class="secondary-btn">
 									Book Now
 								</a>
 							</div>
@@ -588,7 +539,7 @@
 									<img src="images/user-thumb-94x94.png" alt="user-thumb">
 								</div>
 								<div class="user-text">
-									<h5 class="user-name margin-top-0"><a href="author.html">CET King</a></h5>
+									<h5 class="user-name margin-top-0"><a href="#">CET King</a></h5>
 									<label class="user-position md-trigger quickformtrigger2" data-modal="modal-6">Quick Connect</label>
 									<label class="user-position quickformtrigger">Quick Connect</label>
 									
@@ -629,7 +580,7 @@
 						<div class="widget-box widget-bg-color widget-categories lp-border-radius-5">
 							<div class="widget-content">
 								<ul class=" list-style-none categories-container">
-									<li><a href="listing.html"><span class="cat-icon"><img class="icon icons8-Exam" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACkklEQVRoQ+2Z4XHUMBCF3+sgqSCkgiQVQCqAVABUAFQAVABUAKkgoQKgApIKSAekg8e8jOTxHWdbtnWSM2PN3I87SeP9dt+udGuiZ0hS3/zEuRsA5yTvJ+7fuY0VQPzI7DBJICR716V6divCWWFqgdwCOMkZmVoghwB+5oSpAmKpSjrICVMNxHmVE6YqSE6Y6iC5YBYBkgNmMSBzYRYFMgdmcSBTYRYJMgWmCkjq3Wxr3Q3Js669jwkEfZfXoiATI+EbwMP/ohUkxRNTvTxmX4odWaUl6UmQwN0YQ4fWFgUJN9k/AO5JHg8ZN2a+NMhbAJ+CgRckr8cYm9I7KJLskn4DOA0GfSf54tGBhNywrC4BPANwBOCYZJZcKSYtSVFWFwCc8JbYO5Kfc0SlJIhl5QgchKT/6w5J35ViDGARkLasSL4KFz4n+nMAZyTdv9o5JDliJyTPqyd7S1avSX4LIAb6CuALScuuC8QtoadDDcBSEYneP4z93FR5SVoUiC90tyRj6X3wvqQI2Fm9JDmCL2NEgkx9oG40uPceEUkutT9Co83ejcO/u3r505acv1tyHm7QbcCH33+R9P5mlABxsr4ZqEDN4SjJhkdgFwGD+cxxL9hR8Jyr3catoASIH2zjmlOcZBMZSTb2iKR7vf8NSR8AvA/vS9oR3VhbAsT50XkdCeXVEdtZhhcB0sqPjyTt2V0ed6Su2nmypf2YY36DVSciKd5sleHLeFhugTjhDXvd9ypur9Jqldfm/OiIihP3ru9gHCgW+/3PHirQaTzNh4yZM7/XiMwxbOzeFSR6LMUTY707ZX2KHVm7KFOMTNmzgqzSStHJhDWrtFZpTZBNypZs0kp5WIk1s1umJYxMeUYfyD9fBotRRf1I0gAAAABJRU5ErkJggg=="></span><span>Entrance</span></a></li>
+									<li><a href="listing-entrance.html"><span class="cat-icon"><img class="icon icons8-Exam" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACkklEQVRoQ+2Z4XHUMBCF3+sgqSCkgiQVQCqAVABUAFQAVABUAKkgoQKgApIKSAekg8e8jOTxHWdbtnWSM2PN3I87SeP9dt+udGuiZ0hS3/zEuRsA5yTvJ+7fuY0VQPzI7DBJICR716V6divCWWFqgdwCOMkZmVoghwB+5oSpAmKpSjrICVMNxHmVE6YqSE6Y6iC5YBYBkgNmMSBzYRYFMgdmcSBTYRYJMgWmCkjq3Wxr3Q3Js669jwkEfZfXoiATI+EbwMP/ohUkxRNTvTxmX4odWaUl6UmQwN0YQ4fWFgUJN9k/AO5JHg8ZN2a+NMhbAJ+CgRckr8cYm9I7KJLskn4DOA0GfSf54tGBhNywrC4BPANwBOCYZJZcKSYtSVFWFwCc8JbYO5Kfc0SlJIhl5QgchKT/6w5J35ViDGARkLasSL4KFz4n+nMAZyTdv9o5JDliJyTPqyd7S1avSX4LIAb6CuALScuuC8QtoadDDcBSEYneP4z93FR5SVoUiC90tyRj6X3wvqQI2Fm9JDmCL2NEgkx9oG40uPceEUkutT9Co83ejcO/u3r505acv1tyHm7QbcCH33+R9P5mlABxsr4ZqEDN4SjJhkdgFwGD+cxxL9hR8Jyr3catoASIH2zjmlOcZBMZSTb2iKR7vf8NSR8AvA/vS9oR3VhbAsT50XkdCeXVEdtZhhcB0sqPjyTt2V0ed6Su2nmypf2YY36DVSciKd5sleHLeFhugTjhDXvd9ypur9Jqldfm/OiIihP3ru9gHCgW+/3PHirQaTzNh4yZM7/XiMwxbOzeFSR6LMUTY707ZX2KHVm7KFOMTNmzgqzSStHJhDWrtFZpTZBNypZs0kp5WIk1s1umJYxMeUYfyD9fBotRRf1I0gAAAABJRU5ErkJggg=="></span><span>Entrance</span></a></li>
 								</ul>
 							</div>
 						</div><!-- ../widget-box  -->
