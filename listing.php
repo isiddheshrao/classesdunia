@@ -47,7 +47,7 @@ require 'helper.php';
 	<div id="page">
 	<!--==================================Header Open=================================-->
 	<header class="lp-header-bg">
-		<div class="lp-header-overlay"></div> 
+		<div class="lp-header-overlay"></div>
 		<div class="md-overlay"></div> <!-- Overlay for Popup -->
 		<div class="lp-menu-bar">
 			<div class="container">
@@ -93,7 +93,7 @@ require 'helper.php';
 												</ul>
 											</li>
 											<li><a href="listing-design.html">Design </a></li>
-											
+
 											<li class="has-menu"><a href="listing-entrance.html">Entrance </a>
 												<ul class="sub-menu">
 													<li><a href="listing-entrance.html">GATE </a></li>
@@ -115,7 +115,7 @@ require 'helper.php';
 												<a href="about-us.html">About Us </a></li>
 											<li>
 												<a href="contact-us.html">Contact Us </a>
-											</li>							
+											</li>
 										</ul>
 									</div>
 
@@ -347,7 +347,10 @@ if (isset($_POST['location']) && isset($_POST['stream']) && isset($_POST['subjec
 
 			    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-			    $stmt = $conn->prepare('SELECT a.cname,a.location,a.logourl,a.pageurl,b.ssname,c.sname FROM classes a, substream b, subject c, map_class_stream d, map_class_subject e WHERE a.classid = d.class_id AND b.ssid=d.stream_id AND a.classid = e.class_id AND c.subjectid = e.subject_id AND c.fstream = b.ssname AND a.location LIKE :location AND b.ssname LIKE :stream AND c.sname LIKE :subject');
+					// old-stmt
+					//$stmt = $conn->prepare('SELECT a.cname,a.location,a.logourl,a.pageurl,b.ssname,c.sname FROM classes a, substream b, subject c, map_class_stream d, map_class_subject e WHERE a.classid = d.class_id AND b.ssid=d.stream_id AND a.classid = e.class_id AND c.subjectid = e.subject_id AND c.fstream = b.ssname AND a.location LIKE :location AND b.ssname LIKE :stream AND c.sname LIKE :subject');
+
+			    $stmt = $conn->prepare('SELECT DISTINCT a.cname,a.location,a.logourl,a.pageurl FROM classes a, substream b, subject c, map_class_stream d, map_class_subject e WHERE a.classid = d.class_id AND b.ssid=d.stream_id AND a.classid = e.class_id AND c.subjectid = e.subject_id AND c.fstream = b.ssname AND a.location LIKE :location AND b.ssname LIKE :stream AND c.sname LIKE :subject');
 
 			    $stmt->execute(array('location' => '%'.$location.'%', 'stream' => '%'.$stream.'%', 'subject' => '%'.$subject.'%'));
 
@@ -414,12 +417,6 @@ if (isset($_POST['location']) && isset($_POST['stream']) && isset($_POST['subjec
 													<i class="fa fa-map-marker"></i>
 													<span><b>'.$row['location'].'</b></span>
 												</p>
-												<ul class="lp-grid-box-price">
-													<i class="fa fa-graduation-cap"></i>
-													<li><b>'.$row['ssname'].'</b></li>
-													<li>||</li>
-													<li><b>'.$row['sname'].'</b></li>
-												</ul>
 											</div><!-- ../grid-box-description-->
 											<div class="lp-grid-box-bottom">
 												<div class="pull-left">
