@@ -350,7 +350,7 @@ if (isset($_POST['location']) && isset($_POST['stream']) && isset($_POST['subjec
 					// old-stmt
 					//$stmt = $conn->prepare('SELECT a.cname,a.location,a.logourl,a.pageurl,b.ssname,c.sname FROM classes a, substream b, subject c, map_class_stream d, map_class_subject e WHERE a.classid = d.class_id AND b.ssid=d.stream_id AND a.classid = e.class_id AND c.subjectid = e.subject_id AND c.fstream = b.ssname AND a.location LIKE :location AND b.ssname LIKE :stream AND c.sname LIKE :subject');
 
-			    $stmt = $conn->prepare('SELECT DISTINCT a.cname,a.location,a.logourl,a.pageurl,b.ssname FROM classes a, substream b, subject c, map_class_stream d, map_class_subject e WHERE a.classid = d.class_id AND b.ssid=d.stream_id AND a.classid = e.class_id AND c.subjectid = e.subject_id AND c.fstream = b.ssname AND a.location LIKE :location AND b.ssname LIKE :stream AND c.sname LIKE :subject');
+			    $stmt = $conn->prepare('SELECT DISTINCT a.cname,a.location,a.logourl,a.pageurl FROM classes a, substream b, subject c, map_class_stream d, map_class_subject e WHERE a.classid = d.class_id AND b.ssid=d.stream_id AND a.classid = e.class_id AND c.subjectid = e.subject_id AND c.fstream = b.ssname AND a.location LIKE :location AND b.ssname LIKE :stream AND c.sname LIKE :subject');
 
 			    $stmt->execute(array('location' => '%'.$location.'%', 'stream' => '%'.$stream.'%', 'subject' => '%'.$subject.'%'));
 
@@ -417,10 +417,6 @@ if (isset($_POST['location']) && isset($_POST['stream']) && isset($_POST['subjec
 													<i class="fa fa-map-marker"></i>
 													<span><b>'.$row['location'].'</b></span>
 												</p>
-												<ul class="lp-grid-box-price">
-													<i class="fa fa-graduation-cap"></i>
-													<li><b>'.$row['ssname'].'</b></li>
-												</ul>
 											</div><!-- ../grid-box-description-->
 											<div class="lp-grid-box-bottom">
 												<div class="pull-left">
