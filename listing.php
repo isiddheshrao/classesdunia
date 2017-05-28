@@ -25,15 +25,10 @@ require 'helper.php';
 	<link href="lib/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" />
 	<link href="css/colors.css" type="text/css" rel="stylesheet" />
 	<link href="css/font.css" type="text/css" rel="stylesheet" />
-	<link href="lib/jQuery.filer-master/css/jquery.filer.css" type="text/css" rel="stylesheet" />
-	<link href="lib/jQuery.filer-master/css/themes/jquery.filer-dragdropbox-theme.css" type="text/css" rel="stylesheet" />
 	<link href="lib/popup/css/component.css" type="text/css" rel="stylesheet" />
 	<link href="lib/icon8/styles.min.css" type="text/css" rel="stylesheet" />
 	<link href="lib/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
 	<link type="text/css" rel="stylesheet" href="lib/jquerym.menu/css/jquery.mmenu.all.css" />
-	<link href='css/mapbox.css' rel='stylesheet' />
-	<link href='lib/chosen/chosen.css' rel='stylesheet' />
-	<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
 	<link href="css/main.css" type="text/css" rel="stylesheet" />
 	<link href="css/stylefooter.css" rel="stylesheet" type="text/css" />
 <link href="css/bootstrapfooter.css" rel="stylesheet" type="text/css" />
@@ -171,7 +166,7 @@ require 'helper.php';
 			<div class="page-heading-inner-container text-center">
 				<h1>Class Search</h1>
 				<ul class="breadcrumbs">
-					<li><a href="index.html">Home</a></li>
+					<li><a href="index.php">Home</a></li>
 					<li><span>Classes</span></li>
 				</ul>
 			</div>
@@ -365,27 +360,12 @@ if (isset($_POST['location']) && isset($_POST['stream']) && isset($_POST['subjec
 						</div>
 						<div class="col-md-4 col-sm-4  text-center">
 							<p class="view-on-map">
-								<!-- Marker icon by Icons8 -->
-								<img class="icon icons8-Marker" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEoklEQVRoQ91Z4XEWNxDVqgGggjgVYCrAVICpIKYCnAIs7ckFYCoIVBC7gpgKMBXgVIDTwG3mfbNiNJc7aXXffZ4M+mN/c7qTnnb37dsVuZ9k0NY4QgiviejUOXfknHvqnDvWNe6ccw/OuXsRuU4p3Wy59iZAmPlIRKJzDgCwecsAqGsi+p2Z8f9eY28gIYRIROcZgIh89d5/dM7tLMDM+OuYGZbZWWgcxzMieq47fxCRq5TSsA+S1UCY+amI/JVdR0Q+ee+Zme8tG4IVx3FkIvotux4RvVprnVVAcLoKAmBggXNmvrUAmM5h5pNxHK/UQg8KZmfFntENRC3xDW4iIp+996drTzFvFN8cxxHx8hLuSES/9n6zC0jpTgCRUjrpObXW3BDCrYK5G4bhRWt++bwLSAgBPh3VnU56T621MbUMwDwXkSGlxK138nMzEKXYL3ApInqR2ci6kHUeYkbjr8vFzEBCCB/BMGCnlNKZdWNr5q1ZywwkxvhdrYFArFKsusg7zfA/Mjsyuvf+Q8sl1foglIdhGJ5ZDsMEhJlPReRPxEZKKW9s9vvMfCYi7ysZHi7zlpmvaxsMIdwhVojoTWsuvmMCkk2tcuJqaQMK4g88F5Eb7/1Vzi+aL86J6PVu4cYGC2L5kFKCcqgOK5AdLWqymk18ZX7RE4dM+c8owFaDOQe9leZNQGKMYKvjGlsVJ3iTUoJ4XBw5X9QoVtUD1jXlFCsQwa6GYVicX4CFXqrKlYJiq5uMMTbX7cojlg9a5pQmssy3zPnfA9GY+y4i/6SUmjWOybWyT9eCvaBLs2vV6PwgwV4AWeT0HOyo+oZheFML9hgj6hhIkUU9ldkNNN4ij548ksVibWFI8XsielKjX60oGS7jvT9ayvIFC5rEo8m1isxele55nlrjGgXT5eXlZ/y+uLh4iQoSljAmxJy7tsvsOfBaFIznADOOIwTmkzn3Ukuc1WRHuR4RPWtpM7NrYWKP9lHRCFlxmpsMCGzEj8qWatfE6gHlQZlcS4Ggrn73SDIeZS/6Y2gVLWq7VUDWSOuW0FvQYugFoGSAsGyWDF0JMU8u3AsyfFYUrtl8+U5Bu109AbNraSCj1oBMvx2G4dW+m557P8aIguqoRuFz7/UCKXPF5nV7kc3/Timhd2weXUAOHfSWjL+ErBtIEfRdwdg62sIa1Yy/GRC1yuYdlX2s0ZUQJ8yCawQEJazSVLuHtsZqIGqVnZDcgsEyU/V2F1clxOmpqgzJatck7BYS4DnaRyLSzVSbAJnkFQACHXfdPE06L6sPYy/XKrL9Tm6vcYuiNdqVxfdOiAuugUsftG0Q+OYkOaHb41YbtkUY3Xlk7oNFmWvqQalLATzYz1QBPgoQDXz0an+xbCyEkEuCZi+5BSA/38QiGvgmFyuac12u2AK0GZBJbpllsQlLmYumFohNWGu6SK5Z5tpChQzZm6Wm625qEXUx3J8jXtAW+nHqRXtnlShsWWVzIApmdzGUtRj+6r3gJtrsIHlk6aQKSs7ZHrX4JlT7qEA0+HfdELWIqfXZcqGl5wdxrbxYvjfHb+/95vfyJaiDAll7umve+xc6iKNgzDxqMAAAAABJRU5ErkJggg==" alt="map">
-								<a class="md-trigger mobilelink" data-modal="modal-4">View on map</a>
+								<!-- view on map was here -->
 							</p>
 						</div>
 						<div class="col-md-4 col-sm-4  text-right">
 							<p>Showing all Class Listings <a href="#" class="achor-color">Reset</a></p>
 						</div>
-					</div>
-					<div class="mobile-map-space">
-
-							<!-- Popup Open -->
-
-							<div class="md-modal md-effect-3 mobilemap" id="modal-4">
-								<div class="md-content mapbilemap-content">
-									<div id="map" class="listingmap"></div>
-									<a class="md-close mapbilemap-close"><i class="fa fa-close"></i></a>
-								</div>
-							</div>
-							<!-- Popup Close -->
-							<div class="md-overlay md-overlayi"></div> <!-- Overlay for Popup -->
 					</div>';
 
 
