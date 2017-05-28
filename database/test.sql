@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 02, 2017 at 08:12 PM
+-- Generation Time: Apr 20, 2017 at 06:10 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -50,8 +50,7 @@ INSERT INTO `classes` (`classid`, `cname`, `location`, `email`, `phone`, `logour
 (214, 'Progate-Coaching', 'Dadar', 'contactus@progatecoaching.com', '7362361717', 'progate.png', 'post-progate.html', 'progate-coaching-provides-gate-preparation-for-computer-and-civil'),
 (215, 'Ideal-st-Century', 'Mira-Road', 'contactus@idealcentury.com', '7432892428', 'ideal.png', 'post-ideal.html', 'this-one-offers-subjects-Accountancy-and-Book-Keeping-in-BFM'),
 (216, 'Lokayan', 'Dahisar', 'contactus@lokayan.com', '3242434354', 'lokayan.png', 'post-lokayan.html', 'Lokayan-Provides-Preparation-for-Government-Exams'),
-(217, 'Focus-Competition', 'Goregaon', 'contactus@focuscompetition.com', '6726262676', 'focuscompetition.png', 'post-focuscompetition.html', 'Focus-Competition-provides-preparation-for-Entrance-Exams-such-as-SBI-PO-and-Civil-Services'),
-(218, 'Rao-IIT-Academy', 'Kandivali', 'contactus@raoiit.com', '3245345345', 'raoiit.png', 'post-raoiit.html', 'Rao-IIT-does-not-belong-to-Siddesh-Rao');
+(217, 'Focus-Competition', 'Goregaon', 'contactus@focuscompetition.com', '6726262676', 'focuscompetition.png', 'post-focuscompetition.html', 'Focus-Competition-provides-preparation-for-Entrance-Exams-such-as-SBI-PO-and-Civil-Services');
 
 -- --------------------------------------------------------
 
@@ -144,8 +143,7 @@ INSERT INTO `map_class_stream` (`class_id`, `stream_id`) VALUES
 (214, 704),
 (215, 710),
 (216, 728),
-(217, 728),
-(218, 702);
+(217, 728);
 
 -- --------------------------------------------------------
 
@@ -187,8 +185,7 @@ INSERT INTO `map_class_subject` (`class_id`, `subject_id`) VALUES
 (216, 118),
 (216, 119),
 (217, 117),
-(217, 119),
-(218, 102);
+(217, 119);
 
 -- --------------------------------------------------------
 
@@ -266,6 +263,78 @@ INSERT INTO `substream` (`ssid`, `ssname`, `msname`) VALUES
 (727, 'Communication-Design', 'Design'),
 (728, 'Entrance', 'Engineering');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tags`
+--
+
+CREATE TABLE `tags` (
+  `tag` varchar(100) NOT NULL DEFAULT '' COMMENT 'primary as all tag values are unique and not null'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tags`
+--
+
+INSERT INTO `tags` (`tag`) VALUES
+('Badhe'),
+('Badhe Classes'),
+('Engineering Classes'),
+('Mahesh Tutorials'),
+('Medical Classes'),
+('Overseas Education'),
+('Semester 1 CIVIL classes'),
+('Semester 1 CS classes'),
+('Semester 1 Electronics classes'),
+('Semester 1 EXTC classes'),
+('Semester 1 IT classes'),
+('Semester 1 MECH classes'),
+('Semester 2 CIVIL classes'),
+('Semester 2 CS classes'),
+('Semester 2 Electronics classes'),
+('Semester 2 EXTC classes'),
+('Semester 2 IT classes'),
+('Semester 2 MECH classes'),
+('Semester 3 CIVIL classes'),
+('Semester 3 CS classes'),
+('Semester 3 Electronics classes'),
+('Semester 3 EXTC classes'),
+('Semester 3 IT classes'),
+('Semester 3 MECH classes'),
+('Semester 4 CIVIL classes'),
+('Semester 4 CS classes'),
+('Semester 4 Electronics classes'),
+('Semester 4 EXTC classes'),
+('Semester 4 IT classes'),
+('Semester 4 MECH classes'),
+('Semester 5 CIVIL classes'),
+('Semester 5 CS classes'),
+('Semester 5 Electronics classes'),
+('Semester 5 EXTC classes'),
+('Semester 5 IT classes'),
+('Semester 5 MECH classes'),
+('Semester 6 CIVIL classes'),
+('Semester 6 CS classes'),
+('Semester 6 Electronics classes'),
+('Semester 6 EXTC classes'),
+('Semester 6 IT classes'),
+('Semester 6 MECH classes'),
+('Semester 7 CIVIL classes'),
+('Semester 7 CS classes'),
+('Semester 7 Electronics classes'),
+('Semester 7 EXTC classes'),
+('Semester 7 IT classes'),
+('Semester 7 MECH classes'),
+('Semester 8 CIVIL classes'),
+('Semester 8 CS classes'),
+('Semester 8 Electronics classes'),
+('Semester 8 EXTC classes'),
+('Semester 8 IT classes'),
+('Semester 8 MECH classes'),
+('VidyaLankar'),
+('VidyaLankar Classes');
+
 --
 -- Indexes for dumped tables
 --
@@ -327,6 +396,12 @@ ALTER TABLE `substream`
   ADD KEY `msname` (`msname`);
 
 --
+-- Indexes for table `tags`
+--
+ALTER TABLE `tags`
+  ADD PRIMARY KEY (`tag`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -334,7 +409,7 @@ ALTER TABLE `substream`
 -- AUTO_INCREMENT for table `classes`
 --
 ALTER TABLE `classes`
-  MODIFY `classid` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=219;
+  MODIFY `classid` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=218;
 --
 -- AUTO_INCREMENT for table `mainstream`
 --

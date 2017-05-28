@@ -713,7 +713,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-$sqls = sprintf("SELECT name,msg FROM classes_msgs WHERE classname='raoiit' AND enable='true'");
+$sqls = sprintf("SELECT Name,Msg FROM Class_Msg WHERE Uname='raoiit' AND Enable='true'");
 $result = $conn->query($sqls); 
  while($row = mysqli_fetch_array($result))
           {        
@@ -725,7 +725,7 @@ $result = $conn->query($sqls);
 		 <div class="comments-meta-box">
 		   <div class="comments-author text-left">
 		     <div class="comments-name">'
-                        .$row['name'].
+                        .$row['Name'].
 			'</div>
 			  <div class="comments-date">
 			   Rating
@@ -741,7 +741,7 @@ $result = $conn->query($sqls);
 		</div>
 		<div class="comments-description">
 		<p>'
-		.$row['msg'].
+		.$row['Msg'].
 		'</p>
 		</div>
 		</div>
