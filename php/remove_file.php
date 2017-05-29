@@ -1,7 +1,6 @@
 <?php
 if(isset($_POST['file'])){
-    $class = $_POST['file'];
-    $file = '../'.$class.'/'.$class.'_logo.png';
+    $file = '../uploads/' . $_POST['file'];
     if(file_exists($file)){
         unlink($file);
     }

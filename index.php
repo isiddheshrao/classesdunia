@@ -344,65 +344,37 @@
 				<div class="row">
 					<div class="col-md-12" id="tellmemore">
 						<div class="lp-section-title-container text-center ">
-							<h1>Explore Your Nearby</h1>
-							<div class="lp-sub-title">find your interests and check whats going on in the city now.</div>
+							<h1>How Classesdunia Works</h1>
+							<div class="lp-sub-title">Find the Classes of your interests and explore better options</div>
 						</div><!-- ../section-title-->
 						<div class="lp-section-content-container">
 							<div class="row">
 								<div class="col-md-3 col-sm-3 col-xs-12">
 									<div class="city-girds lp-border-radius-8">
 										<div class="city-thumb">
-											<img src="images/city/manchester.png" alt="manchester" />
+											<img src="images/city/search.png" alt="manchester" />
 										</div>
-										<div class="city-title text-center">
-											<h3 class="lp-h3">
-												<a href="listing-sidebar.html">Manchester</a>
-											</h3>
-											<label class="lp-listing-quantity">08 Listings</label>
-										</div>
-										<a href="listing-sidebar.html" class="overlay-link"></a>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-3 col-xs-12">
 									<div class="city-girds lp-border-radius-8">
 										<div class="city-thumb">
-											<img src="images/city/glasgow.png" alt="glasgow" />
+											<img src="images/city/explore.png" alt="glasgow" />
 										</div>
-										<div class="city-title text-center">
-											<h3 class="lp-h3">
-												<a href="listing-sidebar.html">Glasgow</a>
-											</h3>
-											<label class="lp-listing-quantity">68 Listings</label>
-										</div>
-										<a href="listing-sidebar.html" class="overlay-link"></a>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-3 col-xs-12">
 									<div class="city-girds lp-border-radius-8">
 										<div class="city-thumb">
-											<img src="images/city/manchester.png" alt="manchester" />
+											<img src="images/city/select.png" alt="manchester" />
 										</div>
-										<div class="city-title text-center">
-											<h3 class="lp-h3">
-												<a href="listing-sidebar.html">Manchester</a>
-											</h3>
-											<label class="lp-listing-quantity">08 Listings</label>
-										</div>
-										<a href="listing-sidebar.html" class="overlay-link"></a>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-3 col-xs-12">
 									<div class="city-girds lp-border-radius-8">
 										<div class="city-thumb">
-											<img src="images/city/glasgow.png" alt="glasgow" />
+											<img src="images/city/book.png" alt="glasgow" />
 										</div>
-										<div class="city-title text-center">
-											<h3 class="lp-h3">
-												<a href="listing-sidebar.html">Glasgow</a>
-											</h3>
-											<label class="lp-listing-quantity">68 Listings</label>
-										</div>
-										<a href="listing-sidebar.html" class="overlay-link"></a>
 									</div>
 								</div>
 							</div>

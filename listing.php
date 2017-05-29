@@ -399,7 +399,7 @@ if (isset($_POST['location']) && isset($_POST['stream']) && isset($_POST['subjec
 												</p>
 											</div><!-- ../grid-box-description-->
 											<div class="lp-grid-box-bottom">
-												<!--<div class="pull-left">
+												<div class="pull-left">
 													<i class="fa fa-star"></i>
 													<i class="fa fa-star"></i>
 													<i class="fa fa-star"></i>
@@ -412,7 +412,7 @@ if (isset($_POST['location']) && isset($_POST['stream']) && isset($_POST['subjec
 													<i></i>
 													</a>
 												</div>
-												<div class="clearfix"></div>-->
+												<div class="clearfix"></div>
 											</div><!-- ../grid-box-bottom-->
 										</div><!-- ../grid-box -->
 									</div>';

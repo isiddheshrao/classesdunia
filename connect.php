@@ -1,8 +1,8 @@
 <?php
 
-	define('DB_SERVER', 'localhost');
-	define('DB_USER', 'root');
-	define('DB_PASSWORD', 'best');
-	define('DB_NAME', 'test');
+define('DB_SERVER', 'localhost');
+define('DB_USER', 'root7262');
+define('DB_PASSWORD', 'Punk@7262');
+define('DB_NAME', 'shubham7262');
 
 ?>
