@@ -143,56 +143,158 @@ $(document).ready(function(){
         }
     });
 
-  $("#filer_input2").filer({
-		limit: 3,
-		maxSize: 3,
-		extensions: ["png"],
-		showThumbs: true,
-		uploadFile: {
-				url: "./php/upload.php",
-				data: {
-					'classname' : 'Resonance'
-				},
-				type: 'POST',
-				enctype: 'multipart/form-data',
-				beforeSend: function(){},
-				success: function(data, el){
-						var parent = el.find(".jFiler-jProgressBar").parent();
-						el.find(".jFiler-jProgressBar").fadeOut("slow", function(){
-								$("<div class=\"jFiler-item-others text-success\"><i class=\"icon-jfi-check-circle\"></i> Success</div>").hide().appendTo(parent).fadeIn("slow");
-						});
-						document.querySelector("#response").innerHTML = "";
-						$('#response').append(data);
-				},
-				error: function(el){
-						var parent = el.find(".jFiler-jProgressBar").parent();
-						el.find(".jFiler-jProgressBar").fadeOut("slow", function(){
-								$("<div class=\"jFiler-item-others text-error\"><i class=\"icon-jfi-minus-circle\"></i> Error</div>").hide().appendTo(parent).fadeIn("slow");
-						});
-				},
-				statusCode: null,
-				onProgress: null,
-				onComplete: null
-		},
-		onRemove: function(itemEl, file, id, listEl, boxEl, newInputEl, inputEl){
-				//var file = file.name;
-				var file = "Resonance";
-				$.post('./php/remove_file.php', {file: file});
-		},
-		captions: {
-				button: "Choose Files",
-				feedback: "Choose files To Upload",
-				feedback2: "files were chosen",
-				drop: "Drop file here to Upload",
-				removeConfirmation: "Are you sure you want to remove this file?",
-				errors: {
-						filesLimit: "Only {{fi-limit}} files are allowed to be uploaded.",
-						filesType: "Only Images are allowed to be uploaded.",
-						filesSize: "{{fi-name}} is too large! Please upload file up to {{fi-maxSize}} MB.",
-						filesSizeAll: "Files you've choosed are too large! Please upload files up to {{fi-maxSize}} MB."
-				}
-		}
-	});
+		$("#filer_input_logo").filer({
+			limit: 3,
+			maxSize: 3,
+			extensions: ["png"],
+			showThumbs: true,
+			uploadFile: {
+					url: "./php/upload.php",
+					data: {
+						'classname' : 'Resonance'
+					},
+					type: 'POST',
+					enctype: 'multipart/form-data',
+					beforeSend: function(){},
+					success: function(data, el){
+							var parent = el.find(".jFiler-jProgressBar").parent();
+							el.find(".jFiler-jProgressBar").fadeOut("slow", function(){
+									$("<div class=\"jFiler-item-others text-success\"><i class=\"icon-jfi-check-circle\"></i> Success</div>").hide().appendTo(parent).fadeIn("slow");
+							});
+							document.querySelector("#response").innerHTML = "";
+							$('#response').append(data);
+					},
+					error: function(el){
+							var parent = el.find(".jFiler-jProgressBar").parent();
+							el.find(".jFiler-jProgressBar").fadeOut("slow", function(){
+									$("<div class=\"jFiler-item-others text-error\"><i class=\"icon-jfi-minus-circle\"></i> Error</div>").hide().appendTo(parent).fadeIn("slow");
+							});
+					},
+					statusCode: null,
+					onProgress: null,
+					onComplete: null
+			},
+			onRemove: function(itemEl, file, id, listEl, boxEl, newInputEl, inputEl){
+					//var file = file.name;
+					var file = "Resonance";
+					$.post('./php/remove_file.php', {file: file});
+			},
+			captions: {
+					button: "Choose Files",
+					feedback: "Choose files To Upload",
+					feedback2: "files were chosen",
+					drop: "Drop file here to Upload",
+					removeConfirmation: "Are you sure you want to remove this file?",
+					errors: {
+							filesLimit: "Only {{fi-limit}} files are allowed to be uploaded.",
+							filesType: "Only Images are allowed to be uploaded.",
+							filesSize: "{{fi-name}} is too large! Please upload file up to {{fi-maxSize}} MB.",
+							filesSizeAll: "Files you've choosed are too large! Please upload files up to {{fi-maxSize}} MB."
+					}
+			}
+		});
+
+		$("#filer_input_slider_1").filer({
+			limit: 3,
+			maxSize: 3,
+			extensions: ["png"],
+			showThumbs: true,
+			uploadFile: {
+					url: "./php/upload.php",
+					data: {
+						'classname' : 'Resonance'
+					},
+					type: 'POST',
+					enctype: 'multipart/form-data',
+					beforeSend: function(){},
+					success: function(data, el){
+							var parent = el.find(".jFiler-jProgressBar").parent();
+							el.find(".jFiler-jProgressBar").fadeOut("slow", function(){
+									$("<div class=\"jFiler-item-others text-success\"><i class=\"icon-jfi-check-circle\"></i> Success</div>").hide().appendTo(parent).fadeIn("slow");
+							});
+							document.querySelector("#response").innerHTML = "";
+							$('#response').append(data);
+					},
+					error: function(el){
+							var parent = el.find(".jFiler-jProgressBar").parent();
+							el.find(".jFiler-jProgressBar").fadeOut("slow", function(){
+									$("<div class=\"jFiler-item-others text-error\"><i class=\"icon-jfi-minus-circle\"></i> Error</div>").hide().appendTo(parent).fadeIn("slow");
+							});
+					},
+					statusCode: null,
+					onProgress: null,
+					onComplete: null
+			},
+			onRemove: function(itemEl, file, id, listEl, boxEl, newInputEl, inputEl){
+					//var file = file.name;
+					var file = "Resonance";
+					$.post('./php/remove_file.php', {file: file});
+			},
+			captions: {
+					button: "Choose Files",
+					feedback: "Choose files To Upload",
+					feedback2: "files were chosen",
+					drop: "Drop file here to Upload",
+					removeConfirmation: "Are you sure you want to remove this file?",
+					errors: {
+							filesLimit: "Only {{fi-limit}} files are allowed to be uploaded.",
+							filesType: "Only Images are allowed to be uploaded.",
+							filesSize: "{{fi-name}} is too large! Please upload file up to {{fi-maxSize}} MB.",
+							filesSizeAll: "Files you've choosed are too large! Please upload files up to {{fi-maxSize}} MB."
+					}
+			}
+		});
+
+		$("#filer_input_slider_2").filer({
+			limit: 3,
+			maxSize: 3,
+			extensions: ["png"],
+			showThumbs: true,
+			uploadFile: {
+					url: "./php/upload.php",
+					data: {
+						'classname' : 'Resonance'
+					},
+					type: 'POST',
+					enctype: 'multipart/form-data',
+					beforeSend: function(){},
+					success: function(data, el){
+							var parent = el.find(".jFiler-jProgressBar").parent();
+							el.find(".jFiler-jProgressBar").fadeOut("slow", function(){
+									$("<div class=\"jFiler-item-others text-success\"><i class=\"icon-jfi-check-circle\"></i> Success</div>").hide().appendTo(parent).fadeIn("slow");
+							});
+							document.querySelector("#response").innerHTML = "";
+							$('#response').append(data);
+					},
+					error: function(el){
+							var parent = el.find(".jFiler-jProgressBar").parent();
+							el.find(".jFiler-jProgressBar").fadeOut("slow", function(){
+									$("<div class=\"jFiler-item-others text-error\"><i class=\"icon-jfi-minus-circle\"></i> Error</div>").hide().appendTo(parent).fadeIn("slow");
+							});
+					},
+					statusCode: null,
+					onProgress: null,
+					onComplete: null
+			},
+			onRemove: function(itemEl, file, id, listEl, boxEl, newInputEl, inputEl){
+					//var file = file.name;
+					var file = "Resonance";
+					$.post('./php/remove_file.php', {file: file});
+			},
+			captions: {
+					button: "Choose Files",
+					feedback: "Choose files To Upload",
+					feedback2: "files were chosen",
+					drop: "Drop file here to Upload",
+					removeConfirmation: "Are you sure you want to remove this file?",
+					errors: {
+							filesLimit: "Only {{fi-limit}} files are allowed to be uploaded.",
+							filesType: "Only Images are allowed to be uploaded.",
+							filesSize: "{{fi-name}} is too large! Please upload file up to {{fi-maxSize}} MB.",
+							filesSizeAll: "Files you've choosed are too large! Please upload files up to {{fi-maxSize}} MB."
+					}
+			}
+		});
 
 
 
