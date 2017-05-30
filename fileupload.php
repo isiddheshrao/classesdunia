@@ -38,15 +38,74 @@
 	<![endif]-->
 </head>
 <body>
-
+	<h2>existing images</h2>
+	<div class="jFiler-items jFiler-row">
+					<ul class="jFiler-items-list jFiler-items-grid">
 <?php
-	echo '<h2>existing images</h2>';
 	$class = 'Resonance';
 	$file = $class.'/'.$class.'_logo.png';
 	if(file_exists($file)){
-			echo '<div class="jFiler-items jFiler-row">
-							<ul class="jFiler-items-list jFiler-items-grid">
-									<li class="jFiler-item" data-jfiler-index="0" style="">
+			echo '	<li class="jFiler-item" data-jfiler-index="0" style="">
+								   <div class="jFiler-item-container">
+								      <div class="jFiler-item-inner">
+								         <div class="jFiler-item-thumb">
+								            <div class="jFiler-item-status"></div>
+								            <div class="jFiler-item-info">
+								               <span class="jFiler-item-title"><b title="allenlogo.png">Resonance_logo.png</b></span>
+								               <span class="jFiler-item-others">160 KB</span>
+								            </div>
+								            <div class="jFiler-item-thumb-image">
+														  <div class="loading"></div>
+															<img id="logo_img" src="'.$file.'" draggable="false">
+														</div>
+								         </div>
+								         <div class="jFiler-item-assets jFiler-row">
+								            <ul class="list-inline pull-left">
+								               <li>
+															 			RESONANCE LOGO
+								               </li>
+								            </ul>
+								            <ul class="list-inline pull-right">
+								               <li><a class="icon-jfi-trash jFiler-item-trash-action"></a></li>
+								            </ul>
+								         </div>
+								      </div>
+								   </div>
+								</li>';
+		}
+		$file = $class.'/'.$class.'_slider_1.png';
+		if(file_exists($file)){
+			echo '	<li class="jFiler-item" data-jfiler-index="0" style="">
+								   <div class="jFiler-item-container">
+								      <div class="jFiler-item-inner">
+								         <div class="jFiler-item-thumb">
+								            <div class="jFiler-item-status"></div>
+								            <div class="jFiler-item-info">
+								               <span class="jFiler-item-title"><b title="allenlogo.png">Resonance_logo.png</b></span>
+								               <span class="jFiler-item-others">160 KB</span>
+								            </div>
+								            <div class="jFiler-item-thumb-image">
+														  <div class="loading"></div>
+															<img id="logo_img" src="'.$file.'" draggable="false">
+														</div>
+								         </div>
+								         <div class="jFiler-item-assets jFiler-row">
+								            <ul class="list-inline pull-left">
+								               <li>
+															 			RESONANCE LOGO
+								               </li>
+								            </ul>
+								            <ul class="list-inline pull-right">
+								               <li><a class="icon-jfi-trash jFiler-item-trash-action"></a></li>
+								            </ul>
+								         </div>
+								      </div>
+								   </div>
+								</li>';
+			}
+			$file = $class.'/'.$class.'_slider_2.png';
+			if(file_exists($file)){
+				echo '	<li class="jFiler-item" data-jfiler-index="0" style="">
 									   <div class="jFiler-item-container">
 									      <div class="jFiler-item-inner">
 									         <div class="jFiler-item-thumb">
@@ -72,25 +131,33 @@
 									         </div>
 									      </div>
 									   </div>
-									</li>
-							</ul>
-						</div>';
-		}
+									</li>';
+				}
 ?>
 
+</ul>
+</div>'
+
 <div class="seperator">
-	<h1>Logo Upload</h1>
+	<h2>Logo Upload</h2>
 	<div class="col-sm-12 padding-left-0 padding-right-0">
-		<input type="file" name="files[]" id="filer_input2" multiple="multiple">
+		<input type="file" name="files[]" id="filer_input_logo" multiple="multiple">
 	</div>
 </div>
 
-<!-- <div class="seperator">
-	<h1>Slider Image Upload</h1>
+<div class="seperator">
+	<h2>Slider Image 1 Upload</h2>
 	<div class="col-sm-12 padding-left-0 padding-right-0">
-		<input type="file" name="files[]" id="filer_input3" multiple="multiple">
+		<input type="file" name="files[]" id="filer_input_slider_1" multiple="multiple">
 	</div>
-</div> -->
+</div>
+
+<div class="seperator">
+	<h2>Slider Image 1 Upload</h2>
+	<div class="col-sm-12 padding-left-0 padding-right-0">
+		<input type="file" name="files[]" id="filer_input_slider_2" multiple="multiple">
+	</div>
+</div>
 
 <div>
 	<h1> Response: </h1>
