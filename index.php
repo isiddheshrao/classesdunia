@@ -1,3 +1,7 @@
+<?php
+require 'connect.php';
+require 'helper.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -182,10 +186,6 @@
 										<option value="">Select Location</option>
 										<option value="All">All Locations</option>
 										<?php
-
-	                    require 'connect.php';
-	                    require 'helper.php';
-
 											try {
 
 												$conn = new PDO("mysql:host=".DB_SERVER.";dbname=".DB_NAME, DB_USER, DB_PASSWORD);
