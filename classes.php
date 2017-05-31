@@ -62,124 +62,7 @@ if (isset($_GET['stream']) && !empty($_GET['stream']))
 		<header class="lp-header-bg">
 		<div class="lp-header-overlay"></div> <!-- ../header-overlay -->
 		<div class="md-overlay"></div> <!-- Overlay for Popup -->
-		<div class="lp-menu-bar">
-			<div class="container">
-					<div class="row">
-						<div class="col-md-4 col-xs-6 lp-logo-container">
-							<div class="lp-logo">
-								<a href="index.php">
-									<img src="images/logo.png" alt="" />
-								</a>
-							</div>
-						</div>
-						<style>
-							.mobile-nav-icon .nav-icon {
-    													width: 28px;
-   														float: right;
-   													}
-						</style>
-						<div class="col-xs-6 mobile-nav-icon">
-							<a href="#menu" class="nav-icon">
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</a>
-						</div>
-
-							<div id="menu">
-								<ul>
-									<li><a href="index.php">Home</a></li>
-									<li><a href="#">Categories</a>
-										<ul class="sub-menu">
-											<li class="has-menu"><a href="listing-science.html">Science</a>
-												<ul class="sub-menu">
-													<li><a href="listing-science.html">HSC</a></li>
-													<li><a href="listing-science.html">Diploma</a></li>
-													<li><a href="listing-science.html">Engineering</a></li>
-													<li><a href="listing-science.html">Medical</a></li>
-												</ul>
-											</li>
-											<li class="has-menu"><a href="listing-commerce.html">Commerce</a>
-												<ul class="sub-menu">
-													<li><a href="listing-commerce.html">CA</a></li>
-													<li><a href="listing-commerce.html">CS</a></li>
-												</ul>
-											</li>
-											<li><a href="listing-design.html">Design</a></li>
-
-											<li class="has-menu"><a href="listing-entrance.html">Entrance</a>
-												<ul class="sub-menu">
-													<li><a href="listing-entrance.html">GATE</a></li>
-													<li><a href="listing-entrance.html">JEE</a></li>
-													<li><a href="listing-entrance.html">CET</a></li>
-												</ul>
-											</li>
-											<li class="has-menu"><a href="listing-school.html">School</a>
-												<ul class="sub-menu">
-													<li><a href="listing-school.html">SSC</a></li>
-												</ul>
-											</li>
-											</ul>
-											</li>
-											<li>
-												<a href="#">Blog</a>
-											</li>
-											<li>
-												<a href="about-us.html">About Us</a></li>
-											<li>
-												<a href="contact-us.html">Contact Us</a>
-											</li>
-										</ul>
-									</div>
-
-						<div class="col-md-8 col-xs-12 lp-menu-container">
-							<div class="lp-menu pull-right menu">
-								<ul>
-								<li><a href="index.php">Home</a></li>
-									<li><a href="#">Categories<i class="icons8-angle-down drop-down-icon"></i></a>
-										<ul class="sub-menu">
-											<li class="has-menu"><a href="listing-science.html">Science</a>
-												<ul class="sub-menu">
-													<li><a href="listing-science.html">HSC</a></li>
-													<li><a href="listing-science.html">Diploma</a></li>
-													<li><a href="listing-science.html">Engineering</a></li>
-													<li><a href="listing-science.html">Medical</a></li>
-												</ul>
-											</li>
-											<li class="has-menu"><a href="listing-commerce.html">Commerce</a>
-												<ul class="sub-menu">
-													<li><a href="listing-commerce.html">CA</a></li>
-													<li><a href="listing-commerce.html">CS</a></li>
-												</ul>
-											</li>
-											<li><a href="listing-design.html">Design</a></li>
-
-											<li class="has-menu"><a href="listing-entrance.html">Entrance</a>
-												<ul class="sub-menu">
-													<li><a href="listing-entrance.html">GATE</a></li>
-													<li><a href="listing-entrance.html">JEE</a></li>
-													<li><a href="listing-entrance.html">CET</a></li>
-												</ul>
-											</li>
-											<li class="has-menu"><a href="listing-school.html">School</a>
-												<ul class="sub-menu">
-													<li><a href="listing-school.html">SSC</a></li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">Blog</a>
-									</li>
-									<li><a href="about-us.html">About Us</a></li>
-									<li>
-										<a href="contact-us.html">Contact Us</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-		</div><!-- ../menu-bar -->
+		<?php require 'footer.php' ?>
 		<div class="page-heading listing-page archive-page ">
 			<div class="page-heading-inner-container text-center">
 				<h1><?php echo $stream; ?></h1>
@@ -294,8 +177,6 @@ if (isset($_GET['stream']) && !empty($_GET['stream']))
 											</div><!-- ../grid-box-bottom-->
 										</div><!-- ../grid-box -->
 									</div>';
-
-
 					}
 
 					    // Toss back results as json encoded array.
@@ -388,92 +269,7 @@ if (isset($_GET['stream']) && !empty($_GET['stream']))
 	</section>
 	<!--==================================Section Close=================================-->
 
-<!--==================================Footer Open=================================-->
-<footer id="footer" class="clearfix">
-      <div id="footer-widgets">
-
-        <div class="container">
-
-        <div id="footer-wrapper">
-
-          <div class="row">
-            <div class="col-sm-6 col-md-2">
-              <div id="meta-3" class="widget widgetFooter widget_meta">
-              <h4 class="widgettitle">Pages:</h4>
-              <ul>
-    		  <li><a href="index.php"><i class="fa fa-home fa-fw"></i> Home</a></li>
-			  <li><a href="privacypolicy.php"><i class="fa fa-link"></i>   Privacy Policy</a></li>
-			  <li><a href="contact-us.php"><i class="fa fa-envelope fa-fw"></i> Contact Us</a></li>
-             </ul>
-</div>      </div> <!-- end widget1 -->
-
-            <div class="col-sm-6 col-md-2">
-              		<div id="recent-posts-3" class="widget widgetFooter widget_recent_entries">
-                    <h4 class="widgettitle">Social Media :</h4>
-                    <ul>
-					<li>
-				     <a href="#" target="_blank"><i class="fa fa-facebook"></i> Facebook</a>
-					</li>
-					<li>
-				      <a href="#" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>
-					</li>
-					<li>
-				      <a href="#" target="_blank"><i class="fa fa-youtube"></i> Youtube</a>
-				   </li>
-				</ul>
-		</div>            </div> <!-- end widget1 -->
-
-            <div class="col-sm-6 col-md-4">
-              <div id="meta-4" class="widget widgetFooter widget_meta">
-              <h4 class="widgettitle">Subscribe:</h4>
-
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-addon">E-mail:</span>
-                  <input class="form-control" placeholder="Write your email .." type="text">
-                   <span class="input-group-btn">
-                    <button class="btn btn-primary" type="button">Subscribe!</button>
-                </div>
-              </div>
-              </div>
-             </div> <!-- end widget1 -->
-             <div class="col-sm-6 col-md-2">
-              		<div id="recent-posts-3" class="widget widgetFooter widget_recent_entries">
-                    <h4 class="widgettitle">Payment Modes:</h4>
-                    <ul>
-					<li>
-				     <a href="#" target="#"><img src="images/payment/visa.png"></a>
-				     <a href="#" target="#"><img src="images/payment/mastercard.png"></a>
-				 </li>
-				 <li>
-				     <a href="#" target="#"><img src="images/payment/bhim.png"></a>
-				     <a href="#" target="#"><img src="images/payment/instamojo.png"></a>
-				   </li>
-				</ul>
-		</div>
-          </div> <!-- end .row -->
-
-
-        </div> <!-- end #footer-wrapper -->
-
-        </div> <!-- end .container -->
-      </div> <!-- end #footer-widgets -->
-
-      <div id="sub-floor">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 copyright">
-             Copyright CodeMarshalls
-            </div>
-            <div class="col-md-4 col-md-offset-4 attribution">
-             Developed by  <a target="_blank" href="#">Code Marshalls</a>
-             </div>
-          </div> <!-- end .row -->
-        </div>
-      </div>
-    </footer>
-	<!--==================================Footer Close=================================-->
-
+<?php require 'footer.php' ?>
 
 	<!--==================================Javscript=================================-->
 
