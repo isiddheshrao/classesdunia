@@ -153,11 +153,11 @@ if (isset($_GET['stream']) && !empty($_GET['stream']))
 											</div><!-- ../grid-box-description-->
 											<div class="lp-grid-box-bottom">
 												<div class="pull-left">
-													<!--<i class="fa fa-star"></i>
 													<i class="fa fa-star"></i>
 													<i class="fa fa-star"></i>
 													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>-->
+													<i class="fa fa-star"></i>
+													<i class="fa fa-star-o"></i>
 													<span class="rating-ratio">4.0</span>
 												</div>
 												<!--<div class="pull-right">
