@@ -88,9 +88,7 @@ if (isset($_GET['stream']) && !empty($_GET['stream']))
 
 							<div id="menu">
 								<ul>
-									<li>
-										<a href="index.php">Home</a>
-									</li>
+									<li><a href="index.php">Home</a></li>
 									<li><a href="#">Categories</a>
 										<ul class="sub-menu">
 											<li class="has-menu"><a href="listing-science.html">Science</a>
