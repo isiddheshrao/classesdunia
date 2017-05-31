@@ -62,7 +62,7 @@ if (isset($_GET['stream']) && !empty($_GET['stream']))
 		<header class="lp-header-bg">
 		<div class="lp-header-overlay"></div> <!-- ../header-overlay -->
 		<div class="md-overlay"></div> <!-- Overlay for Popup -->
-		<?php require 'footer.php' ?>
+		<?php require 'nav.php' ?>
 		<div class="page-heading listing-page archive-page ">
 			<div class="page-heading-inner-container text-center">
 				<h1><?php echo $stream; ?></h1>
@@ -119,14 +119,6 @@ if (isset($_GET['stream']) && !empty($_GET['stream']))
 						<div class="col-md-4 col-sm-4 text-left">
 							<p>'.$stmt->rowCount().' Results</p>
 						</div>
-						<div class="col-md-4 col-sm-4  text-center">
-							<p class="view-on-map">
-								<!-- view on map was here -->
-							</p>
-						</div>
-						<div class="col-md-4 col-sm-4  text-right">
-							<p>Showing all Class Listings <a href="#" class="achor-color">Reset</a></p>
-						</div>
 					</div>';
 
 
@@ -160,20 +152,20 @@ if (isset($_GET['stream']) && !empty($_GET['stream']))
 												</p>
 											</div><!-- ../grid-box-description-->
 											<div class="lp-grid-box-bottom">
-												<!--<div class="pull-left">
+												<div class="pull-left">
+													<!--<i class="fa fa-star"></i>
 													<i class="fa fa-star"></i>
 													<i class="fa fa-star"></i>
 													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
+													<i class="fa fa-star-o"></i>-->
 													<span class="rating-ratio">4.0</span>
 												</div>
-												<div class="pull-right">
+												<!--<div class="pull-right">
 													<a href="#" class="lp-add-to-fav simptip-position-top simptip-movable" data-tooltip="Add to favorites">
 													<i></i>
 													</a>
-												</div>
-												<div class="clearfix"></div>-->
+												</div>-->
+												<div class="clearfix"></div>
 											</div><!-- ../grid-box-bottom-->
 										</div><!-- ../grid-box -->
 									</div>';
