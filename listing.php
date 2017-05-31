@@ -282,7 +282,7 @@ if (isset($_POST['location']) && isset($_POST['stream']) && isset($_POST['subjec
 												</p>
 											</div><!-- ../grid-box-description-->
 											<div class="lp-grid-box-bottom">
-												<!--<div class="pull-left">
+												<div class="pull-left">
 													<i class="fa fa-star"></i>
 													<i class="fa fa-star"></i>
 													<i class="fa fa-star"></i>
@@ -290,12 +290,12 @@ if (isset($_POST['location']) && isset($_POST['stream']) && isset($_POST['subjec
 													<i class="fa fa-star-o"></i>
 													<span class="rating-ratio">4.0</span>
 												</div>
-												<div class="pull-right">
+												<!--<div class="pull-right">
 													<a href="#" class="lp-add-to-fav simptip-position-top simptip-movable" data-tooltip="Add to favorites">
 													<i></i>
 													</a>
-												</div>
-												<div class="clearfix"></div>-->
+												</div>-->
+												<div class="clearfix"></div>
 											</div><!-- ../grid-box-bottom-->
 										</div><!-- ../grid-box -->
 									</div>';
