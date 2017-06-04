@@ -422,9 +422,6 @@ class Uploader {
 	private function _onUpload(){
 		$arguments = func_get_args();
     $var = function_exists($this->options['onUpload']);
-    echo 'inside class uploader _upload';
-    echo ' value->'.$var.' val ';
-    echo ' this->'.print_r($this).' val ';
 		return $this->options['onUpload'] && function_exists($this->options['onUpload']) ? $this->options['onUpload'](@$arguments[0], @$arguments[1]) : null;
 	}
 
@@ -438,9 +435,5 @@ class Uploader {
 		return $this->options['onRemove'] && function_exists($this->options['onRemove']) ? $this->options['onRemove'](@$arguments[0], @$arguments[1]) : null;
 	}
 
-  public function up($file)
-  {
-    echo 'inside class uploader';
-  }
 }
 ?>
