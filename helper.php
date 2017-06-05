@@ -33,6 +33,18 @@ function cleanStringCap($string)
   return $string;
 }
 
+function genDisplayValue($string)
+{
+  // allow only letters
+  $string = preg_replace("/[^a-zA-Z\s-]/", "", $string);
+
+  //Clean up multiple dashes or whitespaces
+  $string = preg_replace("/[\s-]+/", " ", $string);
+
+  // return
+  return $string;
+}
+
 function lower($string)
 {
   // convert string to lower case

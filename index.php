@@ -118,7 +118,7 @@ require 'helper.php';
 												{
 													while($row = $stmt->fetch())
 													{
-	                                                    echo '<option value="'.$row['sname'].'">'.$row['sname'].'</option>';
+	                            echo '<option value="'.$row['sname'].'">'.$row['sname'].'</option>';
 													}
 												}
 
@@ -157,7 +157,7 @@ require 'helper.php';
 					<div class="col-md-12">
 						<ul class="lp-home-categoires margin-top-subtract-55 padding-left-0">
 							<li>
-								<a href="listing-science.html" class="lp-border-radius-5">
+								<a href="classes.php?stream=science" class="lp-border-radius-5">
 									<span>
 									<!-- Physics icon by Icons8 -->
 <img class="icon icons8-Physics" src="data:image/png;base64,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"><br>
@@ -166,7 +166,7 @@ require 'helper.php';
 								</a>
 							</li>
 							<li>
-								<a href="listing-commerce.html" class="lp-border-radius-5">
+								<a href="classes.php?stream=commerce" class="lp-border-radius-5">
 									<span>
 										<!-- Money icon by Icons8 -->
 <img class="icon icons8-Money" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADYUlEQVRoQ+2ZgVHcMBBF/1aQUEFIBYEKEioIVBDoIOkgHQQqCKkgUAFQQUgFgQoCFWzmebQ3OiPbutzhMzenGY89tizv3/93tZJNG9JsQ3BoC2RqTG4ZmSwj7n4l6cPUDByw58LMjugzk5a7+wsD0ZhrZg2GJ0DiQQ4qQJaePSf4vu+2n22BPCcTMfYkGHH3T5I+S9pLht1KOjWzH7VOWCsQd38tiQwYANp2A+jAzB6GAK0bSKTx+8TIdTKY1H4q6Y2kazM7mCwQdz+W9F0SIPbaXk9swQhgTszsvA/M2hhx9wtJHyUdmRnXT5q7H0r6KenSzLjubKMCcfddSd9STHBN2+mKgdT/T+p3JwmGvpgZ13NtNCDJqF+SCPBoNZ4mbt5n7xD4+20wYwIJKd1IOqzJRLnLU8wwBqCeOGBMIH8TG51SqshMsMk4d2b2tgW0qf9qyqalShR3RxKv+mKiAghxRczcm1nEWPPamIyEtNA8mWpwkitIiwzGHLNWaeFBsg6s0G7NbH+IheRtkkTM/o+SdgvzzjjSSgYBhhkbox7MrKs0aadWHEB8cD4usTmatGo8v0yfLZDaVLeMlxd5d8vIlpFF9LJA36WktcB3JtG1tB1EPn83CevqjZhVA5u39+vuFG5zRVtrvQBj7Rbrce6zMGoWR2ZGWf/fzd0pXxhnrtzput/0ja+5O0awll5lAzyFZJwB/mhmJafMvtsV5H3BXyWttAAq1VD5pjfPY6WYr/66HAOoWOpSbM5YXApIj7Ry+YR3MS7u/+5Znwe4OAMc+XYxz5gcX0tz2iAjyeN4J8rxReUVAJEM49xUyAdQAIyjlDFZ73CQnR4GgfRZ7e65fPBmJIS43yej8DAbcr0JIDmTMeNoAwNQs31UWvpWxcgQPWk3BYAhHc5t+cAawGYebo+bxsHQuwQMwznYK5u1ZwNSAtryMMa0gQHo3Mwus8zJJgRAdvIx01jsYrIpXly8rYSRIcZ4nrwNIAzKZUNMsXV6lnZT5qTTN3fMsVRjxKr7JFAA4gimkF6TvnPp1P4tG42RLmekvWAkkycN0u/ZUKZaOyMdMUWCAFAENpI7Sf9aiplqkkCygAcQjMyl9aEfsWuXVo/kYAdAzST9YoFkma75zzK0XzZZRhbNlBsD5B8RnadRKCw/CQAAAABJRU5ErkJggg=="><br>
@@ -175,7 +175,7 @@ require 'helper.php';
 								</a>
 							</li>
 							<li>
-								<a href="listing-arts.html" class="lp-border-radius-5">
+								<a href="classes.php?stream=arts" class="lp-border-radius-5">
 									<span>
 <!-- Art Prices icon by Icons8 -->
 <img class="icon icons8-Art-Prices" src="data:image/png;base64,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"><br>
@@ -184,7 +184,7 @@ require 'helper.php';
 								</a>
 							</li>
 							<li>
-								<a href="listing-design.html" class="lp-border-radius-5">
+								<a href="classes.php?stream=design" class="lp-border-radius-5">
 									<span>
 										<!-- Design icon by Icons8 -->
 <img class="icon icons8-Design" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADbElEQVRoQ82Z4XEUMQyFpQ6gAtIBlBA6oANIBdACFQAVQAdABYQKCBVAKiBUYOYt9qHzyZYse4/sTH7Fe+vPfnqyJSbHk1J6QkQ/mfnOMfy/DGHrqxniC0CI6Ol9hemCCIgHGfjm3DAppUsieklEz8QcXjPzJ7kJTZAK4nt+6TERnQ0mpfSCiN43VPOOmV+V/6kgCgRWBc81EZ0FxoAo84fUMSc6AdEgEBcpJcgLsYLAx7PbzlQQt0T0qLErX5l5W+QjkBYEBqaUoNGPRLSrzCqIKyJCLBQl1Dx3zPzwCKQHUd7OMNtW7iGzGoKZP+RFhBo0mFtmvjiAeCDkUuwhsxaEWEQN5jMzb27GkxBLZGZBVDCITcTMb8QrMyO/bSCS1AzgKlam3cwLkSUm7fiqSE9KKwJzPetmqyDqYB+CqQxg2M1WQmj2OwPjdrPVEK2EGIIRNtlNmntAqCCKb5sGoECobrYXRBMkAuNwMyS3tzm2jhynTtcjwOVd6xg/JLOS+RtuVr65HKK7I42M6pJZ3tFyNpMLvguECyQiM7EIkNPzveQkV8i86kZ3ZkTnI2PreHLFiBKErpgZmdjI2BaEW1ryB6yz2cjERsb2IEIgvZgZmdjIWAsiDNKACeeJfAukmVKTO9i1ValkFsoTGQLHGjzhutkUSN4ZlGTeRCxWQEwXNKZARnSujV1Z0AiDzEKI/IQTgPsKsCSPiI83r5xK7nGNnS1oDO/Iqp1QclO5x4QKGkMge0Bkw5DFv1BBww0yA+HJE8YVwDx1u0AWQAzliYibmSAzEKg7WWezlguNlmetG6LLcbLOm2OjMOIoZHYBeo2eJRDR+4wC0XWzVqNnKUQUxlHQOJzNtEbPLhCTMGZ5tm704Ab4K3IAlAVl6/4QjZmum1UZVlY+mhWPESfruJLr2qwceTBH5BXUm3FqRnvhst4RFNDQCm7eLVZARGWmGMBfCOabGuSbaHaewKyEiMBUB8sDBH7rAJJSQi/uR0MKaEriKT3vbqHNihFFLqbMehA1SK85L7+9FMKzMxZEDSKrgq1F3QWiB5P/VzL7kZzkJKW0IKut1SseZFPc3ra/mSqHV26KNePVf+7EDMc6eSQIBhStlolvHdNzP0p1prkTZW7m6ffcEIrMoJLNYntzubcgmHTemQsLAmP/ADcKeppwrrwzAAAAAElFTkSuQmCC">
@@ -195,7 +195,7 @@ require 'helper.php';
 								</a>
 							</li>
 							<li>
-								<a href="listing-entrance.html" class="lp-border-radius-5">
+								<a href="classes.php?stream=entrance" class="lp-border-radius-5">
 									<span><!-- Exam icon by Icons8 -->
 <img class="icon icons8-Exam" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACkklEQVRoQ+2Z4XHUMBCF3+sgqSCkgiQVQCqAVABUAFQAVABUAKkgoQKgApIKSAekg8e8jOTxHWdbtnWSM2PN3I87SeP9dt+udGuiZ0hS3/zEuRsA5yTvJ+7fuY0VQPzI7DBJICR716V6divCWWFqgdwCOMkZmVoghwB+5oSpAmKpSjrICVMNxHmVE6YqSE6Y6iC5YBYBkgNmMSBzYRYFMgdmcSBTYRYJMgWmCkjq3Wxr3Q3Js669jwkEfZfXoiATI+EbwMP/ohUkxRNTvTxmX4odWaUl6UmQwN0YQ4fWFgUJN9k/AO5JHg8ZN2a+NMhbAJ+CgRckr8cYm9I7KJLskn4DOA0GfSf54tGBhNywrC4BPANwBOCYZJZcKSYtSVFWFwCc8JbYO5Kfc0SlJIhl5QgchKT/6w5J35ViDGARkLasSL4KFz4n+nMAZyTdv9o5JDliJyTPqyd7S1avSX4LIAb6CuALScuuC8QtoadDDcBSEYneP4z93FR5SVoUiC90tyRj6X3wvqQI2Fm9JDmCL2NEgkx9oG40uPceEUkutT9Co83ejcO/u3r505acv1tyHm7QbcCH33+R9P5mlABxsr4ZqEDN4SjJhkdgFwGD+cxxL9hR8Jyr3catoASIH2zjmlOcZBMZSTb2iKR7vf8NSR8AvA/vS9oR3VhbAsT50XkdCeXVEdtZhhcB0sqPjyTt2V0ed6Su2nmypf2YY36DVSciKd5sleHLeFhugTjhDXvd9ypur9Jqldfm/OiIihP3ru9gHCgW+/3PHirQaTzNh4yZM7/XiMwxbOzeFSR6LMUTY707ZX2KHVm7KFOMTNmzgqzSStHJhDWrtFZpTZBNypZs0kp5WIk1s1umJYxMeUYfyD9fBotRRf1I0gAAAABJRU5ErkJggg=="><br>
 										Entrance
@@ -203,11 +203,11 @@ require 'helper.php';
 								</a>
 							</li>
 							<li>
-								<a href="listing-school.html" class="lp-border-radius-5">
+								<a href="classes.php?stream=hobby" class="lp-border-radius-5">
 									<span>
 <!-- Classroom icon by Icons8 -->
 <img class="icon icons8-Classroom" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAD6klEQVRoQ92Z/VkTQRDGZypQKlAqECoQKlAqECpQKhAqECsQKjCpQKhAqECoQKxgfH777OTZHHfH7HFJDvYfTJzszTvvfJ9K4JjZbxHZCYiuW2Smqgc8VCNPNjOLyG1CRlUThiog/qNNKNx8phu3Fsh1Qq06GfcaBGQKDIzFyCcR+VIEPAydqerFpkBWMWJmr0XkV0/GAtC+qt6vG1AtEE+7d5mRy6zwHoyIyBsRuVbV3ckCMbNDEfkhIoDYaVo9swUjgDlS1fN1ggkzUhTBA1WdtSlpZh9F5GeUlWycryKCy3Ln8VC3rAHiRXCr62Fm9lZE/uTU3FuTCoZLm3xXVZJI9dkIEDOj/hBvnCMYzJ/vVXWrGoWI1ADhYe9EJOJaN13FMscSIGAvMWBmJAuy4Z2q8n31qQHiwX4rIrsdwe4Kdga7maEwiiew2R35HXFyqqon1ShqGOFyM3NWAIMv3+SHwhTpF2v2sYGSBPe/nPluiyRypaoAHHTCjGQgWI3ageJtB2B7LWwB8EMGy+8ompdmBvjPXSm9BlEVEL84ZxwYcUAAoEU5z67C9wQ0FuYvBvCT3KeRtXDV1IgOPWEgOUi/iQi1olQs8myKKIpequpZzlrECveMUjxDQAI9VgkG/8f9kuK5OC56r8ZdF6pKEnnyiQJxX8aFDoe4QQZAnBDwKSm0xdNQRFEgVGsevq2qZKzwMTOUxx1Ly48KIiei1Hn0TohNtBEUZkY8oXwZT1cicv5YQxncCSwliCgjS2iDQLw3w/p0wmw4QmwGgZA49otMujJGqsE3lXrEYEsFdOWMDNm0BBlZr2sBZAMLvVnrDDEw2BeuVfRokfAaRWYlQEbRLHjJwuht8iMwsvZd8UoY2YBrzVcCJOgVo4q9XCDFPO0WY23DrO3LuSVLZnmGJforTkSeqdGnw1HklxgxM4Yneqa282C+NjMU6pq5T1T1tLzIzHz0jd4fll8AaTDB4oyBiAaQRpALX/nImrtP34Tw8Tgzwb9hxo2RRtyGPPML9/lm8rH7Q/IlECimBU8gGpZ0puaqmlzIzPrk3ZKlPIDeV9xfJV8C+Ztb8AebxbaNopn1ycMk/79YwBX9VPT+zk1nmz4lkKofrlqx2vtX5Vq1rvhk+bZgZ3GAj/vbKN5Wecy0Be8k5GvSb18SaEuna5UvGSEb8WKna4eF5dlJpXcl+d3IZOQTkOKFDR/neYtY5n9cjdTJ8bmZhdsk5KlVTHMwwPqndwtYVGVfvk1JfhsgD4pXV1tqZl6kEhNeHCcgfwoQV26RkXoUK9uSKclfAaRqjTNR+fuXAkQWQLrc6bl8X8bIc9G5Tc/5f8bAn4VrWjzMAAAAAElFTkSuQmCC"><br>
-										School
+										Hobby
 									</span>
 								</a>
 							</li>
