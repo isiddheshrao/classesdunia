@@ -352,21 +352,21 @@
 
 											// Case - I : MainStream based search
 
-											$stmt = $conn->prepare('SELECT msname FROM mainstream');
+											$stmt = $conn->prepare('SELECT msname,dmainstream FROM mainstream');
 											$stmt->execute();
 											if($stmt->rowCount()>0)
 											{
 												while($row = $stmt->fetch())
 												{
-													    $stmt1 = $conn->prepare('SELECT ssname FROM substream WHERE msname LIKE :mainstream');
+													    $stmt1 = $conn->prepare('SELECT ssname,dsubstream FROM substream WHERE msname LIKE :mainstream');
                                                         $stmt1->execute(array('mainstream' => $row['msname']));
 
                                                         if($stmt1->rowCount()>0)
                                                         {
-                                                            echo '<optgroup label="'.$row['msname'].'">';
+                                                            echo '<optgroup label="'.$row['dmainstream'].'">';
                                                             while($row1 = $stmt1->fetch())
                                                             {
-                                                                echo '<option value="'.$row1['ssname'].'">'.$row1['ssname'].'</option>';
+                                                                echo '<option value="'.$row1['ssname'].'">'.$row1['dsubstream'].'</option>';
                                                             }
                                                             echo '</optgroup>';
                                                         }
@@ -407,14 +407,16 @@
 
 						</div>
 
-						<!-- Description textbox component -->
+						<!-- //Description textbox component
 
 						<div class="form-group">
 							<label for="description">Description</label>
 							<textarea class="form-control" rows="8" id="description" name="description"></textarea>
 						</div>
 
-						<!-- File Component
+						-->
+
+						<!-- //File Component
 
 						<div class="form-group clearfix">
 							<div class="col-sm-12 padding-left-0 padding-right-0">
@@ -428,6 +430,7 @@
 							<label for="city">City</label>
 							<input type="text" class="form-control" id="city" name="city" placeholder="select your listing region">
 						</div>
+						<!--
 						<div class="form-group">
 							<label for="phone">Phone</label>
 							<input type="tel" class="form-control" id="phone" name="phone" placeholder="your contact number" maxlength="10">
@@ -436,6 +439,7 @@
 							<label for="email">Email</label>
 							<input type="email" class="form-control" id="email" name="email" placeholder="your contact email">
 						</div>
+						-->
 						<div class="form-group">
 							<label for="logo_url">Logo Path</label>
 							<input type="text" class="form-control" id="logo_url" name="logo_url" placeholder="Logo URL path">

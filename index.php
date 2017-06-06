@@ -92,13 +92,13 @@ require 'helper.php';
 										<option value="">Select Stream</option>
 										<option value="All">All Streams</option>
 										<?php
-												$stmt = $conn->prepare('SELECT ssname FROM substream');
+												$stmt = $conn->prepare('SELECT ssname,dsubstream FROM substream');
 												$stmt->execute();
 												if($stmt->rowCount()>0)
 												{
 													while($row = $stmt->fetch())
 													{
-	                            echo '<option value="'.$row['ssname'].'">'.$row['ssname'].'</option>';
+	                            echo '<option value="'.$row['ssname'].'">'.$row['dsubstream'].'</option>';
 													}
 												}
 
@@ -112,16 +112,15 @@ require 'helper.php';
 										<option value="">Select Subject</option>
 										<option value="All">All Subjects</option>
 										<?php
-												$stmt = $conn->prepare('SELECT sname FROM subject');
+												$stmt = $conn->prepare('SELECT sname,dsubject FROM subject');
 												$stmt->execute();
 												if($stmt->rowCount()>0)
 												{
 													while($row = $stmt->fetch())
 													{
-	                            echo '<option value="'.$row['sname'].'">'.$row['sname'].'</option>';
+	                            echo '<option value="'.$row['sname'].'">'.$row['dsubject'].'</option>';
 													}
 												}
-
 		                }
 										catch(PDOException $e) {
 		    								echo 'ERROR: ' . $e->getMessage();

@@ -10,14 +10,14 @@ if (isset($_GET['stream']) && !empty($_GET['stream']))
 				$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 				// Case - I : MainStream based search
-				$stmt = $conn->prepare('SELECT msname FROM mainstream where msname LIKE :stream');
+				$stmt = $conn->prepare('SELECT msname,dmainstream FROM mainstream where msname LIKE :stream');
 				$stmt->execute(array('stream' => $stream));
 				if($stmt->rowCount()==1)
 				{
 					$row = $stmt->fetch();
 					$stream = $row['msname'];
+					$displaystream = $row['dmainstream'];
 				}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,10 +65,10 @@ if (isset($_GET['stream']) && !empty($_GET['stream']))
 		<?php require 'nav.php' ?>
 		<div class="page-heading listing-page archive-page ">
 			<div class="page-heading-inner-container text-center">
-				<h1><?php echo $stream; ?></h1>
+				<h1><?php echo $displaystream; ?></h1>
 				<ul class="breadcrumbs">
 					<li><a href="index.php">Home</a></li>
-					<li><span><?php echo $stream; ?></span></li>
+					<li><span><?php echo $displaystream; ?></span></li>
 				</ul>
 			</div>
 			<div class="page-header-overlay"></div>
@@ -104,9 +104,9 @@ if (isset($_GET['stream']) && !empty($_GET['stream']))
 			  //  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 					// old-stmt
-					//$stmt = $conn->prepare('SELECT a.cname,a.location,a.logourl,a.pageurl,b.ssname,c.sname FROM classes a, substream b, subject c, map_class_stream d, map_class_subject e WHERE a.classid = d.class_id AND b.ssid=d.stream_id AND a.classid = e.class_id AND c.subjectid = e.subject_id AND c.fstream = b.ssname AND a.location LIKE :location AND b.ssname LIKE :stream AND c.sname LIKE :subject');
+					//$stmt = $conn->prepare('SELECT a.dclass,a.location,a.logourl,a.pageurl,b.ssname,c.sname FROM classes a, substream b, subject c, map_class_stream d, map_class_subject e WHERE a.classid = d.class_id AND b.ssid=d.stream_id AND a.classid = e.class_id AND c.subjectid = e.subject_id AND c.fstream = b.ssname AND a.location LIKE :location AND b.ssname LIKE :stream AND c.sname LIKE :subject');
 
-			    $stmt = $conn->prepare('SELECT DISTINCT a.cname,a.location,a.logourl,a.pageurl,b.msname FROM classes a, substream b, subject c, map_class_stream d, map_class_subject e WHERE a.classid = d.class_id AND b.ssid=d.stream_id AND a.classid = e.class_id AND c.subjectid = e.subject_id AND c.fstream = b.ssname AND b.msname LIKE :mainstream');
+			    $stmt = $conn->prepare('SELECT DISTINCT a.dclass,a.location,a.logourl,a.pageurl,b.msname FROM classes a, substream b, subject c, map_class_stream d, map_class_subject e WHERE a.classid = d.class_id AND b.ssid=d.stream_id AND a.classid = e.class_id AND c.subjectid = e.subject_id AND c.fstream = b.ssname AND b.msname LIKE :mainstream');
 
 			    $stmt->execute(array('mainstream' => $stream));
 
@@ -143,7 +143,7 @@ if (isset($_GET['stream']) && !empty($_GET['stream']))
 											<div class="lp-grid-box-description ">
 												<h4 class="lp-h4">
 													<a href="'.$row['pageurl'].'">
-													'.$row['cname'].'
+													'.$row['dclass'].'
 													</a>
 												</h4>
 												<p>

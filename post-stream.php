@@ -358,13 +358,13 @@
 
 												// Case - I : MainStream based search
 
-												$stmt = $conn->prepare('SELECT msname FROM mainstream');
+												$stmt = $conn->prepare('SELECT msname,dmainstream FROM mainstream');
 												$stmt->execute();
 												if($stmt->rowCount()>0)
 												{
 													while($row = $stmt->fetch())
 													{
-														echo '<option value="'.$row['msname'].'">'.$row['msname'].'</option>';
+														echo '<option value="'.$row['msname'].'">'.$row['dmainstream'].'</option>';
 													}
 												}
 

@@ -7,16 +7,16 @@
 	<meta name="keywords" content="HTML5 Template" />
 	<meta name="description" content="Listingpro - Template HTML5">
 	<meta name="author" content="">
-	
+
 	<!-- Title -->
 	<title>Listingpro - Home</title>
-	
+
 	<!-- Mobile Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-	
+
 	<!-- CSS -->
 	<link href="lib/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" />
 	<link href="css/colors.css" type="text/css" rel="stylesheet" />
@@ -42,7 +42,7 @@
 </head>
 <body class="post-submit"  data-userimg="images/user-thumb-94x94.png" data-userlink ="author.html">
 	<!--==================================Header Open=================================-->
-	
+
 	<!--==================================Header Open=================================-->
 	<div id="page">
 	<!--==================================Header Open=================================-->
@@ -75,7 +75,7 @@
 				</div>
 			</div>
 		</div><!-- ../topbar -->
-		
+
 		<!-- Login Popup -->
 		<div class="md-modal md-effect-3" id="modal-3">
 			<div class="login-form-popup lp-border-radius-8">
@@ -96,11 +96,11 @@
 								<label for="check1">Keep me signed in</label>
 							</div>
 						</div>
-						
+
 						<div class="form-group">
-							<input type="submit" value="Sign in" class="lp-secondary-btn width-full btn-first-hover" /> 
+							<input type="submit" value="Sign in" class="lp-secondary-btn width-full btn-first-hover" />
 						</div>
-					</form>	
+					</form>
 					<div class="pop-form-bottom">
 						<div class="bottom-links">
 							<a  class="signUpClick">Not a member? Sign up</a>
@@ -130,9 +130,9 @@
 							<p>A password will be e-mailed to you.</p>
 						</div>
 						<div class="form-group">
-							<input type="submit" value="Register" class="lp-secondary-btn width-full btn-first-hover" /> 
+							<input type="submit" value="Register" class="lp-secondary-btn width-full btn-first-hover" />
 						</div>
-					</form>	
+					</form>
 					<div class="pop-form-bottom">
 						<div class="bottom-links">
 							<a class="signInClick" >Already have an account? Sign in</a>
@@ -155,9 +155,9 @@
 							<input type="email" class="form-control" id="email2" />
 						</div>
 						<div class="form-group">
-							<input type="submit" value="Get New Password" class="lp-secondary-btn width-full btn-first-hover" /> 
+							<input type="submit" value="Get New Password" class="lp-secondary-btn width-full btn-first-hover" />
 						</div>
-					</form>	
+					</form>
 					<div class="pop-form-bottom">
 						<div class="bottom-links">
 							<a class="cancelClick" >Cancel</a>
@@ -165,10 +165,10 @@
 					</div>
 				<a class="md-close"><i class="fa fa-close"></i></a>
 				</div>
-			</div>	
+			</div>
 		</div>
 		<!-- ../Login Popup -->
-		
+
 		<!-- Popup Open -->
 		<div class="md-modal md-effect-3" id="modal-2">
 			<div class="container">
@@ -311,7 +311,7 @@
 		</div><!-- ../Home Search Container -->
 	</header>
 	<!--==================================Header Close=================================-->
-	
+
 	<!--==================================Section Open=================================-->
 	<section class="aliceblue">
 		<div class="container page-container-third">
@@ -325,12 +325,12 @@
 			</div>
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0">
-					
+
 					<div class="lp-border-radius-8 lp-border lp-form-container">
 						<div class="lp-form-row clearfix lp-border-bottom margin-bottom-40 padding-bottom-40">
 							<h3>Enter Subject Details</h3>
 						<div class="status-results">
-						</div>			
+						</div>
 						</div>
 						<form id="subject_form">
 						<div class="form-group">
@@ -338,24 +338,16 @@
 							<input type="text" class="form-control" name="subject_name" placeholder="Subject Name" required>
 						</div>
 						<div class="form-group">
-							<label for="semester">Semester</label>
-							<input type="text" class="form-control" name="semester" placeholder="Enter semester" required>
-						</div>
-						<div class="form-group">
 							<label for="university">University</label>
 							<input type="text" class="form-control" name="university" placeholder="university" required>
 						</div>
 						<div class="form-group">
-
 								<label for="substream">Please Select field Name</label>
 								  <select placeholder="Choose a Stream" name="substream" class="cd-dropdown" size="4" required>
 								    <!--<option value="" disabled selected>Select your option</option>-->
 								    <!-- add php code here to load streams -->
-
-                                    <?php
-
-                                    	require 'connect.php';
-
+              <?php
+                    require 'connect.php';
 										try {
 
 												$conn = new PDO("mysql:host=".DB_SERVER.";dbname=".DB_NAME, DB_USER, DB_PASSWORD);
@@ -363,27 +355,25 @@
 
 												// Case - I : MainStream based search
 
-												$stmt = $conn->prepare('SELECT ssname FROM substream');
+												$stmt = $conn->prepare('SELECT ssname,dsubstream FROM substream');
 												$stmt->execute();
 												if($stmt->rowCount()>0)
 												{
 													while($row = $stmt->fetch())
 													{
-														echo '<option value="'.$row['ssname'].'">'.$row['ssname'].'</option>';
+														echo '<option value="'.$row['ssname'].'">'.$row['dsubstream'].'</option>';
 													}
 												}
-
 										}
 										catch(PDOException $e) {
             								echo 'ERROR: ' . $e->getMessage();
-        								}
+        						}
 
 								    ?>
-
 						      </select>
 							</div>
 						<div class="form-group clearfix margin-bottom-0">
-							<input type="submit" value="Add Subject" class="lp-secondary-btn btn-first-hover" /> 
+							<input type="submit" value="Add Subject" class="lp-secondary-btn btn-first-hover" />
 						</div>
 						</form>
 					</div>
@@ -392,7 +382,7 @@
 		</div>
 	</section>
 	<!--==================================Section Close=================================-->
-	
+
 	<!--==================================Footer Open=================================-->
 	<footer class="text-center">
 		<div class="footer-upper-bar">
@@ -439,8 +429,8 @@
 	<!--==================================Footer Close=================================-->
 	<a href="post-submit.html" class="add-listing-mobile lp-search-btn">Add listing</a>
 	</div>
-	
-	
+
+
 	<!--==================================Javscript=================================-->
 
 

@@ -226,9 +226,9 @@ if (isset($_POST['location']) && isset($_POST['stream']) && isset($_POST['subjec
 			    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 					// old-stmt
-					//$stmt = $conn->prepare('SELECT a.cname,a.location,a.logourl,a.pageurl,b.ssname,c.sname FROM classes a, substream b, subject c, map_class_stream d, map_class_subject e WHERE a.classid = d.class_id AND b.ssid=d.stream_id AND a.classid = e.class_id AND c.subjectid = e.subject_id AND c.fstream = b.ssname AND a.location LIKE :location AND b.ssname LIKE :stream AND c.sname LIKE :subject');
+					//$stmt = $conn->prepare('SELECT a.dclass,a.location,a.logourl,a.pageurl,b.ssname,c.sname FROM classes a, substream b, subject c, map_class_stream d, map_class_subject e WHERE a.classid = d.class_id AND b.ssid=d.stream_id AND a.classid = e.class_id AND c.subjectid = e.subject_id AND c.fstream = b.ssname AND a.location LIKE :location AND b.ssname LIKE :stream AND c.sname LIKE :subject');
 
-			    $stmt = $conn->prepare('SELECT DISTINCT a.cname,a.location,a.logourl,a.pageurl FROM classes a, substream b, subject c, map_class_stream d, map_class_subject e WHERE a.classid = d.class_id AND b.ssid=d.stream_id AND a.classid = e.class_id AND c.subjectid = e.subject_id AND c.fstream = b.ssname AND a.location LIKE :location AND b.ssname LIKE :stream AND c.sname LIKE :subject');
+			    $stmt = $conn->prepare('SELECT DISTINCT a.dclass,a.location,a.logourl,a.pageurl FROM classes a, substream b, subject c, map_class_stream d, map_class_subject e WHERE a.classid = d.class_id AND b.ssid=d.stream_id AND a.classid = e.class_id AND c.subjectid = e.subject_id AND c.fstream = b.ssname AND a.location LIKE :location AND b.ssname LIKE :stream AND c.sname LIKE :subject');
 
 			    $stmt->execute(array('location' => '%'.$location.'%', 'stream' => '%'.$stream.'%', 'subject' => '%'.$subject.'%'));
 
@@ -273,7 +273,7 @@ if (isset($_POST['location']) && isset($_POST['stream']) && isset($_POST['subjec
 											<div class="lp-grid-box-description ">
 												<h4 class="lp-h4">
 													<a href="'.$row['pageurl'].'">
-													'.$row['cname'].'
+													'.$row['dclass'].'
 													</a>
 												</h4>
 												<p>

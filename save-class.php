@@ -4,20 +4,12 @@ require 'connect.php';
 require 'helper.php';
 
 if (isset($_POST['classtitle']) &&
-    isset($_POST['description']) &&
     isset($_POST['city']) &&
-    isset($_POST['phone']) &&
-    isset($_POST['phone']) &&
-    isset($_POST['email']) &&
     isset($_POST['astreams']) &&
     isset($_POST['logo_url']) &&
     isset($_POST['page_url']) &&
     !empty($_POST['classtitle']) &&
-    !empty($_POST['description']) &&
     !empty($_POST['city']) &&
-    !empty($_POST['phone']) &&
-    !empty($_POST['phone']) &&
-    !empty($_POST['email']) &&
     !empty($_POST['logo_url']) &&
     !empty($_POST['page_url']) &&
     !empty($_POST['astreams'])) {
@@ -30,25 +22,17 @@ if (isset($_POST['classtitle']) &&
 
     $arr = array('status' => 'failure');
 
-    $classtitle = cleanStringCap($_POST['classtitle']);
-    $description = cleanStringCap($_POST['description']);
+    $classtitle = cleanStringLow($_POST['classtitle']);
+    $displayName = genDisplayValue($_POST['classtitle']);
     $city = cleanStringCap($_POST['city']);
-    $phone = cleanPhoneNo($_POST['phone']);
-    $email = $_POST['email'];
     $logourl = cleanUrl($_POST['logo_url']);
     $pageurl = cleanUrl($_POST['page_url']);
-    if(!validEmail($email))
-    {
-        echo json_encode($arr);
-        return;
+    if(is_array($_POST['astreams'])){
+      $astreams = $_POST['astreams'];
     }
-    $astreams = $_POST['astreams'];
 
     // echo 'classtitle: '.$classtitle.'<br/>';
-    // echo 'description: '.$description.'<br/>';
     // echo 'city: '.$city.'<br/>';
-    // echo 'phone: '.$phone.'<br/>';
-    // echo 'email: '.$email.'<br/>';
 
     //var_dump($results);
 
@@ -71,8 +55,8 @@ if (isset($_POST['classtitle']) &&
 
       }
 
-	    $stmt = $conn->prepare('INSERT INTO `classes`(`cname`, `location`, `email`, `phone`, `logourl`, `pageurl`, `description`) VALUES (:classname,:location,:email,:phone,:logourl,:pageurl,:description)');
-	    $res = $stmt->execute(array('classname' => $classtitle,'location' => $city, 'email' => $email, 'phone' => $phone, 'logourl' => $logourl, 'pageurl' => $pageurl, 'description' => $description));
+    $stmt = $conn->prepare('INSERT INTO `classes`(`cname`, `dclass`, `location`, `logourl`, `pageurl`) VALUES (:classname,:display,:location,:logourl,:pageurl)');
+	    $res = $stmt->execute(array('classname' => $classtitle, 'display' => $displayName, 'location' => $city, 'logourl' => $logourl, 'pageurl' => $pageurl));
 
         if($res)
         {
