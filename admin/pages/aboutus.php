@@ -29,7 +29,9 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+<noscript>
+<meta http-equiv="refresh" content="0; url=https://www.classesdunia.com/admin/pages/nscript.html" />
+</noscript>
 </head>
 
 <body>
@@ -45,7 +47,7 @@
                     <div class="col-lg-12">
                         <h1 class="page-header">About us</h1>
 <div class="featurette">
-            <img class="featurette-image img-circle img-responsive pull-right" src="https://www.classesdunia.com/varun/classesdunia.png">
+            <img class="featurette-image img-circle img-responsive pull-right" src="https://www.classesdunia.com/admin/images/classesdunia.png">
             <h2 class="featurette-heading">Classesdunia</h2>
             <p class="lead">Classesdunia under the aegis of Code Marshalls is a platform providing unique solution to its user for their educational needs, setup by industry professional and education experts having more than 18 years of experience in education domain.
 The platform provides efficient and lasting benefits to all its clients in order to get the most of their business.</p>
@@ -55,9 +57,9 @@ The platform provides efficient and lasting benefits to all its clients in order
 
         <!-- Second Featurette -->
         <div class="featurette">
-            <img class="featurette-image img-circle img-responsive pull-left" src="https://www.classesdunia.com/varun/codemarshalls.png">
+            <img class="featurette-image img-circle img-responsive pull-left" src="https://www.classesdunia.com/admin/images/codemarshalls.png">
             <h2 class="featurette-heading">Codemarshalls</h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <p class="lead">Code Marshalls is a Tech Solution company located in Powai, India serving clients nationwide.We at Code Marshalls, pursue to provide the best in class solution for various business & education sectors. Already having clients from core companies including domains like education, food, media and various other industries and employ the best practices developed over past years of service proving experience.We are extremely committed towards delivering quality service to our clients and to help them achieve the maximum benefits from their investment.</p>
         </div>
                     </div>
                     <!-- /.col-lg-12 -->

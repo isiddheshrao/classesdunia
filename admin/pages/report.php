@@ -29,6 +29,10 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+<noscript>
+<meta http-equiv="refresh" content="0; url=https://www.classesdunia.com/admin/pages/nscript.html" />
+</noscript>
+
 <script>
 function sendmsg()
 {
@@ -55,7 +59,7 @@ xmlhttp.onreadystatechange = function() {
   font-family: 'Lato', georgia;
   font-size: 25px;
   color: rgba(0,0,0, 1);
-  background-image: url('https://www.classesdunia.com/varun/classesdunia.png');
+  background-image: url('https://www.classesdunia.com/admin/classesdunia.png');
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;

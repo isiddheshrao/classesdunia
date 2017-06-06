@@ -1,0 +1,77 @@
+<div class="comments-posts">
+							
+<?php
+$servername = "localhost";
+$username = "classesadmin";
+$password = "ClassAdmin@#2017";
+$dbname = "prod_class_admin_17";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+$sqls = sprintf("SELECT Name,Msg FROM Class_Msg WHERE Uname='raoiit' AND Enable='true'");
+$result = $conn->query($sqls); 
+ while($row = mysqli_fetch_array($result))
+          {        
+          echo '<div class="comments-box">
+		 <div class="comments-thumb">
+		  <img src="images/comments-thumb-1.png" alt="comments-thumb-1" />
+		   </div>
+		<div class="comments-content">
+		 <div class="comments-meta-box">
+		   <div class="comments-author text-left">
+		     <div class="comments-name">'
+                        .$row['Name'].
+			'</div>
+			  <div class="comments-date">
+			   Rating
+			   <div class="post-reviews">
+			   <i class="fa fa-star"></i>
+			   <i class="fa fa-star"></i>
+			   <i class="fa fa-star"></i>
+			   <i class="fa fa-star"></i>
+			   <i class="fa fa-star-o"></i>
+			 </div>
+			</div>
+		    </div>
+		</div>
+		<div class="comments-description">
+		<p>'
+		.$row['Msg'].
+		'</p>
+		</div>
+		</div>
+	</div><!--../comments-box-->';    
+          }
+ mysqli_close($conn);
+?>
+						</div><!--../comments-posts-->
+
+<script id="removethis">
+var cid=102;
+window.onload=function(){
+if (typeof(Storage) !== "undefined") {
+     
+        if (!sessionStorage.getItem(cid)) {
+           sessionStorage[cid] = 1; 
+           var xmlhttp = new XMLHttpRequest();
+           var data="cid=102";        
+           xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) 
+            {
+               window.location.reload(true);
+            } 
+        };
+        xmlhttp.open("POST","php/view_analytics.php", true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send(data);
+        }
+
+} else {
+    // Sorry! No Web Storage support..
+}
+document.getElementById("removethis").remove();
+};
+</script>
+

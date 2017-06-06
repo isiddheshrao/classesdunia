@@ -46,7 +46,7 @@ echo '<!-- Navigation -->
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="https://www.classesdunia.com/varun/php/signout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="https://www.classesdunia.com/admin/php/signout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -124,7 +124,7 @@ echo '<!-- Navigation -->
 }
 else
 {
-echo'<script>window.location = "https://www.classesdunia.com/varun/pages/login.html"</script>';
+echo'<script>window.location = "https://www.classesdunia.com/admin/index.html"</script>';
 exit();
 }
 ?>

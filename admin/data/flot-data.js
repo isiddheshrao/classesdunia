@@ -122,47 +122,7 @@ shifts: {
 
 });
 
-//Flot Multiple Axes Line Chart
-$(function() {
-    function doPlot(position) {
-        $.plot($("#flot-line-chart-multi"), [{
-            data: ourview,
-            label: "Students admitted"
-        }, {
-            data: admittedstudent,
-            label: "Page views",
-            yaxis: 2
-        }], {
-            xaxes: [{
-                ticks:ticks
-            }],
-            yaxes: [{
-                min: 0
-            }, {
-                // align if we are to the right
-                alignTicksWithAxis: position == "right" ? 1 : null,
-                position: position,
-            }],
-            legend: {
-                position: 'sw'
-            },
-            grid: {
-                hoverable: true //IMPORTANT! this is needed for tooltip to work
-            },
-            tooltip: true,
-            tooltipOpts: {
-                content: "%s for %x was %y"         
-            }
 
-        });
-    }
-
-    doPlot("right");
-
-    $("button").click(function() {
-        doPlot($(this).text());
-    });
-});
 
 
 //Flot Bar Chart

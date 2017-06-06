@@ -1,8 +1,3 @@
-<?php
-if(!isset($_COOKIE['user'])) {
-    header("Location: https://www.classesdunia.com/varun/pages/login.html");
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 

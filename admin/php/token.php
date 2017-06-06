@@ -52,16 +52,15 @@ if ($result->num_rows == 1) {
     $msg = "your login token is :".$token;
     $to = $email;
     $email_subject = "Your login token";
-    $email_body = "You have received a new message from class admin panel .\n\n"."Here are the details:\n\nName:".$uname."\n\n".$msg;
-    $headers = "From: Admin@classesdunia.com";	
-    mail($to,$email_subject,$email_body,$headers);
-    header("Location: https://www.classesdunia.com/varun/pages/modal.html?uname=$uname");
+    $email_body = "You have received a new message from class admin panel .\n\n"."Here are the details:\n\nName:".$uname."\n\n".$msg;	
+    mail($to,$email_subject,$email_body,"From: admin@classesdunia.com","-odb -f admin@classesdunia.com");
+    header("Location: https://www.classesdunia.com/admin/pages/modal.html?uname=$uname");
   
     mysqli_close($conn);
 } 
 else {
    mysqli_close($conn);
-   header("Location: https://www.classesdunia.com/varun/pages/login.html");
+   header("Location: https://www.classesdunia.com/admin/index.html");
 }
 
 }//end try

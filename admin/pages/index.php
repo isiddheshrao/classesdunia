@@ -28,16 +28,11 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 <noscript>
-    <style type="text/css">
-        body{background-color: lightblue;}
-        .container {display:none;}
-       .noscriptmsg {color: white;text-align: center;font-family: verdana;font-size: 20px;}
-    </style>
-    <div class="noscriptmsg">
-    You don't have javascript enabled.  Please enable it!.
-    </div>
+<meta http-equiv="refresh" content="0; url=https://www.classesdunia.com/admin/pages/nscript.html" />
 </noscript>
+
 <body>
     <div id="wrapper">
 

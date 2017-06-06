@@ -31,6 +31,9 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+<noscript>
+<meta http-equiv="refresh" content="0; url=https://www.classesdunia.com/admin/pages/nscript.html" />
+</noscript>
     
 </head>
 
@@ -169,22 +172,6 @@ admittedstudent.push([inc,parseInt(temp5[inc])]);
                         <div class="panel-body">
                             <div class="flot-chart">
                                 <div class="flot-chart-content" id="flot-pie-chart"></div>
-                            </div>
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-6 -->
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Multiple Axes view example
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="flot-chart">
-                                <div class="flot-chart-content" id="flot-line-chart-multi"></div>
                             </div>
                         </div>
                         <!-- /.panel-body -->

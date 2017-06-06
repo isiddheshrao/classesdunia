@@ -45,7 +45,7 @@ echo $resp;
 }
 else if($tokenrec==$token)
 {
-$resp="https://www.classesdunia.com/varun/pages/cookie.php?uname=".$uname;
+$resp="https://www.classesdunia.com/admin/pages/cookie.php?uname=".$uname;
 echo $resp;
 }
 else

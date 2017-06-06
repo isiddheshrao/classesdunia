@@ -10,7 +10,7 @@ $email=filter_var($_REQUEST["email"], FILTER_SANITIZE_EMAIL);
 $message=filter_var($_REQUEST["message"], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW);
 
 $msg = "My issue is: ".$message;
-    $to = "centrix94@gmail.com";
+    $to = "admin@classesdunia.com";
     $email_subject = "Issue of ".$name;
     $email_body = "Here are the details:\n\nName:".$name."\n\n".$msg;
     $headers = "From: ".$email;	

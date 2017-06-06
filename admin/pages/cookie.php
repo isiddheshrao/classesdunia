@@ -4,6 +4,7 @@ if(isset($_REQUEST["uname"]))
 {
 $cookie_name = "user";
 $Encrypt = $_REQUEST["uname"];
+
 $servername = "localhost";
 $username = "classesadmin";
 $password = "ClassAdmin@#2017";
@@ -23,12 +24,14 @@ if ($result->num_rows > 0) {
         $secretKey=$row["Tkn"];
     }
 }
+
+
 $encrypted = openssl_encrypt($Encrypt,'AES-128-CBC',$secretKey,OPENSSL_RAW_DATA,$secretKey);
     
 
 setcookie($cookie_name,$encrypted,time() + 3600, "/");
 
-header('Location: https://www.classesdunia.com/varun/pages/index.php');
+header('Location: https://www.classesdunia.com/admin/pages/index.php');
 exit();
 }
 ?>
