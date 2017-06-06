@@ -11,9 +11,9 @@
             <div id="meta-3" class="widget widgetFooter widget_meta">
             <h4 class="widgettitle">Pages:</h4>
             <ul>
-        <li><a href="index.php"><i class="fa fa-home fa-fw"></i> Home</a></li>
-      <li><a href="privacypolicy.php"><i class="fa fa-link"></i>   Privacy Policy</a></li>
-      <li><a href="contact-us.php"><i class="fa fa-envelope fa-fw"></i> Contact Us</a></li>
+        <li><a href="../../index.php"><i class="fa fa-home fa-fw"></i> Home</a></li>
+      <li><a href="../../privacypolicy.php"><i class="fa fa-link"></i>   Privacy Policy</a></li>
+      <li><a href="../../contact-us.php"><i class="fa fa-envelope fa-fw"></i> Contact Us</a></li>
            </ul>
 </div>      </div> <!-- end widget1 -->
 
@@ -52,12 +52,12 @@
                   <h4 class="widgettitle">Payment Modes:</h4>
                   <ul>
         <li>
-           <a href="#" target="#"><img src="images/payment/visa.png"></a>
-           <a href="#" target="#"><img src="images/payment/mastercard.png"></a>
+           <a href="#" target="#"><img src="../../images/payment/visa.png"></a>
+           <a href="#" target="#"><img src="../../images/payment/mastercard.png"></a>
        </li>
        <li>
-           <a href="#" target="#"><img src="images/payment/bhim.png"></a>
-           <a href="#" target="#"><img src="images/payment/instamojo.png"></a>
+           <a href="#" target="#"><img src="../../images/payment/bhim.png"></a>
+           <a href="#" target="#"><img src="../../images/payment/instamojo.png"></a>
          </li>
       </ul>
   </div>

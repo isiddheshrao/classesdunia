@@ -9,31 +9,29 @@
 	<meta name="author" content="">
 	
 	<!-- Title -->
-	<title>ClassesDunia - Ideal 21st Century Competitions</title>
+	<title>ClassesDunia - CET King</title>
 	
 	<!-- Mobile Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="../../images/favicon.png" type="image/x-icon">
 	
 	<!-- CSS -->
-	<link href="lib/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" />
-	<link href="css/colors.css" type="text/css" rel="stylesheet" />
-	<link href="css/font.css" type="text/css" rel="stylesheet" />
-	<link href="lib/popup/css/component.css" type="text/css" rel="stylesheet" />
-	<link href="lib/icon8/styles.min.css" type="text/css" rel="stylesheet" />
-	<link href="lib/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
-	<link type="text/css" rel="stylesheet" href="lib/jquerym.menu/css/jquery.mmenu.all.css" />
-	<link rel="stylesheet" type="text/css" href="lib/slick/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css"/>
-	<link rel="stylesheet" href="css/jquery-ui.css">
-	<link href='css/mapbox.css' rel='stylesheet' />
-	<link href="css/main.css" type="text/css" rel="stylesheet" />
-	<link href="css/stylefooter.css" rel="stylesheet" type="text/css" />
-<link href="css/bootstrapfooter.css" rel="stylesheet" type="text/css" />
-<link href="css/agency.css" rel="stylesheet" type="text/css" />
-<link href="css/tiles.css" rel="stylesheet" type="text/css" />
+	<link href="../../lib/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" />
+	<link href="../../css/colors.css" type="text/css" rel="stylesheet" />
+	<link href="../../css/font.css" type="text/css" rel="stylesheet" />
+	<link href="../../lib/popup/css/component.css" type="text/css" rel="stylesheet" />
+	<link href="../../lib/icon8/styles.min.css" type="text/css" rel="stylesheet" />
+	<link href="../../lib/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+	<link type="text/css" rel="stylesheet" href="../../lib/jquerym.menu/css/jquery.mmenu.all.css" />
+	<link rel="stylesheet" type="text/css" href="../../lib/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="../../lib/slick/slick-theme.css"/>
+	<link href="../../css/main.css" type="text/css" rel="stylesheet" />
+	<link href="../../css/stylefooter.css" rel="stylesheet" type="text/css" />
+<link href="../../css/bootstrapfooter.css" rel="stylesheet" type="text/css" />
+<link href="../../css/agency.css" rel="stylesheet" type="text/css" />
+<link href="../../css/tiles.css" rel="stylesheet" type="text/css" />
 
 	<!-- IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -41,230 +39,20 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body class="post-detail googlemap"  data-userimg="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEGUlEQVRoge1ZLWwcRxQ+cMCVItXAIKDgQKQaGBQYtFLBm4mBgYFBQSoZGBgYGAQYFBhYOhAQYBBgqa204G7fWGdg4EqWUrCwqgpcqYoiy975xnKlAIMDAQYGWzAzd6vmfnb39rxX1Z+07L2n7828N+9na7VHPOK/A2IsEusNCuN9qRBIhUMK9S4x1inAXNX8RoKiqE5tbAuF3wQjGfGd09HVUtV8B4I6754IxlmfrLlxt7BHITYp1DtSmTdCmUsncyeVeU2Mxaq590AB5gSbv7wD1I7XKIrqA2WjqC7Z/JS+IanMm2HyDwqpzGvnxB/UwdNx8hRFdVLxslSmKdjcWmcQPATX4aQUGoLNvWBzXyTuibEoGF3BSCjEV9PgmI1IG9suPI4L2wjjfcFIJEOVyS0XJOPEneZmURt0dLXk8gUlUssHwYgEI6EWaEI7iWAkJdEqQMA9p6TQmMhO5Y64Z3eSRKUA8zPgiP7FJer3hW209JeCkQhl/i6TWy744kaMH4raoDa+9q1LmdzykQj1riuGPxa1IZXZdbd6UCa3XKCj6zVH4m1hG6yPBSN5ztcbZXLLSQKrLiy6xfQvFmxngITCeKVsfpnhO14K9V4RfdtE4pW71ZOy+WWGYLwXjGSS+YJaIHerUZncckEqc2xfLV04vinE5qT92sQg1hu+T6JQ7+bWD/WeYGDSw5gYFEV1qcypK2iXefV9Cy8YZ5UPV990bj4TjD/tqcbfZtUT6vq5c+L3afLLBakQuDhvZtcxTTcdHk6TWy6kXp4uBZgfK28bxW4ZI0Dp8LOJVOZ0VLy72nFS+ZM7DNSO11KbkVPii4VPZALMp5xISMXLVXAdCbfbukvttm6J9RYpNEihQay3BJub9O6ras5D4WuCr/gDv/6SrroZfRx6DSBfLBDrDRtG5sbtr86ojW1qXT2baUdS25C7kXIdPPVyM7UyrdVqNVLxsg+nLAOSZNPyITgTCU9HV0u2GNqQco68Gqtneyyf9PdSIXjwTaP9faC/6/VYnozNB7s+DfFiqH4Yr3g5ezP9QxCMMwrxYqr/UCjAHDFe+sWzr+SScUCtq2e1Wr/t6G3Z2/GaTfyLBWKsSsZBr4a4YYwUGm4R3hXppzuM97N0CfmcsO36h5QD7ynUO9R59+QT2VDvCDYfhz6/NslfDjyoNrb7vyhcyzNANr8DUVSXCocpw+fEWB/vOBalMk0bfuZWsLmVypxKZZpZpklirAvGeT/vTGvQoWVGPw/MR2K9VdhQQdhI6N1uVGhm8SOoYMDnQBVwBRQur/JNodS+/KLXZjNWp8QxO5/+mHCXa2Huf+AINr9Oj14++DDPlfxCmZ9zK00ZMjQ7bknRyqz0r6d21r4PmZxI/6+Y1W+lE39e9GYf8Yj/K/4BSKKZsGt5SOsAAAAASUVORK5CYII=" data-userlink ="login.html">
+<body>
 	<!--==================================Header Open=================================-->
 	<div id="page">
 	<!--==================================Header Open=================================-->
 	<header class="lp-header-bg">
 		<div class="lp-header-overlay"></div> <!-- ../header-overlay -->
 		<div class="md-overlay"></div> <!-- Overlay for Popup -->
-		<div class="lp-menu-bar">
-			<div class="container">
-					<div class="row">
-						<div class="col-md-4 col-xs-6 lp-logo-container">
-							<div class="lp-logo">
-								<a href="index.php">
-									<img src="images/logo.png" alt="" />
-								</a>
-							</div>
-						</div>
-						<style>
-							.mobile-nav-icon .nav-icon {
-    													width: 28px;
-   														float: right;
-   													}
-						</style>
-						<div class="col-xs-6 mobile-nav-icon">
-							<a href="#menu" class="nav-icon">
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</a>
-						</div>
-
-							<div id="menu">
-								<ul>
-									<li>
-										<a href="index.php">Home</a>
-									</li>
-									<li><a href="#">Categories </a>
-										<ul class="sub-menu">
-											<li class="has-menu"><a href="listing-science.html">Science </a>
-												<ul class="sub-menu">
-													<li><a href="listing-science.html">HSC </a></li>
-													<li><a href="listing-science.html">Diploma </a></li>
-													<li><a href="listing-science.html">Engineering </a></li>
-													<li><a href="listing-science.html">Medical</a></li>
-												</ul>
-											</li>
-											<li class="has-menu"><a href="listing-commerce.html">Commerce </a>
-												<ul class="sub-menu">
-													<li><a href="listing-commerce.html">CA </a></li>
-													<li><a href="listing-commerce.html">CS </a></li>
-												</ul>
-											</li>
-											<li><a href="listing-design.html">Design </a></li>
-											
-											<li class="has-menu"><a href="listing-entrance.html">Entrance </a>
-												<ul class="sub-menu">
-													<li><a href="listing-entrance.html">GATE </a></li>
-													<li><a href="listing-entrance.html">JEE </a></li>
-													<li><a href="listing-entrance.html">CET </a></li>
-												</ul>
-											</li>
-											<li class="has-menu"><a href="listing-school.html">School </a>
-												<ul class="sub-menu">
-													<li><a href="listing-school.html">SSC </a></li>
-												</ul>
-											</li>
-											</ul>
-											</li>
-											<li>
-												<a href="#">Blog</a>
-											</li>
-											<li>
-												<a href="about-us.html">About Us </a></li>
-											<li>
-												<a href="contact-us.html">Contact Us </a>
-											</li>							
-										</ul>
-									</div>
-
-						<div class="col-md-8 col-xs-12 lp-menu-container">
-							<div class="lp-menu pull-right menu">
-								<ul>
-								<li><a href="index.php">Home </a></li>
-									<li><a href="#">Categories <i class="icons8-angle-down drop-down-icon"></i></a>
-										<ul class="sub-menu">
-											<li class="has-menu"><a href="listing-science.html">Science </a>
-												<ul class="sub-menu">
-													<li><a href="listing-science.html">HSC </a></li>
-													<li><a href="listing-science.html">Diploma </a></li>
-													<li><a href="listing-science.html">Engineering </a></li>
-													<li><a href="listing-science.html">Medical</a></li>
-												</ul>
-											</li>
-											<li class="has-menu"><a href="listing-commerce.html">Commerce </a>
-												<ul class="sub-menu">
-													<li><a href="listing-commerce.html">CA </a></li>
-													<li><a href="listing-commerce.html">CS </a></li>
-												</ul>
-											</li>
-											<li><a href="listing-design.html">Design </a></li>
-
-											<li class="has-menu"><a href="listing-entrance.html">Entrance </a>
-												<ul class="sub-menu">
-													<li><a href="listing-entrance.html">GATE </a></li>
-													<li><a href="listing-entrance.html">JEE </a></li>
-													<li><a href="listing-entrance.html">CET </a></li>
-												</ul>
-											</li>
-											<li class="has-menu"><a href="listing-school.html">School </a>
-												<ul class="sub-menu">
-													<li><a href="listing-school.html">SSC </a></li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">Blog</a>
-									</li>
-									<li><a href="about-us.html">About Us </a></li>
-									<li>
-										<a href="contact-us.html">Contact Us </a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-		</div><!-- ../menu-bar -->
+	<?php require '../../nav.php'; ?>
 	</header>
 	<!--==================================Header Close=================================-->
 	
 	<!--==================================Section Open=================================-->
 		
-		<!-- Login Popup -->
-		<div class="md-modal md-effect-3" id="modal-3">
-			<div class="login-form-popup lp-border-radius-8">
-				<div class="siginincontainer">
-					<h1 class="text-center">Sign in</h1>
-					<form class="form-horizontal margin-top-30"  method="post">
-						<div class="form-group">
-							<label for="username">Username or Email Address *</label>
-							<input type="text" class="form-control" id="username" />
-						</div>
-						<div class="form-group">
-							<label for="password">Password *</label>
-							<input type="password" class="form-control" id="password" />
-						</div>
-						<div class="form-group">
-							<div class="checkbox pad-bottom-10">
-								<input id="check1" type="checkbox" name="price-on-call" value="price-on-call">
-								<label for="check1">Keep me signed in</label>
-							</div>
-						</div>
-						
-						<div class="form-group">
-							<input type="submit" value="Sign in" class="lp-secondary-btn width-full btn-first-hover" /> 
-						</div>
-					</form>	
-					<div class="pop-form-bottom">
-						<div class="bottom-links">
-							<a  class="signUpClick">Not a member? Sign up</a>
-							<a  class="forgetPasswordClick pull-right" >Forgot Password</a>
-						</div>
-						<p class="margin-top-15">Connect with your Social Network</p>
-						<ul class="social-login list-style-none">
-							<li><button id="logingoogle" class="google flaticon-googleplus" ><i class="fa fa-google-plus"></i><span>Google</span></button></li>
-							<li><button id="loginfacebook" class="facebook flaticon-facebook" ><i class="fa fa-facebook"></i><span>Facebook</span></button></li>
-							<li><button id="logintwitter" class="twitter flaticon-twitter" ><i class="fa fa-twitter"></i><span>Twitter</span></button></li>
-						</ul>
-					</div>
-				<a class="md-close"><i class="fa fa-close"></i></a>
-				</div>
-				<div class="siginupcontainer">
-					<h1 class="text-center">Sign Up</h1>
-					<form class="form-horizontal margin-top-30"  method="post">
-						<div class="form-group">
-							<label for="username">Username *</label>
-							<input type="text" class="form-control" id="username2" />
-						</div>
-						<div class="form-group">
-							<label for="password">Email Address *</label>
-							<input type="email" class="form-control" id="password2" />
-						</div>
-						<div class="form-group">
-							<p>A password will be e-mailed to you.</p>
-						</div>
-						<div class="form-group">
-							<input type="submit" value="Register" class="lp-secondary-btn width-full btn-first-hover" /> 
-						</div>
-					</form>	
-					<div class="pop-form-bottom">
-						<div class="bottom-links">
-							<a class="signInClick" >Already have an account? Sign in</a>
-							<a class="forgetPasswordClick pull-right" >Forgot Password</a>
-						</div>
-						<p class="margin-top-15">Connect with your Social Network</p>
-						<ul class="social-login list-style-none">
-							<li><button id="logingoogle2" class="google flaticon-googleplus" ><i class="fa fa-google-plus"></i><span>Google</span></button></li>
-							<li><button id="loginfacebook2" class="facebook flaticon-facebook" ><i class="fa fa-facebook"></i><span>Facebook</span></button></li>
-							<li><button id="logintwitter2" class="twitter flaticon-twitter" ><i class="fa fa-twitter"></i><span>Twitter</span></button></li>
-						</ul>
-					</div>
-				<a class="md-close"><i class="fa fa-close"></i></a>
-				</div>
-				<div class="forgetpasswordcontainer">
-					<h1 class="text-center">Forgotten Password</h1>
-					<form class="form-horizontal margin-top-30"  method="post">
-						<div class="form-group">
-							<label for="password">Email Address *</label>
-							<input type="email" class="form-control" id="email2" />
-						</div>
-						<div class="form-group">
-							<input type="submit" value="Get New Password" class="lp-secondary-btn width-full btn-first-hover" /> 
-						</div>
-					</form>	
-					<div class="pop-form-bottom">
-						<div class="bottom-links">
-							<a class="cancelClick" >Cancel</a>
-						</div>
-					</div>
-				<a class="md-close"><i class="fa fa-close"></i></a>
-				</div>
-			</div>	
-		</div>
-		<!-- ../Login Popup -->
+		
 		<!-- Popup Open -->
 		<div class="md-modal md-effect-3 single-page-popup" id="modal-6">
 			<div class="md-content cotnactowner-box">
@@ -289,12 +77,6 @@
 			</div>
 		</div>
 		<!-- Popup Close -->
-		<div class="md-modal md-effect-3" id="modal-4">
-			<div class="md-content">
-				<div id="map"  class="singlebigpost"></div>
-				<a class="md-close widget-map-click"><i class="fa fa-close"></i></a>
-			</div>
-		</div>
 		<div class="md-overlay"></div> <!-- Overlay for Popup -->
 	<section class="aliceblue">
 		<div class="pos-relative">
@@ -307,10 +89,10 @@
 					<div class="">
 						<div class="post-slide">
 							<div class="slide">
-								<img src="images/ideal/ideal1.png" alt="post1" />
+								<img src="images/slider-1.png" alt="post1" />
 							</div>
 							<div class="slide">
-								<img src="images/ideal/ideal2.png" alt="post2" />
+								<img src="images/slider-2.png" alt="post2" />
 							</div>
 						</div>
 					</div>
@@ -323,11 +105,11 @@
 					<div class="col-md-8">
 						<div class="post-meta-left-box">
 							<ul class="breadcrumbs">
-								<li><a href="index.php">Home</a></li>
-								<li><a href="listing-science.html">Science</a></li>
-								<li><span>Engineering And Medical Entrance</span></li>
+								<li><a href="../../index.php">Home</a></li>
+								<li><a href="../../listing-entrance.html">Entrance</a></li>
+								<li><span>MBA Coaching</span></li>
 							</ul>
-							<h1>Ideal 21st Century Competitions</h1>
+							<h1>CET King</h1>
 							<ul class="post-stat">
 								<li>
 									<span class="phone-icon">
@@ -335,7 +117,7 @@
 										<img class="icon icons8-Phone" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEbElEQVRoQ81a4XnUMAy1vEC7QekEwASUCWgnoEzQY4FE9gLQCWgnoJ2AMgF0AtoJgAUivpdPyefzJU6cC5fcv/Z8iZ71JD3JJpP4MPO5iJTGmFfGmCcicsx8k/rNUt9R14uZ+VhEPhljLuPviegtMz8sZXDfe3eAKIhv8IKI/LXWMjN/ZuaNgoNnXjPznzWB2QLCzDAeIOCRR2vtJTP/bAwuiuInEb00xtw55y5WCaQDxFm868z8QkR+AQARXTDz3VrA1B5RA3+oJ26ttZs+6hRFwUSEBPCHiE7XQjGKYuLee38+tMsNxUTk2nu/GVp/iO+pKIrPRHSlMbFDp56shliCB0GxVWQxKssSnH+Ra1BAsVVkMQAR7KxzrrOmpGixJoqBWtjREw3cpxw+a6ZbBcUA5IGI3kxNpyHFnHOnORsx51oAqdPpPhmooecUr84FBum3yUBPU3ZU0/fvqXE2GxA8KIiT7FTaaDAR+e69P5vLsNzn1JkqoNet935H8fY9VL2B9H2cm75zDR1a30gUiMSaHjk8DzZgUW/UdgfK9oaI3ovIKK9EAjKbkkM7nPt9CyQyDP1GK9+7HlqW5VdjDDrIUcBzDctdv1XNg5rw4Jx7m4iNUGtBAWcV0lwjx6yPG6vjqqpQ6Y+I6CM6wx7ROGrdGAPmWtPV6oIuoA36DVCsc7d1MIF1q1DAnUKxKIo7InpnjElSLGqyEPDJuJpr97ue0ztFqaoK/fmJiDjvPfcZURRFne2MMVgPMIsMJXqlOzOf6SAiSR0UxaqqIDwxlFgMTLIHiaiTipfFwQw2U0G8JHcbdUjpeLSEZwaBRNRJzrOgpJVmAAO6YWR0kJgZBIIgj3b7xjn3IVUsAzAHi5lRQBRMu9upYhmvPRTNRgNRAy9F5IsWwQ+pyXxEs9GeAZUx1cmtSVlAJoBBAkBxbVIzwHcWTVUKV8aYpjmDVML6UZP/bCATwISpGbIHCaA1TusVRrB93SUGiDiXSSaNSUAmgoFBUABGRNhae6uHSHVHqkcYmDnXB0lBDcOfg96ZDCQXTIdxbeKDDLLW4gxma9c1ziCBQE18er2zF5ApYEAljZsjEbnXyX+ynxnjnb2BxGBEZOO9v04p3SmZacg7swCJwRhjkkVzHznf553ZgDRgqqoCjyFRkHaRPmeXKLF38J5ZgfRUdaTb/9LTbx1t7OPmhN4KC+FO7Zjzne3cec6Hhs9S1YzUiZa5rh3eezfn+4Jx7ePs1IoNjYIT0h5xszfVwlNoqIX/DkTjpq0dmM6od5Ipeih96xkmjsvrAeFBgCgYaK6Watp4YXaWNXmJTqFxqaE+wD0YkGaHoXI1RZ/o/wAOonAU3cqyRBuBduLZWvuqSe8HBxJ4Z6MXDxqMqDvXfbK9444MPNF6cxEggXeQpnH0V6ti/cAzdyLyYK19hKdU6uO2UnPRZwsEfrcokAAQusLLqqrgpYZyO/GulxrOu2i4CiBR/cFsANdI0GjhIgOmnc/wkl656pQ8/wC3pFkyvejV7AAAAABJRU5ErkJggg==" alt="phone-icon">
 									</span>
 									<span class="phone-number">
-										 +91-9223583343/ 022 33814103 
+										09594441448
 									</span>
 								</li>
 								<li>
@@ -344,7 +126,7 @@
 										@
 									</span>
 									<span >
-										 ideal21st@idealclasses.com 
+										 workshopmumbai@gmail.com
 									</span>
 									</a>
 								</li>
@@ -355,7 +137,7 @@
 										<img class="icon icons8-Globe" src="data:image/png;base64,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" alt="web-link">
 									</span>
 									<span class="website-link">
-										www.21stideal.com
+										www.cetking.com
 									</span>
 									</a>
 								</li>
@@ -374,29 +156,22 @@
 				</div>
 			</div>
 		</div>
-		<div class="container single-inner-container single_listing"  data-title="The Dorchester grill" data-reviews="4" data-number="+007-123-4567-89" data-email="jhonruss@example.com" data-website="www.example.com" data-price="$200" data-pricetext="Text about your price" data-description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi archeum" data-userimage="images/user-thumb-94x94.png" data-username="Jhon Russel" data-fb="www.facebook.com" data-gplus="www.plus.google.com" data-linkedin="www.linkedin.com" data-instagram="www.instagram.com" data-twitter="www.twitter.com" data-lattitue="40.6700" data-longitute="-73.9400" >
+		<div class="container single-inner-container single_listing">
 			<div class="row">
 				<div class="col-md-8">
 					<div class="post-row">
 						<ul class="list-style-none post-price-row line-height-16">
-							<li><span class="post-rice">About Ideal 21st Century Competitions</span></li>
+							<li><span class="post-rice">About CET King</span></li>
 							
 						</ul>
 					</div>
 					<div class="post-row padding-top-40">
 						<p>
-							Ideal 21st Century Competitions (a division of Ideal Education Pvt Ltd) is all set to establish itself as the number one All India JEE Main | AIPMT and Board coaching Institute in Mumbai for students seeking admission to top ranked institutes in the country for higher education in Sciences, Engineering and Medicine. For more than two decades, our faculties have drawn on their passion for teaching, their experience in working with students from different backgrounds, and their insights to coach students for Boards and competitive examinations. Now, they take up a giant leap by designing an innovative curriculum and providing a strong academic grounding as per the individual needs of the student.
+							Cetking, an institute with over 5 years of experience in shaping success stories. Our motto is to mentor, motivate and guide our students and all those who interact with us in order to enable them to make the right career decisions. Today, Cetking has spread its wings across India with online presence.
 						</p>
 						<p>
-							Ideal Education has been at the forefront of coaching industry across multiple spheres of education since 1987. The journey from a coaching class to pioneer in the education sector epitomizes our ideology. We seek to impart quality coaching to students at every stage of their academic life right from the final years of school to post-graduation.
+							 In Classroom we have more than 5 centers and over 5,000 students, successfully making it to some of the most prestigious institutes in India. In the field of management entrance education, Cetking boasts of being "student friendly" institution, providing a platform for students to further their careers. We believe in bringing self-awareness to our students, because only then can they truly know their own path to career and future success. Our motto is to be with our students, to mentor, motivate, guide and accompany them in their educational journey, till they cross the milestone of their coveted entrance examination. We nurture aspirations and facilitate achievement, and it fulfils our purpose – to ensure, for the next generation, a successful and rewarding future.
 						</p>
-						<p>
-							Today, we have gone beyond traditional classroom teaching to include web, satellite and mobile-based coaching. Through these, we serve the needs of nearly 2,00,000 students across the country. The name of IDEAL is now synonymous with superior teaching, testament to which is our ISO 9001:2008 certification, a first in the industry.
-						</p>
-						<p>
-							Our continual efforts to serve students have resulted in the creation of a Placement Division for students and Ideal Foundation – a platform that aims to develop the student’s overall personality. We are also the first institute to have an independent teachers training programme, a teacher trained at our academy is highly regarded in the industry.
-						</p>
-						<p>As we continue to break new ground in our quest to impart quality education, IDEAL has become one of the premier educational institutions in the country.</p>
 					</div>
 					<div class="post-row padding-top-5">
 						<div class="post-row-header clearfix margin-bottom-15" id="booknow">
@@ -409,7 +184,7 @@
 									<!-- Checked icon by Icons8 -->
 									<img class="icon icons8-Checked" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFLklEQVRoQ+1azXHbOBT+nm/2Zb0VREgDUSow1IF9DHWwXYG1FaxTQZIKohykHC1XIGwFtiuAXEHsS7wnv50HghRJgSQoMc5OJpzxjDwEQXzv53sfHkj4RS76RXDgN5CQJ0dze8QEDXZ/h0QYZuOYcQvCg/ufYPCMazNWt31FxM4e0V+txjNOiXDWdVEMrMAw2MMX806Zrs8Xx28NRM/tMYALAnRhwjsGZEEGjFXR4npmh9jDoXgKgCbmYxC9yj0mzxDebwuoMxD91Q7A+JwDYL5n0BR7mJp3atXFqg4ccEzEE4D+kGedIfZxYk5UGoaRVycgzgsCgsSq/MigS5Ooj5Hvqh2mr+whvmOSAfIhd1LNIRlXBzAaiJ7ZCyK4RTPjGgc462q1NsCyUHpyofnGv+fcjNVUfuuZlRz8AGAUIokoIHpmxQsumRn4qw8vNIHSc/uRgAtmvJVFC6EQY1kF1ynZ9dxOyFmCH5lpklmozbq73pdclJzzebSUcGbGezNWl6G5Gz0iOUHAVZMldl1wo2fS3BEQQwa+mETVUnwtEMdOz7hxlniBcAoB0jMr7xdmu+N96KacrAcyt0uhWElsM1ZSM170yvNS6P2AhgJCcqWuzgSBrEOKH3mfBn2zU5tFKnmpiwnPhFEITB2Q1Bs/IaSEZonw2TPkiUnUwtPvJRH+loJpEjWqGmMDSE51zPfL8etBm/X6vF9hqLyGOCCuxvBKFEDIK5tA5nZKwGkT1fW5+GyuCrkEGUrPbOaVjfsbQEZzy86tBNVVO20L0EsUR7MA/lkmqihE82kFLDEsMx5wAFXM3RKQQt24WyYq30tsu8DY5/TcXhEgzNhKs6O5lT3Mm2p4lYGsXffJJGoSu5Bdxq3lDz8y0bAtCgrypVTlS0BGcyuC7YiBnC12WWTbs2uGcvLH0WzsM9X6VvWIq6SZWGubdJf7MUIwWO3XArKUS1WPuERfJipaFUtydhWSsUIwCCSV+t8k4c1Y/ZmN2RpIqXAxSpzfKgSfcEPAoE0I1s2TMWvR4FsD8dV2XYUZIvE/tYVbUQhuy4y9AwmAmZqxOq8DExKCbcBD92OApBztd2axL6mEWRBMVpX9Bi2KoYI5MrNDItxIzSl6tDf6TVmIF04LMUpgSkBr1Gu00dabvXrWKmiZrQqisBERGwfGt3XwHQNvQWlaRJNCbXiu9/P1BTHjdmlvmrF6G2ul4rgSGGmTwgGRXWbjVjX2XRlZNEoUmawP0ZiCgbRxsrZOL7vMTDRKni2T19KxzK8fJuMLPSq07bc7eCNexufhBaxMolTsS+qqMP7FYZsQjH2HntlvLkwDhBGUIgXx+MObcdEg8v5aeL/S2HwIbWBiX9znOL/xsnXekHfVisOCVxYmUSd9LqzrXNnGq6k11digI+ZbXxN+WoiVWkMNG6//d8u0pjUU8mjrviOziMsX6XP5Nn/X8Og6vtLfao2IViBO4foWkfzmSLnedeEVdbA+i4lUBFFAPBh/vODOSBbYx3nfrVTHTk/uWM/1mrt0OqOBeDDHBJ56hSuhdhmzmYrxjpyIyXyFY72zrF0a83wnIA5M2iQTHXXkrbZCqqvkiLnbYagcXQCnYJzJ1teH7jX2MOk6V2cgmXV8M096Xw6QX4R8FGCIYRi43zjMFDEJvMo+Kih+UCBNDCZcvtjxdNXN7oOB1KKnMSFQHuNOhhfi0W0BZPNt7ZHQov1XEJrkMw64DwOcjC9cdwAeOP3awey6+OLEvQLp7pH+nvgNpD9b9jPTfwQDNWCupe5qAAAAAElFTkSuQmCC" alt="checked">
 								<br>
-								JEE Main <br> Book Now
+								CAT <br> Book Now
 								</span>
 								</a>
 							</li>
@@ -419,7 +194,7 @@
 									<!-- Checked icon by Icons8 -->
 									<img class="icon icons8-Checked" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFLklEQVRoQ+1azXHbOBT+nm/2Zb0VREgDUSow1IF9DHWwXYG1FaxTQZIKohykHC1XIGwFtiuAXEHsS7wnv50HghRJgSQoMc5OJpzxjDwEQXzv53sfHkj4RS76RXDgN5CQJ0dze8QEDXZ/h0QYZuOYcQvCg/ufYPCMazNWt31FxM4e0V+txjNOiXDWdVEMrMAw2MMX806Zrs8Xx28NRM/tMYALAnRhwjsGZEEGjFXR4npmh9jDoXgKgCbmYxC9yj0mzxDebwuoMxD91Q7A+JwDYL5n0BR7mJp3atXFqg4ccEzEE4D+kGedIfZxYk5UGoaRVycgzgsCgsSq/MigS5Ooj5Hvqh2mr+whvmOSAfIhd1LNIRlXBzAaiJ7ZCyK4RTPjGgc462q1NsCyUHpyofnGv+fcjNVUfuuZlRz8AGAUIokoIHpmxQsumRn4qw8vNIHSc/uRgAtmvJVFC6EQY1kF1ynZ9dxOyFmCH5lpklmozbq73pdclJzzebSUcGbGezNWl6G5Gz0iOUHAVZMldl1wo2fS3BEQQwa+mETVUnwtEMdOz7hxlniBcAoB0jMr7xdmu+N96KacrAcyt0uhWElsM1ZSM170yvNS6P2AhgJCcqWuzgSBrEOKH3mfBn2zU5tFKnmpiwnPhFEITB2Q1Bs/IaSEZonw2TPkiUnUwtPvJRH+loJpEjWqGmMDSE51zPfL8etBm/X6vF9hqLyGOCCuxvBKFEDIK5tA5nZKwGkT1fW5+GyuCrkEGUrPbOaVjfsbQEZzy86tBNVVO20L0EsUR7MA/lkmqihE82kFLDEsMx5wAFXM3RKQQt24WyYq30tsu8DY5/TcXhEgzNhKs6O5lT3Mm2p4lYGsXffJJGoSu5Bdxq3lDz8y0bAtCgrypVTlS0BGcyuC7YiBnC12WWTbs2uGcvLH0WzsM9X6VvWIq6SZWGubdJf7MUIwWO3XArKUS1WPuERfJipaFUtydhWSsUIwCCSV+t8k4c1Y/ZmN2RpIqXAxSpzfKgSfcEPAoE0I1s2TMWvR4FsD8dV2XYUZIvE/tYVbUQhuy4y9AwmAmZqxOq8DExKCbcBD92OApBztd2axL6mEWRBMVpX9Bi2KoYI5MrNDItxIzSl6tDf6TVmIF04LMUpgSkBr1Gu00dabvXrWKmiZrQqisBERGwfGt3XwHQNvQWlaRJNCbXiu9/P1BTHjdmlvmrF6G2ul4rgSGGmTwgGRXWbjVjX2XRlZNEoUmawP0ZiCgbRxsrZOL7vMTDRKni2T19KxzK8fJuMLPSq07bc7eCNexufhBaxMolTsS+qqMP7FYZsQjH2HntlvLkwDhBGUIgXx+MObcdEg8v5aeL/S2HwIbWBiX9znOL/xsnXekHfVisOCVxYmUSd9LqzrXNnGq6k11digI+ZbXxN+WoiVWkMNG6//d8u0pjUU8mjrviOziMsX6XP5Nn/X8Og6vtLfao2IViBO4foWkfzmSLnedeEVdbA+i4lUBFFAPBh/vODOSBbYx3nfrVTHTk/uWM/1mrt0OqOBeDDHBJ56hSuhdhmzmYrxjpyIyXyFY72zrF0a83wnIA5M2iQTHXXkrbZCqqvkiLnbYagcXQCnYJzJ1teH7jX2MOk6V2cgmXV8M096Xw6QX4R8FGCIYRi43zjMFDEJvMo+Kih+UCBNDCZcvtjxdNXN7oOB1KKnMSFQHuNOhhfi0W0BZPNt7ZHQov1XEJrkMw64DwOcjC9cdwAeOP3awey6+OLEvQLp7pH+nvgNpD9b9jPTfwQDNWCupe5qAAAAAElFTkSuQmCC" alt="checked">
 								<br>
-								AIPMT <br> Book Now
+								MBACET <br> Book Now
 								</span>
 								</a>
 							</li>
@@ -429,17 +204,18 @@
 									<!-- Checked icon by Icons8 -->
 									<img class="icon icons8-Checked" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFLklEQVRoQ+1azXHbOBT+nm/2Zb0VREgDUSow1IF9DHWwXYG1FaxTQZIKohykHC1XIGwFtiuAXEHsS7wnv50HghRJgSQoMc5OJpzxjDwEQXzv53sfHkj4RS76RXDgN5CQJ0dze8QEDXZ/h0QYZuOYcQvCg/ufYPCMazNWt31FxM4e0V+txjNOiXDWdVEMrMAw2MMX806Zrs8Xx28NRM/tMYALAnRhwjsGZEEGjFXR4npmh9jDoXgKgCbmYxC9yj0mzxDebwuoMxD91Q7A+JwDYL5n0BR7mJp3atXFqg4ccEzEE4D+kGedIfZxYk5UGoaRVycgzgsCgsSq/MigS5Ooj5Hvqh2mr+whvmOSAfIhd1LNIRlXBzAaiJ7ZCyK4RTPjGgc462q1NsCyUHpyofnGv+fcjNVUfuuZlRz8AGAUIokoIHpmxQsumRn4qw8vNIHSc/uRgAtmvJVFC6EQY1kF1ynZ9dxOyFmCH5lpklmozbq73pdclJzzebSUcGbGezNWl6G5Gz0iOUHAVZMldl1wo2fS3BEQQwa+mETVUnwtEMdOz7hxlniBcAoB0jMr7xdmu+N96KacrAcyt0uhWElsM1ZSM170yvNS6P2AhgJCcqWuzgSBrEOKH3mfBn2zU5tFKnmpiwnPhFEITB2Q1Bs/IaSEZonw2TPkiUnUwtPvJRH+loJpEjWqGmMDSE51zPfL8etBm/X6vF9hqLyGOCCuxvBKFEDIK5tA5nZKwGkT1fW5+GyuCrkEGUrPbOaVjfsbQEZzy86tBNVVO20L0EsUR7MA/lkmqihE82kFLDEsMx5wAFXM3RKQQt24WyYq30tsu8DY5/TcXhEgzNhKs6O5lT3Mm2p4lYGsXffJJGoSu5Bdxq3lDz8y0bAtCgrypVTlS0BGcyuC7YiBnC12WWTbs2uGcvLH0WzsM9X6VvWIq6SZWGubdJf7MUIwWO3XArKUS1WPuERfJipaFUtydhWSsUIwCCSV+t8k4c1Y/ZmN2RpIqXAxSpzfKgSfcEPAoE0I1s2TMWvR4FsD8dV2XYUZIvE/tYVbUQhuy4y9AwmAmZqxOq8DExKCbcBD92OApBztd2axL6mEWRBMVpX9Bi2KoYI5MrNDItxIzSl6tDf6TVmIF04LMUpgSkBr1Gu00dabvXrWKmiZrQqisBERGwfGt3XwHQNvQWlaRJNCbXiu9/P1BTHjdmlvmrF6G2ul4rgSGGmTwgGRXWbjVjX2XRlZNEoUmawP0ZiCgbRxsrZOL7vMTDRKni2T19KxzK8fJuMLPSq07bc7eCNexufhBaxMolTsS+qqMP7FYZsQjH2HntlvLkwDhBGUIgXx+MObcdEg8v5aeL/S2HwIbWBiX9znOL/xsnXekHfVisOCVxYmUSd9LqzrXNnGq6k11digI+ZbXxN+WoiVWkMNG6//d8u0pjUU8mjrviOziMsX6XP5Nn/X8Og6vtLfao2IViBO4foWkfzmSLnedeEVdbA+i4lUBFFAPBh/vODOSBbYx3nfrVTHTk/uWM/1mrt0OqOBeDDHBJ56hSuhdhmzmYrxjpyIyXyFY72zrF0a83wnIA5M2iQTHXXkrbZCqqvkiLnbYagcXQCnYJzJ1teH7jX2MOk6V2cgmXV8M096Xw6QX4R8FGCIYRi43zjMFDEJvMo+Kih+UCBNDCZcvtjxdNXN7oOB1KKnMSFQHuNOhhfi0W0BZPNt7ZHQov1XEJrkMw64DwOcjC9cdwAeOP3awey6+OLEvQLp7pH+nvgNpD9b9jPTfwQDNWCupe5qAAAAAElFTkSuQmCC" alt="checked">
 								<br>
-								BIT-SAT <br> Book Now
+								GMAT <br> Book Now
 								</span>
 								</a>
-							</li><br>
+							</li>
+							<br>
 							<li>
 							<a href="#portfolioModal4" class="portfolio-link lp-border-radius-5" data-toggle="modal">
 								<span class="tick-icon">
 									<!-- Checked icon by Icons8 -->
 									<img class="icon icons8-Checked" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFLklEQVRoQ+1azXHbOBT+nm/2Zb0VREgDUSow1IF9DHWwXYG1FaxTQZIKohykHC1XIGwFtiuAXEHsS7wnv50HghRJgSQoMc5OJpzxjDwEQXzv53sfHkj4RS76RXDgN5CQJ0dze8QEDXZ/h0QYZuOYcQvCg/ufYPCMazNWt31FxM4e0V+txjNOiXDWdVEMrMAw2MMX806Zrs8Xx28NRM/tMYALAnRhwjsGZEEGjFXR4npmh9jDoXgKgCbmYxC9yj0mzxDebwuoMxD91Q7A+JwDYL5n0BR7mJp3atXFqg4ccEzEE4D+kGedIfZxYk5UGoaRVycgzgsCgsSq/MigS5Ooj5Hvqh2mr+whvmOSAfIhd1LNIRlXBzAaiJ7ZCyK4RTPjGgc462q1NsCyUHpyofnGv+fcjNVUfuuZlRz8AGAUIokoIHpmxQsumRn4qw8vNIHSc/uRgAtmvJVFC6EQY1kF1ynZ9dxOyFmCH5lpklmozbq73pdclJzzebSUcGbGezNWl6G5Gz0iOUHAVZMldl1wo2fS3BEQQwa+mETVUnwtEMdOz7hxlniBcAoB0jMr7xdmu+N96KacrAcyt0uhWElsM1ZSM170yvNS6P2AhgJCcqWuzgSBrEOKH3mfBn2zU5tFKnmpiwnPhFEITB2Q1Bs/IaSEZonw2TPkiUnUwtPvJRH+loJpEjWqGmMDSE51zPfL8etBm/X6vF9hqLyGOCCuxvBKFEDIK5tA5nZKwGkT1fW5+GyuCrkEGUrPbOaVjfsbQEZzy86tBNVVO20L0EsUR7MA/lkmqihE82kFLDEsMx5wAFXM3RKQQt24WyYq30tsu8DY5/TcXhEgzNhKs6O5lT3Mm2p4lYGsXffJJGoSu5Bdxq3lDz8y0bAtCgrypVTlS0BGcyuC7YiBnC12WWTbs2uGcvLH0WzsM9X6VvWIq6SZWGubdJf7MUIwWO3XArKUS1WPuERfJipaFUtydhWSsUIwCCSV+t8k4c1Y/ZmN2RpIqXAxSpzfKgSfcEPAoE0I1s2TMWvR4FsD8dV2XYUZIvE/tYVbUQhuy4y9AwmAmZqxOq8DExKCbcBD92OApBztd2axL6mEWRBMVpX9Bi2KoYI5MrNDItxIzSl6tDf6TVmIF04LMUpgSkBr1Gu00dabvXrWKmiZrQqisBERGwfGt3XwHQNvQWlaRJNCbXiu9/P1BTHjdmlvmrF6G2ul4rgSGGmTwgGRXWbjVjX2XRlZNEoUmawP0ZiCgbRxsrZOL7vMTDRKni2T19KxzK8fJuMLPSq07bc7eCNexufhBaxMolTsS+qqMP7FYZsQjH2HntlvLkwDhBGUIgXx+MObcdEg8v5aeL/S2HwIbWBiX9znOL/xsnXekHfVisOCVxYmUSd9LqzrXNnGq6k11digI+ZbXxN+WoiVWkMNG6//d8u0pjUU8mjrviOziMsX6XP5Nn/X8Og6vtLfao2IViBO4foWkfzmSLnedeEVdbA+i4lUBFFAPBh/vODOSBbYx3nfrVTHTk/uWM/1mrt0OqOBeDDHBJ56hSuhdhmzmYrxjpyIyXyFY72zrF0a83wnIA5M2iQTHXXkrbZCqqvkiLnbYagcXQCnYJzJ1teH7jX2MOk6V2cgmXV8M096Xw6QX4R8FGCIYRi43zjMFDEJvMo+Kih+UCBNDCZcvtjxdNXN7oOB1KKnMSFQHuNOhhfi0W0BZPNt7ZHQov1XEJrkMw64DwOcjC9cdwAeOP3awey6+OLEvQLp7pH+nvgNpD9b9jPTfwQDNWCupe5qAAAAAElFTkSuQmCC" alt="checked">
 								<br>
-								MH-CET <br> Book Now
+								MBA <br> Book Now
 								</span>
 								</a>
 							</li>
@@ -449,7 +225,7 @@
 									<!-- Checked icon by Icons8 -->
 									<img class="icon icons8-Checked" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFLklEQVRoQ+1azXHbOBT+nm/2Zb0VREgDUSow1IF9DHWwXYG1FaxTQZIKohykHC1XIGwFtiuAXEHsS7wnv50HghRJgSQoMc5OJpzxjDwEQXzv53sfHkj4RS76RXDgN5CQJ0dze8QEDXZ/h0QYZuOYcQvCg/ufYPCMazNWt31FxM4e0V+txjNOiXDWdVEMrMAw2MMX806Zrs8Xx28NRM/tMYALAnRhwjsGZEEGjFXR4npmh9jDoXgKgCbmYxC9yj0mzxDebwuoMxD91Q7A+JwDYL5n0BR7mJp3atXFqg4ccEzEE4D+kGedIfZxYk5UGoaRVycgzgsCgsSq/MigS5Ooj5Hvqh2mr+whvmOSAfIhd1LNIRlXBzAaiJ7ZCyK4RTPjGgc462q1NsCyUHpyofnGv+fcjNVUfuuZlRz8AGAUIokoIHpmxQsumRn4qw8vNIHSc/uRgAtmvJVFC6EQY1kF1ynZ9dxOyFmCH5lpklmozbq73pdclJzzebSUcGbGezNWl6G5Gz0iOUHAVZMldl1wo2fS3BEQQwa+mETVUnwtEMdOz7hxlniBcAoB0jMr7xdmu+N96KacrAcyt0uhWElsM1ZSM170yvNS6P2AhgJCcqWuzgSBrEOKH3mfBn2zU5tFKnmpiwnPhFEITB2Q1Bs/IaSEZonw2TPkiUnUwtPvJRH+loJpEjWqGmMDSE51zPfL8etBm/X6vF9hqLyGOCCuxvBKFEDIK5tA5nZKwGkT1fW5+GyuCrkEGUrPbOaVjfsbQEZzy86tBNVVO20L0EsUR7MA/lkmqihE82kFLDEsMx5wAFXM3RKQQt24WyYq30tsu8DY5/TcXhEgzNhKs6O5lT3Mm2p4lYGsXffJJGoSu5Bdxq3lDz8y0bAtCgrypVTlS0BGcyuC7YiBnC12WWTbs2uGcvLH0WzsM9X6VvWIq6SZWGubdJf7MUIwWO3XArKUS1WPuERfJipaFUtydhWSsUIwCCSV+t8k4c1Y/ZmN2RpIqXAxSpzfKgSfcEPAoE0I1s2TMWvR4FsD8dV2XYUZIvE/tYVbUQhuy4y9AwmAmZqxOq8DExKCbcBD92OApBztd2axL6mEWRBMVpX9Bi2KoYI5MrNDItxIzSl6tDf6TVmIF04LMUpgSkBr1Gu00dabvXrWKmiZrQqisBERGwfGt3XwHQNvQWlaRJNCbXiu9/P1BTHjdmlvmrF6G2ul4rgSGGmTwgGRXWbjVjX2XRlZNEoUmawP0ZiCgbRxsrZOL7vMTDRKni2T19KxzK8fJuMLPSq07bc7eCNexufhBaxMolTsS+qqMP7FYZsQjH2HntlvLkwDhBGUIgXx+MObcdEg8v5aeL/S2HwIbWBiX9znOL/xsnXekHfVisOCVxYmUSd9LqzrXNnGq6k11digI+ZbXxN+WoiVWkMNG6//d8u0pjUU8mjrviOziMsX6XP5Nn/X8Og6vtLfao2IViBO4foWkfzmSLnedeEVdbA+i4lUBFFAPBh/vODOSBbYx3nfrVTHTk/uWM/1mrt0OqOBeDDHBJ56hSuhdhmzmYrxjpyIyXyFY72zrF0a83wnIA5M2iQTHXXkrbZCqqvkiLnbYagcXQCnYJzJ1teH7jX2MOk6V2cgmXV8M096Xw6QX4R8FGCIYRi43zjMFDEJvMo+Kih+UCBNDCZcvtjxdNXN7oOB1KKnMSFQHuNOhhfi0W0BZPNt7ZHQov1XEJrkMw64DwOcjC9cdwAeOP3awey6+OLEvQLp7pH+nvgNpD9b9jPTfwQDNWCupe5qAAAAAElFTkSuQmCC" alt="checked">
 								<br>
-								VIEEE <br> Book Now
+								GRE <br> Book Now
 								</span>
 								</a>
 							</li>
@@ -459,13 +235,11 @@
 									<!-- Checked icon by Icons8 -->
 									<img class="icon icons8-Checked" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFLklEQVRoQ+1azXHbOBT+nm/2Zb0VREgDUSow1IF9DHWwXYG1FaxTQZIKohykHC1XIGwFtiuAXEHsS7wnv50HghRJgSQoMc5OJpzxjDwEQXzv53sfHkj4RS76RXDgN5CQJ0dze8QEDXZ/h0QYZuOYcQvCg/ufYPCMazNWt31FxM4e0V+txjNOiXDWdVEMrMAw2MMX806Zrs8Xx28NRM/tMYALAnRhwjsGZEEGjFXR4npmh9jDoXgKgCbmYxC9yj0mzxDebwuoMxD91Q7A+JwDYL5n0BR7mJp3atXFqg4ccEzEE4D+kGedIfZxYk5UGoaRVycgzgsCgsSq/MigS5Ooj5Hvqh2mr+whvmOSAfIhd1LNIRlXBzAaiJ7ZCyK4RTPjGgc462q1NsCyUHpyofnGv+fcjNVUfuuZlRz8AGAUIokoIHpmxQsumRn4qw8vNIHSc/uRgAtmvJVFC6EQY1kF1ynZ9dxOyFmCH5lpklmozbq73pdclJzzebSUcGbGezNWl6G5Gz0iOUHAVZMldl1wo2fS3BEQQwa+mETVUnwtEMdOz7hxlniBcAoB0jMr7xdmu+N96KacrAcyt0uhWElsM1ZSM170yvNS6P2AhgJCcqWuzgSBrEOKH3mfBn2zU5tFKnmpiwnPhFEITB2Q1Bs/IaSEZonw2TPkiUnUwtPvJRH+loJpEjWqGmMDSE51zPfL8etBm/X6vF9hqLyGOCCuxvBKFEDIK5tA5nZKwGkT1fW5+GyuCrkEGUrPbOaVjfsbQEZzy86tBNVVO20L0EsUR7MA/lkmqihE82kFLDEsMx5wAFXM3RKQQt24WyYq30tsu8DY5/TcXhEgzNhKs6O5lT3Mm2p4lYGsXffJJGoSu5Bdxq3lDz8y0bAtCgrypVTlS0BGcyuC7YiBnC12WWTbs2uGcvLH0WzsM9X6VvWIq6SZWGubdJf7MUIwWO3XArKUS1WPuERfJipaFUtydhWSsUIwCCSV+t8k4c1Y/ZmN2RpIqXAxSpzfKgSfcEPAoE0I1s2TMWvR4FsD8dV2XYUZIvE/tYVbUQhuy4y9AwmAmZqxOq8DExKCbcBD92OApBztd2axL6mEWRBMVpX9Bi2KoYI5MrNDItxIzSl6tDf6TVmIF04LMUpgSkBr1Gu00dabvXrWKmiZrQqisBERGwfGt3XwHQNvQWlaRJNCbXiu9/P1BTHjdmlvmrF6G2ul4rgSGGmTwgGRXWbjVjX2XRlZNEoUmawP0ZiCgbRxsrZOL7vMTDRKni2T19KxzK8fJuMLPSq07bc7eCNexufhBaxMolTsS+qqMP7FYZsQjH2HntlvLkwDhBGUIgXx+MObcdEg8v5aeL/S2HwIbWBiX9znOL/xsnXekHfVisOCVxYmUSd9LqzrXNnGq6k11digI+ZbXxN+WoiVWkMNG6//d8u0pjUU8mjrviOziMsX6XP5Nn/X8Og6vtLfao2IViBO4foWkfzmSLnedeEVdbA+i4lUBFFAPBh/vODOSBbYx3nfrVTHTk/uWM/1mrt0OqOBeDDHBJ56hSuhdhmzmYrxjpyIyXyFY72zrF0a83wnIA5M2iQTHXXkrbZCqqvkiLnbYagcXQCnYJzJ1teH7jX2MOk6V2cgmXV8M096Xw6QX4R8FGCIYRi43zjMFDEJvMo+Kih+UCBNDCZcvtjxdNXN7oOB1KKnMSFQHuNOhhfi0W0BZPNt7ZHQov1XEJrkMw64DwOcjC9cdwAeOP3awey6+OLEvQLp7pH+nvgNpD9b9jPTfwQDNWCupe5qAAAAAElFTkSuQmCC" alt="checked">
 								<br>
-								MT-CET <br> Book Now
+								Bank PO <br> Book Now
 								</span>
 								</a>
 							</li>
 						</ul>
-					</div>					
-					<div class="post-row   padding-top-15 clearfix">
 					</div>
 					<div class="comments-form padding-left-40 padding-right-40 padding-bottom-40" id="submitreview">
 						<div class="comments-header lp-border-bottom clearfix">
@@ -500,16 +274,17 @@
 							</div>
 						</div>
 					</div>
-				</div>
+					</div>
+
 				<div class="col-md-4 ">
 					<div class="sidebar-post">
 						<div class="widget-box  widget-bg-color post-author-box lp-border-radius-5">
 							<div class="user-info">
 								<div class="user-thumb">
-									<img src="images/user-thumb-94x94.png" alt="user-thumb">
+									<img src="../../images/user-thumb-94x94.png" alt="user-thumb">
 								</div>
 								<div class="user-text">
-									<h5 class="user-name margin-top-0"><a href="#">Ideal 21st Century</a></h5>
+									<h5 class="user-name margin-top-0"><a href="#">CET King</a></h5>
 									<label class="user-position md-trigger quickformtrigger2" data-modal="modal-6">Quick Connect</label>
 									<label class="user-position quickformtrigger">Quick Connect</label>
 									
@@ -550,7 +325,7 @@
 						<div class="widget-box widget-bg-color widget-categories lp-border-radius-5">
 							<div class="widget-content">
 								<ul class=" list-style-none categories-container">
-									<li><a href="listing-entrance.html"><span class="cat-icon"><img class="icon icons8-Exam" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACkklEQVRoQ+2Z4XHUMBCF3+sgqSCkgiQVQCqAVABUAFQAVABUAKkgoQKgApIKSAekg8e8jOTxHWdbtnWSM2PN3I87SeP9dt+udGuiZ0hS3/zEuRsA5yTvJ+7fuY0VQPzI7DBJICR716V6divCWWFqgdwCOMkZmVoghwB+5oSpAmKpSjrICVMNxHmVE6YqSE6Y6iC5YBYBkgNmMSBzYRYFMgdmcSBTYRYJMgWmCkjq3Wxr3Q3Js669jwkEfZfXoiATI+EbwMP/ohUkxRNTvTxmX4odWaUl6UmQwN0YQ4fWFgUJN9k/AO5JHg8ZN2a+NMhbAJ+CgRckr8cYm9I7KJLskn4DOA0GfSf54tGBhNywrC4BPANwBOCYZJZcKSYtSVFWFwCc8JbYO5Kfc0SlJIhl5QgchKT/6w5J35ViDGARkLasSL4KFz4n+nMAZyTdv9o5JDliJyTPqyd7S1avSX4LIAb6CuALScuuC8QtoadDDcBSEYneP4z93FR5SVoUiC90tyRj6X3wvqQI2Fm9JDmCL2NEgkx9oG40uPceEUkutT9Co83ejcO/u3r505acv1tyHm7QbcCH33+R9P5mlABxsr4ZqEDN4SjJhkdgFwGD+cxxL9hR8Jyr3catoASIH2zjmlOcZBMZSTb2iKR7vf8NSR8AvA/vS9oR3VhbAsT50XkdCeXVEdtZhhcB0sqPjyTt2V0ed6Su2nmypf2YY36DVSciKd5sleHLeFhugTjhDXvd9ypur9Jqldfm/OiIihP3ru9gHCgW+/3PHirQaTzNh4yZM7/XiMwxbOzeFSR6LMUTY707ZX2KHVm7KFOMTNmzgqzSStHJhDWrtFZpTZBNypZs0kp5WIk1s1umJYxMeUYfyD9fBotRRf1I0gAAAABJRU5ErkJggg=="></span><span>Entrance</span></a></li>
+									<li><a href="../../listing-entrance.html"><span class="cat-icon"><img class="icon icons8-Exam" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACkklEQVRoQ+2Z4XHUMBCF3+sgqSCkgiQVQCqAVABUAFQAVABUAKkgoQKgApIKSAekg8e8jOTxHWdbtnWSM2PN3I87SeP9dt+udGuiZ0hS3/zEuRsA5yTvJ+7fuY0VQPzI7DBJICR716V6divCWWFqgdwCOMkZmVoghwB+5oSpAmKpSjrICVMNxHmVE6YqSE6Y6iC5YBYBkgNmMSBzYRYFMgdmcSBTYRYJMgWmCkjq3Wxr3Q3Js669jwkEfZfXoiATI+EbwMP/ohUkxRNTvTxmX4odWaUl6UmQwN0YQ4fWFgUJN9k/AO5JHg8ZN2a+NMhbAJ+CgRckr8cYm9I7KJLskn4DOA0GfSf54tGBhNywrC4BPANwBOCYZJZcKSYtSVFWFwCc8JbYO5Kfc0SlJIhl5QgchKT/6w5J35ViDGARkLasSL4KFz4n+nMAZyTdv9o5JDliJyTPqyd7S1avSX4LIAb6CuALScuuC8QtoadDDcBSEYneP4z93FR5SVoUiC90tyRj6X3wvqQI2Fm9JDmCL2NEgkx9oG40uPceEUkutT9Co83ejcO/u3r505acv1tyHm7QbcCH33+R9P5mlABxsr4ZqEDN4SjJhkdgFwGD+cxxL9hR8Jyr3catoASIH2zjmlOcZBMZSTb2iKR7vf8NSR8AvA/vS9oR3VhbAsT50XkdCeXVEdtZhhcB0sqPjyTt2V0ed6Su2nmypf2YY36DVSciKd5sleHLeFhugTjhDXvd9ypur9Jqldfm/OiIihP3ru9gHCgW+/3PHirQaTzNh4yZM7/XiMwxbOzeFSR6LMUTY707ZX2KHVm7KFOMTNmzgqzSStHJhDWrtFZpTZBNypZs0kp5WIk1s1umJYxMeUYfyD9fBotRRf1I0gAAAABJRU5ErkJggg=="></span><span>Entrance</span></a></li>
 								</ul>
 							</div>
 						</div><!-- ../widget-box  -->
@@ -571,98 +346,15 @@
 								</ul>
 							</div>
 						</div><!-- ../widget-box  -->
-					</div><!-- ../sidebar-post  -->
+						</div><!-- ../sidebar-post  -->
 				</div>
 			</div>
 		</div>
 	</section>
 	<!--==================================Section Close=================================-->
 	
-		<!--==================================Footer Open=================================-->
-<footer id="footer" class="clearfix">
-      <div id="footer-widgets">
-
-        <div class="container">
-
-        <div id="footer-wrapper">
-
-          <div class="row">
-            <div class="col-sm-6 col-md-2">
-              <div id="meta-3" class="widget widgetFooter widget_meta">
-              <h4 class="widgettitle">Pages:</h4>
-              <ul>
-    		  <li><a href="index.php"><i class="fa fa-home fa-fw"></i> Home</a></li>
-			  <li><a href="privacypolicy.php"><i class="fa fa-link"></i>   Privacy Policy</a></li>
-			  <li><a href="contact-us.php"><i class="fa fa-envelope fa-fw"></i> Contact Us</a></li>
-             </ul>
-</div>      </div> <!-- end widget1 -->
-
-            <div class="col-sm-6 col-md-2">
-              		<div id="recent-posts-3" class="widget widgetFooter widget_recent_entries">
-                    <h4 class="widgettitle">Social Media :</h4>
-                    <ul>
-					<li>
-				     <a href="#" target="_blank"><i class="fa fa-facebook"></i> Facebook</a>
-					</li>
-					<li>
-				      <a href="#" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>
-					</li>
-					<li>
-				      <a href="#" target="_blank"><i class="fa fa-youtube"></i> Youtube</a>
-				   </li>
-				</ul>
-		</div>            </div> <!-- end widget1 -->
-
-            <div class="col-sm-6 col-md-4">
-              <div id="meta-4" class="widget widgetFooter widget_meta">
-              <h4 class="widgettitle">Subscribe:</h4>
-
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-addon">E-mail:</span>
-                  <input class="form-control" placeholder="Write your email .." type="text">
-                   <span class="input-group-btn">
-                    <button class="btn btn-primary" type="button">Subscribe!</button>
-                </div>
-              </div>
-              </div>
-             </div> <!-- end widget1 -->
-             <div class="col-sm-6 col-md-2">
-              		<div id="recent-posts-3" class="widget widgetFooter widget_recent_entries">
-                    <h4 class="widgettitle">Payment Modes:</h4>
-                    <ul>
-					<li>
-				     <a href="#" target="#"><img src="images/payment/visa.png"></a>
-				     <a href="#" target="#"><img src="images/payment/mastercard.png"></a>
-				 </li>
-				 <li>
-				     <a href="#" target="#"><img src="images/payment/bhim.png"></a>
-				     <a href="#" target="#"><img src="images/payment/instamojo.png"></a>
-				   </li>
-				</ul>
-		</div>
-          </div> <!-- end .row -->
-
-
-        </div> <!-- end #footer-wrapper -->
-
-        </div> <!-- end .container -->
-      </div> <!-- end #footer-widgets -->
-
-      <div id="sub-floor">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 copyright">
-             Copyright CodeMarshalls
-            </div>
-            <div class="col-md-4 col-md-offset-4 attribution">
-             Developed by  <a target="_blank" href="#">Code Marshalls</a>
-             </div>
-          </div> <!-- end .row -->
-        </div>
-      </div>
-    </footer>
-	<!--==================================Footer Close=================================-->
+	<?php require '../../footer.php' ?>
+	
 	<!-- Portfolio Modals -->
     <!-- Use the modals below to showcase details about your portfolio projects! -->
 
@@ -1104,24 +796,20 @@
 	<!--==================================Javscript=================================-->
 
 
-	<script type="text/javascript" src="js/jquery-lib.js"></script><!-- Jquery Library -->
-	<script type="text/javascript" src="js/jquery-migrate-1.3.0.min.js"></script>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-	<script type="text/javascript" src='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.js'></script>
-	<script type="text/javascript" src='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
-	<script type="text/javascript" src="js/build.min.js"></script>
-	<script type="text/javascript" src="lib/chosen/chosen.jquery.js" ></script>
-	<script type="text/javascript" src="js/jquery-ui.js"></script>
-	<script type="text/javascript" src="lib/slick/slick.min.js"></script>
-	<script type="text/javascript" src="lib/jquerym.menu/js/jquery.mmenu.min.all.js"></script>
-	<script type="text/javascript" src="lib/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
-	<script type="text/javascript" src="lib/jQuery.filer-master/js/jquery.filer.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap-rating.js"></script>
-	<script type="text/javascript" src="lib/popup/js/classie.js"></script> <!-- Popup -->
-	<script type="text/javascript" src="lib/popup/js/modalEffects.js"></script> <!-- Popup -->
-	<script type="text/javascript" src="js/singlepostmap.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="../../js/jquery-lib.js"></script><!-- Jquery Library -->
+	<script type="text/javascript" src="../../js/jquery-migrate-1.3.0.min.js"></script>
+	<script type="text/javascript" src="../../js/build.min.js"></script>
+	<script type="text/javascript" src="../../lib/chosen/chosen.jquery.js" ></script>
+	<script type="text/javascript" src="../../js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../../lib/slick/slick.min.js"></script>
+	<script type="text/javascript" src="../../lib/jquerym.menu/js/jquery.mmenu.min.all.js"></script>
+	<script type="text/javascript" src="../../lib/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript" src="../../lib/jQuery.filer-master/js/jquery.filer.min.js"></script>
+	<script type="text/javascript" src="../../js/bootstrap-rating.js"></script>
+	<script type="text/javascript" src="../../lib/popup/js/classie.js"></script> <!-- Popup -->
+	<script type="text/javascript" src="../../lib/popup/js/modalEffects.js"></script> <!-- Popup -->
+	<script type="text/javascript" src="../../js/main.js"></script>
     <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

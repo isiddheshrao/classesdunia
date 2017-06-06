@@ -15,24 +15,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="../../images/favicon.png" type="image/x-icon">
 	
 	<!-- CSS -->
-	<link href="lib/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" />
-	<link href="css/colors.css" type="text/css" rel="stylesheet" />
-	<link href="css/font.css" type="text/css" rel="stylesheet" />
-	<link href="lib/popup/css/component.css" type="text/css" rel="stylesheet" />
-	<link href="lib/icon8/styles.min.css" type="text/css" rel="stylesheet" />
-	<link href="lib/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
-	<link type="text/css" rel="stylesheet" href="lib/jquerym.menu/css/jquery.mmenu.all.css" />
-	<link rel="stylesheet" type="text/css" href="lib/slick/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css"/>
-	<link href='css/mapbox.css' rel='stylesheet' />
-	<link href="css/main.css" type="text/css" rel="stylesheet" />
-	<link href="css/stylefooter.css" rel="stylesheet" type="text/css" />
-<link href="css/bootstrapfooter.css" rel="stylesheet" type="text/css" />
-<link href="css/agency.css" rel="stylesheet" type="text/css" />
-<link href="css/tiles.css" rel="stylesheet" type="text/css" />
+	<link href="../../lib/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" />
+	<link href="../../css/colors.css" type="text/css" rel="stylesheet" />
+	<link href="../../css/font.css" type="text/css" rel="stylesheet" />
+	<link href="../../lib/popup/css/component.css" type="text/css" rel="stylesheet" />
+	<link href="../../lib/icon8/styles.min.css" type="text/css" rel="stylesheet" />
+	<link href="../../lib/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+	<link type="text/css" rel="stylesheet" href="../../lib/jquerym.menu/css/jquery.mmenu.all.css" />
+	<link rel="stylesheet" type="text/css" href="../../lib/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="../../lib/slick/slick-theme.css"/>
+	<link href="../../css/main.css" type="text/css" rel="stylesheet" />
+	<link href="../../css/stylefooter.css" rel="stylesheet" type="text/css" />
+<link href="../../css/bootstrapfooter.css" rel="stylesheet" type="text/css" />
+<link href="../../css/agency.css" rel="stylesheet" type="text/css" />
+<link href="../../css/tiles.css" rel="stylesheet" type="text/css" />
 
 	<!-- IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -40,230 +39,18 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body class="post-detail googlemap"  data-userimg="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEGUlEQVRoge1ZLWwcRxQ+cMCVItXAIKDgQKQaGBQYtFLBm4mBgYFBQSoZGBgYGAQYFBhYOhAQYBBgqa204G7fWGdg4EqWUrCwqgpcqYoiy975xnKlAIMDAQYGWzAzd6vmfnb39rxX1Z+07L2n7828N+9na7VHPOK/A2IsEusNCuN9qRBIhUMK9S4x1inAXNX8RoKiqE5tbAuF3wQjGfGd09HVUtV8B4I6754IxlmfrLlxt7BHITYp1DtSmTdCmUsncyeVeU2Mxaq590AB5gSbv7wD1I7XKIrqA2WjqC7Z/JS+IanMm2HyDwqpzGvnxB/UwdNx8hRFdVLxslSmKdjcWmcQPATX4aQUGoLNvWBzXyTuibEoGF3BSCjEV9PgmI1IG9suPI4L2wjjfcFIJEOVyS0XJOPEneZmURt0dLXk8gUlUssHwYgEI6EWaEI7iWAkJdEqQMA9p6TQmMhO5Y64Z3eSRKUA8zPgiP7FJer3hW209JeCkQhl/i6TWy744kaMH4raoDa+9q1LmdzykQj1riuGPxa1IZXZdbd6UCa3XKCj6zVH4m1hG6yPBSN5ztcbZXLLSQKrLiy6xfQvFmxngITCeKVsfpnhO14K9V4RfdtE4pW71ZOy+WWGYLwXjGSS+YJaIHerUZncckEqc2xfLV04vinE5qT92sQg1hu+T6JQ7+bWD/WeYGDSw5gYFEV1qcypK2iXefV9Cy8YZ5UPV990bj4TjD/tqcbfZtUT6vq5c+L3afLLBakQuDhvZtcxTTcdHk6TWy6kXp4uBZgfK28bxW4ZI0Dp8LOJVOZ0VLy72nFS+ZM7DNSO11KbkVPii4VPZALMp5xISMXLVXAdCbfbukvttm6J9RYpNEihQay3BJub9O6ras5D4WuCr/gDv/6SrroZfRx6DSBfLBDrDRtG5sbtr86ojW1qXT2baUdS25C7kXIdPPVyM7UyrdVqNVLxsg+nLAOSZNPyITgTCU9HV0u2GNqQco68Gqtneyyf9PdSIXjwTaP9faC/6/VYnozNB7s+DfFiqH4Yr3g5ezP9QxCMMwrxYqr/UCjAHDFe+sWzr+SScUCtq2e1Wr/t6G3Z2/GaTfyLBWKsSsZBr4a4YYwUGm4R3hXppzuM97N0CfmcsO36h5QD7ynUO9R59+QT2VDvCDYfhz6/NslfDjyoNrb7vyhcyzNANr8DUVSXCocpw+fEWB/vOBalMk0bfuZWsLmVypxKZZpZpklirAvGeT/vTGvQoWVGPw/MR2K9VdhQQdhI6N1uVGhm8SOoYMDnQBVwBRQur/JNodS+/KLXZjNWp8QxO5/+mHCXa2Huf+AINr9Oj14++DDPlfxCmZ9zK00ZMjQ7bknRyqz0r6d21r4PmZxI/6+Y1W+lE39e9GYf8Yj/K/4BSKKZsGt5SOsAAAAASUVORK5CYII=" data-userlink ="login.html">
+<body>
 	<!--==================================Header Open=================================-->
 	<div id="page">
 	<!--==================================Header Open=================================-->
 	<header class="lp-header-bg">
 		<div class="lp-header-overlay"></div> <!-- ../header-overlay -->
 		<div class="md-overlay"></div> <!-- Overlay for Popup -->
-		<div class="lp-menu-bar">
-			<div class="container">
-					<div class="row">
-						<div class="col-md-4 col-xs-6 lp-logo-container">
-							<div class="lp-logo">
-								<a href="index.php">
-									<img src="images/logo.png" alt="" />
-								</a>
-							</div>
-						</div>
-						<style>
-							.mobile-nav-icon .nav-icon {
-    													width: 28px;
-   														float: right;
-   													}
-						</style>
-						<div class="col-xs-6 mobile-nav-icon">
-							<a href="#menu" class="nav-icon">
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</a>
-						</div>
-
-							<div id="menu">
-								<ul>
-									<li>
-										<a href="index.php">Home</a>
-									</li>
-									<li><a href="#">Categories </a>
-										<ul class="sub-menu">
-											<li class="has-menu"><a href="listing-science.html">Science </a>
-												<ul class="sub-menu">
-													<li><a href="listing-science.html">HSC </a></li>
-													<li><a href="listing-science.html">Diploma </a></li>
-													<li><a href="listing-science.html">Engineering </a></li>
-													<li><a href="listing-science.html">Medical</a></li>
-												</ul>
-											</li>
-											<li class="has-menu"><a href="listing-commerce.html">Commerce </a>
-												<ul class="sub-menu">
-													<li><a href="listing-commerce.html">CA </a></li>
-													<li><a href="listing-commerce.html">CS </a></li>
-												</ul>
-											</li>
-											<li><a href="listing-design.html">Design </a></li>
-											
-											<li class="has-menu"><a href="listing-entrance.html">Entrance </a>
-												<ul class="sub-menu">
-													<li><a href="listing-entrance.html">GATE </a></li>
-													<li><a href="listing-entrance.html">JEE </a></li>
-													<li><a href="listing-entrance.html">CET </a></li>
-												</ul>
-											</li>
-											<li class="has-menu"><a href="listing-school.html">School </a>
-												<ul class="sub-menu">
-													<li><a href="listing-school.html">SSC </a></li>
-												</ul>
-											</li>
-											</ul>
-											</li>
-											<li>
-												<a href="#">Blog</a>
-											</li>
-											<li>
-												<a href="about-us.html">About Us </a></li>
-											<li>
-												<a href="contact-us.html">Contact Us </a>
-											</li>							
-										</ul>
-									</div>
-
-						<div class="col-md-8 col-xs-12 lp-menu-container">
-							<div class="lp-menu pull-right menu">
-								<ul>
-								<li><a href="index.php">Home </a></li>
-									<li><a href="#">Categories <i class="icons8-angle-down drop-down-icon"></i></a>
-										<ul class="sub-menu">
-											<li class="has-menu"><a href="listing-science.html">Science </a>
-												<ul class="sub-menu">
-													<li><a href="listing-science.html">HSC </a></li>
-													<li><a href="listing-science.html">Diploma </a></li>
-													<li><a href="listing-science.html">Engineering </a></li>
-													<li><a href="listing-science.html">Medical</a></li>
-												</ul>
-											</li>
-											<li class="has-menu"><a href="listing-commerce.html">Commerce </a>
-												<ul class="sub-menu">
-													<li><a href="listing-commerce.html">CA </a></li>
-													<li><a href="listing-commerce.html">CS </a></li>
-												</ul>
-											</li>
-											<li><a href="listing-design.html">Design </a></li>
-
-											<li class="has-menu"><a href="listing-entrance.html">Entrance </a>
-												<ul class="sub-menu">
-													<li><a href="listing-entrance.html">GATE </a></li>
-													<li><a href="listing-entrance.html">JEE </a></li>
-													<li><a href="listing-entrance.html">CET </a></li>
-												</ul>
-											</li>
-											<li class="has-menu"><a href="listing-school.html">School </a>
-												<ul class="sub-menu">
-													<li><a href="listing-school.html">SSC </a></li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">Blog</a>
-									</li>
-									<li><a href="about-us.html">About Us </a></li>
-									<li>
-										<a href="contact-us.html">Contact Us </a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-		</div><!-- ../menu-bar -->
+		<?php require '../../nav.php'; ?>
 	</header>
 	<!--==================================Header Close=================================-->
 	
 	<!--==================================Section Open=================================-->
-		
-		<!-- Login Popup -->
-		<div class="md-modal md-effect-3" id="modal-3">
-			<div class="login-form-popup lp-border-radius-8">
-				<div class="siginincontainer">
-					<h1 class="text-center">Sign in</h1>
-					<form class="form-horizontal margin-top-30"  method="post">
-						<div class="form-group">
-							<label for="username">Username or Email Address *</label>
-							<input type="text" class="form-control" id="username" />
-						</div>
-						<div class="form-group">
-							<label for="password">Password *</label>
-							<input type="password" class="form-control" id="password" />
-						</div>
-						<div class="form-group">
-							<div class="checkbox pad-bottom-10">
-								<input id="check1" type="checkbox" name="price-on-call" value="price-on-call">
-								<label for="check1">Keep me signed in</label>
-							</div>
-						</div>
-						
-						<div class="form-group">
-							<input type="submit" value="Sign in" class="lp-secondary-btn width-full btn-first-hover" /> 
-						</div>
-					</form>	
-					<div class="pop-form-bottom">
-						<div class="bottom-links">
-							<a  class="signUpClick">Not a member? Sign up</a>
-							<a  class="forgetPasswordClick pull-right" >Forgot Password</a>
-						</div>
-						<p class="margin-top-15">Connect with your Social Network</p>
-						<ul class="social-login list-style-none">
-							<li><button id="logingoogle" class="google flaticon-googleplus" ><i class="fa fa-google-plus"></i><span>Google</span></button></li>
-							<li><button id="loginfacebook" class="facebook flaticon-facebook" ><i class="fa fa-facebook"></i><span>Facebook</span></button></li>
-							<li><button id="logintwitter" class="twitter flaticon-twitter" ><i class="fa fa-twitter"></i><span>Twitter</span></button></li>
-						</ul>
-					</div>
-				<a class="md-close"><i class="fa fa-close"></i></a>
-				</div>
-				<div class="siginupcontainer">
-					<h1 class="text-center">Sign Up</h1>
-					<form class="form-horizontal margin-top-30"  method="post">
-						<div class="form-group">
-							<label for="username">Username *</label>
-							<input type="text" class="form-control" id="username2" />
-						</div>
-						<div class="form-group">
-							<label for="password">Email Address *</label>
-							<input type="email" class="form-control" id="password2" />
-						</div>
-						<div class="form-group">
-							<p>A password will be e-mailed to you.</p>
-						</div>
-						<div class="form-group">
-							<input type="submit" value="Register" class="lp-secondary-btn width-full btn-first-hover" /> 
-						</div>
-					</form>	
-					<div class="pop-form-bottom">
-						<div class="bottom-links">
-							<a class="signInClick" >Already have an account? Sign in</a>
-							<a class="forgetPasswordClick pull-right" >Forgot Password</a>
-						</div>
-						<p class="margin-top-15">Connect with your Social Network</p>
-						<ul class="social-login list-style-none">
-							<li><button id="logingoogle2" class="google flaticon-googleplus" ><i class="fa fa-google-plus"></i><span>Google</span></button></li>
-							<li><button id="loginfacebook2" class="facebook flaticon-facebook" ><i class="fa fa-facebook"></i><span>Facebook</span></button></li>
-							<li><button id="logintwitter2" class="twitter flaticon-twitter" ><i class="fa fa-twitter"></i><span>Twitter</span></button></li>
-						</ul>
-					</div>
-				<a class="md-close"><i class="fa fa-close"></i></a>
-				</div>
-				<div class="forgetpasswordcontainer">
-					<h1 class="text-center">Forgotten Password</h1>
-					<form class="form-horizontal margin-top-30"  method="post">
-						<div class="form-group">
-							<label for="password">Email Address *</label>
-							<input type="email" class="form-control" id="email2" />
-						</div>
-						<div class="form-group">
-							<input type="submit" value="Get New Password" class="lp-secondary-btn width-full btn-first-hover" /> 
-						</div>
-					</form>	
-					<div class="pop-form-bottom">
-						<div class="bottom-links">
-							<a class="cancelClick" >Cancel</a>
-						</div>
-					</div>
-				<a class="md-close"><i class="fa fa-close"></i></a>
-				</div>
-			</div>	
-		</div>
-		<!-- ../Login Popup -->
 		
 		<!-- Popup Open -->
 		<div class="md-modal md-effect-3 single-page-popup" id="modal-6">
@@ -289,12 +76,6 @@
 			</div>
 		</div>
 		<!-- Popup Close -->
-		<div class="md-modal md-effect-3" id="modal-4">
-			<div class="md-content">
-				<div id="map"  class="singlebigpost"></div>
-				<a class="md-close widget-map-click"><i class="fa fa-close"></i></a>
-			</div>
-		</div>
 		<div class="md-overlay"></div> <!-- Overlay for Popup -->
 	<section class="aliceblue">
 		<div class="pos-relative">
@@ -307,10 +88,10 @@
 					<div class="">
 						<div class="post-slide">
 							<div class="slide">
-								<img src="images/progate/progate1.png" alt="post1" />
+								<img src="images/slider-1.png" alt="post1" />
 							</div>
 							<div class="slide">
-								<img src="images/progate/progate2.png" alt="post2" />
+								<img src="images/slider-2.png" alt="post2" />
 							</div>
 						</div>
 					</div>
@@ -323,8 +104,8 @@
 					<div class="col-md-8">
 						<div class="post-meta-left-box">
 							<ul class="breadcrumbs">
-								<li><a href="index.php">Home</a></li>
-								<li><a href="listing-science.html">Science</a></li>
+								<li><a href="../../index.php">Home</a></li>
+								<li><a href="../../listing-science.html">Science</a></li>
 								<li><span>GATE Coaching</span></li>
 							</ul>
 							<h1>Progate Coaching</h1>
@@ -374,7 +155,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="container single-inner-container single_listing"  data-title="The Dorchester grill" data-reviews="4" data-number="+007-123-4567-89" data-email="jhonruss@example.com" data-website="www.example.com" data-price="$200" data-pricetext="Text about your price" data-description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi archeum" data-userimage="images/user-thumb-94x94.png" data-username="Jhon Russel" data-fb="www.facebook.com" data-gplus="www.plus.google.com" data-linkedin="www.linkedin.com" data-instagram="www.instagram.com" data-twitter="www.twitter.com" data-lattitue="40.6700" data-longitute="-73.9400" >
+		<div class="container single-inner-container single_listing">
 			<div class="row">
 				<div class="col-md-8">
 					<div class="post-row">
@@ -456,7 +237,7 @@
 						<div class="widget-box  widget-bg-color post-author-box lp-border-radius-5">
 							<div class="user-info">
 								<div class="user-thumb">
-									<img src="images/user-thumb-94x94.png" alt="user-thumb">
+									<img src="../../images/user-thumb-94x94.png" alt="user-thumb">
 								</div>
 								<div class="user-text">
 									<h5 class="user-name margin-top-0"><a href="#">Progate Coaching</a></h5>
@@ -500,7 +281,7 @@
 						<div class="widget-box widget-bg-color widget-categories lp-border-radius-5">
 							<div class="widget-content">
 								<ul class=" list-style-none categories-container">
-									<li><a href="listing-entrance.html"><span class="cat-icon"><img class="icon icons8-Exam" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACkklEQVRoQ+2Z4XHUMBCF3+sgqSCkgiQVQCqAVABUAFQAVABUAKkgoQKgApIKSAekg8e8jOTxHWdbtnWSM2PN3I87SeP9dt+udGuiZ0hS3/zEuRsA5yTvJ+7fuY0VQPzI7DBJICR716V6divCWWFqgdwCOMkZmVoghwB+5oSpAmKpSjrICVMNxHmVE6YqSE6Y6iC5YBYBkgNmMSBzYRYFMgdmcSBTYRYJMgWmCkjq3Wxr3Q3Js669jwkEfZfXoiATI+EbwMP/ohUkxRNTvTxmX4odWaUl6UmQwN0YQ4fWFgUJN9k/AO5JHg8ZN2a+NMhbAJ+CgRckr8cYm9I7KJLskn4DOA0GfSf54tGBhNywrC4BPANwBOCYZJZcKSYtSVFWFwCc8JbYO5Kfc0SlJIhl5QgchKT/6w5J35ViDGARkLasSL4KFz4n+nMAZyTdv9o5JDliJyTPqyd7S1avSX4LIAb6CuALScuuC8QtoadDDcBSEYneP4z93FR5SVoUiC90tyRj6X3wvqQI2Fm9JDmCL2NEgkx9oG40uPceEUkutT9Co83ejcO/u3r505acv1tyHm7QbcCH33+R9P5mlABxsr4ZqEDN4SjJhkdgFwGD+cxxL9hR8Jyr3catoASIH2zjmlOcZBMZSTb2iKR7vf8NSR8AvA/vS9oR3VhbAsT50XkdCeXVEdtZhhcB0sqPjyTt2V0ed6Su2nmypf2YY36DVSciKd5sleHLeFhugTjhDXvd9ypur9Jqldfm/OiIihP3ru9gHCgW+/3PHirQaTzNh4yZM7/XiMwxbOzeFSR6LMUTY707ZX2KHVm7KFOMTNmzgqzSStHJhDWrtFZpTZBNypZs0kp5WIk1s1umJYxMeUYfyD9fBotRRf1I0gAAAABJRU5ErkJggg=="></span><span>Entrance</span></a></li>
+									<li><a href="../../listing-entrance.html"><span class="cat-icon"><img class="icon icons8-Exam" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACkklEQVRoQ+2Z4XHUMBCF3+sgqSCkgiQVQCqAVABUAFQAVABUAKkgoQKgApIKSAekg8e8jOTxHWdbtnWSM2PN3I87SeP9dt+udGuiZ0hS3/zEuRsA5yTvJ+7fuY0VQPzI7DBJICR716V6divCWWFqgdwCOMkZmVoghwB+5oSpAmKpSjrICVMNxHmVE6YqSE6Y6iC5YBYBkgNmMSBzYRYFMgdmcSBTYRYJMgWmCkjq3Wxr3Q3Js669jwkEfZfXoiATI+EbwMP/ohUkxRNTvTxmX4odWaUl6UmQwN0YQ4fWFgUJN9k/AO5JHg8ZN2a+NMhbAJ+CgRckr8cYm9I7KJLskn4DOA0GfSf54tGBhNywrC4BPANwBOCYZJZcKSYtSVFWFwCc8JbYO5Kfc0SlJIhl5QgchKT/6w5J35ViDGARkLasSL4KFz4n+nMAZyTdv9o5JDliJyTPqyd7S1avSX4LIAb6CuALScuuC8QtoadDDcBSEYneP4z93FR5SVoUiC90tyRj6X3wvqQI2Fm9JDmCL2NEgkx9oG40uPceEUkutT9Co83ejcO/u3r505acv1tyHm7QbcCH33+R9P5mlABxsr4ZqEDN4SjJhkdgFwGD+cxxL9hR8Jyr3catoASIH2zjmlOcZBMZSTb2iKR7vf8NSR8AvA/vS9oR3VhbAsT50XkdCeXVEdtZhhcB0sqPjyTt2V0ed6Su2nmypf2YY36DVSciKd5sleHLeFhugTjhDXvd9ypur9Jqldfm/OiIihP3ru9gHCgW+/3PHirQaTzNh4yZM7/XiMwxbOzeFSR6LMUTY707ZX2KHVm7KFOMTNmzgqzSStHJhDWrtFZpTZBNypZs0kp5WIk1s1umJYxMeUYfyD9fBotRRf1I0gAAAABJRU5ErkJggg=="></span><span>Entrance</span></a></li>
 								</ul>
 							</div>
 						</div><!-- ../widget-box  -->
@@ -527,92 +308,7 @@
 		</div>
 	</section>
 	<!--==================================Section Close=================================-->
-	
-		<!--==================================Footer Open=================================-->
-<footer id="footer" class="clearfix">
-      <div id="footer-widgets">
-
-        <div class="container">
-
-        <div id="footer-wrapper">
-
-          <div class="row">
-            <div class="col-sm-6 col-md-2">
-              <div id="meta-3" class="widget widgetFooter widget_meta">
-              <h4 class="widgettitle">Pages:</h4>
-              <ul>
-    		  <li><a href="index.php"><i class="fa fa-home fa-fw"></i> Home</a></li>
-			  <li><a href="privacypolicy.php"><i class="fa fa-link"></i>   Privacy Policy</a></li>
-			  <li><a href="contact-us.php"><i class="fa fa-envelope fa-fw"></i> Contact Us</a></li>
-             </ul>
-</div>      </div> <!-- end widget1 -->
-
-            <div class="col-sm-6 col-md-2">
-              		<div id="recent-posts-3" class="widget widgetFooter widget_recent_entries">
-                    <h4 class="widgettitle">Social Media :</h4>
-                    <ul>
-					<li>
-				     <a href="#" target="_blank"><i class="fa fa-facebook"></i> Facebook</a>
-					</li>
-					<li>
-				      <a href="#" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>
-					</li>
-					<li>
-				      <a href="#" target="_blank"><i class="fa fa-youtube"></i> Youtube</a>
-				   </li>
-				</ul>
-		</div>            </div> <!-- end widget1 -->
-
-            <div class="col-sm-6 col-md-4">
-              <div id="meta-4" class="widget widgetFooter widget_meta">
-              <h4 class="widgettitle">Subscribe:</h4>
-
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-addon">E-mail:</span>
-                  <input class="form-control" placeholder="Write your email .." type="text">
-                   <span class="input-group-btn">
-                    <button class="btn btn-primary" type="button">Subscribe!</button>
-                </div>
-              </div>
-              </div>
-             </div> <!-- end widget1 -->
-             <div class="col-sm-6 col-md-2">
-              		<div id="recent-posts-3" class="widget widgetFooter widget_recent_entries">
-                    <h4 class="widgettitle">Payment Modes:</h4>
-                    <ul>
-					<li>
-				     <a href="#" target="#"><img src="images/payment/visa.png"></a>
-				     <a href="#" target="#"><img src="images/payment/mastercard.png"></a>
-				 </li>
-				 <li>
-				     <a href="#" target="#"><img src="images/payment/bhim.png"></a>
-				     <a href="#" target="#"><img src="images/payment/instamojo.png"></a>
-				   </li>
-				</ul>
-		</div>
-          </div> <!-- end .row -->
-
-
-        </div> <!-- end #footer-wrapper -->
-
-        </div> <!-- end .container -->
-      </div> <!-- end #footer-widgets -->
-
-      <div id="sub-floor">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 copyright">
-             Copyright CodeMarshalls
-            </div>
-            <div class="col-md-4 col-md-offset-4 attribution">
-             Developed by  <a target="_blank" href="#">Code Marshalls</a>
-             </div>
-          </div> <!-- end .row -->
-        </div>
-      </div>
-    </footer>
-	<!--==================================Footer Close=================================-->
+	<?php require '../../footer.php' ?>
 		<!-- Portfolio Modals -->
     <!-- Use the modals below to showcase details about your portfolio projects! -->
 
@@ -719,24 +415,20 @@
 	<!--==================================Javscript=================================-->
 
 
-	<script type="text/javascript" src="js/jquery-lib.js"></script><!-- Jquery Library -->
-	<script type="text/javascript" src="js/jquery-migrate-1.3.0.min.js"></script>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-	<script type="text/javascript" src='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.js'></script>
-	<script type="text/javascript" src='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
-	<script type="text/javascript" src="js/build.min.js"></script>
-	<script type="text/javascript" src="lib/chosen/chosen.jquery.js" ></script>
-	<script type="text/javascript" src="js/jquery-ui.js"></script>
-	<script type="text/javascript" src="lib/slick/slick.min.js"></script>
-	<script type="text/javascript" src="lib/jquerym.menu/js/jquery.mmenu.min.all.js"></script>
-	<script type="text/javascript" src="lib/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
-	<script type="text/javascript" src="lib/jQuery.filer-master/js/jquery.filer.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap-rating.js"></script>
-	<script type="text/javascript" src="lib/popup/js/classie.js"></script> <!-- Popup -->
-	<script type="text/javascript" src="lib/popup/js/modalEffects.js"></script> <!-- Popup -->
-	<script type="text/javascript" src="js/singlepostmap.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="../../js/jquery-lib.js"></script><!-- Jquery Library -->
+	<script type="text/javascript" src="../../js/jquery-migrate-1.3.0.min.js"></script>
+	<script type="text/javascript" src="../../js/build.min.js"></script>
+	<script type="text/javascript" src="../../lib/chosen/chosen.jquery.js" ></script>
+	<script type="text/javascript" src="../../js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../../lib/slick/slick.min.js"></script>
+	<script type="text/javascript" src="../../lib/jquerym.menu/js/jquery.mmenu.min.all.js"></script>
+	<script type="text/javascript" src="../../lib/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript" src="../../lib/jQuery.filer-master/js/jquery.filer.min.js"></script>
+	<script type="text/javascript" src="../../js/bootstrap-rating.js"></script>
+	<script type="text/javascript" src="../../lib/popup/js/classie.js"></script> <!-- Popup -->
+	<script type="text/javascript" src="../../lib/popup/js/modalEffects.js"></script> <!-- Popup -->
+	<script type="text/javascript" src="../../js/main.js"></script>
     <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

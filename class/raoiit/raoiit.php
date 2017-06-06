@@ -9,31 +9,29 @@
 	<meta name="author" content="">
 	
 	<!-- Title -->
-	<title>ClassesDunia - Lokayan</title>
+	<title>ClassesDunia - Rao IIT</title>
 	
 	<!-- Mobile Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="../../images/favicon.png" type="image/x-icon">
 	
 	<!-- CSS -->
-	<link href="lib/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" />
-	<link href="css/colors.css" type="text/css" rel="stylesheet" />
-	<link href="css/font.css" type="text/css" rel="stylesheet" />
-	<link href="lib/popup/css/component.css" type="text/css" rel="stylesheet" />
-	<link href="lib/icon8/styles.min.css" type="text/css" rel="stylesheet" />
-	<link href="lib/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
-	<link type="text/css" rel="stylesheet" href="lib/jquerym.menu/css/jquery.mmenu.all.css" />
-	<link rel="stylesheet" type="text/css" href="lib/slick/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css"/>
-	<link rel="stylesheet" href="css/jquery-ui.css">
-	<link href='css/mapbox.css' rel='stylesheet' />
-	<link href="css/main.css" type="text/css" rel="stylesheet" />
-	<link href="css/stylefooter.css" rel="stylesheet" type="text/css" />
-<link href="css/bootstrapfooter.css" rel="stylesheet" type="text/css" />
-<link href="css/agency.css" rel="stylesheet" type="text/css" />
-<link href="css/tiles.css" rel="stylesheet" type="text/css" />
+	<link href="../../lib/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" />
+	<link href="../../css/colors.css" type="text/css" rel="stylesheet" />
+	<link href="../../css/font.css" type="text/css" rel="stylesheet" />
+	<link href="../../lib/popup/css/component.css" type="text/css" rel="stylesheet" />
+	<link href="../../lib/icon8/styles.min.css" type="text/css" rel="stylesheet" />
+	<link href="../../lib/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+	<link type="text/css" rel="stylesheet" href="../../lib/jquerym.menu/css/jquery.mmenu.all.css" />
+	<link rel="stylesheet" type="text/css" href="../../lib/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="../../lib/slick/slick-theme.css"/>
+	<link href="../../css/main.css" type="text/css" rel="stylesheet" />
+	<link href="../../css/stylefooter.css" rel="stylesheet" type="text/css" />
+<link href="../../css/bootstrapfooter.css" rel="stylesheet" type="text/css" />
+<link href="../../css/agency.css" rel="stylesheet" type="text/css" />
+<link href="../../css/tiles.css" rel="stylesheet" type="text/css" />
 
 	<!-- IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -41,230 +39,19 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body class="post-detail googlemap"  data-userimg="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEGUlEQVRoge1ZLWwcRxQ+cMCVItXAIKDgQKQaGBQYtFLBm4mBgYFBQSoZGBgYGAQYFBhYOhAQYBBgqa204G7fWGdg4EqWUrCwqgpcqYoiy975xnKlAIMDAQYGWzAzd6vmfnb39rxX1Z+07L2n7828N+9na7VHPOK/A2IsEusNCuN9qRBIhUMK9S4x1inAXNX8RoKiqE5tbAuF3wQjGfGd09HVUtV8B4I6754IxlmfrLlxt7BHITYp1DtSmTdCmUsncyeVeU2Mxaq590AB5gSbv7wD1I7XKIrqA2WjqC7Z/JS+IanMm2HyDwqpzGvnxB/UwdNx8hRFdVLxslSmKdjcWmcQPATX4aQUGoLNvWBzXyTuibEoGF3BSCjEV9PgmI1IG9suPI4L2wjjfcFIJEOVyS0XJOPEneZmURt0dLXk8gUlUssHwYgEI6EWaEI7iWAkJdEqQMA9p6TQmMhO5Y64Z3eSRKUA8zPgiP7FJer3hW209JeCkQhl/i6TWy744kaMH4raoDa+9q1LmdzykQj1riuGPxa1IZXZdbd6UCa3XKCj6zVH4m1hG6yPBSN5ztcbZXLLSQKrLiy6xfQvFmxngITCeKVsfpnhO14K9V4RfdtE4pW71ZOy+WWGYLwXjGSS+YJaIHerUZncckEqc2xfLV04vinE5qT92sQg1hu+T6JQ7+bWD/WeYGDSw5gYFEV1qcypK2iXefV9Cy8YZ5UPV990bj4TjD/tqcbfZtUT6vq5c+L3afLLBakQuDhvZtcxTTcdHk6TWy6kXp4uBZgfK28bxW4ZI0Dp8LOJVOZ0VLy72nFS+ZM7DNSO11KbkVPii4VPZALMp5xISMXLVXAdCbfbukvttm6J9RYpNEihQay3BJub9O6ras5D4WuCr/gDv/6SrroZfRx6DSBfLBDrDRtG5sbtr86ojW1qXT2baUdS25C7kXIdPPVyM7UyrdVqNVLxsg+nLAOSZNPyITgTCU9HV0u2GNqQco68Gqtneyyf9PdSIXjwTaP9faC/6/VYnozNB7s+DfFiqH4Yr3g5ezP9QxCMMwrxYqr/UCjAHDFe+sWzr+SScUCtq2e1Wr/t6G3Z2/GaTfyLBWKsSsZBr4a4YYwUGm4R3hXppzuM97N0CfmcsO36h5QD7ynUO9R59+QT2VDvCDYfhz6/NslfDjyoNrb7vyhcyzNANr8DUVSXCocpw+fEWB/vOBalMk0bfuZWsLmVypxKZZpZpklirAvGeT/vTGvQoWVGPw/MR2K9VdhQQdhI6N1uVGhm8SOoYMDnQBVwBRQur/JNodS+/KLXZjNWp8QxO5/+mHCXa2Huf+AINr9Oj14++DDPlfxCmZ9zK00ZMjQ7bknRyqz0r6d21r4PmZxI/6+Y1W+lE39e9GYf8Yj/K/4BSKKZsGt5SOsAAAAASUVORK5CYII=" data-userlink ="login.html">
-	<!--==================================Header Open=================================-->
+<body>
+
 	<div id="page">
 	<!--==================================Header Open=================================-->
 	<header class="lp-header-bg">
 		<div class="lp-header-overlay"></div> <!-- ../header-overlay -->
 		<div class="md-overlay"></div> <!-- Overlay for Popup -->
-		<div class="lp-menu-bar">
-			<div class="container">
-					<div class="row">
-						<div class="col-md-4 col-xs-6 lp-logo-container">
-							<div class="lp-logo">
-								<a href="index.php">
-									<img src="images/logo.png" alt="" />
-								</a>
-							</div>
-						</div>
-						<style>
-							.mobile-nav-icon .nav-icon {
-    													width: 28px;
-   														float: right;
-   													}
-						</style>
-						<div class="col-xs-6 mobile-nav-icon">
-							<a href="#menu" class="nav-icon">
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</a>
-						</div>
-
-							<div id="menu">
-								<ul>
-									<li>
-										<a href="index.php">Home</a>
-									</li>
-									<li><a href="#">Categories </a>
-										<ul class="sub-menu">
-											<li class="has-menu"><a href="listing-science.html">Science </a>
-												<ul class="sub-menu">
-													<li><a href="listing-science.html">HSC </a></li>
-													<li><a href="listing-science.html">Diploma </a></li>
-													<li><a href="listing-science.html">Engineering </a></li>
-													<li><a href="listing-science.html">Medical</a></li>
-												</ul>
-											</li>
-											<li class="has-menu"><a href="listing-commerce.html">Commerce </a>
-												<ul class="sub-menu">
-													<li><a href="listing-commerce.html">CA </a></li>
-													<li><a href="listing-commerce.html">CS </a></li>
-												</ul>
-											</li>
-											<li><a href="listing-design.html">Design </a></li>
-											
-											<li class="has-menu"><a href="listing-entrance.html">Entrance </a>
-												<ul class="sub-menu">
-													<li><a href="listing-entrance.html">GATE </a></li>
-													<li><a href="listing-entrance.html">JEE </a></li>
-													<li><a href="listing-entrance.html">CET </a></li>
-												</ul>
-											</li>
-											<li class="has-menu"><a href="listing-school.html">School </a>
-												<ul class="sub-menu">
-													<li><a href="listing-school.html">SSC </a></li>
-												</ul>
-											</li>
-											</ul>
-											</li>
-											<li>
-												<a href="#">Blog</a>
-											</li>
-											<li>
-												<a href="about-us.html">About Us </a></li>
-											<li>
-												<a href="contact-us.html">Contact Us </a>
-											</li>							
-										</ul>
-									</div>
-
-						<div class="col-md-8 col-xs-12 lp-menu-container">
-							<div class="lp-menu pull-right menu">
-								<ul>
-								<li><a href="index.php">Home </a></li>
-									<li><a href="#">Categories <i class="icons8-angle-down drop-down-icon"></i></a>
-										<ul class="sub-menu">
-											<li class="has-menu"><a href="listing-science.html">Science </a>
-												<ul class="sub-menu">
-													<li><a href="listing-science.html">HSC </a></li>
-													<li><a href="listing-science.html">Diploma </a></li>
-													<li><a href="listing-science.html">Engineering </a></li>
-													<li><a href="listing-science.html">Medical</a></li>
-												</ul>
-											</li>
-											<li class="has-menu"><a href="listing-commerce.html">Commerce </a>
-												<ul class="sub-menu">
-													<li><a href="listing-commerce.html">CA </a></li>
-													<li><a href="listing-commerce.html">CS </a></li>
-												</ul>
-											</li>
-											<li><a href="listing-design.html">Design </a></li>
-
-											<li class="has-menu"><a href="listing-entrance.html">Entrance </a>
-												<ul class="sub-menu">
-													<li><a href="listing-entrance.html">GATE </a></li>
-													<li><a href="listing-entrance.html">JEE </a></li>
-													<li><a href="listing-entrance.html">CET </a></li>
-												</ul>
-											</li>
-											<li class="has-menu"><a href="listing-school.html">School </a>
-												<ul class="sub-menu">
-													<li><a href="listing-school.html">SSC </a></li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li><a href="#">Blog</a>
-									</li>
-									<li><a href="about-us.html">About Us </a></li>
-									<li>
-										<a href="contact-us.html">Contact Us </a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-		</div><!-- ../menu-bar -->
+		<?php require '../../nav.php'; ?>
 	</header>
 	<!--==================================Header Close=================================-->
 	
 	<!--==================================Section Open=================================-->
 		
-		<!-- Login Popup -->
-		<div class="md-modal md-effect-3" id="modal-3">
-			<div class="login-form-popup lp-border-radius-8">
-				<div class="siginincontainer">
-					<h1 class="text-center">Sign in</h1>
-					<form class="form-horizontal margin-top-30"  method="post">
-						<div class="form-group">
-							<label for="username">Username or Email Address *</label>
-							<input type="text" class="form-control" id="username" />
-						</div>
-						<div class="form-group">
-							<label for="password">Password *</label>
-							<input type="password" class="form-control" id="password" />
-						</div>
-						<div class="form-group">
-							<div class="checkbox pad-bottom-10">
-								<input id="check1" type="checkbox" name="price-on-call" value="price-on-call">
-								<label for="check1">Keep me signed in</label>
-							</div>
-						</div>
-						
-						<div class="form-group">
-							<input type="submit" value="Sign in" class="lp-secondary-btn width-full btn-first-hover" /> 
-						</div>
-					</form>	
-					<div class="pop-form-bottom">
-						<div class="bottom-links">
-							<a  class="signUpClick">Not a member? Sign up</a>
-							<a  class="forgetPasswordClick pull-right" >Forgot Password</a>
-						</div>
-						<p class="margin-top-15">Connect with your Social Network</p>
-						<ul class="social-login list-style-none">
-							<li><button id="logingoogle" class="google flaticon-googleplus" ><i class="fa fa-google-plus"></i><span>Google</span></button></li>
-							<li><button id="loginfacebook" class="facebook flaticon-facebook" ><i class="fa fa-facebook"></i><span>Facebook</span></button></li>
-							<li><button id="logintwitter" class="twitter flaticon-twitter" ><i class="fa fa-twitter"></i><span>Twitter</span></button></li>
-						</ul>
-					</div>
-				<a class="md-close"><i class="fa fa-close"></i></a>
-				</div>
-				<div class="siginupcontainer">
-					<h1 class="text-center">Sign Up</h1>
-					<form class="form-horizontal margin-top-30"  method="post">
-						<div class="form-group">
-							<label for="username">Username *</label>
-							<input type="text" class="form-control" id="username2" />
-						</div>
-						<div class="form-group">
-							<label for="password">Email Address *</label>
-							<input type="email" class="form-control" id="password2" />
-						</div>
-						<div class="form-group">
-							<p>A password will be e-mailed to you.</p>
-						</div>
-						<div class="form-group">
-							<input type="submit" value="Register" class="lp-secondary-btn width-full btn-first-hover" /> 
-						</div>
-					</form>	
-					<div class="pop-form-bottom">
-						<div class="bottom-links">
-							<a class="signInClick" >Already have an account? Sign in</a>
-							<a class="forgetPasswordClick pull-right" >Forgot Password</a>
-						</div>
-						<p class="margin-top-15">Connect with your Social Network</p>
-						<ul class="social-login list-style-none">
-							<li><button id="logingoogle2" class="google flaticon-googleplus" ><i class="fa fa-google-plus"></i><span>Google</span></button></li>
-							<li><button id="loginfacebook2" class="facebook flaticon-facebook" ><i class="fa fa-facebook"></i><span>Facebook</span></button></li>
-							<li><button id="logintwitter2" class="twitter flaticon-twitter" ><i class="fa fa-twitter"></i><span>Twitter</span></button></li>
-						</ul>
-					</div>
-				<a class="md-close"><i class="fa fa-close"></i></a>
-				</div>
-				<div class="forgetpasswordcontainer">
-					<h1 class="text-center">Forgotten Password</h1>
-					<form class="form-horizontal margin-top-30"  method="post">
-						<div class="form-group">
-							<label for="password">Email Address *</label>
-							<input type="email" class="form-control" id="email2" />
-						</div>
-						<div class="form-group">
-							<input type="submit" value="Get New Password" class="lp-secondary-btn width-full btn-first-hover" /> 
-						</div>
-					</form>	
-					<div class="pop-form-bottom">
-						<div class="bottom-links">
-							<a class="cancelClick" >Cancel</a>
-						</div>
-					</div>
-				<a class="md-close"><i class="fa fa-close"></i></a>
-				</div>
-			</div>	
-		</div>
-		<!-- ../Login Popup -->
 		<!-- Popup Open -->
 		<div class="md-modal md-effect-3 single-page-popup" id="modal-6">
 			<div class="md-content cotnactowner-box">
@@ -289,12 +76,6 @@
 			</div>
 		</div>
 		<!-- Popup Close -->
-		<div class="md-modal md-effect-3" id="modal-4">
-			<div class="md-content">
-				<div id="map"  class="singlebigpost"></div>
-				<a class="md-close widget-map-click"><i class="fa fa-close"></i></a>
-			</div>
-		</div>
 		<div class="md-overlay"></div> <!-- Overlay for Popup -->
 	<section class="aliceblue">
 		<div class="pos-relative">
@@ -307,10 +88,10 @@
 					<div class="">
 						<div class="post-slide">
 							<div class="slide">
-								<img src="images/lokayan/lokayan1.png" alt="post1" />
+								<img src="images/slider-1.jpg" alt="post1" />
 							</div>
 							<div class="slide">
-								<img src="images/lokayan/lokayan.png" alt="post2" />
+								<img src="images/slider-2.jpg" alt="post2" />
 							</div>
 						</div>
 					</div>
@@ -323,11 +104,11 @@
 					<div class="col-md-8">
 						<div class="post-meta-left-box">
 							<ul class="breadcrumbs">
-								<li><a href="index.php">Home</a></li>
-								<li><a href="listing-entrance.html">Entrance</a></li>
-								<li><span>Government Competitive Exams</span></li>
+								<li><a href="../../index.php">Home</a></li>
+								<li><a href="../../listing-science.html">Science</a></li>
+								<li><span>Engineering</span></li>
 							</ul>
-							<h1>Lokayan</h1>
+							<h1>Rao IIT Academy</h1>
 							<ul class="post-stat">
 								<li>
 									<span class="phone-icon">
@@ -335,7 +116,7 @@
 										<img class="icon icons8-Phone" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEbElEQVRoQ81a4XnUMAy1vEC7QekEwASUCWgnoEzQY4FE9gLQCWgnoJ2AMgF0AtoJgAUivpdPyefzJU6cC5fcv/Z8iZ71JD3JJpP4MPO5iJTGmFfGmCcicsx8k/rNUt9R14uZ+VhEPhljLuPviegtMz8sZXDfe3eAKIhv8IKI/LXWMjN/ZuaNgoNnXjPznzWB2QLCzDAeIOCRR2vtJTP/bAwuiuInEb00xtw55y5WCaQDxFm868z8QkR+AQARXTDz3VrA1B5RA3+oJ26ttZs+6hRFwUSEBPCHiE7XQjGKYuLee38+tMsNxUTk2nu/GVp/iO+pKIrPRHSlMbFDp56shliCB0GxVWQxKssSnH+Ra1BAsVVkMQAR7KxzrrOmpGixJoqBWtjREw3cpxw+a6ZbBcUA5IGI3kxNpyHFnHOnORsx51oAqdPpPhmooecUr84FBum3yUBPU3ZU0/fvqXE2GxA8KIiT7FTaaDAR+e69P5vLsNzn1JkqoNet935H8fY9VL2B9H2cm75zDR1a30gUiMSaHjk8DzZgUW/UdgfK9oaI3ovIKK9EAjKbkkM7nPt9CyQyDP1GK9+7HlqW5VdjDDrIUcBzDctdv1XNg5rw4Jx7m4iNUGtBAWcV0lwjx6yPG6vjqqpQ6Y+I6CM6wx7ROGrdGAPmWtPV6oIuoA36DVCsc7d1MIF1q1DAnUKxKIo7InpnjElSLGqyEPDJuJpr97ue0ztFqaoK/fmJiDjvPfcZURRFne2MMVgPMIsMJXqlOzOf6SAiSR0UxaqqIDwxlFgMTLIHiaiTipfFwQw2U0G8JHcbdUjpeLSEZwaBRNRJzrOgpJVmAAO6YWR0kJgZBIIgj3b7xjn3IVUsAzAHi5lRQBRMu9upYhmvPRTNRgNRAy9F5IsWwQ+pyXxEs9GeAZUx1cmtSVlAJoBBAkBxbVIzwHcWTVUKV8aYpjmDVML6UZP/bCATwISpGbIHCaA1TusVRrB93SUGiDiXSSaNSUAmgoFBUABGRNhae6uHSHVHqkcYmDnXB0lBDcOfg96ZDCQXTIdxbeKDDLLW4gxma9c1ziCBQE18er2zF5ApYEAljZsjEbnXyX+ynxnjnb2BxGBEZOO9v04p3SmZacg7swCJwRhjkkVzHznf553ZgDRgqqoCjyFRkHaRPmeXKLF38J5ZgfRUdaTb/9LTbx1t7OPmhN4KC+FO7Zjzne3cec6Hhs9S1YzUiZa5rh3eezfn+4Jx7ePs1IoNjYIT0h5xszfVwlNoqIX/DkTjpq0dmM6od5Ipeih96xkmjsvrAeFBgCgYaK6Watp4YXaWNXmJTqFxqaE+wD0YkGaHoXI1RZ/o/wAOonAU3cqyRBuBduLZWvuqSe8HBxJ4Z6MXDxqMqDvXfbK9444MPNF6cxEggXeQpnH0V6ti/cAzdyLyYK19hKdU6uO2UnPRZwsEfrcokAAQusLLqqrgpYZyO/GulxrOu2i4CiBR/cFsANdI0GjhIgOmnc/wkl656pQ8/wC3pFkyvejV7AAAAABJRU5ErkJggg==" alt="phone-icon">
 									</span>
 									<span class="phone-number">
-										 9004804366 / 9004804409
+										(022)-28470045
 									</span>
 								</li>
 								<li>
@@ -344,7 +125,7 @@
 										@
 									</span>
 									<span >
-										 lokayan@lokayan.com 
+										studentcare@raoiit.com
 									</span>
 									</a>
 								</li>
@@ -355,7 +136,7 @@
 										<img class="icon icons8-Globe" src="data:image/png;base64,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" alt="web-link">
 									</span>
 									<span class="website-link">
-										www.lokayan.com
+										www.raoiit.com
 									</span>
 									</a>
 								</li>
@@ -374,29 +155,29 @@
 				</div>
 			</div>
 		</div>
-		<div class="container single-inner-container single_listing"  data-title="The Dorchester grill" data-reviews="4" data-number="+007-123-4567-89" data-email="jhonruss@example.com" data-website="www.example.com" data-price="$200" data-pricetext="Text about your price" data-description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi archeum" data-userimage="images/user-thumb-94x94.png" data-username="Jhon Russel" data-fb="www.facebook.com" data-gplus="www.plus.google.com" data-linkedin="www.linkedin.com" data-instagram="www.instagram.com" data-twitter="www.twitter.com" data-lattitue="40.6700" data-longitute="-73.9400" >
+		<div class="container single-inner-container single_listing">
 			<div class="row">
 				<div class="col-md-8">
 					<div class="post-row">
 						<ul class="list-style-none post-price-row line-height-16">
-							<li><span class="post-rice">About Lokayan</span></li>
+							<li><span class="post-rice">About  Rao IIT Academy</span></li>
 							
 						</ul>
 					</div>
 					<div class="post-row padding-top-40">
 						<p>
-							Lokayan is a reputed institute imparting coaching into Indian Civil Services Examination like those conducted by Union Public Service Commission (UPSC) and Maharashtra Public Service Commission (MPSC). 
+							Rao IIT Academy has been established at Kota by a Research Scientist, a Technocrat - turned - outstanding teacher Dr. B.V. Rao, M.SC., M.S.(IIT Madras), Ph.D.(IIT Delhi) who has carved the careers of thousands of students for over two decades by enabling them to take berth in various IITs so far and has proved to be an undisputed leader in the field of education. Rested on the strong pillars of commitment, excellence, perfection and innovation that are depicted by the four wings in the logo of the Institute, he has laid a strong foundation of the Rao IIT Academy. The Institute is the enlargement of his vision to further display the best of his teaching ability and rich experience to strive and enable his students to make their cherished dreams a breathtaking reality and shape the destiny of students as IITians.
 						</p>
 						<p>
-							Many of our candidates are selected for the esteemed services like Indian Administrative (IAS), Indian Police Service (IPS), and Indian Foreign Service (IFS) etc.
+							The institute is accomplished by a team of highly experienced and fully dedicated faculty with a Commitment to promote Excellence and Perfection in teaching and enhance the Success of every JEE Aspirant.
 						</p>
 						<p>
-							Lokayan has set in motion the debate about role of bureaucracy and need of youth to join them and contribute towards delivery mechanism of governance.
+							The academy is fully loaded with rich ambience and state-of-the-art infrastructural facilities to complement the teaching and to meet the requirements by providing a very congenial and intellectually stimulating competitive environment that is suitable for shaping your aspirations into reality and paving the way to Success. We firmly believe that the Success of our students is our Success.
 						</p>
 						<p>
-							We at Lokayan (meaning is journey from people to people) believe in providing complete solution to the student community regarding civil services examination conducted by both Central and State government.
+							You Aspire, We Inspire.
+							"Our Mission is to make your Mission possible."
 						</p>
-						<p>We are group of young people well experienced into the applied aspect of examination and professional about our committment to students.</p>
 					</div>
 					<div class="post-row padding-top-5">
 						<div class="post-row-header clearfix margin-bottom-15" id="booknow">
@@ -407,9 +188,8 @@
 							<a href="#portfolioModal1" class="portfolio-link lp-border-radius-5" data-toggle="modal">
 								<span class="tick-icon">
 									<!-- Checked icon by Icons8 -->
-									<img class="icon icons8-Checked" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFLklEQVRoQ+1azXHbOBT+nm/2Zb0VREgDUSow1IF9DHWwXYG1FaxTQZIKohykHC1XIGwFtiuAXEHsS7wnv50HghRJgSQoMc5OJpzxjDwEQXzv53sfHkj4RS76RXDgN5CQJ0dze8QEDXZ/h0QYZuOYcQvCg/ufYPCMazNWt31FxM4e0V+txjNOiXDWdVEMrMAw2MMX806Zrs8Xx28NRM/tMYALAnRhwjsGZEEGjFXR4npmh9jDoXgKgCbmYxC9yj0mzxDebwuoMxD91Q7A+JwDYL5n0BR7mJp3atXFqg4ccEzEE4D+kGedIfZxYk5UGoaRVycgzgsCgsSq/MigS5Ooj5Hvqh2mr+whvmOSAfIhd1LNIRlXBzAaiJ7ZCyK4RTPjGgc462q1NsCyUHpyofnGv+fcjNVUfuuZlRz8AGAUIokoIHpmxQsumRn4qw8vNIHSc/uRgAtmvJVFC6EQY1kF1ynZ9dxOyFmCH5lpklmozbq73pdclJzzebSUcGbGezNWl6G5Gz0iOUHAVZMldl1wo2fS3BEQQwa+mETVUnwtEMdOz7hxlniBcAoB0jMr7xdmu+N96KacrAcyt0uhWElsM1ZSM170yvNS6P2AhgJCcqWuzgSBrEOKH3mfBn2zU5tFKnmpiwnPhFEITB2Q1Bs/IaSEZonw2TPkiUnUwtPvJRH+loJpEjWqGmMDSE51zPfL8etBm/X6vF9hqLyGOCCuxvBKFEDIK5tA5nZKwGkT1fW5+GyuCrkEGUrPbOaVjfsbQEZzy86tBNVVO20L0EsUR7MA/lkmqihE82kFLDEsMx5wAFXM3RKQQt24WyYq30tsu8DY5/TcXhEgzNhKs6O5lT3Mm2p4lYGsXffJJGoSu5Bdxq3lDz8y0bAtCgrypVTlS0BGcyuC7YiBnC12WWTbs2uGcvLH0WzsM9X6VvWIq6SZWGubdJf7MUIwWO3XArKUS1WPuERfJipaFUtydhWSsUIwCCSV+t8k4c1Y/ZmN2RpIqXAxSpzfKgSfcEPAoE0I1s2TMWvR4FsD8dV2XYUZIvE/tYVbUQhuy4y9AwmAmZqxOq8DExKCbcBD92OApBztd2axL6mEWRBMVpX9Bi2KoYI5MrNDItxIzSl6tDf6TVmIF04LMUpgSkBr1Gu00dabvXrWKmiZrQqisBERGwfGt3XwHQNvQWlaRJNCbXiu9/P1BTHjdmlvmrF6G2ul4rgSGGmTwgGRXWbjVjX2XRlZNEoUmawP0ZiCgbRxsrZOL7vMTDRKni2T19KxzK8fJuMLPSq07bc7eCNexufhBaxMolTsS+qqMP7FYZsQjH2HntlvLkwDhBGUIgXx+MObcdEg8v5aeL/S2HwIbWBiX9znOL/xsnXekHfVisOCVxYmUSd9LqzrXNnGq6k11digI+ZbXxN+WoiVWkMNG6//d8u0pjUU8mjrviOziMsX6XP5Nn/X8Og6vtLfao2IViBO4foWkfzmSLnedeEVdbA+i4lUBFFAPBh/vODOSBbYx3nfrVTHTk/uWM/1mrt0OqOBeDDHBJ56hSuhdhmzmYrxjpyIyXyFY72zrF0a83wnIA5M2iQTHXXkrbZCqqvkiLnbYagcXQCnYJzJ1teH7jX2MOk6V2cgmXV8M096Xw6QX4R8FGCIYRi43zjMFDEJvMo+Kih+UCBNDCZcvtjxdNXN7oOB1KKnMSFQHuNOhhfi0W0BZPNt7ZHQov1XEJrkMw64DwOcjC9cdwAeOP3awey6+OLEvQLp7pH+nvgNpD9b9jPTfwQDNWCupe5qAAAAAElFTkSuQmCC" alt="checked">
-								<br>
-								UPSE <br> Book Now
+									<img class="icon icons8-Checked" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFLklEQVRoQ+1azXHbOBT+nm/2Zb0VREgDUSow1IF9DHWwXYG1FaxTQZIKohykHC1XIGwFtiuAXEHsS7wnv50HghRJgSQoMc5OJpzxjDwEQXzv53sfHkj4RS76RXDgN5CQJ0dze8QEDXZ/h0QYZuOYcQvCg/ufYPCMazNWt31FxM4e0V+txjNOiXDWdVEMrMAw2MMX806Zrs8Xx28NRM/tMYALAnRhwjsGZEEGjFXR4npmh9jDoXgKgCbmYxC9yj0mzxDebwuoMxD91Q7A+JwDYL5n0BR7mJp3atXFqg4ccEzEE4D+kGedIfZxYk5UGoaRVycgzgsCgsSq/MigS5Ooj5Hvqh2mr+whvmOSAfIhd1LNIRlXBzAaiJ7ZCyK4RTPjGgc462q1NsCyUHpyofnGv+fcjNVUfuuZlRz8AGAUIokoIHpmxQsumRn4qw8vNIHSc/uRgAtmvJVFC6EQY1kF1ynZ9dxOyFmCH5lpklmozbq73pdclJzzebSUcGbGezNWl6G5Gz0iOUHAVZMldl1wo2fS3BEQQwa+mETVUnwtEMdOz7hxlniBcAoB0jMr7xdmu+N96KacrAcyt0uhWElsM1ZSM170yvNS6P2AhgJCcqWuzgSBrEOKH3mfBn2zU5tFKnmpiwnPhFEITB2Q1Bs/IaSEZonw2TPkiUnUwtPvJRH+loJpEjWqGmMDSE51zPfL8etBm/X6vF9hqLyGOCCuxvBKFEDIK5tA5nZKwGkT1fW5+GyuCrkEGUrPbOaVjfsbQEZzy86tBNVVO20L0EsUR7MA/lkmqihE82kFLDEsMx5wAFXM3RKQQt24WyYq30tsu8DY5/TcXhEgzNhKs6O5lT3Mm2p4lYGsXffJJGoSu5Bdxq3lDz8y0bAtCgrypVTlS0BGcyuC7YiBnC12WWTbs2uGcvLH0WzsM9X6VvWIq6SZWGubdJf7MUIwWO3XArKUS1WPuERfJipaFUtydhWSsUIwCCSV+t8k4c1Y/ZmN2RpIqXAxSpzfKgSfcEPAoE0I1s2TMWvR4FsD8dV2XYUZIvE/tYVbUQhuy4y9AwmAmZqxOq8DExKCbcBD92OApBztd2axL6mEWRBMVpX9Bi2KoYI5MrNDItxIzSl6tDf6TVmIF04LMUpgSkBr1Gu00dabvXrWKmiZrQqisBERGwfGt3XwHQNvQWlaRJNCbXiu9/P1BTHjdmlvmrF6G2ul4rgSGGmTwgGRXWbjVjX2XRlZNEoUmawP0ZiCgbRxsrZOL7vMTDRKni2T19KxzK8fJuMLPSq07bc7eCNexufhBaxMolTsS+qqMP7FYZsQjH2HntlvLkwDhBGUIgXx+MObcdEg8v5aeL/S2HwIbWBiX9znOL/xsnXekHfVisOCVxYmUSd9LqzrXNnGq6k11digI+ZbXxN+WoiVWkMNG6//d8u0pjUU8mjrviOziMsX6XP5Nn/X8Og6vtLfao2IViBO4foWkfzmSLnedeEVdbA+i4lUBFFAPBh/vODOSBbYx3nfrVTHTk/uWM/1mrt0OqOBeDDHBJ56hSuhdhmzmYrxjpyIyXyFY72zrF0a83wnIA5M2iQTHXXkrbZCqqvkiLnbYagcXQCnYJzJ1teH7jX2MOk6V2cgmXV8M096Xw6QX4R8FGCIYRi43zjMFDEJvMo+Kih+UCBNDCZcvtjxdNXN7oOB1KKnMSFQHuNOhhfi0W0BZPNt7ZHQov1XEJrkMw64DwOcjC9cdwAeOP3awey6+OLEvQLp7pH+nvgNpD9b9jPTfwQDNWCupe5qAAAAAElFTkSuQmCC" alt="checked"><br>
+									IIT-JEE <br> Book Now
 								</span>
 								</a>
 							</li>
@@ -417,9 +197,8 @@
 							<a href="#portfolioModal2" class="portfolio-link lp-border-radius-5" data-toggle="modal">
 								<span class="tick-icon">
 									<!-- Checked icon by Icons8 -->
-									<img class="icon icons8-Checked" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFLklEQVRoQ+1azXHbOBT+nm/2Zb0VREgDUSow1IF9DHWwXYG1FaxTQZIKohykHC1XIGwFtiuAXEHsS7wnv50HghRJgSQoMc5OJpzxjDwEQXzv53sfHkj4RS76RXDgN5CQJ0dze8QEDXZ/h0QYZuOYcQvCg/ufYPCMazNWt31FxM4e0V+txjNOiXDWdVEMrMAw2MMX806Zrs8Xx28NRM/tMYALAnRhwjsGZEEGjFXR4npmh9jDoXgKgCbmYxC9yj0mzxDebwuoMxD91Q7A+JwDYL5n0BR7mJp3atXFqg4ccEzEE4D+kGedIfZxYk5UGoaRVycgzgsCgsSq/MigS5Ooj5Hvqh2mr+whvmOSAfIhd1LNIRlXBzAaiJ7ZCyK4RTPjGgc462q1NsCyUHpyofnGv+fcjNVUfuuZlRz8AGAUIokoIHpmxQsumRn4qw8vNIHSc/uRgAtmvJVFC6EQY1kF1ynZ9dxOyFmCH5lpklmozbq73pdclJzzebSUcGbGezNWl6G5Gz0iOUHAVZMldl1wo2fS3BEQQwa+mETVUnwtEMdOz7hxlniBcAoB0jMr7xdmu+N96KacrAcyt0uhWElsM1ZSM170yvNS6P2AhgJCcqWuzgSBrEOKH3mfBn2zU5tFKnmpiwnPhFEITB2Q1Bs/IaSEZonw2TPkiUnUwtPvJRH+loJpEjWqGmMDSE51zPfL8etBm/X6vF9hqLyGOCCuxvBKFEDIK5tA5nZKwGkT1fW5+GyuCrkEGUrPbOaVjfsbQEZzy86tBNVVO20L0EsUR7MA/lkmqihE82kFLDEsMx5wAFXM3RKQQt24WyYq30tsu8DY5/TcXhEgzNhKs6O5lT3Mm2p4lYGsXffJJGoSu5Bdxq3lDz8y0bAtCgrypVTlS0BGcyuC7YiBnC12WWTbs2uGcvLH0WzsM9X6VvWIq6SZWGubdJf7MUIwWO3XArKUS1WPuERfJipaFUtydhWSsUIwCCSV+t8k4c1Y/ZmN2RpIqXAxSpzfKgSfcEPAoE0I1s2TMWvR4FsD8dV2XYUZIvE/tYVbUQhuy4y9AwmAmZqxOq8DExKCbcBD92OApBztd2axL6mEWRBMVpX9Bi2KoYI5MrNDItxIzSl6tDf6TVmIF04LMUpgSkBr1Gu00dabvXrWKmiZrQqisBERGwfGt3XwHQNvQWlaRJNCbXiu9/P1BTHjdmlvmrF6G2ul4rgSGGmTwgGRXWbjVjX2XRlZNEoUmawP0ZiCgbRxsrZOL7vMTDRKni2T19KxzK8fJuMLPSq07bc7eCNexufhBaxMolTsS+qqMP7FYZsQjH2HntlvLkwDhBGUIgXx+MObcdEg8v5aeL/S2HwIbWBiX9znOL/xsnXekHfVisOCVxYmUSd9LqzrXNnGq6k11digI+ZbXxN+WoiVWkMNG6//d8u0pjUU8mjrviOziMsX6XP5Nn/X8Og6vtLfao2IViBO4foWkfzmSLnedeEVdbA+i4lUBFFAPBh/vODOSBbYx3nfrVTHTk/uWM/1mrt0OqOBeDDHBJ56hSuhdhmzmYrxjpyIyXyFY72zrF0a83wnIA5M2iQTHXXkrbZCqqvkiLnbYagcXQCnYJzJ1teH7jX2MOk6V2cgmXV8M096Xw6QX4R8FGCIYRi43zjMFDEJvMo+Kih+UCBNDCZcvtjxdNXN7oOB1KKnMSFQHuNOhhfi0W0BZPNt7ZHQov1XEJrkMw64DwOcjC9cdwAeOP3awey6+OLEvQLp7pH+nvgNpD9b9jPTfwQDNWCupe5qAAAAAElFTkSuQmCC" alt="checked">
-								<br>
-								MPSE <br> Book Now
+									<img class="icon icons8-Checked" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFLklEQVRoQ+1azXHbOBT+nm/2Zb0VREgDUSow1IF9DHWwXYG1FaxTQZIKohykHC1XIGwFtiuAXEHsS7wnv50HghRJgSQoMc5OJpzxjDwEQXzv53sfHkj4RS76RXDgN5CQJ0dze8QEDXZ/h0QYZuOYcQvCg/ufYPCMazNWt31FxM4e0V+txjNOiXDWdVEMrMAw2MMX806Zrs8Xx28NRM/tMYALAnRhwjsGZEEGjFXR4npmh9jDoXgKgCbmYxC9yj0mzxDebwuoMxD91Q7A+JwDYL5n0BR7mJp3atXFqg4ccEzEE4D+kGedIfZxYk5UGoaRVycgzgsCgsSq/MigS5Ooj5Hvqh2mr+whvmOSAfIhd1LNIRlXBzAaiJ7ZCyK4RTPjGgc462q1NsCyUHpyofnGv+fcjNVUfuuZlRz8AGAUIokoIHpmxQsumRn4qw8vNIHSc/uRgAtmvJVFC6EQY1kF1ynZ9dxOyFmCH5lpklmozbq73pdclJzzebSUcGbGezNWl6G5Gz0iOUHAVZMldl1wo2fS3BEQQwa+mETVUnwtEMdOz7hxlniBcAoB0jMr7xdmu+N96KacrAcyt0uhWElsM1ZSM170yvNS6P2AhgJCcqWuzgSBrEOKH3mfBn2zU5tFKnmpiwnPhFEITB2Q1Bs/IaSEZonw2TPkiUnUwtPvJRH+loJpEjWqGmMDSE51zPfL8etBm/X6vF9hqLyGOCCuxvBKFEDIK5tA5nZKwGkT1fW5+GyuCrkEGUrPbOaVjfsbQEZzy86tBNVVO20L0EsUR7MA/lkmqihE82kFLDEsMx5wAFXM3RKQQt24WyYq30tsu8DY5/TcXhEgzNhKs6O5lT3Mm2p4lYGsXffJJGoSu5Bdxq3lDz8y0bAtCgrypVTlS0BGcyuC7YiBnC12WWTbs2uGcvLH0WzsM9X6VvWIq6SZWGubdJf7MUIwWO3XArKUS1WPuERfJipaFUtydhWSsUIwCCSV+t8k4c1Y/ZmN2RpIqXAxSpzfKgSfcEPAoE0I1s2TMWvR4FsD8dV2XYUZIvE/tYVbUQhuy4y9AwmAmZqxOq8DExKCbcBD92OApBztd2axL6mEWRBMVpX9Bi2KoYI5MrNDItxIzSl6tDf6TVmIF04LMUpgSkBr1Gu00dabvXrWKmiZrQqisBERGwfGt3XwHQNvQWlaRJNCbXiu9/P1BTHjdmlvmrF6G2ul4rgSGGmTwgGRXWbjVjX2XRlZNEoUmawP0ZiCgbRxsrZOL7vMTDRKni2T19KxzK8fJuMLPSq07bc7eCNexufhBaxMolTsS+qqMP7FYZsQjH2HntlvLkwDhBGUIgXx+MObcdEg8v5aeL/S2HwIbWBiX9znOL/xsnXekHfVisOCVxYmUSd9LqzrXNnGq6k11digI+ZbXxN+WoiVWkMNG6//d8u0pjUU8mjrviOziMsX6XP5Nn/X8Og6vtLfao2IViBO4foWkfzmSLnedeEVdbA+i4lUBFFAPBh/vODOSBbYx3nfrVTHTk/uWM/1mrt0OqOBeDDHBJ56hSuhdhmzmYrxjpyIyXyFY72zrF0a83wnIA5M2iQTHXXkrbZCqqvkiLnbYagcXQCnYJzJ1teH7jX2MOk6V2cgmXV8M096Xw6QX4R8FGCIYRi43zjMFDEJvMo+Kih+UCBNDCZcvtjxdNXN7oOB1KKnMSFQHuNOhhfi0W0BZPNt7ZHQov1XEJrkMw64DwOcjC9cdwAeOP3awey6+OLEvQLp7pH+nvgNpD9b9jPTfwQDNWCupe5qAAAAAElFTkSuQmCC" alt="checked"><br>
+								MHT-CET <br> Book Now
 								</span>
 								</a>
 							</li>
@@ -427,19 +206,18 @@
 							<a href="#portfolioModal3" class="portfolio-link lp-border-radius-5" data-toggle="modal">
 								<span class="tick-icon">
 									<!-- Checked icon by Icons8 -->
-									<img class="icon icons8-Checked" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFLklEQVRoQ+1azXHbOBT+nm/2Zb0VREgDUSow1IF9DHWwXYG1FaxTQZIKohykHC1XIGwFtiuAXEHsS7wnv50HghRJgSQoMc5OJpzxjDwEQXzv53sfHkj4RS76RXDgN5CQJ0dze8QEDXZ/h0QYZuOYcQvCg/ufYPCMazNWt31FxM4e0V+txjNOiXDWdVEMrMAw2MMX806Zrs8Xx28NRM/tMYALAnRhwjsGZEEGjFXR4npmh9jDoXgKgCbmYxC9yj0mzxDebwuoMxD91Q7A+JwDYL5n0BR7mJp3atXFqg4ccEzEE4D+kGedIfZxYk5UGoaRVycgzgsCgsSq/MigS5Ooj5Hvqh2mr+whvmOSAfIhd1LNIRlXBzAaiJ7ZCyK4RTPjGgc462q1NsCyUHpyofnGv+fcjNVUfuuZlRz8AGAUIokoIHpmxQsumRn4qw8vNIHSc/uRgAtmvJVFC6EQY1kF1ynZ9dxOyFmCH5lpklmozbq73pdclJzzebSUcGbGezNWl6G5Gz0iOUHAVZMldl1wo2fS3BEQQwa+mETVUnwtEMdOz7hxlniBcAoB0jMr7xdmu+N96KacrAcyt0uhWElsM1ZSM170yvNS6P2AhgJCcqWuzgSBrEOKH3mfBn2zU5tFKnmpiwnPhFEITB2Q1Bs/IaSEZonw2TPkiUnUwtPvJRH+loJpEjWqGmMDSE51zPfL8etBm/X6vF9hqLyGOCCuxvBKFEDIK5tA5nZKwGkT1fW5+GyuCrkEGUrPbOaVjfsbQEZzy86tBNVVO20L0EsUR7MA/lkmqihE82kFLDEsMx5wAFXM3RKQQt24WyYq30tsu8DY5/TcXhEgzNhKs6O5lT3Mm2p4lYGsXffJJGoSu5Bdxq3lDz8y0bAtCgrypVTlS0BGcyuC7YiBnC12WWTbs2uGcvLH0WzsM9X6VvWIq6SZWGubdJf7MUIwWO3XArKUS1WPuERfJipaFUtydhWSsUIwCCSV+t8k4c1Y/ZmN2RpIqXAxSpzfKgSfcEPAoE0I1s2TMWvR4FsD8dV2XYUZIvE/tYVbUQhuy4y9AwmAmZqxOq8DExKCbcBD92OApBztd2axL6mEWRBMVpX9Bi2KoYI5MrNDItxIzSl6tDf6TVmIF04LMUpgSkBr1Gu00dabvXrWKmiZrQqisBERGwfGt3XwHQNvQWlaRJNCbXiu9/P1BTHjdmlvmrF6G2ul4rgSGGmTwgGRXWbjVjX2XRlZNEoUmawP0ZiCgbRxsrZOL7vMTDRKni2T19KxzK8fJuMLPSq07bc7eCNexufhBaxMolTsS+qqMP7FYZsQjH2HntlvLkwDhBGUIgXx+MObcdEg8v5aeL/S2HwIbWBiX9znOL/xsnXekHfVisOCVxYmUSd9LqzrXNnGq6k11digI+ZbXxN+WoiVWkMNG6//d8u0pjUU8mjrviOziMsX6XP5Nn/X8Og6vtLfao2IViBO4foWkfzmSLnedeEVdbA+i4lUBFFAPBh/vODOSBbYx3nfrVTHTk/uWM/1mrt0OqOBeDDHBJ56hSuhdhmzmYrxjpyIyXyFY72zrF0a83wnIA5M2iQTHXXkrbZCqqvkiLnbYagcXQCnYJzJ1teH7jX2MOk6V2cgmXV8M096Xw6QX4R8FGCIYRi43zjMFDEJvMo+Kih+UCBNDCZcvtjxdNXN7oOB1KKnMSFQHuNOhhfi0W0BZPNt7ZHQov1XEJrkMw64DwOcjC9cdwAeOP3awey6+OLEvQLp7pH+nvgNpD9b9jPTfwQDNWCupe5qAAAAAElFTkSuQmCC" alt="checked">
-								<br>
-								IAS <br> Book Now
+									<img class="icon icons8-Checked" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFLklEQVRoQ+1azXHbOBT+nm/2Zb0VREgDUSow1IF9DHWwXYG1FaxTQZIKohykHC1XIGwFtiuAXEHsS7wnv50HghRJgSQoMc5OJpzxjDwEQXzv53sfHkj4RS76RXDgN5CQJ0dze8QEDXZ/h0QYZuOYcQvCg/ufYPCMazNWt31FxM4e0V+txjNOiXDWdVEMrMAw2MMX806Zrs8Xx28NRM/tMYALAnRhwjsGZEEGjFXR4npmh9jDoXgKgCbmYxC9yj0mzxDebwuoMxD91Q7A+JwDYL5n0BR7mJp3atXFqg4ccEzEE4D+kGedIfZxYk5UGoaRVycgzgsCgsSq/MigS5Ooj5Hvqh2mr+whvmOSAfIhd1LNIRlXBzAaiJ7ZCyK4RTPjGgc462q1NsCyUHpyofnGv+fcjNVUfuuZlRz8AGAUIokoIHpmxQsumRn4qw8vNIHSc/uRgAtmvJVFC6EQY1kF1ynZ9dxOyFmCH5lpklmozbq73pdclJzzebSUcGbGezNWl6G5Gz0iOUHAVZMldl1wo2fS3BEQQwa+mETVUnwtEMdOz7hxlniBcAoB0jMr7xdmu+N96KacrAcyt0uhWElsM1ZSM170yvNS6P2AhgJCcqWuzgSBrEOKH3mfBn2zU5tFKnmpiwnPhFEITB2Q1Bs/IaSEZonw2TPkiUnUwtPvJRH+loJpEjWqGmMDSE51zPfL8etBm/X6vF9hqLyGOCCuxvBKFEDIK5tA5nZKwGkT1fW5+GyuCrkEGUrPbOaVjfsbQEZzy86tBNVVO20L0EsUR7MA/lkmqihE82kFLDEsMx5wAFXM3RKQQt24WyYq30tsu8DY5/TcXhEgzNhKs6O5lT3Mm2p4lYGsXffJJGoSu5Bdxq3lDz8y0bAtCgrypVTlS0BGcyuC7YiBnC12WWTbs2uGcvLH0WzsM9X6VvWIq6SZWGubdJf7MUIwWO3XArKUS1WPuERfJipaFUtydhWSsUIwCCSV+t8k4c1Y/ZmN2RpIqXAxSpzfKgSfcEPAoE0I1s2TMWvR4FsD8dV2XYUZIvE/tYVbUQhuy4y9AwmAmZqxOq8DExKCbcBD92OApBztd2axL6mEWRBMVpX9Bi2KoYI5MrNDItxIzSl6tDf6TVmIF04LMUpgSkBr1Gu00dabvXrWKmiZrQqisBERGwfGt3XwHQNvQWlaRJNCbXiu9/P1BTHjdmlvmrF6G2ul4rgSGGmTwgGRXWbjVjX2XRlZNEoUmawP0ZiCgbRxsrZOL7vMTDRKni2T19KxzK8fJuMLPSq07bc7eCNexufhBaxMolTsS+qqMP7FYZsQjH2HntlvLkwDhBGUIgXx+MObcdEg8v5aeL/S2HwIbWBiX9znOL/xsnXekHfVisOCVxYmUSd9LqzrXNnGq6k11digI+ZbXxN+WoiVWkMNG6//d8u0pjUU8mjrviOziMsX6XP5Nn/X8Og6vtLfao2IViBO4foWkfzmSLnedeEVdbA+i4lUBFFAPBh/vODOSBbYx3nfrVTHTk/uWM/1mrt0OqOBeDDHBJ56hSuhdhmzmYrxjpyIyXyFY72zrF0a83wnIA5M2iQTHXXkrbZCqqvkiLnbYagcXQCnYJzJ1teH7jX2MOk6V2cgmXV8M096Xw6QX4R8FGCIYRi43zjMFDEJvMo+Kih+UCBNDCZcvtjxdNXN7oOB1KKnMSFQHuNOhhfi0W0BZPNt7ZHQov1XEJrkMw64DwOcjC9cdwAeOP3awey6+OLEvQLp7pH+nvgNpD9b9jPTfwQDNWCupe5qAAAAAElFTkSuQmCC" alt="checked"><br>
+								NEET/AIIMS <br> Book Now
 								</span>
 								</a>
-							</li><br>
+							</li>
+							<br>
 							<li>
 							<a href="#portfolioModal4" class="portfolio-link lp-border-radius-5" data-toggle="modal">
 								<span class="tick-icon">
 									<!-- Checked icon by Icons8 -->
-									<img class="icon icons8-Checked" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFLklEQVRoQ+1azXHbOBT+nm/2Zb0VREgDUSow1IF9DHWwXYG1FaxTQZIKohykHC1XIGwFtiuAXEHsS7wnv50HghRJgSQoMc5OJpzxjDwEQXzv53sfHkj4RS76RXDgN5CQJ0dze8QEDXZ/h0QYZuOYcQvCg/ufYPCMazNWt31FxM4e0V+txjNOiXDWdVEMrMAw2MMX806Zrs8Xx28NRM/tMYALAnRhwjsGZEEGjFXR4npmh9jDoXgKgCbmYxC9yj0mzxDebwuoMxD91Q7A+JwDYL5n0BR7mJp3atXFqg4ccEzEE4D+kGedIfZxYk5UGoaRVycgzgsCgsSq/MigS5Ooj5Hvqh2mr+whvmOSAfIhd1LNIRlXBzAaiJ7ZCyK4RTPjGgc462q1NsCyUHpyofnGv+fcjNVUfuuZlRz8AGAUIokoIHpmxQsumRn4qw8vNIHSc/uRgAtmvJVFC6EQY1kF1ynZ9dxOyFmCH5lpklmozbq73pdclJzzebSUcGbGezNWl6G5Gz0iOUHAVZMldl1wo2fS3BEQQwa+mETVUnwtEMdOz7hxlniBcAoB0jMr7xdmu+N96KacrAcyt0uhWElsM1ZSM170yvNS6P2AhgJCcqWuzgSBrEOKH3mfBn2zU5tFKnmpiwnPhFEITB2Q1Bs/IaSEZonw2TPkiUnUwtPvJRH+loJpEjWqGmMDSE51zPfL8etBm/X6vF9hqLyGOCCuxvBKFEDIK5tA5nZKwGkT1fW5+GyuCrkEGUrPbOaVjfsbQEZzy86tBNVVO20L0EsUR7MA/lkmqihE82kFLDEsMx5wAFXM3RKQQt24WyYq30tsu8DY5/TcXhEgzNhKs6O5lT3Mm2p4lYGsXffJJGoSu5Bdxq3lDz8y0bAtCgrypVTlS0BGcyuC7YiBnC12WWTbs2uGcvLH0WzsM9X6VvWIq6SZWGubdJf7MUIwWO3XArKUS1WPuERfJipaFUtydhWSsUIwCCSV+t8k4c1Y/ZmN2RpIqXAxSpzfKgSfcEPAoE0I1s2TMWvR4FsD8dV2XYUZIvE/tYVbUQhuy4y9AwmAmZqxOq8DExKCbcBD92OApBztd2axL6mEWRBMVpX9Bi2KoYI5MrNDItxIzSl6tDf6TVmIF04LMUpgSkBr1Gu00dabvXrWKmiZrQqisBERGwfGt3XwHQNvQWlaRJNCbXiu9/P1BTHjdmlvmrF6G2ul4rgSGGmTwgGRXWbjVjX2XRlZNEoUmawP0ZiCgbRxsrZOL7vMTDRKni2T19KxzK8fJuMLPSq07bc7eCNexufhBaxMolTsS+qqMP7FYZsQjH2HntlvLkwDhBGUIgXx+MObcdEg8v5aeL/S2HwIbWBiX9znOL/xsnXekHfVisOCVxYmUSd9LqzrXNnGq6k11digI+ZbXxN+WoiVWkMNG6//d8u0pjUU8mjrviOziMsX6XP5Nn/X8Og6vtLfao2IViBO4foWkfzmSLnedeEVdbA+i4lUBFFAPBh/vODOSBbYx3nfrVTHTk/uWM/1mrt0OqOBeDDHBJ56hSuhdhmzmYrxjpyIyXyFY72zrF0a83wnIA5M2iQTHXXkrbZCqqvkiLnbYagcXQCnYJzJ1teH7jX2MOk6V2cgmXV8M096Xw6QX4R8FGCIYRi43zjMFDEJvMo+Kih+UCBNDCZcvtjxdNXN7oOB1KKnMSFQHuNOhhfi0W0BZPNt7ZHQov1XEJrkMw64DwOcjC9cdwAeOP3awey6+OLEvQLp7pH+nvgNpD9b9jPTfwQDNWCupe5qAAAAAElFTkSuQmCC" alt="checked">
-								<br>
-								IPS <br> Book Now
+									<img class="icon icons8-Checked" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFLklEQVRoQ+1azXHbOBT+nm/2Zb0VREgDUSow1IF9DHWwXYG1FaxTQZIKohykHC1XIGwFtiuAXEHsS7wnv50HghRJgSQoMc5OJpzxjDwEQXzv53sfHkj4RS76RXDgN5CQJ0dze8QEDXZ/h0QYZuOYcQvCg/ufYPCMazNWt31FxM4e0V+txjNOiXDWdVEMrMAw2MMX806Zrs8Xx28NRM/tMYALAnRhwjsGZEEGjFXR4npmh9jDoXgKgCbmYxC9yj0mzxDebwuoMxD91Q7A+JwDYL5n0BR7mJp3atXFqg4ccEzEE4D+kGedIfZxYk5UGoaRVycgzgsCgsSq/MigS5Ooj5Hvqh2mr+whvmOSAfIhd1LNIRlXBzAaiJ7ZCyK4RTPjGgc462q1NsCyUHpyofnGv+fcjNVUfuuZlRz8AGAUIokoIHpmxQsumRn4qw8vNIHSc/uRgAtmvJVFC6EQY1kF1ynZ9dxOyFmCH5lpklmozbq73pdclJzzebSUcGbGezNWl6G5Gz0iOUHAVZMldl1wo2fS3BEQQwa+mETVUnwtEMdOz7hxlniBcAoB0jMr7xdmu+N96KacrAcyt0uhWElsM1ZSM170yvNS6P2AhgJCcqWuzgSBrEOKH3mfBn2zU5tFKnmpiwnPhFEITB2Q1Bs/IaSEZonw2TPkiUnUwtPvJRH+loJpEjWqGmMDSE51zPfL8etBm/X6vF9hqLyGOCCuxvBKFEDIK5tA5nZKwGkT1fW5+GyuCrkEGUrPbOaVjfsbQEZzy86tBNVVO20L0EsUR7MA/lkmqihE82kFLDEsMx5wAFXM3RKQQt24WyYq30tsu8DY5/TcXhEgzNhKs6O5lT3Mm2p4lYGsXffJJGoSu5Bdxq3lDz8y0bAtCgrypVTlS0BGcyuC7YiBnC12WWTbs2uGcvLH0WzsM9X6VvWIq6SZWGubdJf7MUIwWO3XArKUS1WPuERfJipaFUtydhWSsUIwCCSV+t8k4c1Y/ZmN2RpIqXAxSpzfKgSfcEPAoE0I1s2TMWvR4FsD8dV2XYUZIvE/tYVbUQhuy4y9AwmAmZqxOq8DExKCbcBD92OApBztd2axL6mEWRBMVpX9Bi2KoYI5MrNDItxIzSl6tDf6TVmIF04LMUpgSkBr1Gu00dabvXrWKmiZrQqisBERGwfGt3XwHQNvQWlaRJNCbXiu9/P1BTHjdmlvmrF6G2ul4rgSGGmTwgGRXWbjVjX2XRlZNEoUmawP0ZiCgbRxsrZOL7vMTDRKni2T19KxzK8fJuMLPSq07bc7eCNexufhBaxMolTsS+qqMP7FYZsQjH2HntlvLkwDhBGUIgXx+MObcdEg8v5aeL/S2HwIbWBiX9znOL/xsnXekHfVisOCVxYmUSd9LqzrXNnGq6k11digI+ZbXxN+WoiVWkMNG6//d8u0pjUU8mjrviOziMsX6XP5Nn/X8Og6vtLfao2IViBO4foWkfzmSLnedeEVdbA+i4lUBFFAPBh/vODOSBbYx3nfrVTHTk/uWM/1mrt0OqOBeDDHBJ56hSuhdhmzmYrxjpyIyXyFY72zrF0a83wnIA5M2iQTHXXkrbZCqqvkiLnbYagcXQCnYJzJ1teH7jX2MOk6V2cgmXV8M096Xw6QX4R8FGCIYRi43zjMFDEJvMo+Kih+UCBNDCZcvtjxdNXN7oOB1KKnMSFQHuNOhhfi0W0BZPNt7ZHQov1XEJrkMw64DwOcjC9cdwAeOP3awey6+OLEvQLp7pH+nvgNpD9b9jPTfwQDNWCupe5qAAAAAElFTkSuQmCC" alt="checked"><br>
+								NTSE <br> Book Now
 								</span>
 								</a>
 							</li>
@@ -447,87 +225,26 @@
 							<a href="#portfolioModal5" class="portfolio-link lp-border-radius-5" data-toggle="modal">
 								<span class="tick-icon">
 									<!-- Checked icon by Icons8 -->
-									<img class="icon icons8-Checked" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFLklEQVRoQ+1azXHbOBT+nm/2Zb0VREgDUSow1IF9DHWwXYG1FaxTQZIKohykHC1XIGwFtiuAXEHsS7wnv50HghRJgSQoMc5OJpzxjDwEQXzv53sfHkj4RS76RXDgN5CQJ0dze8QEDXZ/h0QYZuOYcQvCg/ufYPCMazNWt31FxM4e0V+txjNOiXDWdVEMrMAw2MMX806Zrs8Xx28NRM/tMYALAnRhwjsGZEEGjFXR4npmh9jDoXgKgCbmYxC9yj0mzxDebwuoMxD91Q7A+JwDYL5n0BR7mJp3atXFqg4ccEzEE4D+kGedIfZxYk5UGoaRVycgzgsCgsSq/MigS5Ooj5Hvqh2mr+whvmOSAfIhd1LNIRlXBzAaiJ7ZCyK4RTPjGgc462q1NsCyUHpyofnGv+fcjNVUfuuZlRz8AGAUIokoIHpmxQsumRn4qw8vNIHSc/uRgAtmvJVFC6EQY1kF1ynZ9dxOyFmCH5lpklmozbq73pdclJzzebSUcGbGezNWl6G5Gz0iOUHAVZMldl1wo2fS3BEQQwa+mETVUnwtEMdOz7hxlniBcAoB0jMr7xdmu+N96KacrAcyt0uhWElsM1ZSM170yvNS6P2AhgJCcqWuzgSBrEOKH3mfBn2zU5tFKnmpiwnPhFEITB2Q1Bs/IaSEZonw2TPkiUnUwtPvJRH+loJpEjWqGmMDSE51zPfL8etBm/X6vF9hqLyGOCCuxvBKFEDIK5tA5nZKwGkT1fW5+GyuCrkEGUrPbOaVjfsbQEZzy86tBNVVO20L0EsUR7MA/lkmqihE82kFLDEsMx5wAFXM3RKQQt24WyYq30tsu8DY5/TcXhEgzNhKs6O5lT3Mm2p4lYGsXffJJGoSu5Bdxq3lDz8y0bAtCgrypVTlS0BGcyuC7YiBnC12WWTbs2uGcvLH0WzsM9X6VvWIq6SZWGubdJf7MUIwWO3XArKUS1WPuERfJipaFUtydhWSsUIwCCSV+t8k4c1Y/ZmN2RpIqXAxSpzfKgSfcEPAoE0I1s2TMWvR4FsD8dV2XYUZIvE/tYVbUQhuy4y9AwmAmZqxOq8DExKCbcBD92OApBztd2axL6mEWRBMVpX9Bi2KoYI5MrNDItxIzSl6tDf6TVmIF04LMUpgSkBr1Gu00dabvXrWKmiZrQqisBERGwfGt3XwHQNvQWlaRJNCbXiu9/P1BTHjdmlvmrF6G2ul4rgSGGmTwgGRXWbjVjX2XRlZNEoUmawP0ZiCgbRxsrZOL7vMTDRKni2T19KxzK8fJuMLPSq07bc7eCNexufhBaxMolTsS+qqMP7FYZsQjH2HntlvLkwDhBGUIgXx+MObcdEg8v5aeL/S2HwIbWBiX9znOL/xsnXekHfVisOCVxYmUSd9LqzrXNnGq6k11digI+ZbXxN+WoiVWkMNG6//d8u0pjUU8mjrviOziMsX6XP5Nn/X8Og6vtLfao2IViBO4foWkfzmSLnedeEVdbA+i4lUBFFAPBh/vODOSBbYx3nfrVTHTk/uWM/1mrt0OqOBeDDHBJ56hSuhdhmzmYrxjpyIyXyFY72zrF0a83wnIA5M2iQTHXXkrbZCqqvkiLnbYagcXQCnYJzJ1teH7jX2MOk6V2cgmXV8M096Xw6QX4R8FGCIYRi43zjMFDEJvMo+Kih+UCBNDCZcvtjxdNXN7oOB1KKnMSFQHuNOhhfi0W0BZPNt7ZHQov1XEJrkMw64DwOcjC9cdwAeOP3awey6+OLEvQLp7pH+nvgNpD9b9jPTfwQDNWCupe5qAAAAAElFTkSuQmCC" alt="checked">
-								<br>
-								IFS <br> Book Now
+									<img class="icon icons8-Checked" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFLklEQVRoQ+1azXHbOBT+nm/2Zb0VREgDUSow1IF9DHWwXYG1FaxTQZIKohykHC1XIGwFtiuAXEHsS7wnv50HghRJgSQoMc5OJpzxjDwEQXzv53sfHkj4RS76RXDgN5CQJ0dze8QEDXZ/h0QYZuOYcQvCg/ufYPCMazNWt31FxM4e0V+txjNOiXDWdVEMrMAw2MMX806Zrs8Xx28NRM/tMYALAnRhwjsGZEEGjFXR4npmh9jDoXgKgCbmYxC9yj0mzxDebwuoMxD91Q7A+JwDYL5n0BR7mJp3atXFqg4ccEzEE4D+kGedIfZxYk5UGoaRVycgzgsCgsSq/MigS5Ooj5Hvqh2mr+whvmOSAfIhd1LNIRlXBzAaiJ7ZCyK4RTPjGgc462q1NsCyUHpyofnGv+fcjNVUfuuZlRz8AGAUIokoIHpmxQsumRn4qw8vNIHSc/uRgAtmvJVFC6EQY1kF1ynZ9dxOyFmCH5lpklmozbq73pdclJzzebSUcGbGezNWl6G5Gz0iOUHAVZMldl1wo2fS3BEQQwa+mETVUnwtEMdOz7hxlniBcAoB0jMr7xdmu+N96KacrAcyt0uhWElsM1ZSM170yvNS6P2AhgJCcqWuzgSBrEOKH3mfBn2zU5tFKnmpiwnPhFEITB2Q1Bs/IaSEZonw2TPkiUnUwtPvJRH+loJpEjWqGmMDSE51zPfL8etBm/X6vF9hqLyGOCCuxvBKFEDIK5tA5nZKwGkT1fW5+GyuCrkEGUrPbOaVjfsbQEZzy86tBNVVO20L0EsUR7MA/lkmqihE82kFLDEsMx5wAFXM3RKQQt24WyYq30tsu8DY5/TcXhEgzNhKs6O5lT3Mm2p4lYGsXffJJGoSu5Bdxq3lDz8y0bAtCgrypVTlS0BGcyuC7YiBnC12WWTbs2uGcvLH0WzsM9X6VvWIq6SZWGubdJf7MUIwWO3XArKUS1WPuERfJipaFUtydhWSsUIwCCSV+t8k4c1Y/ZmN2RpIqXAxSpzfKgSfcEPAoE0I1s2TMWvR4FsD8dV2XYUZIvE/tYVbUQhuy4y9AwmAmZqxOq8DExKCbcBD92OApBztd2axL6mEWRBMVpX9Bi2KoYI5MrNDItxIzSl6tDf6TVmIF04LMUpgSkBr1Gu00dabvXrWKmiZrQqisBERGwfGt3XwHQNvQWlaRJNCbXiu9/P1BTHjdmlvmrF6G2ul4rgSGGmTwgGRXWbjVjX2XRlZNEoUmawP0ZiCgbRxsrZOL7vMTDRKni2T19KxzK8fJuMLPSq07bc7eCNexufhBaxMolTsS+qqMP7FYZsQjH2HntlvLkwDhBGUIgXx+MObcdEg8v5aeL/S2HwIbWBiX9znOL/xsnXekHfVisOCVxYmUSd9LqzrXNnGq6k11digI+ZbXxN+WoiVWkMNG6//d8u0pjUU8mjrviOziMsX6XP5Nn/X8Og6vtLfao2IViBO4foWkfzmSLnedeEVdbA+i4lUBFFAPBh/vODOSBbYx3nfrVTHTk/uWM/1mrt0OqOBeDDHBJ56hSuhdhmzmYrxjpyIyXyFY72zrF0a83wnIA5M2iQTHXXkrbZCqqvkiLnbYagcXQCnYJzJ1teH7jX2MOk6V2cgmXV8M096Xw6QX4R8FGCIYRi43zjMFDEJvMo+Kih+UCBNDCZcvtjxdNXN7oOB1KKnMSFQHuNOhhfi0W0BZPNt7ZHQov1XEJrkMw64DwOcjC9cdwAeOP3awey6+OLEvQLp7pH+nvgNpD9b9jPTfwQDNWCupe5qAAAAAElFTkSuQmCC" alt="checked"><br>
+								BITSAT <br> Book Now
+								</span>
+								</a>
+							</li>
+							<li>
+							<a href="#portfolioModal6" class="portfolio-link lp-border-radius-5" data-toggle="modal">
+								<span class="tick-icon">
+									<!-- Checked icon by Icons8 -->
+									<img class="icon icons8-Checked" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAFLklEQVRoQ+1azXHbOBT+nm/2Zb0VREgDUSow1IF9DHWwXYG1FaxTQZIKohykHC1XIGwFtiuAXEHsS7wnv50HghRJgSQoMc5OJpzxjDwEQXzv53sfHkj4RS76RXDgN5CQJ0dze8QEDXZ/h0QYZuOYcQvCg/ufYPCMazNWt31FxM4e0V+txjNOiXDWdVEMrMAw2MMX806Zrs8Xx28NRM/tMYALAnRhwjsGZEEGjFXR4npmh9jDoXgKgCbmYxC9yj0mzxDebwuoMxD91Q7A+JwDYL5n0BR7mJp3atXFqg4ccEzEE4D+kGedIfZxYk5UGoaRVycgzgsCgsSq/MigS5Ooj5Hvqh2mr+whvmOSAfIhd1LNIRlXBzAaiJ7ZCyK4RTPjGgc462q1NsCyUHpyofnGv+fcjNVUfuuZlRz8AGAUIokoIHpmxQsumRn4qw8vNIHSc/uRgAtmvJVFC6EQY1kF1ynZ9dxOyFmCH5lpklmozbq73pdclJzzebSUcGbGezNWl6G5Gz0iOUHAVZMldl1wo2fS3BEQQwa+mETVUnwtEMdOz7hxlniBcAoB0jMr7xdmu+N96KacrAcyt0uhWElsM1ZSM170yvNS6P2AhgJCcqWuzgSBrEOKH3mfBn2zU5tFKnmpiwnPhFEITB2Q1Bs/IaSEZonw2TPkiUnUwtPvJRH+loJpEjWqGmMDSE51zPfL8etBm/X6vF9hqLyGOCCuxvBKFEDIK5tA5nZKwGkT1fW5+GyuCrkEGUrPbOaVjfsbQEZzy86tBNVVO20L0EsUR7MA/lkmqihE82kFLDEsMx5wAFXM3RKQQt24WyYq30tsu8DY5/TcXhEgzNhKs6O5lT3Mm2p4lYGsXffJJGoSu5Bdxq3lDz8y0bAtCgrypVTlS0BGcyuC7YiBnC12WWTbs2uGcvLH0WzsM9X6VvWIq6SZWGubdJf7MUIwWO3XArKUS1WPuERfJipaFUtydhWSsUIwCCSV+t8k4c1Y/ZmN2RpIqXAxSpzfKgSfcEPAoE0I1s2TMWvR4FsD8dV2XYUZIvE/tYVbUQhuy4y9AwmAmZqxOq8DExKCbcBD92OApBztd2axL6mEWRBMVpX9Bi2KoYI5MrNDItxIzSl6tDf6TVmIF04LMUpgSkBr1Gu00dabvXrWKmiZrQqisBERGwfGt3XwHQNvQWlaRJNCbXiu9/P1BTHjdmlvmrF6G2ul4rgSGGmTwgGRXWbjVjX2XRlZNEoUmawP0ZiCgbRxsrZOL7vMTDRKni2T19KxzK8fJuMLPSq07bc7eCNexufhBaxMolTsS+qqMP7FYZsQjH2HntlvLkwDhBGUIgXx+MObcdEg8v5aeL/S2HwIbWBiX9znOL/xsnXekHfVisOCVxYmUSd9LqzrXNnGq6k11digI+ZbXxN+WoiVWkMNG6//d8u0pjUU8mjrviOziMsX6XP5Nn/X8Og6vtLfao2IViBO4foWkfzmSLnedeEVdbA+i4lUBFFAPBh/vODOSBbYx3nfrVTHTk/uWM/1mrt0OqOBeDDHBJ56hSuhdhmzmYrxjpyIyXyFY72zrF0a83wnIA5M2iQTHXXkrbZCqqvkiLnbYagcXQCnYJzJ1teH7jX2MOk6V2cgmXV8M096Xw6QX4R8FGCIYRi43zjMFDEJvMo+Kih+UCBNDCZcvtjxdNXN7oOB1KKnMSFQHuNOhhfi0W0BZPNt7ZHQov1XEJrkMw64DwOcjC9cdwAeOP3awey6+OLEvQLp7pH+nvgNpD9b9jPTfwQDNWCupe5qAAAAAElFTkSuQmCC" alt="checked"><br>
+								VITEEE <br> Book Now
 								</span>
 								</a>
 							</li>
 						</ul>
-					</div>					
+					</div>
 					<div class="post-row   padding-top-15 clearfix">
 					</div>
 					<div class="comments-container padding-left-40 padding-right-40 clearfix margin-top-50">
-						<div class="comments-header clearfix">
-							<h3>2 Reviews</h3>
-						</div><!--comments-header-->
-						<div class="comments-posts">
-							<div class="comments-box">
-								<div class="comments-thumb">
-									<img src="images/comments-thumb-1.png" alt="comments-thumb-1" />
-								</div>
-								<div class="comments-content">
-									<div class="comments-meta-box">
-										<div class="comments-author text-left">
-											<div class="comments-name">
-												Manoj Chothe
-											</div>
-											<div class="comments-date">
-												IPS
-												<div class="post-reviews">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
-												</div>
-											</div>
-										</div>
-										<div class="comments-replay text-right">
-											<a href="#submitreview">Reply</a>
-										</div>
-									</div>
-									<div class="comments-description">
-										<p>
-											I owe you a lot for the success in this tortuous exam. I would like to thank you humbly for your continuous support and undending love for me. Thank you very much!!
-										</p>
-									</div>
-								</div>
-							</div><!--../comments-box-->
-							<div class="comments-box">
-								<div class="comments-thumb">
-									<img src="images/comments-thumb-2.png" alt="comments-thumb-2" />
-								</div>
-								<div class="comments-content">
-									<div class="comments-meta-box">
-										<div class="comments-author text-left">
-											<div class="comments-name">
-												Chinmaya Aurangabadkar
-											</div>
-											<div class="comments-date">
-												IRS (IT) (Rank 139, Got 372 in History optional)
-												<div class="post-reviews">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
-													<i class="fa fa-star-o"></i>
-												</div>
-											</div>
-										</div>
-										<div class="comments-replay text-right">
-											<a href="#submitreview">Reply</a>
-										</div>
-									</div>
-									<div class="comments-description">
-										<p>
-											Thanks a lot for your help. I could make it in the first attempt only because of your guidance in history and g.s.
-										</p>
-									</div>
-								</div>
-							</div><!--../comments-box-->
-						</div><!--../comments-posts-->
-					</div>
+						</div>
 					<div class="comments-form padding-left-40 padding-right-40 padding-bottom-40" id="submitreview">
 						<div class="comments-header lp-border-bottom clearfix">
 							<h3>Rate us and Write a Review</h3>
@@ -567,10 +284,10 @@
 						<div class="widget-box  widget-bg-color post-author-box lp-border-radius-5">
 							<div class="user-info">
 								<div class="user-thumb">
-									<img src="images/user-thumb-94x94.png" alt="user-thumb">
+									<img src="../../images/user-thumb-94x94.png" alt="user-thumb">
 								</div>
 								<div class="user-text">
-									<h5 class="user-name margin-top-0"><a href="#">Lokayan</a></h5>
+									<h5 class="user-name margin-top-0"><a href="#">Rao IIT Academy</a></h5>
 									<label class="user-position md-trigger quickformtrigger2" data-modal="modal-6">Quick Connect</label>
 									<label class="user-position quickformtrigger">Quick Connect</label>
 									
@@ -611,7 +328,8 @@
 						<div class="widget-box widget-bg-color widget-categories lp-border-radius-5">
 							<div class="widget-content">
 								<ul class=" list-style-none categories-container">
-									<li><a href="listing-entrance.html"><span class="cat-icon"><img class="icon icons8-Exam" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACkklEQVRoQ+2Z4XHUMBCF3+sgqSCkgiQVQCqAVABUAFQAVABUAKkgoQKgApIKSAekg8e8jOTxHWdbtnWSM2PN3I87SeP9dt+udGuiZ0hS3/zEuRsA5yTvJ+7fuY0VQPzI7DBJICR716V6divCWWFqgdwCOMkZmVoghwB+5oSpAmKpSjrICVMNxHmVE6YqSE6Y6iC5YBYBkgNmMSBzYRYFMgdmcSBTYRYJMgWmCkjq3Wxr3Q3Js669jwkEfZfXoiATI+EbwMP/ohUkxRNTvTxmX4odWaUl6UmQwN0YQ4fWFgUJN9k/AO5JHg8ZN2a+NMhbAJ+CgRckr8cYm9I7KJLskn4DOA0GfSf54tGBhNywrC4BPANwBOCYZJZcKSYtSVFWFwCc8JbYO5Kfc0SlJIhl5QgchKT/6w5J35ViDGARkLasSL4KFz4n+nMAZyTdv9o5JDliJyTPqyd7S1avSX4LIAb6CuALScuuC8QtoadDDcBSEYneP4z93FR5SVoUiC90tyRj6X3wvqQI2Fm9JDmCL2NEgkx9oG40uPceEUkutT9Co83ejcO/u3r505acv1tyHm7QbcCH33+R9P5mlABxsr4ZqEDN4SjJhkdgFwGD+cxxL9hR8Jyr3catoASIH2zjmlOcZBMZSTb2iKR7vf8NSR8AvA/vS9oR3VhbAsT50XkdCeXVEdtZhhcB0sqPjyTt2V0ed6Su2nmypf2YY36DVSciKd5sleHLeFhugTjhDXvd9ypur9Jqldfm/OiIihP3ru9gHCgW+/3PHirQaTzNh4yZM7/XiMwxbOzeFSR6LMUTY707ZX2KHVm7KFOMTNmzgqzSStHJhDWrtFZpTZBNypZs0kp5WIk1s1umJYxMeUYfyD9fBotRRf1I0gAAAABJRU5ErkJggg=="></span><span>Entrance</span></a></li>
+									<li><a href="../../listing-science.html"><span class="cat-icon"><img class="icon icons8-Engineering-Filled" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEIklEQVRoQ+WagVEVMRCG969ArUCpQKhArECpQKhArUCsQKhAqUCoQKxAqEDoACpY52NyzL27JJs7jzcPzcyNzPhukz+7+++fzckeYLj7LzPbLpg+lbS39LRa2qC7vzCz3zW7khafd3GD7r5rZj+CDXot6XzJTXwIIIdm9ilY5EdJR5sO5JuZvQsWeSzpw1qBuPvTFCrE/qGk49oC3J2QeRUs8qckQrA43P0985nZlZkRijfVvAuMdSD6DHRqZgdDw+7+xszemtl+w06zKOzAYGf936eN+5psdf91EYEp5kjPEzkaZSFQKBOwcywej80Z2CJf8DRzfTczNnA4qmCyQAIQ/QlYRG7SuYAiW0UwJSC1gjZnkUu+cyFpZ2iwBISdfrLk7AvaupU08lwJCElLrG7i2JMEUayMWrKTgCTyJo1i/YlYi+R6PhHJdaJW6smVJGyYu8NIMBv1A4/PsbtdqidViZImJ/FbBgAomFT2cLg7lE3BawW0021KzniotdwdJRvVCIraflR9hwtINA9wimlt4Nmt2g8ij7BrVNnaOJHUUs2LNty9RZ+hJorejoBE3jiTRLz/9XB3mKjmmapXaskeUTA5kU2+FDIwHjY6iUPSs1iYZyQA0zsIxFr9ylIvu1gDErk76+qUxF8q0gUQvDuqBendWigXw/gOSDqewh5QI4nd0WQpZK4ljQigYSF9e9nddXe8UmOyO1pPD3+zlisFjYISkFFhSqFBTkXCr7OJZ7Yyx4E5hfgcID4jU0e76e4tR9zhVJ8l8d79cPcoN7PLnQtkVJxmenakZCcW4XtQs4Dk2jkzPWtL2fq/gZhZLrSoEy8n5tulpJWj9FpDi/P6sA5sQrJH0iC3ySX6jSpz39Yt9Woh+j27r+yp1dmdGfiXpyQXsrpnInWWCmJN3wGeEOZh02C9u9brQ0kUilppE1gMkn95iZKLnYbdZUdI+pIApCVKcesI4DKJxqPKO5EymC4akwaLuimL3XW4O82O2pEg2z3pnBCdR1pkxzdJBxNpd+Xn7o7ijQ5nIznTNxIBQQC2MFG2HxyBK/R5c69lGW4KkJZLm84egGk+nEQAUthy9QAptKrl6uVQ1A6Kki+3ZgDhoe6s0G8HdWceciFqaAxtZ2V/mCMNydey8Uv/pkgupZYp1MlxdRNH9tpuBGTGSW/dYG8kPRtOWvLIHCW7LkAjxVyUKMkrJGsky6HFpa4faC9F7VPUwW5OGUSsVQLDpDAPDEU+8cwFdN8zTmcRGC8HqAiiKhoT18PxQzDc9VEvVjRW0maAi66mMY0nu8vQFfGYogFF0b/SqIIIgQzAwPtZ1dpPDndvya+W62k2hSYhXs+GU3Nln5O9DT1czK7/g4GpYBqPvI/iE46WBtuj+Kjm3/jMKRFELeEXu1Pph/0fdbcTogu1dEEAAAAASUVORK5CYII="></span><span>Engineering Classes</span></a></li>
+									<li><a href="../../listing-science.html"><span class="cat-icon"><img class="icon icons8-Physics" src="data:image/png;base64,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"></span><span>Science</span></a></li>
 								</ul>
 							</div>
 						</div><!-- ../widget-box  -->
@@ -622,13 +340,12 @@
 										<span class="timing-days">
 											<!-- Clock icon by Icons8 -->
 											<img class="icon icons8-Clock" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAE8UlEQVRoQ82ai3EbNxCGsVABliuwXEHkCqRUELkCKRVYbgDAoYFQFUSqwFQFpiuIUoGpCqIUIGzmxywYEDqSuDuc5ZvheDy6x37YB/YBUo0u59xJCOGMiE6VUvidyC//wlophd8DMz9orb855/D/yRdNeYMIf0lEVz1C1756zcwLrfX9FKhRIABgZquUAkC8mPlfpdQKq621xr/rUjA8B+AQwrlo7ZyI3mTEt0TUjQEaBOKcO2bmPwqAO6310jm3rFVBfp9z7iKEcEFElwXQZ+fcU+07q0HwQWb+UykFGKw+zGEx5GP7hBIzhYavRUtPRPR77QJVgVhroYVrMaF7rfV1rfqttX/hua7rPtSsrgDBxM7k/kXXdZ8PPbsXREzpi1LqHFoQgNtDL83/bq1lAalatPSsc+4qhLAQ7ayI6OM+7e98uUB8hVMKxLlz7mEIBO4dC4JnnXOnIQRAICA8ENGvu2B2glhrAQFN/K21vqg1pRJ0CkgGA1P7RSm17LruY99i9oIYY6DST6KJ07EQUzWSmdlGM8x8472P/ppfL0AkOn2ZYk4tfKQUNDcz8ZetcL8FIn7xHSFWQt8gx+5T+VTTKvacK9kCEJrf5/6yBWKMgS1eMvO99/5iqGPPDYL3G2Pg/GfMfOe932QWGxBJO7638Is5TCvzF6Q4iGBvRCsx6dyAZNrovPeuhTZaOXspizHGEZHNtRJBkjYiGdHbVmnHXCCFvPCVdQTpI/yZNSIyR38mIiSXiwhirUWkOukLa1OBWkatIoIhiUX6tO667j3lTu69P54qePn8XCCiFYTh6PQAibG5ZcidM2rl7zbGLInoN+x5lKUjTaNV+uDMGknR6wYgcYORzBIlatNrThDnHJLar8z8jTJHj2GsJYUxxhJR3JOY2Xnvu5bvR/7FzCjc1gAZVfgcEiiZbH4fMzc33yT/bCDW2n+QfBbAT13XvT20CEP+PjuIMSaGxkIjj957tISaXbOCSDkA290SelbTMsasiehdnklOWa6i1n8U80J/6rZlMgoZs838sWn4LSBQ66NhUd1kG7qAW+G31Yb4oyGKZPemSYryGhAC8n+KkuX2o0Lja0FI1h5DfEwahSw5PLp5g5rR0hLFDju7T/Sl8cwcQ3qqEK/RZS8L+hrnM8bE7uPcjl3KkkrzrcKqr3SsgXite3aWumJeqRXUPB9qDZxF2k1L6EU7SCmF1OJD60y4FYxoA1lDdPIkZ2+Dbl+zuJVAY9+TNdf7G3Sy5R+HEBDBUAdjWjS5ZTpW4L7nnHMpKGFWc7KzZSowqTsBE8M8YvBMpKXw6V1SRGHUAZN6sU3sHSv8LP6SQ1SPFdIKpFpeJkVYgaZlcK3WBAJDWGy6O5vre0dvMvbCpOhVzKzQxN7M4eAwNISAxAwTVsCgPflDAoAx5pM0LjAOxyT5atQwNFd90UhA+wgRbRZTk30CpoTTEei+9I7aStOsHhnLCQXs/qjDn+T8yF0roOxcS2ofIcRCC1VJbDVIts9gULp13IKZl977+1oHLrSNliemY/m5FhwLwaGE6upyEEgW0zE1QrsyB8JHVzi+xMyro6Ojx75DNc/Pz+gP4DANjkLBfDYtI2TfWms3RsujQHIgpRQOxeD8yLsxGkE9gTMtSIvGAKRvTgIpCh20fs5DCJuDZyUchE4Hz7TWyBhWU4TPv/8fVZPejlNsRCUAAAAASUVORK5CYII=" alt="clock">
-											Office Meeting Hours
+											Meeting Hours
 										</span>
 										<span class="timing-hours">
-											08:00-20:00
+											10:00-18:00
 										</span>
 									</li>
-									
 								</ul>
 							</div>
 						</div><!-- ../widget-box  -->
@@ -638,92 +355,9 @@
 		</div>
 	</section>
 	<!--==================================Section Close=================================-->
-	
-		<!--==================================Footer Open=================================-->
-<footer id="footer" class="clearfix">
-      <div id="footer-widgets">
 
-        <div class="container">
+	<?php require '../../footer.php' ?>
 
-        <div id="footer-wrapper">
-
-          <div class="row">
-            <div class="col-sm-6 col-md-2">
-              <div id="meta-3" class="widget widgetFooter widget_meta">
-              <h4 class="widgettitle">Pages:</h4>
-              <ul>
-    		  <li><a href="index.php"><i class="fa fa-home fa-fw"></i> Home</a></li>
-			  <li><a href="privacypolicy.php"><i class="fa fa-link"></i>   Privacy Policy</a></li>
-			  <li><a href="contact-us.php"><i class="fa fa-envelope fa-fw"></i> Contact Us</a></li>
-             </ul>
-</div>      </div> <!-- end widget1 -->
-
-            <div class="col-sm-6 col-md-2">
-              		<div id="recent-posts-3" class="widget widgetFooter widget_recent_entries">
-                    <h4 class="widgettitle">Social Media :</h4>
-                    <ul>
-					<li>
-				     <a href="#" target="_blank"><i class="fa fa-facebook"></i> Facebook</a>
-					</li>
-					<li>
-				      <a href="#" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>
-					</li>
-					<li>
-				      <a href="#" target="_blank"><i class="fa fa-youtube"></i> Youtube</a>
-				   </li>
-				</ul>
-		</div>            </div> <!-- end widget1 -->
-
-            <div class="col-sm-6 col-md-4">
-              <div id="meta-4" class="widget widgetFooter widget_meta">
-              <h4 class="widgettitle">Subscribe:</h4>
-
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-addon">E-mail:</span>
-                  <input class="form-control" placeholder="Write your email .." type="text">
-                   <span class="input-group-btn">
-                    <button class="btn btn-primary" type="button">Subscribe!</button>
-                </div>
-              </div>
-              </div>
-             </div> <!-- end widget1 -->
-             <div class="col-sm-6 col-md-2">
-              		<div id="recent-posts-3" class="widget widgetFooter widget_recent_entries">
-                    <h4 class="widgettitle">Payment Modes:</h4>
-                    <ul>
-					<li>
-				     <a href="#" target="#"><img src="images/payment/visa.png"></a>
-				     <a href="#" target="#"><img src="images/payment/mastercard.png"></a>
-				 </li>
-				 <li>
-				     <a href="#" target="#"><img src="images/payment/bhim.png"></a>
-				     <a href="#" target="#"><img src="images/payment/instamojo.png"></a>
-				   </li>
-				</ul>
-		</div>
-          </div> <!-- end .row -->
-
-
-        </div> <!-- end #footer-wrapper -->
-
-        </div> <!-- end .container -->
-      </div> <!-- end #footer-widgets -->
-
-      <div id="sub-floor">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 copyright">
-             Copyright CodeMarshalls
-            </div>
-            <div class="col-md-4 col-md-offset-4 attribution">
-             Developed by  <a target="_blank" href="#">Code Marshalls</a>
-             </div>
-          </div> <!-- end .row -->
-        </div>
-      </div>
-    </footer>
-	<!--==================================Footer Close=================================-->
 		<!-- Portfolio Modals -->
     <!-- Use the modals below to showcase details about your portfolio projects! -->
 
@@ -741,7 +375,7 @@
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
-                                <!-- Project Details Go Here -->
+<!-- Project Details Go Here -->
                                 <h3>Book Your Class Now</h3>
                                 <table width="100%">
                                 <col style="width:50%">
@@ -808,7 +442,7 @@
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="modal-body">
-                                <!-- Project Details Go Here -->
+<!-- Project Details Go Here -->
                                 <h3>Book Your Class Now</h3>
                                 <table width="100%">
                                 <col style="width:50%">
@@ -904,6 +538,72 @@
 									</div>
 								</td>
 								</tr>
+								<tr style="border-bottom: 1pt solid #f0f0f0">
+								<td>	
+									<div class="form-group mr-bottom-0">
+										<a href="https://www.classesdunia.com/instamojo/order.php?id=101" target="_blank" class="btn btn-primary">
+										Rs. 1000/- Off
+										</a>
+									</div>
+								</td>	
+									</form>
+									<td>
+									<div class="form-group mr-bottom-0">
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#callback"></i>Request a Callback</button><br>
+									</div>
+									</td>
+                                </tr>
+                                
+								<tr align="left">
+									<td>
+									<div class="form-group">
+										<font size="3">9 AM-3 PM (2 Days a Week)</font>
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<font size="3">Rs.12000/- A.Y 2016-17</font>
+									</div>
+								</td>
+								<td>	
+									<div class="form-group">
+										<input type="checkbox" name="demo" value="demo"><font size="3">Add</font>
+									</div>
+								</td>
+								</tr>
+								<tr style="border-bottom: 1pt solid #f0f0f0">
+								<td>	
+									<div class="form-group mr-bottom-0">
+										<a href="https://www.classesdunia.com/instamojo/order.php?id=101" target="_blank" class="btn btn-primary">
+										Rs. 1000/- Off
+										</a>
+									</div>
+								</td>	
+									</form>
+									<td>
+									<div class="form-group mr-bottom-0">
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#callback"></i>Request a Callback</button><br>
+									</div>
+									</td>
+                                </tr>
+                                
+								<tr align="left">
+									<td>
+									<div class="form-group">
+										<font size="3">2 PM-6 PM (Weekends)</font>
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<font size="3">Rs.12000/- A.Y 2016-17</font>
+									</div>
+								</td>
+								<td>	
+									<div class="form-group">
+										<input type="checkbox" name="demo" value="demo"><font size="3">Add</font>
+									</div>
+								</td>
+								</tr>
 								<tr>
 								<td>	
 									<div class="form-group mr-bottom-0">
@@ -928,6 +628,8 @@
             </div>
         </div>
     </div>
+
+									
 
     <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
@@ -1063,7 +765,74 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h3>Book Your Class Now</h3>
+                                <table width="100%">
+                                <col style="width:50%">
+        						<col style="width:40%">
+        						<col style="width:10%">
+                                <tr>
+                                <th><h4><b>Class Timing</b></h4></th>
+                                <th><h4><b>Price</b></h4></th>
+                                <th><h4><b>Select</b></h4></th>
+                                </tr>
+                                <form class="form-horizontal"  method="post">
+                                <tr align="left">
+                                <td>
+									<div class="form-group">
+										<font size="3">7 AM-1 PM (3 Days a Week)</font>
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<font size="3">Rs.12000/- A.Y 2016-17</font>
+									</div>
+								</td>
+								<td>	
+									<div class="form-group">
+										<input type="checkbox" name="demo" value="demo"><font size="3">Add</font>
+									</div>
+								</td>
+								</tr>
+								<tr>
+								<td>	
+									<div class="form-group mr-bottom-0">
+										<a href="https://www.classesdunia.com/instamojo/order.php?id=101" target="_blank" class="btn btn-primary">
+										Rs. 1000/- Off
+										</a>
+									</div>
+								</td>	
+									</form>
+									<td>
+									<div class="form-group mr-bottom-0">
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#callback"></i>Request a Callback</button><br>
+									</div>
+									</td>
+                                </tr>
+                                </table><hr>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Window</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Modal -->
   	<div class="modal fade" id="callback" role="dialog">
    		<div class="modal-dialog">
      		<!-- Modal content-->
@@ -1095,27 +864,25 @@
        	</div>
   	</div>
 
+
+
 	<!--==================================Javscript=================================-->
 
 
-	<script type="text/javascript" src="js/jquery-lib.js"></script><!-- Jquery Library -->
-	<script type="text/javascript" src="js/jquery-migrate-1.3.0.min.js"></script>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-	<script type="text/javascript" src='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.js'></script>
-	<script type="text/javascript" src='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
-	<script type="text/javascript" src="js/build.min.js"></script>
-	<script type="text/javascript" src="lib/chosen/chosen.jquery.js" ></script>
-	<script type="text/javascript" src="js/jquery-ui.js"></script>
-	<script type="text/javascript" src="lib/slick/slick.min.js"></script>
-	<script type="text/javascript" src="lib/jquerym.menu/js/jquery.mmenu.min.all.js"></script>
-	<script type="text/javascript" src="lib/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
-	<script type="text/javascript" src="lib/jQuery.filer-master/js/jquery.filer.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap-rating.js"></script>
-	<script type="text/javascript" src="lib/popup/js/classie.js"></script> <!-- Popup -->
-	<script type="text/javascript" src="lib/popup/js/modalEffects.js"></script> <!-- Popup -->
-	<script type="text/javascript" src="js/singlepostmap.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="../../js/jquery-lib.js"></script><!-- Jquery Library -->
+	<script type="text/javascript" src="../../js/jquery-migrate-1.3.0.min.js"></script>
+	<script type="text/javascript" src="../../js/build.min.js"></script>
+	<script type="text/javascript" src="../../lib/chosen/chosen.jquery.js" ></script>
+	<script type="text/javascript" src="../../js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../../lib/slick/slick.min.js"></script>
+	<script type="text/javascript" src="../../lib/jquerym.menu/js/jquery.mmenu.min.all.js"></script>
+	<script type="text/javascript" src="../../lib/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript" src="../../lib/jQuery.filer-master/js/jquery.filer.min.js"></script>
+	<script type="text/javascript" src="../../js/bootstrap-rating.js"></script>
+	<script type="text/javascript" src="../../lib/popup/js/classie.js"></script> <!-- Popup -->
+	<script type="text/javascript" src="../../lib/popup/js/modalEffects.js"></script> <!-- Popup -->
+	<script type="text/javascript" src="../../js/main.js"></script>
     <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
