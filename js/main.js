@@ -1073,6 +1073,7 @@ $(document).ready(function(){
 			}
 			$.ajax(options);
 
+			$('input[name="substream_name"]').val("");
 	});
 
 
@@ -1136,7 +1137,6 @@ $(document).ready(function(){
 			//cleanup
 
 			$('input[name="subject_name"]').val("");
-			$('input[name="semester"]').val("");
 			$('input[name="university"]').val("");
 			$('select[name="substream"]').val("");
 	});
@@ -1198,10 +1198,7 @@ $(document).ready(function(){
 
 		//clean-up
 		$('#classtitle').val("");
-		$('#description').val("");
 		$('#city').val("");
-		$('#phone').val("");
-		$('#email').val("");
 		$('#logo_url').val("");
 		$('#page_url').val("");
 		$('.substream-container').remove();
