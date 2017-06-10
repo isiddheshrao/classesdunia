@@ -48,7 +48,7 @@ if (isset($_GET['location']) ||
 	    $conn = new PDO("mysql:host=".DB_SERVER.";dbname=".DB_NAME, DB_USER, DB_PASSWORD);
 	    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-      $stmt = $conn->prepare('SELECT DISTINCT a.cname,a.location,a.logourl,a.pageurl FROM classes a, substream b, subject c, map_class_stream d, map_class_subject e WHERE a.classid = d.class_id AND b.ssid=d.stream_id AND a.classid = e.class_id AND c.subjectid = e.subject_id AND c.fstream = b.ssname AND a.location LIKE :location AND b.ssname LIKE :stream AND c.sname LIKE :subject');
+      $stmt = $conn->prepare('SELECT DISTINCT a.dclass,a.location,a.logourl,a.pageurl FROM classes a, subject b, map_class_subject c WHERE a.classid = c.class_id AND b.subjectid = c.subject_id AND a.location LIKE :location AND b.fstream LIKE :stream AND b.sname LIKE :subject');
 
       $stmt->execute(array('location' => '%'.$location.'%', 'stream' => '%'.$stream.'%', 'subject' => '%'.$subject.'%'));
 
