@@ -18,6 +18,10 @@
 	<link rel="shortcut icon" href="../../images/favicon.png" type="image/x-icon">
 	
 	<!-- CSS -->
+<!-- cart files -->
+<script src="https://www.classesdunia.com/admin/cart_script.js"></script>
+<link rel="stylesheet" href="https://www.classesdunia.com/admin/cart_style.css">
+
 	<link href="../../lib/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" />
 	<link href="../../css/colors.css" type="text/css" rel="stylesheet" />
 	<link href="../../css/font.css" type="text/css" rel="stylesheet" />
@@ -40,6 +44,10 @@
 	<![endif]-->
 </head>
 <body>
+<!-- cart -->
+<div id="fab" onclick="fabfunction()" data-toggle="modal" data-target="#myModal">
+<span id="carticon" class="glyphicon glyphicon-education btn-bg"></span>
+</div>
 	<!--==================================Header Open=================================-->
 	<div id="page">
 	<!--==================================Header Open=================================-->
@@ -479,7 +487,7 @@
 								</td>
 								<td>	
 									<div class="form-group">
-										<input type="checkbox" name="demo" value="demo"><font size="3">Add</font>
+										<button type="button" class="btn btn-primary" onclick="shortlist('resonance,7 AM-1 PM (3 Days a Week),Rs.12000/-,1000/-')">checklist</button>
 									</div>
 								</td>
 								</tr>
@@ -546,7 +554,7 @@
 								</td>
 								<td>	
 									<div class="form-group">
-										<input type="checkbox" name="demo" value="demo"><font size="3">Add</font>
+										<button type="button" class="btn btn-primary" onclick="shortlist('resonance,7 AM-1 PM (3 Days a Week),Rs.12000/-,1000/-')">checklist</button>
 									</div>
 								</td>
 								</tr>
@@ -613,7 +621,7 @@
 								</td>
 								<td>	
 									<div class="form-group">
-										<input type="checkbox" name="demo" value="demo"><font size="3">Add</font>
+										<button type="button" class="btn btn-primary" onclick="shortlist('resonance,7 AM-1 PM (3 Days a Week),Rs.12000/-,1000/-')">checklist</button>
 									</div>
 								</td>
 								</tr>
@@ -680,7 +688,7 @@
 								</td>
 								<td>	
 									<div class="form-group">
-										<input type="checkbox" name="demo" value="demo"><font size="3">Add</font>
+										<button type="button" class="btn btn-primary" onclick="shortlist('resonance,7 AM-1 PM (3 Days a Week),Rs.12000/-,1000/-')">checklist</button>
 									</div>
 								</td>
 								</tr>
@@ -747,7 +755,7 @@
 								</td>
 								<td>	
 									<div class="form-group">
-										<input type="checkbox" name="demo" value="demo"><font size="3">Add</font>
+										<button type="button" class="btn btn-primary" onclick="shortlist('resonance,7 AM-1 PM (3 Days a Week),Rs.12000/-,1000/-')">checklist</button>
 									</div>
 								</td>
 								</tr>
@@ -814,7 +822,7 @@
 								</td>
 								<td>	
 									<div class="form-group">
-										<input type="checkbox" name="demo" value="demo"><font size="3">Add</font>
+										<button type="button" class="btn btn-primary" onclick="shortlist('resonance,7 AM-1 PM (3 Days a Week),Rs.12000/-,1000/-')">checklist</button>
 									</div>
 								</td>
 								</tr>
@@ -875,6 +883,40 @@
        	</div>
   	</div>
 
+<!-- cart -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Short listed Classes</h4>
+      </div>
+      <div class="modal-body">
+       <table id="shortlist">
+  <tr>
+    <th>Class Timing</th>
+    <th>Price</th>
+    <th>purchase</th>
+    <th>Call back</th>
+    <th>remove</th>
+  </tr>
+  <tr>
+    <td>7 AM-1 PM (3 Days a Week)</td>
+    <td>Rs.12000/-</td>
+    <td><button type="button" class="btn btn-primary">1000/- rs off</button></td>
+    <td><button type="button" class="btn btn-primary">Request a Callback</button></td>
+  </tr>
+</table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- cart ends-->
 	<!--==================================Javscript=================================-->
 
 

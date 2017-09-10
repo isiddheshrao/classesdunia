@@ -95,7 +95,7 @@ if (isset($_GET['location']) ||
                 <div class="lp-grid-box lp-border lp-border-radius-8">
                   <div class="lp-grid-box-thumb-container" >
                     <div class="lp-grid-box-thumb">
-                      <img src="'.$row['logourl'].'" alt="grid-1" />
+                      <img src="images/grid/'.$row['logourl'].'" alt="grid-1" />
                     </div><!-- ../grid-box-thumb -->
                     <div class="lp-grid-box-quick">
                       <ul class="lp-post-quick-links">
