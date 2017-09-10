@@ -39,7 +39,7 @@ require 'helper.php';
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
-	<body data-userimg="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEGUlEQVRoge1ZLWwcRxQ+cMCVItXAIKDgQKQaGBQYtFLBm4mBgYFBQSoZGBgYGAQYFBhYOhAQYBBgqa204G7fWGdg4EqWUrCwqgpcqYoiy975xnKlAIMDAQYGWzAzd6vmfnb39rxX1Z+07L2n7828N+9na7VHPOK/A2IsEusNCuN9qRBIhUMK9S4x1inAXNX8RoKiqE5tbAuF3wQjGfGd09HVUtV8B4I6754IxlmfrLlxt7BHITYp1DtSmTdCmUsncyeVeU2Mxaq590AB5gSbv7wD1I7XKIrqA2WjqC7Z/JS+IanMm2HyDwqpzGvnxB/UwdNx8hRFdVLxslSmKdjcWmcQPATX4aQUGoLNvWBzXyTuibEoGF3BSCjEV9PgmI1IG9suPI4L2wjjfcFIJEOVyS0XJOPEneZmURt0dLXk8gUlUssHwYgEI6EWaEI7iWAkJdEqQMA9p6TQmMhO5Y64Z3eSRKUA8zPgiP7FJer3hW209JeCkQhl/i6TWy744kaMH4raoDa+9q1LmdzykQj1riuGPxa1IZXZdbd6UCa3XKCj6zVH4m1hG6yPBSN5ztcbZXLLSQKrLiy6xfQvFmxngITCeKVsfpnhO14K9V4RfdtE4pW71ZOy+WWGYLwXjGSS+YJaIHerUZncckEqc2xfLV04vinE5qT92sQg1hu+T6JQ7+bWD/WeYGDSw5gYFEV1qcypK2iXefV9Cy8YZ5UPV990bj4TjD/tqcbfZtUT6vq5c+L3afLLBakQuDhvZtcxTTcdHk6TWy6kXp4uBZgfK28bxW4ZI0Dp8LOJVOZ0VLy72nFS+ZM7DNSO11KbkVPii4VPZALMp5xISMXLVXAdCbfbukvttm6J9RYpNEihQay3BJub9O6ras5D4WuCr/gDv/6SrroZfRx6DSBfLBDrDRtG5sbtr86ojW1qXT2baUdS25C7kXIdPPVyM7UyrdVqNVLxsg+nLAOSZNPyITgTCU9HV0u2GNqQco68Gqtneyyf9PdSIXjwTaP9faC/6/VYnozNB7s+DfFiqH4Yr3g5ezP9QxCMMwrxYqr/UCjAHDFe+sWzr+SScUCtq2e1Wr/t6G3Z2/GaTfyLBWKsSsZBr4a4YYwUGm4R3hXppzuM97N0CfmcsO36h5QD7ynUO9R59+QT2VDvCDYfhz6/NslfDjyoNrb7vyhcyzNANr8DUVSXCocpw+fEWB/vOBalMk0bfuZWsLmVypxKZZpZpklirAvGeT/vTGvQoWVGPw/MR2K9VdhQQdhI6N1uVGhm8SOoYMDnQBVwBRQur/JNodS+/KLXZjNWp8QxO5/+mHCXa2Huf+AINr9Oj14++DDPlfxCmZ9zK00ZMjQ7bknRyqz0r6d21r4PmZxI/6+Y1W+lE39e9GYf8Yj/K/4BSKKZsGt5SOsAAAAASUVORK5CYII=" data-userlink ="login.html">
+<body>
 <div id="page">
 	<!--==================================Header Open=================================-->
 	<header class="lp-header-bg">
@@ -77,7 +77,7 @@ require 'helper.php';
 												{
 													while($row = $stmt->fetch())
 													{
-	                            echo '<option value="'.$row['loc'].'">'.$row['loc'].'</option>';
+	                            						echo '<option value="'.$row['loc'].'">'.$row['loc'].'</option>';
 													}
 												}
 
@@ -98,10 +98,9 @@ require 'helper.php';
 												{
 													while($row = $stmt->fetch())
 													{
-	                            echo '<option value="'.$row['ssname'].'">'.$row['ssname'].'</option>';
+	                            						echo '<option value="'.$row['ssname'].'">'.$row['ssname'].'</option>';
 													}
 												}
-
 										?>
 										<!-- load -->
 									  </select>
@@ -122,7 +121,7 @@ require 'helper.php';
 													}
 												}
 
-		                }
+		                					}
 										catch(PDOException $e) {
 		    								echo 'ERROR: ' . $e->getMessage();
 										}
@@ -206,7 +205,7 @@ require 'helper.php';
 								<a href="listing-school.html" class="lp-border-radius-5">
 									<span>
 <!-- Classroom icon by Icons8 -->
-<img class="icon icons8-Classroom" src=""><br>
+<img class="icon icons8-Classroom" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAD+klEQVRoQ92Z61UUQRCFqyJQIlAiECJQIlAjECJQIxAiECMQIhAjECIQIhAjECK4nm9O95zeYWa2etzHSP/hsFvbU7duvcctcCT9MLNXAdFNi1y7+z4P9ciTJSkitw0Zd28wVAHJP9qGwt1nZuPWArluULvvzQEEOkwCMhflSz0mAZH0zsw+mFlmBIZO3f18WyCrgEh6amZkrCGXAtCBu99tGlAtkJ8JxO/EyGVSmFR8ambPzKxNgZsEEwYi6dDMvpoZIPa6Vk9swQhgjtz9bK5AMhtv3f2iT0lJb8zsW5SVZJxPZvbczAD+capb1jCSi+DO0MMkodCvlJpHa1LBcGmTL+5OEqk+WwEiiWQBw5wjGEz/37n7TjWKmjoiiYe9MLOIa90MFcsUS4CAvYaBwiXv3Z3MWH1qGMnBfmtm+wPBnhUcDPai4WzAJnfkdwA4cffjahQ1jKQ2ILMCGHz5Kj30ZUq/WHmMDZQkuO9T5ruVlJPIlbtP7qjDjCQgWI3agYv1nRva+x62APg6geV3FM1LSdSe90MpvYaZKiD54pRxYCQDAgAtyllyFT4noLEwf0u/b9ynk7Vw1aYRnXrCQFKQfk7KYeGaQxFF0Ut3P01Zi1YHgCspniEggR6rBIX/436N4qk4tr1X565zdyeJ/POJAsm+jAsdTnGDBIA4IeCbpNAXT1MRRYFQrXn4rruTscJHEsrTupSWXymIlIiazmN0QuyijaCQRDyhfBnopOuzZQ1lcCewkCCijCygDQLJvRnWpyG8iLIZBELiOCgy6doYqQbfVWqJwRYK6NoZmbJpCTKyWdcCSNGGRLxyFTLXvTPExGBvXavonFehZOiOtQAJPXlFQq3R++5bASO5w12RusuvWQsjW3Ctm7UAWW6/1Us8XiCSmCloufOho2WmyMu5BXMmeYYl+isOqyNm8zF5psY8HUbuXyq/wIgkhid6pr7zYL6WxAOGZu5jdz8pL5KUR9/o/WH5FkiHCRZnDEQ0gDSCXPgkj6xo0ZVPTPAVzGRjNCNuR575hfvyZnLZ/SH5EgguQQvegOhYMjPV9juSxuSzJb+7e+NykgDE0iJ6f5V8CeRPasEfbBb7NoqSxuRhku/bBVzRT0XvH9x09ulTAqn64boVq72/1rVKV4m44sbk+4KdxQE+nt9G8bYqx0xf8M5Cvib9jgVpXzrdqHzJCNmFFztDS2Usz06qeVeSFtGzkW+AFNtx/mVhQDEr8z+uRurk5Lk5V/+ty6Mr0xwMsP4Z3Y4XVTkv3+YkvwuQB8VrqDctihoibUaagfwJQHIFbTPSiGJlQzkn+SuAVK1xZip/91iAWAtkyJ3+l88Bkl+v/S869+l58xcd65/lEZcR9QAAAABJRU5ErkJggg=="><br>
 										School
 									</span>
 								</a>
